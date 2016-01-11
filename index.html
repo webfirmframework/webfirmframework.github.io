@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>wffweb by webfirmframework</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>wffweb</h1>
+        <h2>Java framework to develop web applications</h2>
+        <a href="https://github.com/webfirmframework" class="button"><small>Follow me on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span class="octicon octicon-link"></span></a>wffweb</h1>
+
+<p>Web Firm Framework is a java framework to build web applications. The advantage of using this framework is its ability to generate html and css dynamically. In version-1.0.0, it is providing features to generate html &amp; css dynamically and some other sophisticated features for ui development. It also provides some inbuilt support for optimized html/css output. It supports html5 and css3 for the ui generation.  As it is java framework we don’t have to keep any separate html/css files, instead we are keeping java files for ui (for html/css generation). A simple rest api or even servlet support is enough to create web applications with this framework. The performance rate will be very high with applications developed by this framework.</p>
+
+<h5>
+<a id="whom-is-this-framework-for" class="anchor" href="#whom-is-this-framework-for" aria-hidden="true"><span class="octicon octicon-link"></span></a>Whom is this framework for?</h5>
+
+<p>Developers who want to be a designer to develop very complex ui.</p>
+
+<h5>
+<a id="what-are-the-advantages-of-this-framework-over-other-ui-frameworks" class="anchor" href="#what-are-the-advantages-of-this-framework-over-other-ui-frameworks" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are the advantages of this framework over other ui frameworks?</h5>
+
+<p>In other ui development frameworks, the developer may face some helpless situations to satisfy some ui features because of their limited control to the developer, in this framework the developer has full control over html &amp; css generation. In other frameworks, the html to java data structure will be different so the developer has to keep different logic in the code, but here it is same so the developer is able to make a one to one mapping with html to java with less modifications. A html to java conversion (and vice versa) tool is also provided in the webfirm website. In some complex ui development cases, we may have to keep a dedicated designer to develop the design html/css and the designer may be unaware of Java, in such cases we can convert these designed html/css to the corresponding webfirm java code. The designer will be able to understand the output html/css even if he/she doesn’t know the java because of the webfirm java code structure. It supports css3 and html5 and also a way to use custom css/html tags so that you will not have to wait for a new release to use new html tag or css.
+Here are some sample codes</p>
+
+<h5>
+<a id="sample1--" class="anchor" href="#sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample1 :-</h5>
+
+<pre><code>Html html = new Html(null) {
+
+            Head head = new Head(this);
+
+            Body body = new Body(this) {
+
+                Blank blank = new Blank(this, "Hello World");
+
+            };
+
+};
+// prepends the doc type &lt;!DOCTYPE html&gt;
+html.setPrependDocType(true);
+System.out.println(html.toHtmlString()); 
+</code></pre>
+
+<p>prints the following output</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello World
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h5>
+<a id="sample2--" class="anchor" href="#sample2--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample2 :-</h5>
+
+<pre><code>Div div = new Div(null); 
+</code></pre>
+
+<p>or </p>
+
+<pre><code>Div div = new Div(null) {
+};
+</code></pre>
+
+<p>prints :- </p>
+
+<pre><code>&lt;div&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>
+<a id="sample3--" class="anchor" href="#sample3--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample3 :-</h5>
+
+<pre><code>Div div = new Div(null) {
+
+            Div div1 = new Div(this);  
+
+            Div div2 = new Div(this);
+
+};
+</code></pre>
+
+<p>prints :- </p>
+
+<pre><code>&lt;div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h5>
+<a id="sample4--" class="anchor" href="#sample4--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample4 :-</h5>
+
+<pre><code>Div div = new Div(null, new Width(50, CssLengthUnit.PX));
+</code></pre>
+
+<p>prints :- </p>
+
+<pre><code>&lt;div width="50px"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>
+<a id="sample5--" class="anchor" href="#sample5--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample5 :-</h5>
+
+<pre><code>Div div = new Div(null, new Style(new BackgroundColor("green")));
+</code></pre>
+
+<p>prints :- </p>
+
+<pre><code>&lt;div style="background-color: green;"&gt;&lt;/div&gt;
+</code></pre>
+
+<h5>
+<a id="sample6--" class="anchor" href="#sample6--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample6 :-</h5>
+
+<pre><code>        final Style paragraphStyle = new Style("color:red");
+
+        Html html = new Html(null, new CustomAttribute("some", "val"),
+                new Id("htmlId"), new Style("background:white;width:15px")) {
+
+            Div outerDiv = new Div(this, new Id("outerDivId")) {
+
+                Div contentDiv = new Div(this) {
+
+                    H1 h1 = new H1(this) {
+                        Blank headerContent = new Blank(this,
+                                "Web Firm Framework");
+                    };
+
+                    CodeExecutor executor = new CodeExecutor(this) {
+
+                        private int paragraphCount;
+
+                        @Override
+                        public void execute(AbstractHtml base) {
+
+                            for (paragraphCount = 1; paragraphCount &lt; 4; paragraphCount++) {
+                                P aboutParagraph = new P(base, paragraphStyle) {
+                                    Blank paragraphContent = new Blank(this,
+                                            "Web Firm Framework Paragraph "
+                                                    + paragraphCount);
+                                };
+                            }
+
+                        }
+                    };
+
+                };
+            };
+
+            Div hiddenDiv = new Div(this, new Hidden(null));
+        };
+
+System.out.println(html.toHtmlString());
+</code></pre>
+
+<p>prints</p>
+
+<pre><code>&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
+   &lt;div id="outerDivId"&gt;
+      &lt;div&gt;
+         &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
+         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 1&lt;/p&gt;
+         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 2&lt;/p&gt;
+         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 3&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div hidden&gt;&lt;/div&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>and we can add/change styles later, eg:-</p>
+
+<pre><code>paragraphStyle.addCssProperties(new WidthCss(100, CssLengthUnit.PER));
+
+Color color = (Color) paragraphStyle
+        .getCssProperty(CssNameConstants.COLOR);
+
+color.setCssValue(CssColorName.BROWN.getColorName());
+
+System.out.println(html.toHtmlString());
+
+</code></pre>
+
+<p>It will add width 100% in aboutParagraph and will change color to brown, its generated html code will be as follows</p>
+
+<pre><code>&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
+   &lt;div id="outerDivId"&gt;
+      &lt;div&gt;
+         &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
+         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 1&lt;/p&gt;
+         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 2&lt;/p&gt;
+         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 3&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div hidden&gt;&lt;/div&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h5>
+<a id="how-to-resolve-dependency-by-maven" class="anchor" href="#how-to-resolve-dependency-by-maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency by maven?</h5>
+
+<p>Add the following code in your pom.xml file. </p>
+
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.webfirmframework&lt;/groupId&gt;
+        &lt;artifactId&gt;wffweb&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-alpha-4&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+
+<h5>
+<a id="how-to-resolve-dependency-by-ivy" class="anchor" href="#how-to-resolve-dependency-by-ivy" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency by ivy?</h5>
+
+<p>Add the following code in your ivy.xml file. </p>
+
+<pre><code>&lt;dependency org="com.webfirmframework" name="wffweb" rev="1.0.0-alpha-4" /&gt;
+
+</code></pre>
+
+<p>Refer <a href="https://github.com/webfirmframework/wff/wiki">https://github.com/webfirmframework/wff/wiki</a> for more details</p>
+        </section>
+
+        <aside id="sidebar">
+
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
