@@ -72,7 +72,7 @@ System.out.println(html.toHtmlString());
 
 <p>prints the following output</p>
 
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code class="notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;/head&gt;
@@ -85,24 +85,24 @@ Hello World
 <h5>
 <a id="sample2--" class="anchor" href="#sample2--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample2 :-</h5>
 
-<pre><code>Div div = new Div(null); 
+<pre><code class="notranslate">Div div = new Div(null); 
 </code></pre>
 
 <p>or </p>
 
-<pre><code>Div div = new Div(null) {
+<pre><code class="notranslate">Div div = new Div(null) {
 };
 </code></pre>
 
 <p>prints :- </p>
 
-<pre><code>&lt;div&gt;&lt;/div&gt;
+<pre><code class="notranslate">&lt;div&gt;&lt;/div&gt;
 </code></pre>
 
 <h5>
 <a id="sample3--" class="anchor" href="#sample3--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample3 :-</h5>
 
-<pre><code>Div div = new Div(null) {
+<pre><code class="notranslate">Div div = new Div(null) {
 
             Div div1 = new Div(this);  
 
@@ -113,7 +113,7 @@ Hello World
 
 <p>prints :- </p>
 
-<pre><code>&lt;div&gt;
+<pre><code class="notranslate">&lt;div&gt;
 &lt;div&gt;
 &lt;/div&gt;
 &lt;div&gt;
@@ -124,29 +124,29 @@ Hello World
 <h5>
 <a id="sample4--" class="anchor" href="#sample4--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample4 :-</h5>
 
-<pre><code>Div div = new Div(null, new Width(50, CssLengthUnit.PX));
+<pre><code class="notranslate">Div div = new Div(null, new Width(50, CssLengthUnit.PX));
 </code></pre>
 
 <p>prints :- </p>
 
-<pre><code>&lt;div width="50px"&gt;&lt;/div&gt;
+<pre><code class="notranslate">&lt;div width="50px"&gt;&lt;/div&gt;
 </code></pre>
 
 <h5>
 <a id="sample5--" class="anchor" href="#sample5--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample5 :-</h5>
 
-<pre><code>Div div = new Div(null, new Style(new BackgroundColor("green")));
+<pre><code class="notranslate">Div div = new Div(null, new Style(new BackgroundColor("green")));
 </code></pre>
 
 <p>prints :- </p>
 
-<pre><code>&lt;div style="background-color: green;"&gt;&lt;/div&gt;
+<pre><code class="notranslate">&lt;div style="background-color: green;"&gt;&lt;/div&gt;
 </code></pre>
 
 <h5>
 <a id="sample6--" class="anchor" href="#sample6--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample6 :-</h5>
 
-<pre><code>        final Style paragraphStyle = new Style("color:red");
+<pre><code class="notranslate">        final Style paragraphStyle = new Style("color:red");
 
         Html html = new Html(null, new CustomAttribute("some", "val"),
                 new Id("htmlId"), new Style("background:white;width:15px")) {
@@ -189,7 +189,7 @@ System.out.println(html.toHtmlString());
 
 <p>prints</p>
 
-<pre><code>&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
+<pre><code class="notranslate">&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
    &lt;div id="outerDivId"&gt;
       &lt;div&gt;
          &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
@@ -204,7 +204,7 @@ System.out.println(html.toHtmlString());
 
 <p>and we can add/change styles later, eg:-</p>
 
-<pre><code>paragraphStyle.addCssProperties(new WidthCss(100, CssLengthUnit.PER));
+<pre><code class="notranslate">paragraphStyle.addCssProperties(new WidthCss(100, CssLengthUnit.PER));
 
 Color color = (Color) paragraphStyle
         .getCssProperty(CssNameConstants.COLOR);
@@ -217,7 +217,7 @@ System.out.println(html.toHtmlString());
 
 <p>It will add width 100% in aboutParagraph and will change color to brown, its generated html code will be as follows</p>
 
-<pre><code>&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
+<pre><code class="notranslate">&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
    &lt;div id="outerDivId"&gt;
       &lt;div&gt;
          &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
@@ -235,7 +235,7 @@ System.out.println(html.toHtmlString());
 
 <p>Add the following code in your pom.xml file. </p>
 
-<pre><code>&lt;dependencies&gt;
+<pre><code class="notranslate">&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;com.webfirmframework&lt;/groupId&gt;
         &lt;artifactId&gt;wffweb&lt;/artifactId&gt;
@@ -249,7 +249,7 @@ System.out.println(html.toHtmlString());
 
 <p>Add the following code in your ivy.xml file. </p>
 
-<pre><code>&lt;dependency org="com.webfirmframework" name="wffweb" rev="1.0.0-alpha-4" /&gt;
+<pre><code class="notranslate">&lt;dependency org="com.webfirmframework" name="wffweb" rev="1.0.0-alpha-4" /&gt;
 
 </code></pre>
 
