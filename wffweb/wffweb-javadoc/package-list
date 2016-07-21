@@ -12,12 +12,14 @@ com.webfirmframework.wffweb.interpreter
 com.webfirmframework.wffweb.io
 com.webfirmframework.wffweb.js
 com.webfirmframework.wffweb.settings
+com.webfirmframework.wffweb.streamer
 com.webfirmframework.wffweb.tag.core
 com.webfirmframework.wffweb.tag.html
 com.webfirmframework.wffweb.tag.html.attribute
 com.webfirmframework.wffweb.tag.html.attribute.core
 com.webfirmframework.wffweb.tag.html.attribute.global
 com.webfirmframework.wffweb.tag.html.attributewff
+com.webfirmframework.wffweb.tag.html.core
 com.webfirmframework.wffweb.tag.html.formatting
 com.webfirmframework.wffweb.tag.html.formsandinputs
 com.webfirmframework.wffweb.tag.html.frames
