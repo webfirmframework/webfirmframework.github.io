@@ -163,178 +163,15 @@ Hello World
 &lt;/html&gt;
 </code></pre>
 
-<h5>
-<a id="sample2--" class="anchor" href="#sample2--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample2 :-</h5>
-
-<pre><code class="notranslate">Div div = new Div(null); 
-</code></pre>
-
-<p>or </p>
-
-<pre><code class="notranslate">Div div = new Div(null) {
-};
-</code></pre>
-
-<p>prints :- </p>
-
-<pre><code class="notranslate">&lt;div&gt;&lt;/div&gt;
-</code></pre>
 
 <h5>
-<a id="sample3--" class="anchor" href="#sample3--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample3 :-</h5>
+<a id="how-to-resolve-dependency-in-build-tools" class="anchor" href="#how-to-resolve-dependency-in-build-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency by ivy?</h5>
 
-<pre><code class="notranslate">Div div = new Div(null) {
+<p><a href="https://github.com/webfirmframework/wff/wiki/How-to-resolve-wffweb-dependency-in-different-build-tools" >Check out how</a> </p>
 
-            Div div1 = new Div(this);  
 
-            Div div2 = new Div(this);
 
-};
-</code></pre>
-
-<p>prints :- </p>
-
-<pre><code class="notranslate">&lt;div&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h5>
-<a id="sample4--" class="anchor" href="#sample4--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample4 :-</h5>
-
-<pre><code class="notranslate">Div div = new Div(null, new Width(50, CssLengthUnit.PX));
-</code></pre>
-
-<p>prints :- </p>
-
-<pre><code class="notranslate">&lt;div width="50px"&gt;&lt;/div&gt;
-</code></pre>
-
-<h5>
-<a id="sample5--" class="anchor" href="#sample5--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample5 :-</h5>
-
-<pre><code class="notranslate">Div div = new Div(null, new Style(new BackgroundColor("green")));
-</code></pre>
-
-<p>prints :- </p>
-
-<pre><code class="notranslate">&lt;div style="background-color: green;"&gt;&lt;/div&gt;
-</code></pre>
-
-<h5>
-<a id="sample6--" class="anchor" href="#sample6--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample6 :-</h5>
-
-<pre><code class="notranslate">        final Style paragraphStyle = new Style("color:red");
-
-        Html html = new Html(null, new CustomAttribute("some", "val"),
-                new Id("htmlId"), new Style("background:white;width:15px")) {
-
-            Div outerDiv = new Div(this, new Id("outerDivId")) {
-
-                Div contentDiv = new Div(this) {
-
-                    H1 h1 = new H1(this) {
-                        Blank headerContent = new Blank(this,
-                                "Web Firm Framework");
-                    };
-
-                    CodeExecutor executor = new CodeExecutor(this) {
-
-                        private int paragraphCount;
-
-                        @Override
-                        public void execute(AbstractHtml base) {
-
-                            for (paragraphCount = 1; paragraphCount &lt; 4; paragraphCount++) {
-                                P aboutParagraph = new P(base, paragraphStyle) {
-                                    Blank paragraphContent = new Blank(this,
-                                            "Web Firm Framework Paragraph "
-                                                    + paragraphCount);
-                                };
-                            }
-
-                        }
-                    };
-
-                };
-            };
-
-            Div hiddenDiv = new Div(this, new Hidden(null));
-        };
-
-System.out.println(html.toHtmlString());
-</code></pre>
-
-<p>prints</p>
-
-<pre><code class="notranslate">&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
-   &lt;div id="outerDivId"&gt;
-      &lt;div&gt;
-         &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
-         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 1&lt;/p&gt;
-         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 2&lt;/p&gt;
-         &lt;p style="color: red;"&gt;Web Firm Framework Paragraph 3&lt;/p&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div hidden&gt;&lt;/div&gt;
-&lt;/html&gt;
-</code></pre>
-
-<p>and we can add/change styles later, eg:-</p>
-
-<pre><code class="notranslate">paragraphStyle.addCssProperties(new WidthCss(100, CssLengthUnit.PER));
-
-Color color = (Color) paragraphStyle
-        .getCssProperty(CssNameConstants.COLOR);
-
-color.setCssValue(CssColorName.BROWN.getColorName());
-
-System.out.println(html.toHtmlString());
-
-</code></pre>
-
-<p>It will add width 100% in aboutParagraph and will change color to brown, its generated html code will be as follows</p>
-
-<pre><code class="notranslate">&lt;html some="val" id="htmlId" style="background: white; width: 15px;"&gt;
-   &lt;div id="outerDivId"&gt;
-      &lt;div&gt;
-         &lt;h1&gt;Web Firm Framework&lt;/h1&gt;
-         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 1&lt;/p&gt;
-         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 2&lt;/p&gt;
-         &lt;p style="color: brown; width: 100.0%;"&gt;Web Firm Framework Paragraph 3&lt;/p&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div hidden&gt;&lt;/div&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h5>
-<a id="how-to-resolve-dependency-by-maven" class="anchor" href="#how-to-resolve-dependency-by-maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency by maven?</h5>
-
-<p>Add the following code in your pom.xml file. </p>
-
-<pre><code class="notranslate">&lt;dependencies&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;com.webfirmframework&lt;/groupId&gt;
-        &lt;artifactId&gt;wffweb&lt;/artifactId&gt;
-        &lt;version&gt;1.1.4&lt;/version&gt;
-    &lt;/dependency&gt;
-&lt;/dependencies&gt;
-</code></pre>
-
-<h5>
-<a id="how-to-resolve-dependency-by-ivy" class="anchor" href="#how-to-resolve-dependency-by-ivy" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency by ivy?</h5>
-
-<p>Add the following code in your ivy.xml file. </p>
-
-<pre><code class="notranslate">&lt;dependency org="com.webfirmframework" name="wffweb" rev="1.1.4" /&gt;
-
-</code></pre>
-
-<p>Refer <a href="https://github.com/webfirmframework/wff/wiki">https://github.com/webfirmframework/wff/wiki</a> for more details</p>
+<p>Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a> for more details</p>
         </section>
 
         <aside id="sidebar">
@@ -348,6 +185,9 @@ System.out.println(html.toHtmlString());
             .tar.gz file
           </a>
  -->
+ 			<p class="repo-owner">
+					<a href="developers-guide/get-started.html">Developers Guide</a>
+			</p>
           <p class="repo-owner"><a href="https://github.com/webfirmframework/wff">wffweb</a> is maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.</p>
           
           <p>Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a> for code samples.</p>
@@ -355,12 +195,7 @@ System.out.println(html.toHtmlString());
           <p>Visit <a href="https://webfirmframework.github.io/wffweb/wffweb-javadoc" target="_blank">wffweb-javadoc</a> for java documentation.</p>          
           
           <p><a href="https://github.com/webfirmframework/wff/issues" target="_blank">Click here for feature request/bug report</a>.</p>          
- 
-
-
-<!-- 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
- -->          
+   
         </aside>
       </div>
     </div>
