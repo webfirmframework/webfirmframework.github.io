@@ -4,6 +4,10 @@
 		<loc>https://webfirmframework.github.io</loc>
 	</url>
 	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/get-started.html
+		</loc>
+	</url>
+	<url>
 		<loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc</loc>
 	</url>
 </urlset>
