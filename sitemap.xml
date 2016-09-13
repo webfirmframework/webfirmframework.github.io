@@ -2,10 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-	<xhtml:link rel="alternate" href="https://webfirmframework.github.io"
-		hreflang="x-default" />
+	
 	<url>
 		<loc>https://webfirmframework.github.io</loc>
+		<xhtml:link rel="alternate" href="https://webfirmframework.github.io"
+		hreflang="x-default" />
 	</url>
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/get-started.html
