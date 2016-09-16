@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/github-light.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
+	media="print">
+
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<title>Developers Guide | Get Started</title>
+<link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+	<header>
+		<div class="inner">
+			<h1>wffweb</h1>
+			<h2>Java framework to develop web applications</h2>
+			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="inner clearfix">
+			<section id="main-content">
+
+				<h1>
+					<a id="mltp-design-pattern" class="anchor"
+						href="#mltp-design-pattern" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>MLTP Desing Pattern
+				</h1>
+
+				<p>
+					<i>MLTP</i> stands for <i>Model Logical-Template Push</i>. The
+					model (AKA domain object) gives the data required for
+					logical-template. Logical Template could be a reusable custom
+					template class containing wff java code which can generate a piece
+					of html for the UI. Push, which is done by the framework internally
+					itself when a template/layout is embedded by another template and
+					we don't have to take care about the push part.
+				</p>
+				
+				<h5>
+					<a id="example-for-logical-template" class="anchor"
+						href="#example-for-logical-template" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>Logical-template
+				</h5>
+
+				<p>Logical-template is a reusable template class which can
+					generate a specific portion of a ui with needful functionalities.
+					The below code shows a simple example for Logical-template. The
+					logical template may be provided model to show required data (it's
+					not included in the below code but you can simply modify). The mere
+					responsibility of a logical-template class is to generate a
+					specific portion of for ui with functionalities</p>
+
+
+				<pre><code>public class ListUsersTempate extends Div implements ServerAsyncMethod {
+
+    private TBody tBody;
+
+    private List<AbstractHtml> previousRows;
+
+    private int rowCount = 0;
+
+    private Button nextRowsButton;
+
+    private Button markGreenButton;
+
+    private Button markVioletButton;
+
+    private Button removeColoumnStyleButton;
+
+    private Style countryColumnStyle;
+
+    public ListUsersTempate() {
+        super(null);
+        
+        countryColumnStyle = new Style("background:yellow");
+
+        develop();
+    }
+    
+    private void develop() {
+        new StyleTag(this) {
+            {
+                new NoTag(this, "table {\n    font-family: arial, sans-serif;");
+                new NoTag(this, "border-collapse: collapse;\n    width: 100%;");
+                new NoTag(this, "}\n\ntd, th {");
+                new NoTag(this,
+                        "border: 1px solid #dddddd;\n    text-align: left;");
+                new NoTag(this, "padding: 8px;\n}");
+                new NoTag(this,
+                        "tr:nth-child(even) {\n    background-color: #dddddd;");
+                new NoTag(this, "}");
+            }
+        };
+
+        new Table(this) {
+            {
+                tBody = new TBody(this) {
+                    {
+                        new Tr(this) {
+                            {
+                                new Th(this) {
+                                    {
+                                        new NoTag(this, "Company");
+                                    }
+                                };
+                                new Th(this) {
+                                    {
+                                        new NoTag(this, "Contact");
+                                    }
+                                };
+                                new Th(this) {
+                                    {
+                                        new NoTag(this, "Country");
+                                    }
+                                };
+                            }
+                        };
+
+                    }
+                };
+            }
+        };
+
+        new Br(this);
+        new Br(this);
+
+        nextRowsButton = new Button(this, new OnClick(this)) {
+            {
+                new B(this) {
+                    {
+                        new NoTag(this, "Next");
+                    }
+                };
+            }
+        };
+
+        markGreenButton = new Button(this, new OnClick(this)) {
+            {
+                new B(this) {
+                    {
+                        new NoTag(this, "Mark column green");
+                    }
+                };
+            }
+        };
+
+        markVioletButton = new Button(this, new OnClick(this)) {
+            {
+                new B(this) {
+                    {
+                        new NoTag(this, "Mark column violet");
+                    }
+                };
+            }
+        };
+
+        removeColoumnStyleButton = new Button(this, new OnClick(this)) {
+            {
+                new B(this) {
+                    {
+                        new NoTag(this, "Remove style from column");
+                    }
+                };
+            }
+        };
+
+        // initially add rows
+        addRows();
+    }
+
+    private void addRows() {
+
+        List<AbstractHtml> rows = new LinkedList<AbstractHtml>();
+
+        for (int i = 0; i < 25; i++) {
+
+            Tr tr = new Tr(null) {
+                {
+                    rowCount++;
+
+                    new Td(this) {
+                        {
+                            new NoTag(this, "Alfreds Futterkiste " + rowCount);
+                        }
+                    };
+                    new Td(this) {
+                        {
+                            new NoTag(this, "Maria Anders " + rowCount);
+                        }
+                    };
+                    new Td(this, countryColumnStyle) {
+                        {
+                            new NoTag(this, "Germany " + rowCount);
+                        }
+                    };
+                }
+            };
+
+            rows.add(tr);
+        }
+
+        if (previousRows != null) {
+            tBody.removeChildren(previousRows);
+        }
+
+        tBody.appendChildren(rows);
+
+        previousRows = rows;
+
+    }
+
+    @Override
+    public WffBMObject asyncMethod(WffBMObject wffBMObject, Event event) {
+
+        if (nextRowsButton.equals(event.getSourceTag())) {
+            addRows();
+        } else if (markGreenButton.equals(event.getSourceTag())) {
+            System.out.println("Mark column green");
+            countryColumnStyle.addCssProperties("background:green");
+        } else if (markVioletButton.equals(event.getSourceTag())) {
+            System.out.println("Mark column violet");
+            countryColumnStyle.addCssProperties("background:violet");
+        } else if (removeColoumnStyleButton.equals(event.getSourceTag())) {
+            System.out.println("remove style");
+            AbstractHtml[] ownerTags = countryColumnStyle.getOwnerTags();
+            
+            for (AbstractHtml ownerTag : ownerTags) {
+                ownerTag.removeAttributes(countryColumnStyle.getAttributeName());
+            }
+        }
+
+        return null;
+    }
+
+}
+				</code></pre>
+				
+				<p>Later you can add this template class to any specific portion of ui, eg:</p>
+				
+				<pre><code>ListUsersTempate listUsers = new ListUsersTempate();
+
+//suppose you have a <i>div</i> in the ui to add, then
+
+div.appendChild(listUsers);
+</code></pre>
+
+
+				<br><br>
+<p>This documentation is being prepared, stay tuned!</p>
+
+				<p>
+					For any technical assistance mail to <a
+						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+				</p>
+
+
+
+				<br> <br> <br> <br>
+
+				<p>
+					Subscribe <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
+						youtube</a> for technical videos
+				</p>
+			</section>
+
+			<aside id="sidebar">
+				<a
+					href="https://search.maven.org/remote_content?g=com.webfirmframework&a=wffweb&v=LATEST"
+					class="button"> <small>Download</small> latest .jar file
+				</a>
+				<!--
+           <a href="https://github.com/webfirmframework/wff/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+ -->
+
+				<p class="repo-owner">
+					<a href="../index.html">Home</a>
+				</p>
+
+				<p class="repo-owner">
+					<a href="get-started.html">Get Started</a>
+				</p>
+				<p class="repo-owner">
+					<a href="wffweb-configurations.html">wff Configurations</a>
+				</p>
+				
+				<p class="repo-owner">
+					<a href="mltp-design-pattern.html">MLTP Design Pattern</a>
+				</p>
+
+				<p class="repo-owner">
+					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
+					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.
+				</p>
+
+				<p>
+					Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a>
+					for code samples.
+				</p>
+
+				<p>
+					Visit <a
+						href="../wffweb/wffweb-javadoc/index.html"
+						target="_blank">wffweb-javadoc</a> for java documentation.
+				</p>
+
+				<p>
+					<a href="https://github.com/webfirmframework/wff/issues"
+						target="_blank">Click here for feature request/bug report</a>.
+				</p>
+				<p>
+					<a href="http://www.mochasupport.com/aff/idevaffiliate.php?id=6128&url=243" >Click here to download a demo project of wffweb with tomcat 8</a>.
+				</p>
+
+
+				<!-- 
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
+ -->
+			</aside>
+		</div>
+	</div>
+
+
+</body>
+</html>
