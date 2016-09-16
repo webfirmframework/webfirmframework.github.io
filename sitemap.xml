@@ -28,4 +28,14 @@
 			href="https://webfirmframework.github.io/wffweb/wffweb-javadoc"
 			hreflang="x-default" />
 	</url>
+
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/mltp-design-pattern.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/mltp-design-pattern.html"
+			hreflang="x-default" />
+	</url>
+
+
 </urlset>
