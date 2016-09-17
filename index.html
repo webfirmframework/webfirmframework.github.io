@@ -116,11 +116,31 @@ function googleTranslateElementInit() {
           <h1>
 <a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span class="octicon octicon-link"></span></a>wffweb</h1>
 
-<p>Web Firm Framework is a java framework to build web applications. The advantage of using this framework is its ability to generate html and css dynamically. In version-1.x.x, it is providing features to generate html &amp; css dynamically and some other sophisticated features for ui development. It also provides some inbuilt support for optimized html/css output. It supports html5 and css3 for the ui generation.  As it is java framework we don’t have to keep any separate html/css files, instead we are keeping java files for ui (for html/css generation). A simple rest api or even servlet support is enough to create web applications with this framework. The performance rate will be very high with applications developed by this framework.</p>
+				<p>Web Firm Framework is an open source java framework to build
+					web applications. The advantage of using this framework is its
+					ability to generate html and css dynamically. In version-1.x.x, it
+					provides features to generate html &amp; css dynamically and some
+					other sophisticated features for ui development. It also provides
+					some inbuilt support for optimized html/css output. It supports
+					html5 and css3 for the ui generation. We don’t have to keep any
+					separate html/css files, instead we are keeping java files for ui
+					(for html/css generation). A simple rest api or even servlet
+					support is enough to create web applications with this framework.
+					The performance rate will be very high with applications developed
+					by this framework.</p>
 
-<p> Since wffweb-2.0.0, it provides inbuilt support for client server bi-directional communication and many more. Check out <a href="developers-guide/get-started.html">Developers Guide</a> for more info.</p>
+				<p>
+					Since wffweb-2.0.0, it provides inbuilt support for client server
+					bi-directional communication and many more. Check out <a
+						href="developers-guide/get-started.html">Developers Guide</a> for
+					more info.
+				</p>
 
-<h5>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/UWoNliHOy6A" frameborder="0"
+					allowfullscreen></iframe>
+
+				<h5>
 <a id="whom-is-this-framework-for" class="anchor" href="#whom-is-this-framework-for" aria-hidden="true"><span class="octicon octicon-link"></span></a>Whom is this framework for?</h5>
 
 <p>Developers who want to be a designer to develop very complex ui. Say for example, an online spreadsheet where each cell has many functionalities.</p>
@@ -164,17 +184,13 @@ function googleTranslateElementInit() {
 				<h5>
 <a id="sample1--" class="anchor" href="#sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample1 :-</h5>
 
-<pre><code class="notranslate">Html html = new Html(null) {
+<pre><code class="notranslate">Html html = new Html(null) {{
+	new Head(this);
+	new Body(this) {{
+		new NoTag(this, "Hello World");
+	}};
+}};
 
-            Head head = new Head(this);
-
-            Body body = new Body(this) {
-
-                Blank blank = new Blank(this, "Hello World");
-
-            };
-
-};
 // prepends the doc type &lt;!DOCTYPE html&gt;
 html.setPrependDocType(true);
 System.out.println(html.toHtmlString()); 
@@ -200,7 +216,7 @@ Hello World
 
 
 
-<p>Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a> for more details</p>
+<p>Refer <a href="developers-guide/get-started.html">Developers Guide</a> for more details</p>
         </section>
 
         <aside id="sidebar">
@@ -231,6 +247,7 @@ Hello World
       </div>
     </div>
 
+<footer style="text-align:center"><a href="http://webfirmframework.com">webfirmframework</a></footer>
   
   </body>
 </html>
