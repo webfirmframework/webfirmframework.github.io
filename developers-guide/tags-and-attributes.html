@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/github-light.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
+	media="print">
+
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<title>wffweb Tags and Attributes</title>
+<link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+	<header>
+		<div class="inner">
+			<h1>wffweb</h1>
+			<h2>Java framework to develop web applications</h2>
+			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="inner clearfix">
+			<section id="main-content" >
+				<h1>
+					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>Tags and Attributes
+				</h1>
+
+				<h5>Tag</h5>
+
+				<p>
+					For every html tag, there is a corresponding java class, eg:- To
+					represent <i>div</i> tag in html, there is a <code>Div</code> class. See the below code 
+				</p>
+				
+				<pre class="notranslate"><code>Div div = new Div(null);
+System.out.println(div.toHtmlString());</code></pre>
+
+this code will print 
+
+<pre class="notranslate"><code><xmp><div></div></xmp></code></pre>
+
+				<p>
+					The first argument in tag constructor (i.e.
+					<code>Div</code>
+					here) is its parent/outer tag. In the above example, there is no
+					parent tag so passed as
+					<code>null</code>
+					. A tag cannot have more than one direct parent tag. The preceding arguments in the constructor are attribute classes.
+					Let us check another example a <i>span</i> tag surrounded by <i>div</i> tag,
+				</p>
+				<pre class="notranslate"><code>new Div(null) {{
+    new Span(this);
+}};
+System.out.println(div.toHtmlString());</code></pre>
+               <p>prints</p>
+               
+               <pre class="notranslate"><code><xmp><div>
+    <span></span>
+</div></xmp></code></pre>
+				
+				
+				<h5>Attribute</h5>
+				<p>
+					Just like tag, every html attribute has corresponding
+					attribute java class, eg:- To represent <i>style</i> attribute, the
+					corresponding java class
+					<code>Style</code>. Check the below code to declare attribute.
+				</p>
+<pre class="notranslate"><code>Style style =  new Style("color:green");</code></pre>
+
+				
+				
+				<h5>Give attribute to tag</h5>
+				<p>
+					An attribute can be given to tag either by passing as a constructor
+					argument or using
+					<code>addAttributes</code>
+					method of that tag. Of course, an attribute can be added to
+					multiple tags.
+				</p>
+				
+				<h6>By passing as a constructor argument</h6>
+				<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
+System.out.println(div.toHtmlString());</code></pre>
+
+				<p>prints</p>
+				<pre class="notranslate"><code><xmp><div style="color:green"></div></xmp></code></pre>
+				
+
+				
+				<h6>By addAttributes method</h6>
+				<pre class="notranslate"><code>Div div = new Div(null);
+				
+Style style =  new Style("color:green");
+Id id =  new Id("divId1");
+
+div.addAttributes(style, id);</code></pre>
+				
+				<p>prints</p>
+				
+				<pre class="notranslate"><code><xmp><div id="divId1" style="color:green"></div></xmp></code></pre>
+				
+				<h5>Add or remove child tag in a tag</h5>
+				<p>Adding or removing child tags is similar to javascript
+					functional concept of a node. There are also few additional
+					methods.</p>
+				<p>
+					There are few methods in the tag class to add child tags, they are
+					<code>appendChild</code>
+					,
+					<code>appendChildren</code>
+					and
+					<code>addInnerHtml</code>
+					. The method
+					<code>addInnerHtml</code>
+					will replace all existing child tags. If a tag is added a child tag
+					which is already a child tag of another tag class then the child
+					will be removed from its previous parent tag because a tag cannot have
+					more than one direct parent tag.
+				</p>
+				<p>
+					The methods for removing tags are
+					<code>removeAllChildren</code>
+					to remove all children,
+					<code>removeChild</code>
+					to remove specific tag and
+					<code>removeChildren</code>
+					to remove multiple tags.
+				</p>
+
+
+				<p>
+					<a href="mltp-design-pattern.html">Next >></a>
+				</p>
+
+				<br> <br> 
+
+				<p>
+					Subscribe <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
+						youtube</a> for technical videos
+				</p>
+			</section>
+
+			<aside id="sidebar">
+				<a
+					href="https://search.maven.org/remote_content?g=com.webfirmframework&a=wffweb&v=LATEST"
+					class="button"> <small>Download</small> latest .jar file
+				</a>
+				<!--
+           <a href="https://github.com/webfirmframework/wff/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+ -->
+
+				<p class="repo-owner">
+					<a href="../index.html">Home</a>
+				</p>
+
+				<p class="repo-owner">
+					<a href="get-started.html">Get Started</a>
+				</p>
+				<p class="repo-owner">
+					<a href="wffweb-configurations.html">wff Configurations</a>
+				</p>
+				
+				<p class="repo-owner">
+					<a href="mltp-design-pattern.html">MLTP Design Pattern</a>
+				</p>
+
+				<p class="repo-owner">
+					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
+					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.
+				</p>
+
+				<p>
+					Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a>
+					for code samples.
+				</p>
+
+				<p>
+					Visit <a
+						href="../wffweb/wffweb-javadoc/index.html"
+						target="_blank">wffweb-javadoc</a> for java documentation.
+				</p>
+
+				<p>
+					<a href="https://github.com/webfirmframework/wff/issues"
+						target="_blank">Click here for feature request/bug report</a>.
+				</p>
+				<p>
+					<a href="http://www.mochasupport.com/aff/idevaffiliate.php?id=6128&url=243" >Click here to download a demo project of wffweb with tomcat 8</a>.
+				</p>
+
+
+				<!-- 
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
+ -->
+			</aside>
+		</div>
+	</div>
+
+<footer style="text-align:center"><a href="http://webfirmframework.com">webfirmframework</a></footer>
+</body>
+</html>
