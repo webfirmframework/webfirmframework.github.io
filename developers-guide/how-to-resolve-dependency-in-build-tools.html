@@ -35,55 +35,53 @@
 
 	<div id="content-wrapper">
 		<div class="inner clearfix">
-			<section id="main-content">
+			<section id="main-content" class="notranslate">
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link"></span></a>Introduction to wffweb-2.x.x
+						class="octicon octicon-link"></span></a>Resolve dependency in build tools
 				</h1>
 
-				<p>
-					This developer guide is based on <i>wffweb-2.x.x</i> version
-					because <i>wffweb-1.x.x</i> provides just to generate html/css but
-					<i>wffweb-2.x.x</i> comes with server-client bi-directional
-					communication, event handling, writing server side/client side code
-					etc... Before getting started with code watch <a target="_blank"
-						href="https://www.youtube.com/watch?v=UWoNliHOy6A">this video</a>
-					to understand the main features of <i>wffweb-2.x.x</i> version. The
-					wffweb-2.0.0 is decoupled with java ee modules so you have to
-					configure your project before use. The configurations may be
-					different on different servers you are using. <a
-						href="../wffweb-demo-projects/tomcat-8-wffweb-demo-apps-master.zip"
-						download>A sample project configured for tomcat 8 can be
-						downloaded from here.</a>
+				<h5>Apache Buildr</h5>
 
+				<pre><code>'com.webfirmframework:wffweb:jar:2.0.0'</code></pre>
+				
+				<h5>Gradle Grails</h5>
 
-				</p>
+				<pre><code>compile 'com.webfirmframework:wffweb:2.0.0'</code></pre>
+				
+				<h5>Groovy Grape</h5>
 
-				<iframe width="560" height="315"
-					src="https://www.youtube.com/embed/UWoNliHOy6A" frameborder="0"
-					allowfullscreen></iframe>
+				<pre><code>@Grapes( 
+@Grab(group='com.webfirmframework', module='wffweb', version='2.0.0') 
+)</code></pre>
+				
+				<h5>ivy</h5>
 
+				<pre><code><xmp><dependency org="com.webfirmframework" name="wffweb" rev="2.0.0" /></xmp></code></pre>
+				
+				<h5>Leiningen</h5>
 
-				<h5>Java version</h5>
-				<p>wffweb requires Java 1.7 or later</p>
+				<pre><code>[com.webfirmframework/wffweb "2.0.0"]</code></pre>
+				
+				<h5>maven</h5>
 
-				<h5>Browser compatibility</h5>
-				<p>Currently, wffweb applications are compatible with only html5
-					supported browsers because it uses html5 websocket at client side.</p>
+				<pre><code><xmp><dependencies>
+    <dependency>
+        <groupId>com.webfirmframework</groupId>
+        <artifactId>wffweb</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+</dependencies></xmp></code></pre>
 
+				<h6>To automatically resolve with the latest version</h6>
 
-				<h5>Server compatibility</h5>
-				<p>Server should support websocket. <a href="http://mochahost.com/javavps_order.php?id=6128&tid1=githubpages&tid2=webfirmframework&tid3=developersguide&tid4=getstarted">vps servers</a> are fine for production use.</p>
-
-				<p>
-					<a href="wffweb-configurations.html">Next >></a>
-				</p>
-
-				<p>
-					For any technical assistance mail to <a
-						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
-				</p>
-
+				<pre><code><xmp><dependencies>
+    <dependency>
+	    <groupId>com.webfirmframework</groupId>
+	    <artifactId>wffweb</artifactId>
+	    <version>RELEASE</version>
+    </dependency>
+</dependencies></xmp></code></pre>
 
 
 				<br> <br> <br> <br>
@@ -136,12 +134,6 @@
 					Visit <a
 						href="../wffweb/wffweb-javadoc/index.html"
 						target="_blank">wffweb-javadoc</a> for java documentation.
-				</p>
-
-				<p>
-					<a
-						href="how-to-resolve-dependency-in-build-tools.html">Resolve
-						dependency in build tools</a>
 				</p>
 
 				<p>
