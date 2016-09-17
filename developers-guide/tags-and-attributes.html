@@ -64,7 +64,7 @@ this code will print
 					. A tag cannot have more than one direct parent tag. The preceding arguments in the constructor are attribute classes.
 					Let us check another example a <i>span</i> tag surrounded by <i>div</i> tag,
 				</p>
-				<pre class="notranslate"><code>new Div(null) {{
+				<pre class="notranslate"><code>Div div = new Div(null) {{
     new Span(this);
 }};
 System.out.println(div.toHtmlString());</code></pre>
