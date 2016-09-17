@@ -30,6 +30,14 @@
 			href="https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html"
 			hreflang="x-default" />
 	</url>
+	
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html"
+			hreflang="x-default" />
+	</url>
 
 	<url>
 		<loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc</loc>
