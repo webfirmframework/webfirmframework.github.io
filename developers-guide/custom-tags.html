@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>Resolve wffweb dependency in build tools</title>
+<title>wffweb Custom Tags and Attributes</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -35,56 +35,76 @@
 
 	<div id="content-wrapper">
 		<div class="inner clearfix">
-			<section id="main-content" class="notranslate">
+			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link"></span></a>Resolve wffweb dependency in build tools
+						class="octicon octicon-link"></span></a>Custom Tags and Attributes
 				</h1>
 
-				<h5>Apache Buildr</h5>
+				<h5>Tag</h5>
 
-				<pre><code>'com.webfirmframework:wffweb:jar:2.0.0'</code></pre>
+				<p>
+					<code>CustomTag</code>
+					class can be used to create a new tag similar to the existing
+					tags like
+					<code>Div</code>
+					.
+				</p>
 				
-				<h5>Gradle Grails</h5>
+<pre class="notranslate"><code>public class NewTag extends CustomTag {
 
-				<pre><code>compile 'com.webfirmframework:wffweb:2.0.0'</code></pre>
+    private static final long serialVersionUID = 1L;
+
+    public NewTag(AbstractHtml base, AbstractAttribute... attributes) {
+        super("newtag", TagType.OPENING_CLOSING, base, attributes);
+    }
+
+    // TODO your own feature methods
+
+    @Override
+    public NewTag clone() throws CloneNotSupportedException {
+        return (NewTag) super.clone();
+    }
+
+}</code></pre>
+
+
+
+<p><code>NewTag</code> may be used as a tag like <code>Div</code> tag. The below code shows custom tag without keeping a separate class</p>
+				<pre class="notranslate"><code>CustomTag customTag = new CustomTag("newtag", null, new Id("ct1Id")) {
+    CustomTag customTag = new CustomTag("anothertag", this);
+};
+System.out.println(customTag.toHtmlString());</code></pre>
+
+this code will print 
+
+<pre class="notranslate"><code><xmp><newtag id="ct1Id">
+    <anothertag></anothertag>
+</newtag></xmp></code></pre>
+
+				<p>
+					The first argument in
+					<code>CustomTag</code>
+					constructor is tag name. There are three types of
+					<code>TagType</code>
+					,
+					<code>TagType.OPENING_CLOSING</code>
+					,
+					<code>TagType.SELF_CLOSING</code>
+					and
+					<code>TagType.NON_CLOSING</code>
+					. Example for
+					<code>TagType.OPENING_CLOSING</code>
+					is <i><xmp><div></div></xmp></i> which has opening and closing tag. Example for
+					<code>TagType.SELF_CLOSING</code>
+					is <i><xmp><input type="text"/></xmp></i> which can be self closed and no need to have a
+					closing tag. Example for
+					<code>TagType.NON_CLOSING</code>
+					is <i><xmp><meta charset="UTF-8"></xmp></i> which need neither be self closed nor be closed with
+					closing tag.
+				</p>
 				
-				<h5>Groovy Grape</h5>
-
-				<pre><code>@Grapes( 
-@Grab(group='com.webfirmframework', module='wffweb', version='2.0.0') 
-)</code></pre>
-				
-				<h5>ivy</h5>
-
-				<pre><code><xmp><dependency org="com.webfirmframework" name="wffweb" rev="2.0.0" /></xmp></code></pre>
-				
-				<h5>Leiningen</h5>
-
-				<pre><code>[com.webfirmframework/wffweb "2.0.0"]</code></pre>
-				
-				<h5>maven</h5>
-
-				<pre><code><xmp><dependencies>
-    <dependency>
-        <groupId>com.webfirmframework</groupId>
-        <artifactId>wffweb</artifactId>
-        <version>2.0.0</version>
-    </dependency>
-</dependencies></xmp></code></pre>
-
-				<h6>To automatically resolve with the latest version</h6>
-
-				<pre><code><xmp><dependencies>
-    <dependency>
-	    <groupId>com.webfirmframework</groupId>
-	    <artifactId>wffweb</artifactId>
-	    <version>RELEASE</version>
-    </dependency>
-</dependencies></xmp></code></pre>
-
-
-				<br> <br> <br> <br>
+				<br> <br> 
 
 				<p>
 					Subscribe <a
@@ -115,15 +135,11 @@
 				<p class="repo-owner">
 					<a href="wffweb-configurations.html">wff Configurations</a>
 				</p>
-				<p class="repo-owner">
-					<a href="tags-and-attributes.html">Tags and Attributes</a>
-				</p>
+				
 				<p class="repo-owner">
 					<a href="mltp-design-pattern.html">MLTP Design Pattern</a>
 				</p>
-				<p class="repo-owner">
-					<a href="custom-tags.html">Custom Tag</a>
-				</p>
+
 				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.

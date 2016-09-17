@@ -30,6 +30,14 @@
 			href="https://webfirmframework.github.io/developers-guide/tags-and-attributes.html"
 			hreflang="x-default" />
 	</url>
+	
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/custom-tags.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/custom-tags.html"
+			hreflang="x-default" />
+	</url>
 
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html
