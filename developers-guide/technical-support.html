@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb Custom Tags and Attributes</title>
+<title>wffweb Technical Support</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -38,72 +38,56 @@
 			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Custom Tags and Attributes</span></a>
+						class="octicon octicon-link">Technical Support</span></a>
 				</h1>
 
-				<h5>Tag</h5>
+				<p>
+				We provide two modes of support. <a href="#freeSupportId">Free support</a> and <a href="#paidSupportId">paid support</a>.
+				</p>
+
+				<h5 id="freeSupportId">Free support</h5>
 
 				<p>
-					<code>CustomTag</code>
-					class can be used to create a new tag similar to the existing
-					tags like
-					<code>Div</code>
-					.
+					If you are unable to achieve a requirement with <i>wffweb</i>, we will
+					provide free solution for how to get it done. For that, you have to create a <a
+						href="https://github.com/webfirmframework/wff/issues">ticket</a> with <i>help wanted</i> label. And we will also
+					publish the solution provided in our website for others
+					reference. 
 				</p>
-				
-<pre class="notranslate"><code>public class NewTag extends CustomTag {
-
-    private static final long serialVersionUID = 1L;
-
-    public NewTag(AbstractHtml base, AbstractAttribute... attributes) {
-        super("newtag", TagType.OPENING_CLOSING, base, attributes);
-    }
-
-    // TODO your own feature methods
-
-    @Override
-    public NewTag clone() throws CloneNotSupportedException {
-        return (NewTag) super.clone();
-    }
-
-}</code></pre>
-
-
-
-<p><code>NewTag</code> may be used as a tag like <code>Div</code> tag. The below code shows custom tag without keeping a separate class</p>
-				<pre class="notranslate"><code>CustomTag customTag = new CustomTag("newtag", null, new Id("ct1Id")) {
-    CustomTag customTag = new CustomTag("anothertag", this);
-};
-System.out.println(customTag.toHtmlString());</code></pre>
-
-this code will print 
-
-<pre class="notranslate"><code><xmp><newtag id="ct1Id">
-    <anothertag></anothertag>
-</newtag></xmp></code></pre>
-
 				<p>
-					The first argument in
-					<code>CustomTag</code>
-					constructor is tag name. There are three types of
-					<code>TagType</code>
-					,
-					<code>TagType.OPENING_CLOSING</code>
-					,
-					<code>TagType.SELF_CLOSING</code>
-					and
-					<code>TagType.NON_CLOSING</code>
-					. Example for
-					<code>TagType.OPENING_CLOSING</code>
-					is <i><xmp><div></div></xmp></i> which has opening and closing tag. Example for
-					<code>TagType.SELF_CLOSING</code>
-					is <i><xmp><input type="text"/></xmp></i> which can be self closed and no need to have a
-					closing tag. Example for
-					<code>TagType.NON_CLOSING</code>
-					is <i><xmp><meta charset="UTF-8"></xmp></i> which need neither be self closed nor be closed with
-					closing tag.
+					If your project is hosted in a domain say <i>domain1.com</i> and you want
+					some technical help for that specific project requirements, we can
+					provide you free private support if you place a link <i><a
+						href="http://webfirmfamework.com">Powered by wffweb</a></i> pointing
+					to <i>webfirmfamework.com</i> website.
 				</p>
 				
+				<h5 id="paidSupportId">Paid support</h5>
+				<p>
+					If you have specific requirements to get it done but you don't want
+					to code it yourself then you can request for a paid support to <a
+						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+					our developers can code it for you. There are two categories of
+					paid support, <a href="#payPerRequirement">Pay per requirement</a>
+					and <a href="#payPerDeveloper">pay per developer</a>.
+
+				</p>
+				<h6 id="payPerRequirement">Pay per requirement</h6>
+				<p>You have to pay only for your requirements. The charges
+					depend upon the requirements. Once we receive your requirement we
+					will analyze and estimate the cost and let you inform. We will work
+					on it only after your approval.</p>
+
+				<h6 id="payPerDeveloper">Pay per developer</h6>
+				<p>You will be provided a dedicated developer to get your work
+					done. There are few categories of developer, <i>40 hours/week
+					developer</i>, <i>32 hours/week developer</i> and <i>24 hours/week developer</i>. The
+					developer will be available to work in your time zone. The payment
+					is made on monthly basis.</p>
+					
+					Contact <a
+						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a> for more info.
+
 				<br> <br> 
 
 				<p>
@@ -163,10 +147,10 @@ this code will print
 				<p>
 					<a href="http://www.mochasupport.com/aff/idevaffiliate.php?id=6128&url=243" >Click here to download a demo project of wffweb with tomcat 8</a>.
 				</p>
+
 				<p>
 					<a href="technical-support.html" >Technical Support</a>
 				</p>
-
 				<!-- 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
  -->
