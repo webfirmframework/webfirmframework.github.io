@@ -46,6 +46,14 @@
 			href="https://webfirmframework.github.io/developers-guide/custom-attributes.html"
 			hreflang="x-default" />
 	</url>
+	
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/css-properties.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/css-properties.html"
+			hreflang="x-default" />
+	</url>
 
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html
