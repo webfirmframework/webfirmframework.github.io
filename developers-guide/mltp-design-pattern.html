@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>Developers Guide | Get Started</title>
+<title>Developers Guide | MLTP Architecture</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -40,7 +40,7 @@
 				<h1>
 					<a id="mltp-design-pattern" class="anchor"
 						href="#mltp-design-pattern" aria-hidden="true"><span
-						class="octicon octicon-link">MLTP Desing Pattern</span></a>
+						class="octicon octicon-link">MLTP Architecture</span></a>
 				</h1>
 
 				<p>
@@ -56,7 +56,7 @@
 				<h5>
 					<a id="example-for-logical-template" class="anchor"
 						href="#example-for-logical-template" aria-hidden="true"><span
-						class="octicon octicon-link"></span></a>Logical-template
+						class="octicon octicon-link">Logical-template</span></a>
 				</h5>
 
 				<p>Logical-template is a reusable template class which can
@@ -261,7 +261,7 @@
 div.appendChild(listUsers);
 </code></pre>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1slPHG0_tOI?html5=1" frameborder="0" allowfullscreen></iframe>
+<iframe id="addRemoveChildTemplatesVideo" width="560" height="315" src="https://www.youtube.com/embed/1slPHG0_tOI?html5=1" frameborder="0" allowfullscreen></iframe>
 <br><br>
 				<p>
 					<a href="custom-tags.html">Next >></a>
@@ -296,23 +296,36 @@ div.appendChild(listUsers);
           </a>
  -->
 
-				<p class="repo-owner">
+			<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
 				<p class="repo-owner">
 					<a href="get-started.html">Get Started</a>
 				</p>
-				<p class="repo-owner">
+				<div class="repo-owner">
 					<a href="wffweb-configurations.html">wff Configurations</a>
-				</p>
+					<ul>
+				<li><a
+						href="wffweb-configurations.html#browserPage">Browser Page
+							</a></li>
+				</ul>
+				</div>
 				<p class="repo-owner">
 					<a href="tags-and-attributes.html">Tags and Attributes</a>
 				</p>
-				<p class="repo-owner">
-					<a href="mltp-design-pattern.html">MLTP Design Pattern</a>
-				</p>
-				
+				<div class="repo-owner">
+					<a href="mltp-design-pattern.html">MLTP Architecture</a>
+				<ul>
+				<li><a
+						href="mltp-design-pattern.html#example-for-logical-template">Logical-template
+							Template</a></li>
+					<li><a
+						href="mltp-design-pattern.html#addRemoveChildTemplatesVideo">Add/Remove
+							Template</a></li>
+				</ul>
+				</div>
+
 				<p class="repo-owner">
 					<a href="custom-tags.html">Custom Tag</a>
 				</p>
@@ -323,6 +336,7 @@ div.appendChild(listUsers);
 				<p class="repo-owner">
 					<a href="css-properties.html">CSS Properties</a>
 				</p>
+				
 				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.

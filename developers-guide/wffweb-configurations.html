@@ -120,9 +120,14 @@ public class SessionListener implements HttpSessionListener {
 }
 </code></pre>
 
-<h5>3. Setting up <code>BrowserPage</code></h5>
+				<h5>
+					<a id="browserPage" class="anchor" href="#browserPage"
+						aria-hidden="true"><span class="octicon octicon-link">3.
+							Setting up <code>BrowserPage</code>
+					</span></a>
+				</h5>
 
-<p><code>BrowserPage</code> represents UI page (window) of a browser. In a single page application, there will be only one <code>BrowserPage</code>.</p>
+				<p><code>BrowserPage</code> represents UI page (window) of a browser. In a single page application, there will be only one <code>BrowserPage</code>.</p>
 <pre><code>public class IndexPage extends BrowserPage {
 
     @Override
@@ -273,23 +278,36 @@ public class IndexPageServlet extends HttpServlet {
           </a>
  -->
 
-				<p class="repo-owner">
+			<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
 				<p class="repo-owner">
 					<a href="get-started.html">Get Started</a>
 				</p>
-				<p class="repo-owner">
+				<div class="repo-owner">
 					<a href="wffweb-configurations.html">wff Configurations</a>
-				</p>
+					<ul>
+				<li><a
+						href="wffweb-configurations.html#browserPage">Browser Page
+							</a></li>
+				</ul>
+				</div>
 				<p class="repo-owner">
 					<a href="tags-and-attributes.html">Tags and Attributes</a>
 				</p>
-				<p class="repo-owner">
-					<a href="mltp-design-pattern.html">MLTP Design Pattern</a>
-				</p>
-				
+				<div class="repo-owner">
+					<a href="mltp-design-pattern.html">MLTP Architecture</a>
+				<ul>
+				<li><a
+						href="mltp-design-pattern.html#example-for-logical-template">Logical-template
+							Template</a></li>
+					<li><a
+						href="mltp-design-pattern.html#addRemoveChildTemplatesVideo">Add/Remove
+							Template</a></li>
+				</ul>
+				</div>
+
 				<p class="repo-owner">
 					<a href="custom-tags.html">Custom Tag</a>
 				</p>
@@ -300,6 +318,7 @@ public class IndexPageServlet extends HttpServlet {
 				<p class="repo-owner">
 					<a href="css-properties.html">CSS Properties</a>
 				</p>
+				
 				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.
