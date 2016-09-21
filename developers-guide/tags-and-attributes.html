@@ -99,9 +99,11 @@ System.out.println(div.toHtmlString());</code></pre>
 					argument or using
 					<code>addAttributes</code>
 					method of that tag. Of course, an attribute can be added to
-					multiple tags.
+					multiple tags. If an attribute object is added to multiple tags,
+					then changing the attribute object properties will apply to all tags to
+					which it is added.
 				</p>
-				
+
 				<h6>By passing as a constructor argument</h6>
 				<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
 System.out.println(div.toHtmlString());</code></pre>
@@ -201,7 +203,9 @@ div.addAttributes(style, id);</code></pre>
 				<p class="repo-owner">
 					<a href="custom-attributes.html">Custom Attribute</a>
 				</p>
-				
+				<p class="repo-owner">
+					<a href="css-properties.html">CSS Properties</a>
+				</p>
 				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.

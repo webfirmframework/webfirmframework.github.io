@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb Custom Attributes</title>
+<title>wffweb custom css properties</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -38,78 +38,38 @@
 			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Custom Attributes</span></a>
+						class="octicon octicon-link">CSS properties</span></a>
 				</h1>
 
-				<p>
-					As explained in <a href="tags-and-attributes.html">attributes
-						section</a>, custom attribute may also be considered as two,
-					<code>com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute</code>
-					class can be used to create a new attribute similar to the existing attribures
-					like
-					<code>Id</code>
-					and
-					<code>com.webfirmframework.wffweb.tag.html.attribute.event.CustomEventAttribute</code>
-					which can be used to create a new event attribute similar to existing event attributes like <i>OnClick</i>.
-				</p>
-				
-				<h5>CustomAttribute</h5>
-				
-				<h6>Custom attribute with value :</h6>
-				
-				<pre class="notranslate"><code>Div div = new Div(null, new CustomAttribute("attribute-with", "value"));
-System.out.println(div);</code></pre>
-				
-				prints
-				
-				<pre class="notranslate"><code><xmp><div attribute-with="value"></div></xmp></code></pre>
-				
-				<h6>Custom attribute without value :</h6>
-				
-				<pre class="notranslate"><code>Div div = new Div(null, new CustomAttribute("attribute-without-value"));
-System.out.println(div);</code></pre>
-				
-				prints
-				
-				<pre class="notranslate"><code><xmp><div attribute-without-value></div></xmp></code></pre>
+				<p>CSS properties are the properties of a style attribute. There
+					are multiple ways to set css properties to a style object, see the
+					below code</p>
 
-				<p>You can also keep your own implementation class by extending
-					CustomAttribute class, see the below samples</p>
-					
-					<h6>To create custom attribute as a separate class</h6>
-					
-				<pre class="notranslate"><code>import com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute;
+				<pre class="notranslate"><code>//if you initially want to have some css properties
+Style style = new Style("text-align:center;background-color:green");
 
-public class CommonDataAttribute extends CustomAttribute {
+//another way of adding css property
+BackgroundColor backgroundColor = new BackgroundColor(CssColorName.BLUE);
+style.addCssProperties(backgroundColor);
 
-    private static final long serialVersionUID = 1L;
+//again another way of adding css property
+style.addCssProperty("align-content", "center");
 
-    public CommonDataAttribute(String attributeValue) {
-        super("common-data", attributeValue);
-    }
+//there some more methods to add/remove/modify properties
+//in a style class those you can find from style object.
 
-    // TODO write the feature methods for this attribute
+//to print the attribute name and value
+System.out.println(style.toHtmlString());
+</code></pre>
 
-}</code></pre>
+the final style object will have this outcome 
+<pre class="notranslate"><code><xmp>style="text-align:center;background-color:blue;align-content:center"</xmp></code></pre>
 
-<pre class="notranslate"><code>public static void main(String[] args) {
 
-    Div div = new Div(null, new CommonDataAttribute("data1")) {
-        Div div = new Div(this, new CommonDataAttribute("data2"));
-    };
+				<p>If a style object is added to multiple tags, then changing
+					the style object properties will apply to all tags to which it is
+					added.</p>
 
-    System.out.println(div.toHtmlString());
-}</code></pre>
-
-this will print
-
-<pre class="notranslate"><code><xmp><div common-data="data1">
-    <div common-data="data2"></div>
-</div></xmp></code></pre>
-
-				<p>
-					<a href="css-properties.html">Next >></a>
-				</p>
 				
 				<br> <br> 
 
