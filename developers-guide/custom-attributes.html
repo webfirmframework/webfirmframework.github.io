@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb demo project configured for tomcat-8</title>
+<title>wffweb Custom Attributes</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -35,31 +35,82 @@
 
 	<div id="content-wrapper">
 		<div class="inner clearfix">
-			<section id="main-content">
+			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">wffweb demo app</span></a>
+						class="octicon octicon-link">Custom Attributes</span></a>
 				</h1>
-				<br>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/PUkYApKxxew?html5=1" frameborder="0" allowfullscreen></iframe>
-					<br><br>
 
 				<p>
-					You can find this demo project in <a target="_blank"
-						href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps">github</a> or <a
-						href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps/archive/master.zip">download
-						it from here</a>.
+					As explained in <a href="tags-and-attributes.html">attributes
+						section</a>, custom attribute may also be considered as two,
+					<code>com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute</code>
+					class can be used to create a new attribute similar to the existing attribures
+					like
+					<code>Id</code>
+					and
+					<code>com.webfirmframework.wffweb.tag.html.attribute.event.CustomEventAttribute</code>
+					which can be used to create a new event attribute similar to existing event attributes like <i>OnClick</i>.
 				</p>
+				
+				<h5>CustomAttribute</h5>
+				
+				<h6>Custom attribute with value :</h6>
+				
+				<pre class="notranslate"><code>Div div = new Div(null, new CustomAttribute("attribute-with", "value"));
+System.out.println(div);</code></pre>
+				
+				prints
+				
+				<pre class="notranslate"><code><xmp><div attribute-with="value"></div></xmp></code></pre>
+				
+				<h6>Custom attribute without value :</h6>
+				
+				<pre class="notranslate"><code>Div div = new Div(null, new CustomAttribute("attribute-without-value"));
+System.out.println(div);</code></pre>
+				
+				prints
+				
+				<pre class="notranslate"><code><xmp><div attribute-without-value></div></xmp></code></pre>
+
+				<p>You can also keep your own implementation class by extending
+					CustomAttribute class, see the below samples</p>
+					
+					<h6>To create custom attribute as a separate class</h6>
+					
+				<pre class="notranslate"><code>import com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute;
+
+public class CommonDataAttribute extends CustomAttribute {
+
+    private static final long serialVersionUID = 1L;
+
+    public CommonDataAttribute(String attributeValue) {
+        super("common-data", attributeValue);
+    }
+
+    // TODO write the feature methods for this attribute
+
+}</code></pre>
+
+<pre class="notranslate"><code>public static void main(String[] args) {
+
+    Div div = new Div(null, new CommonDataAttribute("data1")) {
+        Div div = new Div(this, new CommonDataAttribute("data2"));
+    };
+
+    System.out.println(div.toHtmlString());
+}</code></pre>
+
+this will print
+
+<pre class="notranslate"><code><xmp><div common-data="data1">
+    <div common-data="data2"></div>
+</div></xmp></code></pre>
 
 
-				<p>
-					For any technical assistance mail to <a
-						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
-				</p>
 
-
-
-				<br> <br> <br> <br>
+				
+				<br> <br> 
 
 				<p>
 					Subscribe <a
