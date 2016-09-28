@@ -112,10 +112,17 @@ Each instance of a <code>BrowserPage</code> will have its own unique <code>insta
 					<code>httpSession.setMaxInactiveInterval(60 * 30);</code>
 					(the same value which is given in web.xml). So if the websocket
 					doesn't make a connection again within the given time, the
-					httpSession will be timed out. This is the solution for the issue
-					explained in the <a
+					httpSession will be timed out. This can also avoid keeping a heart
+					beat request to the server to keep the httpSession alive. This is
+					the solution for the issue explained in the <a
 						href="https://java.net/jira/browse/WEBSOCKET_SPEC-175"
 						target="_blank">description of this ticket</a>.
+				</p>
+
+				<p>
+					Refer this <a target="_blank"
+						href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps/blob/master/wffwebdemoproject/src/main/java/com/wffwebdemo/wffwebdemoproject/server/ws/WSServerForIndexPage.java#L66">fully
+						configured code from sample project</a>.
 				</p>
 
 
