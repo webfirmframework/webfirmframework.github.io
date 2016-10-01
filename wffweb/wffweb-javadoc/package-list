@@ -13,6 +13,7 @@ com.webfirmframework.wffweb.io
 com.webfirmframework.wffweb.js
 com.webfirmframework.wffweb.security.object
 com.webfirmframework.wffweb.server.page
+com.webfirmframework.wffweb.server.page.action
 com.webfirmframework.wffweb.server.page.js
 com.webfirmframework.wffweb.settings
 com.webfirmframework.wffweb.streamer
