@@ -101,6 +101,13 @@
 			href="https://webfirmframework.github.io/developers-guide/mltp-design-pattern.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/wffweb-best-practices.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/wffweb-best-practices.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>
