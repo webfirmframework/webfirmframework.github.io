@@ -115,6 +115,13 @@
 			href="https://webfirmframework.github.io/developers-guide/wffweb-current-features-and-future-plans.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/custom-css-properties.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/custom-css-properties.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>
