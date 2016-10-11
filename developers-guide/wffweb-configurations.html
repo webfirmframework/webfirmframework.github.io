@@ -60,18 +60,20 @@
 					binary protocol called wff binary message. when the websocket
 					connection is opened, it must be informed to the wffweb as follows</p>
 
-				<pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
+				<pre><code class="notranslate">//webSocket session
+List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
 String instanceId = wffInstanceIds.get(0);
-BrowserPageContext.INSTANCE.webSocketOpened(instanceId);
+BrowserPage browserPage = BrowserPageContext.INSTANCE.webSocketOpened(instanceId);
 
-browserPage.setWebSocketPushListener(new WebSocketPushListener() {
+//or String.valueOf(session.hashcode()) if session.getId() is not available
+browserPage.addWebSocketPushListener(session.getId(), new WebSocketPushListener() {
 
             @Override
-            public void push(byte[] message) {
+            public void push(ByteBuffer data) {
                 try {
                     session.getBasicRemote()
-                            .sendBinary(ByteBuffer.wrap(message));
-                } catch (IOException e) {
+                            .sendBinary(data);
+                } catch (Exception e) {
                     throw new PushFailedException(e.getMessage(), e);
                 }
             }
@@ -84,7 +86,8 @@ When the websocket is closed, it should be informed to wffweb as follows,
 
 <pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
 String instanceId = wffInstanceIds.get(0);
-BrowserPageContext.INSTANCE.webSocketClosed(instanceId);
+//session.getId() is the id given while adding websocket listener
+BrowserPageContext.INSTANCE.webSocketClosed(instanceId, session.getId());
 </code></pre> 
 
 When the websocket receives a message, it should be forwarded to wffweb as follows.
