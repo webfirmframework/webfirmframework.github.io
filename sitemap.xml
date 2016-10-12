@@ -122,6 +122,13 @@
 			href="https://webfirmframework.github.io/developers-guide/custom-css-properties.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/event-attributes.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/event-attributes.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>

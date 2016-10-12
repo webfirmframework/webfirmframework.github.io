@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb Tags and Attributes</title>
+<title>wffweb Event Attributes | Custom Event Attribute</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -38,124 +38,154 @@
 			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Tags and Attributes</span></a>
+						class="octicon octicon-link">Event Attributes</span></a>
 				</h1>
 
-				<h5>Tag</h5>
+				<h5>EventAttribute</h5>
 
 				<p>
-					For every html tag, there is a corresponding java class, eg:- To
-					represent <i>div</i> tag in html, there is a <code>Div</code> class. See the below code 
+					Attributes which can execute JavaScript on some event are considered as event
+					attributes. Eg :- <i>onclick</i>, <i>onchange</i> etc...
 				</p>
-				
-				<pre class="notranslate"><code>Div div = new Div(null);
-System.out.println(div.toHtmlString());</code></pre>
+				<p>All event attributes in wffweb contain a common constructor
+					containing four arguments which are used to handle events at client
+					side and server side. See the below code sample</p>
 
-this code will print 
+				<pre class="notranslate"><code>public class SampleCode extends Body {
+    
+    public SampleCode() {
+        super(null);
 
-<pre class="notranslate"><code><xmp><div></div></xmp></code></pre>
+        develop();
+    }
+
+    private void develop() {
+        
+        ServerAsyncMethod serverAsyncMethod = new ServerAsyncMethod() {
+
+            @Override
+            public WffBMObject asyncMethod(WffBMObject wffBMObject,
+                    Event event) {
+
+                // the sourceTag from which the event generated
+                // in this sample sourceTag instance will be button1 instance
+                AbstractHtml sourceTag = event.getSourceTag();
+
+                // used to send data to the client
+                WffBMObject bmObject = new WffBMObject();
+                bmObject.put("someKey", BMValueType.STRING,
+                        "こんにちは WebFirmFramework");
+
+                return bmObject;
+            }
+        };
+
+        String preJsFunctionBody = "/*may be on some codition*/ return true;";
+
+        String jsFilterFunctionBody = "var dataFromClient = {'clientKey' : 'clientValue'}; return dataFromClient;";
+
+        // jsObject is an implicit object
+        // which is a conventional representation of bmObject
+        String postJsFunctionBody = "alert(jsObject.someKey);";
+
+        OnClick onClick = new OnClick(preJsFunctionBody, serverAsyncMethod,
+                jsFilterFunctionBody, postJsFunctionBody);
+
+        Button button1 = new Button(this, onClick);
+    }
+}
+				</code></pre>
 
 				<p>
-					The first argument in tag constructor (i.e.
-					<code>Div</code>
-					here) is its parent/outer tag. In the above example, there is no
-					parent tag so passed as
-					<code>null</code>
-					. A tag cannot have more than one direct parent tag. The preceding arguments in the constructor are attribute classes.
-					Let us check another example a <i>span</i> tag surrounded by <i>div</i> tag,
-				</p>
-				<pre class="notranslate"><code>Div div = new Div(null) {{
-    new Span(this);
-}};
-System.out.println(div.toHtmlString());</code></pre>
-               <p>prints</p>
-               
-               <pre class="notranslate"><code><xmp><div>
-    <span></span>
-</div></xmp></code></pre>
-				
-				
-				<h5>Attribute</h5>
-				<p>
-					Just like tag, every html attribute has corresponding
-					attribute java class, eg:- To represent <i>style</i> attribute, the
-					corresponding java class
-					<code>Style</code>. Check the below code to declare attribute.
-				</p>
-<pre class="notranslate"><code>Style style =  new Style("color:green");</code></pre>
-
-				<p>
-					By behavior, attributes may be categorized into two, <i>tag
-						attributes</i> and <i>event attributes</i>.Tag attributes are normal
-					attributes like <i>id, name, style</i> etc... Event attributes are
-					those attributes which handle events in a tag, eg <i>onclick,
-						onchange etc..</i>.
-				</p>
-
-
-				<h5>Giving attribute to tag</h5>
-				<p>
-					An attribute can be given to tag either by passing as a constructor
-					argument or using
-					<code>addAttributes</code>
-					method of that tag. Of course, an attribute can be added to
-					multiple tags. If an attribute object is added to multiple tags,
-					then changing the attribute object properties will apply to all tags to
-					which it is added.
-				</p>
-
-				<h6>By passing as a constructor argument</h6>
-				<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
-System.out.println(div.toHtmlString());</code></pre>
-
-				<p>prints</p>
-				<pre class="notranslate"><code><xmp><div style="color:green"></div></xmp></code></pre>
-				
-
-				
-				<h6>By addAttributes method</h6>
-				<pre class="notranslate"><code>Div div = new Div(null);
-				
-Style style =  new Style("color:green");
-Id id =  new Id("divId1");
-
-div.addAttributes(style, id);</code></pre>
-				
-				<p>prints</p>
-				
-				<pre class="notranslate"><code><xmp><div id="divId1" style="color:green"></div></xmp></code></pre>
-				
-				<h5>Add or remove child tag in a tag</h5>
-				<p>Adding or removing child tags is similar to javascript
-					functional concept of a node. There are also few additional
-					methods.</p>
-				<p>
-					There are few methods in the tag class to add child tags, they are
-					<code>appendChild</code>
+					In the above code,
+					<code>OnClick</code>
+					is an event attribute. There are four arguments for its constructor
+					<code>preJsFunctionBody</code>
 					,
-					<code>appendChildren</code>
+					<code>serverAsyncMethod</code>
+					,
+					<code>jsFilterFunctionBody</code>
 					and
-					<code>addInnerHtml</code>
-					. The method
-					<code>addInnerHtml</code>
-					will replace all existing child tags. If a tag is added a child tag
-					which is already a child tag of another tag class then the child
-					will be removed from its previous parent tag because a tag cannot have
-					more than one direct parent tag.
+					<code>postJsFunctionBody</code>.
+					<code>preJsFunctionBody</code>
+					,
+					<code>jsFilterFunctionBody</code>
+					and
+					<code>postJsFunctionBody</code>
+					can contain JavaScript function body without function declaration
+					and all these are executed at client side.
 				</p>
 				<p>
-					The methods for removing tags are
-					<code>removeAllChildren</code>
-					to remove all children,
-					<code>removeChild</code>
-					to remove specific tag and
-					<code>removeChildren</code>
-					to remove multiple tags.
+					<code>preJsFunctionBody</code>
+					should return boolean value. If it returns true then only
+					<code>serverAsyncMethod</code>
+					will be invoked. This will be useful when there is a validation
+					needs to be done at client side before invoking <code>serverAsyncMethod</code>.
 				</p>
+				<p>
+					<code>serverAsyncMethod</code>
+					should be an instance of
+					<code>ServerAsyncMethod</code>. <code>ServerAsyncMethod#asyncMethod</code> invokes at server side.
+					<code>asyncMethod</code>
+					contains two arguments
+					<code>wffBMObject</code>
+					and
+					<code>event</code>. The returned JavaScript object by
+					<code>jsFilterFunctionBody</code>
+					will be received as a
+					<code>wffBMObject</code>.
+				</p>
+				<p>
+					The role of
+					<code>jsFilterFunctionBody</code>
+					is to provide data to
+					<code>asyncMethod</code>. The
+					<code>jsFilterFunctionBody</code>
+					should return either a JavaScript object or null. This JavaScript
+					object will be converted to a
+					<code>WffBMObject</code>
+					which will be received as an argument in
+					<code>asyncMethod</code>.
+				</p>
+
+				<p>
+					<code>postJsFunctionBody</code>
+					is executed after
+					<code>asyncMethod</code>
+					is invoked. The role of
+					<code>postJsFunctionBody</code>
+					is to receive data returned by
+					<code>asyncMethod</code>. In the sample code,
+					<code>asyncMethod</code>
+					returns an object
+					<code>bmObject</code>
+					which will be converted to a JavaScript object, this JavaScript object be
+					available as an implicit object
+					<code>jsObject</code>
+					in the scope of
+					<code>postJsFunctionBody</code>.
+				</p>
+
+				
+
+				<h6 id="wffBMObject">WffBMObject</h6>
+				<p>
+					<code>WffBMObject</code>
+					stores data as key value pairs. Unlike JSON, it can also contain
+					binary data (<code>WffBMByteArray</code>) in its value. The data types supported by
+					<code>WffBMObject</code>
+					can be found in
+					<code>BMValueType</code>
+					enum.
+					<code>WffBMObject</code>
+					can also be used to send and receive binary data from server to
+					client and vice versa.
+				</p>
+				<p>Check out this <a href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">sample project</a> for code reference.</p>
 
 
 				<p>
-					<a href="event-attributes.html">Next >></a>
+					<a href="mltp-design-pattern.html">Next >></a>
 				</p>
 
 				<br> <br> 
