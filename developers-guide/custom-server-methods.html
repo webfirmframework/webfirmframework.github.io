@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb released versions</title>
+<title>wffweb Custom Server Methods</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
@@ -35,69 +35,133 @@
 
 	<div id="content-wrapper">
 		<div class="inner clearfix">
-			<section id="main-content" class="notranslate">
+			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">wffweb released versions</span></a>
+						class="octicon octicon-link">Custom Server Methods</span></a>
 				</h1>
-				<h5>wffweb-2.1.0</h5>
-				Feature updates, IE support, bug fixes and improvements.
-				<h5>wffweb-2.0.3</h5>
-				Bug fix version 
-				<h5>wffweb-2.0.2</h5>
-				Bug fix version 
-				<h5>wffweb-2.0.1</h5>
-				Bug fix version (IE supported)
 
-				<h5>wffweb-2.0.0</h5>
-
-				<h5>wffweb-2.0.0-beta-1 (not production ready)</h5>
+				<h5>browserPage.addServerMethod(methodName, serverAsyncMethod);</h5>
 				
-				<h5>wffweb-1.2.0-SNAPSHOT</h5>
-				
-				<h5>wffweb-1.1.5</h5>
-				
-				<h5>wffweb-1.1.4</h5>
-				
-				<h5>wffweb-1.1.3</h5>
-				
-				<h5>wffweb-1.1.2</h5>
-				
-				<h5>wffweb-1.1.1</h5>
-				
-				<h5>wffweb-1.1.0</h5>
-				
-				<h5>wffweb-1.0.2</h5>
-				
-				<h5>wffweb-1.0.1</h5>
-				
-				<h5>wffweb-1.0.1-SNAPSHOT</h5>
-				
-				<h5>wffweb-1.0.0</h5>
-				
-				<h5>wffweb-1.0.0-SNAPSHOT</h5>
-				
-				<h5>wffweb-1.0.0-beta-3</h5>
-				
-				<h5>wffweb-1.0.0-beta-2</h5>
-				
-				<h5>wffweb-1.0.0-beta-1</h5>
-				
-				<h5>wffweb-1.0.0-alpha-4</h5>
-				
-				<h5>wffweb-1.0.0-alpha-3</h5>
-				
-				<h5>wffweb-1.0.0-alpha-2</h5>
-				
-				<h5>wffweb-1.0.0-alpha-1</h5>
-				
-				<br> <br> <br> <br>
+				<p>The aim of custom server method is to declare a custom method
+					in the server which can be called from the client using JavaScript.</p>
 
 				<p>
-					Subscribe <a
-						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
-						youtube</a> for technical videos
+					<code>addServerMethod</code> of <code>BrowserPage</code> can be used to register a custom server method. The custom server method can be called from JavaScript code. See the below sample
 				</p>
+				<code>browserPage.addServerMethod(methodName, serverAsyncMethod);</code>
+
+				<pre class="notranslate"><code>ServerAsyncMethod serverAsyncMethod = new ServerAsyncMethod() {
+
+            @Override
+            public WffBMObject asyncMethod(WffBMObject wffBMObject,
+                    Event event) {
+                //will print 'some value'
+                System.out.println(wffBMObject.get("somekeyFromClient").getValue());
+                //prints the type of value
+                System.out.println(wffBMObject.get("somekeyFromClient").getValueType());     
+                
+                String serverMethodName = event.getServerMethodName();
+                
+                //will print someUniqueMethodName
+                System.out.println(serverMethodName);
+
+                // used to send data to the client
+                WffBMObject bmObject = new WffBMObject();
+                bmObject.put("someKey", BMValueType.STRING,
+                        "こんにちは Web Firm Framework");
+
+                return bmObject;
+            }
+        };
+        
+browserPage.addServerMethod("someUniqueMethodName", serverAsyncMethod);</code></pre>
+
+				<p>
+					Invoke the server method from JavaScript, see the code
+				</p>
+				
+			<pre class="notranslate"><code>var arguments = {
+	'somekeyFromClient' : 'some value',
+	'numb' : 55555,
+	'bool' : true,
+	'anObj' : {
+		'key' : 'val'
+	},
+	'funcArray' : function() {console.log('m function');},
+	'numberArray' : [ 5, 55, 555, 55, 5555 ]
+};
+
+var callbackFunction = function(obj) {
+
+    console.log('callback obj ', obj);
+
+    for (key in obj) {
+	    console.log('key is ' + key + ' ', obj[key]);
+    }
+
+    obj.testFun('check out browser console to see values received from server');
+};
+
+wffAsync.serverMethod('someUniqueMethodName', arguments).invoke(callbackFunction);
+
+</code></pre>
+				<p>
+					The first passed in
+					<code>wffAsync.serverMethod</code>
+					is the name of the method to be called.
+				</p>
+				<p>
+					The second argument 
+					<code>arguments</code>
+					passed in
+					<code>wffAsync.serverMethod</code>
+					will be received as a
+					<code>wffBMObject</code>
+					argument in
+					<code>asyncMethod</code>
+					method. The JavaScript object
+					<code>arguments</code>
+					can also contain
+					<code>Int8Array</code>
+					value type to pass binary data, which will be received in
+					<code>wffBMObject</code>
+					as a value type of
+					<code>BMValueType.BM_BYTE_ARRAY</code>
+					i.e. the value is a class type of
+					<code>WffBMByteArray</code>
+					which contains bytes.
+				</p>
+				<p>
+					The
+					<code>callbackFunction</code>
+					function will be called for the result of
+					<code>asyncMethod</code>
+					server method. The argument
+					<code>obj</code>
+					in
+					<code>callbackFunction</code>
+					is conventional JavaScript object of
+					<code>bmObject</code>
+					returned by
+					<code>asyncMethod</code>
+					in the server.
+				</p>
+
+				<p>
+					The server method can also send binary data using
+					<code>WffBMByteArray</code>
+					. Check out
+					<code>BMValueType</code>
+					enum to know the supported data types of value to send from server to client
+					and vice versa.
+				</p>
+
+				<p>
+					<a href="wffweb-best-practices.html">Next >></a>
+				</p>
+
+
 			</section>
 
 			<aside id="sidebar">
@@ -111,7 +175,8 @@
             .tar.gz file
           </a>
  -->
-<p class="repo-owner">
+
+			<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
@@ -187,6 +252,9 @@
 						href="how-to-resolve-dependency-in-build-tools.html">Resolve
 						dependency in build tools</a>
 				</p>
+				<p>
+					<a href="wffweb-released-versions.html" >Released versions</a>
+				</p>
 
 				<p>
 					<a href="https://github.com/webfirmframework/wff/issues"
@@ -198,7 +266,6 @@
                 <p>
 					<a href="technical-support.html" >Professional Support</a>
 				</p>
-
 				<!-- 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
  -->
