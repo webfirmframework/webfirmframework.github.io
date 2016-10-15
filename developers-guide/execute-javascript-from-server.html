@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/github-light.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
+	media="print">
+
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<title>wffweb Execute JavaScript Code At Client Browser From Server</title>
+<link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+	<header>
+		<div class="inner">
+			<h1>wffweb</h1>
+			<h2>Java framework to develop web applications</h2>
+			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="inner clearfix">
+			<section id="main-content" class="notranslate">
+				<h1>
+					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
+						class="octicon octicon-link">Execute JavaScript</span></a>
+				</h1>
+				<p>
+					The normal way to execute a JavaScript code is to insert a
+					<code>Script</code>
+					class containing JavaScript code. But, in some special cases like
+					server restart, there won't be a
+					<code>BrowserPage</code>
+					object so in such cases it's possible to push
+					<code>ByteBuffer</code>
+					returned by
+					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
+					<br><br>
+					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client.
+					<br><br>
+					<code>ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS("alert('executed
+						script');");</code>
+				</p>
+				
+				
+				<br> <br>
+
+				<p>
+					Subscribe <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
+						youtube</a> for technical videos
+				</p>
+			</section>
+
+			<aside id="sidebar">
+				<a
+					href="https://search.maven.org/remote_content?g=com.webfirmframework&a=wffweb&v=LATEST"
+					class="button"> <small>Download</small> latest .jar file
+				</a>
+				<!--
+           <a href="https://github.com/webfirmframework/wff/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+ -->
+<p class="repo-owner">
+					<a href="../index.html">Home</a>
+				</p>
+
+				<p class="repo-owner">
+					<a href="get-started.html">Get Started</a>
+				</p>
+				<div class="repo-owner">
+					<a href="wffweb-configurations.html">wff Configurations</a>
+					<ul>
+				<li><a
+						href="wffweb-configurations.html#browserPage">Browser Page
+							</a></li>
+				</ul>
+				</div>
+				<p class="repo-owner">
+					<a href="tags-and-attributes.html">Tags and Attributes</a>
+				</p>
+				<p class="repo-owner">
+					<a href="event-attributes.html">Event Attributes</a>
+				</p>
+				<div class="repo-owner">
+					<a href="mltp-design-pattern.html">MLTP Architecture</a>
+				<ul>
+				<li><a
+						href="mltp-design-pattern.html#example-for-logical-template">Logical-template
+							Template</a></li>
+					<li><a
+						href="mltp-design-pattern.html#addRemoveChildTemplatesVideo">Add/Remove
+							Template</a></li>
+				</ul>
+				</div>
+
+				<p class="repo-owner">
+					<a href="custom-tags.html">Custom Tag</a>
+				</p>
+				
+				<p class="repo-owner">
+					<a href="custom-attributes.html">Custom Attribute</a>
+				</p>
+				<p class="repo-owner">
+					<a href="css-properties.html">CSS Properties</a>
+				</p>
+				<p class="repo-owner">
+					<a href="custom-css-properties.html" >Custom CSS Property</a>
+				</p>
+				<p class="repo-owner">
+					<a href="custom-server-methods.html" >Custom Server Method</a>
+				</p>
+				<p class="repo-owner">
+					<a href="wffweb-best-practices.html" >Best Practices</a>
+				</p>
+				<p class="repo-owner">
+					<a href="wffweb-current-features-and-future-plans.html" >Features and future plans</a>
+				</p>
+				<p class="repo-owner">
+					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
+					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.
+				</p>
+
+				<p>
+					Refer <a href="https://github.com/webfirmframework/wff/wiki">wiki</a>
+					for code samples.
+				</p>
+
+				<p>
+					Visit <a
+						href="../wffweb/wffweb-javadoc/index.html"
+						target="_blank">wffweb-javadoc</a> for java documentation.
+				</p>
+
+				<p>
+					<a
+						href="how-to-resolve-dependency-in-build-tools.html">Resolve
+						dependency in build tools</a>
+				</p>
+
+				<p>
+					<a href="https://github.com/webfirmframework/wff/issues"
+						target="_blank">Click here for feature request/bug report</a>.
+				</p>
+				<p>
+					<a href="wffweb-demo-app.html" >wffweb demo project</a>.
+				</p>
+                <p>
+					<a href="technical-support.html" >Professional Support</a>
+				</p>
+
+				<!-- 
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
+ -->
+			</aside>
+		</div>
+	</div>
+
+<footer style="text-align:center"><a href="http://webfirmframework.com">webfirmframework</a></footer>
+</body>
+</html>
