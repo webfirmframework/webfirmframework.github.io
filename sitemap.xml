@@ -136,6 +136,13 @@
 			href="https://webfirmframework.github.io/developers-guide/custom-server-methods.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>
