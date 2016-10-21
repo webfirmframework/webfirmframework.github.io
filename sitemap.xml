@@ -143,6 +143,13 @@
 			href="https://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/wffweb-careers.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/wffweb-careers.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>
