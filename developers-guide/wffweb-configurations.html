@@ -114,8 +114,9 @@ Each instance of a <code>BrowserPage</code> will have its own unique <code>insta
 					<code>OnClose</code>
 					reset the session time out as
 					<code>httpSession.setMaxInactiveInterval(60 * 30);</code>
-					(the same value which is given in web.xml). So if the websocket
-					doesn't make a connection again within the given time, the
+					(the same value which is given in web.xml). 
+					An http request to a dummy url may need to be made afterwards. 
+					So if the websocket doesn't make a connection again within the given time, the
 					httpSession will be timed out. This can also avoid keeping a heart
 					beat request to the server to keep the httpSession alive. This is
 					the solution for the issue explained in the <a
