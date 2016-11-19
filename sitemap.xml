@@ -150,6 +150,13 @@
 			href="https://webfirmframework.github.io/developers-guide/wffweb-careers.html"
 			hreflang="x-default" />
 	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/execute-browser-page-action.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/execute-browser-page-action.html"
+			hreflang="x-default" />
+	</url>
 
 
 </urlset>

@@ -18,13 +18,11 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb released versions</title>
+<title>wffweb Execute Browser Page Action</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 </head>
 
 <body>
-
-
 	<header>
 		<div class="inner">
 			<h1>
@@ -33,66 +31,32 @@
 			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
 		</div>
 	</header>
+
 	<div id="content-wrapper">
 		<div class="inner clearfix">
 			<section id="main-content" class="notranslate">
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">wffweb released versions</span></a>
+						class="octicon octicon-link">Browser Page Action</span></a>
 				</h1>
-				<h5>wffweb-2.1.0</h5>
-				Feature updates, IE support, bug fixes and improvements.
-				<h5>wffweb-2.0.3</h5>
-				Bug fix version 
-				<h5>wffweb-2.0.2</h5>
-				Bug fix version 
-				<h5>wffweb-2.0.1</h5>
-				Bug fix version (IE supported)
-
-				<h5>wffweb-2.0.0</h5>
-
-				<h5>wffweb-2.0.0-beta-1 (not production ready)</h5>
+				<p>
+					You can execute specific browser page actions provided by <code>BrowserPageAction</code> enum.
+					
+					
+					<br><br>
+					Eg :- To refresh browser, call <code>BrowserPage#performBrowserPageAction</code> as follows
+					<br><br>
+					<code>browserPage.performBrowserPageAction(BrowserPageAction.RELOAD.getActionByteBuffer());</code>
+					<br><br>
+					It's also possible to execute custom JavaScript code by this method, eg:- <code>browserPage.performBrowserPageAction(
+					BrowserPageAction.getActionByteBufferForExecuteJS("alert('executed script');"));</code>
+				</p>
 				
-				<h5>wffweb-1.2.0-SNAPSHOT</h5>
 				
-				<h5>wffweb-1.1.5</h5>
-				
-				<h5>wffweb-1.1.4</h5>
-				
-				<h5>wffweb-1.1.3</h5>
-				
-				<h5>wffweb-1.1.2</h5>
-				
-				<h5>wffweb-1.1.1</h5>
-				
-				<h5>wffweb-1.1.0</h5>
-				
-				<h5>wffweb-1.0.2</h5>
-				
-				<h5>wffweb-1.0.1</h5>
-				
-				<h5>wffweb-1.0.1-SNAPSHOT</h5>
-				
-				<h5>wffweb-1.0.0</h5>
-				
-				<h5>wffweb-1.0.0-SNAPSHOT</h5>
-				
-				<h5>wffweb-1.0.0-beta-3</h5>
-				
-				<h5>wffweb-1.0.0-beta-2</h5>
-				
-				<h5>wffweb-1.0.0-beta-1</h5>
-				
-				<h5>wffweb-1.0.0-alpha-4</h5>
-				
-				<h5>wffweb-1.0.0-alpha-3</h5>
-				
-				<h5>wffweb-1.0.0-alpha-2</h5>
-				
-				<h5>wffweb-1.0.0-alpha-1</h5>
-				
-				<br> <br> <br> <br>
-
+				<br> <br>
+				<p>
+					<a href="wffweb-best-practices.html">Next >></a>
+				</p>
 				<p>
 					Subscribe <a
 						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
