@@ -134,15 +134,36 @@ div.addAttributes(style, id);</code></pre>
 					<code>appendChild</code>
 					,
 					<code>appendChildren</code>
+					,
+					<code>addInnerHtml</code>
 					and
+					<code>insertBefore</code>. 
+					<code>appendChild</code> is used to append a child in its current children. The method
 					<code>addInnerHtml</code>
-					. The method
-					<code>addInnerHtml</code>
-					will replace all existing child tags. If a tag is added a child tag
+					will replace all existing child tags.
+					<code>insertBefore</code> can be used to insert a tag/tags before a tag, 
+					</p>
+					eg:- <pre class="notranslate"><code>Div parentDiv = new Div(null, new Id("parentDivId"));
+Div childDiv = new Div(parentDiv, new Id("child1"));
+
+childDiv.insertBefore(new Div(null, new Id("inserted1BeforeChild1")),
+new Div(null, new Id("inserted2BeforeChild1")));</code></pre>
+
+see the printed output, <code>new Div(null, new Id("inserted1BeforeChild1")),
+new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code>childDiv</code>. 
+
+<pre class="notranslate"><code><xmp><div id="parentDivId">
+    <div id="inserted1BeforeChild1"></div>
+    <div id="inserted2BeforeChild1"></div>
+    <div id="child1"></div>
+</div></xmp></code></pre> 
+
+<p><code>childDiv</code> will be very useful when you want to insert rows in the middle of a table having thousands of rows.</p>
+				
+				<p>If a tag is added a child tag
 					which is already a child tag of another tag class then the child
 					will be removed from its previous parent tag because a tag cannot have
-					more than one direct parent tag.
-				</p>
+					more than one direct parent tag.</p>
 				<p>
 					The methods for removing tags are
 					<code>removeAllChildren</code>
