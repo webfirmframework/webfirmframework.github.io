@@ -81,9 +81,10 @@
             }
         };
 
-        String preJsFunctionBody = "/*may be on some codition*/ return true;";
+        String preJsFunctionBody = "/* event and source keywords are implicit objects here */ /*may be on some condition*/ return true;";
 
-        String jsFilterFunctionBody = "var dataFromClient = {'clientKey' : 'clientValue'}; return dataFromClient;";
+	//source is equivalent to event.srcElement
+        String jsFilterFunctionBody = "/* event and source keywords are implicit objects here */ var dataFromClient = {'clientKey' : 'clientValue', elementId : source.id, elementName : event.srcElement.name}; return dataFromClient;";
 
         // jsObject is an implicit object
         // which is a conventional representation of bmObject
@@ -122,6 +123,8 @@
 					<code>serverAsyncMethod</code>
 					will be invoked. This will be useful when there is a validation
 					needs to be done at client side before invoking <code>serverAsyncMethod</code>.
+					<code>event</code> and <code>source</code> are implicit objects in its scope.
+					<code>source</code> is equivalent to <code>event.srcElement</code>.
 				</p>
 				<p>
 					<code>serverAsyncMethod</code>
@@ -147,6 +150,8 @@
 					<code>WffBMObject</code>
 					which will be received as an argument in
 					<code>asyncMethod</code>.
+					<code>event</code> and <code>source</code> are implicit objects in its scope.
+					<code>source</code> is equivalent to <code>event.srcElement</code>.
 				</p>
 
 				<p>
