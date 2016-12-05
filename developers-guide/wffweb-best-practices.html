@@ -45,6 +45,95 @@
 				<p>When building heavy UI, it's important to follow this rule to
 					keep only necessary tags. It reduces the load of a browser, why
 					should the browser take care about unnecessary tags!!</p>
+				
+				
+				<h5>Use minimal tag manipulation methods</h5>
+				<p>If there are continuous invocation of tag manipulation methods then try to convert it to invoking minimal tag manipulation methods. Check out the below examples</p>
+				<p>Eg 1 :- </p>
+				<pre class="notranslate"><code>List<AbstractHtml> children = div1.getChildren();
+        
+for (AbstractHtml child : children) {
+    div1.removeChild(child);
+}
+
+//should be as follows instead of the above
+div1.removeAllChildren();
+</code></pre>
+                <p>Eg 2 :- </p>
+				<pre class="notranslate"><code>div1.removeAllChildren();
+div1.appendChild(div2);
+
+//should be as follows instead of the above
+div1.addInnerHtml(div2);
+</code></pre>
+                <p>Eg 3 :- </p>
+				<pre class="notranslate"><code>div1.removeAllChildren();
+div1.appendChild(div2);
+div1.appendChild(div3);
+        
+//should be as follows instead of the above
+div1.addInnerHtmls(div2, div3);</code></pre>
+
+
+<h5>Use BrowserPage#holdPush &amp; BrowserPage#unholdPush wherever possible</h5>
+				<p>
+					Surround with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods for multiple tag manipulation statements. When a tag
+					manipulation method (eg:
+					<code>div.removeAllChildren()</code>
+					) is executed the framework sends its UI update to the client as a
+					push so it there are multiple statements then there will be
+					multiple push. When all tag manipulation methods are surrounded
+					with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then all those UI updates will be sent in a single push so that the
+					end user will not see the UI changes are taking place one by one in
+					a slow network. Also ensure that the
+					<code>BrowserPage#unholdPush()</code>
+					is called inside finally block. See the sample code given below
+				</p>
+				<p>Eg :- </p>
+				<pre class="notranslate"><code>try {
+    browserPage.holdPush();
+            
+    div1.addAttributes(new Style("background:green"));
+    div2.addAttributes(new Id("div2Id"));
+    div3.addAttributes(new Name("div3"));
+    div1.addInnerHtmls(div2, div3);
+} finally {
+    //pushes UI updates for the above four methods in a single push
+    browserPage.unholdPush();
+}</code></pre>
+				<p>
+					But there are also cases where these methods are not suitable, for
+					example you are adding up to 1000 rows (or more than that) in a
+					table. In such case if you are writing that code between
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then the end user will have to wait a long time to see the result
+					because the framework sends all changes in a single push and the
+					browser displays it only after receiving all these UI updates.
+					Here, the end user is expecting a lazy loading. In such scenarios
+					it's better to avoid using these
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods.
+				</p>
+
+				<p>
+					The usage of
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods depends upon the requirements.
+				</p>
 
 				<h5>Do not return anonymous class</h5>
 				<p>When you want to reuse a set of tags, you have to keep a separate template class for it. Eg:-</p>
