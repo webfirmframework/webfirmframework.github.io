@@ -18,14 +18,12 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb custom css properties | property</title>
+<title>Secured by wffweb</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
-
-
 	<header>
 		<div class="inner">
 			<h1>
@@ -38,57 +36,30 @@
 	<div id="content-wrapper">
 		<div class="inner clearfix">
 			<section id="main-content" >
-				<h1>
+				<h2 id="secured-by-wffweb">
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Custom CSS property</span></a>
-				</h1>
+						class="octicon octicon-link">Secured by wffweb</span></a>
+				</h2>
 
 				<p>
-					<code>com.webfirmframework.wffweb.csswff.CustomCssProperty</code>
-					class may be used to create a custom css property. See the below
-					example.
+					If you are seeing a link <b><i>Secured by <a
+							href="#secured-by-wffweb">wffweb</a>
+					</i></b> in any app site it ensures that the end user UI and server
+					communication is highly secured by wffweb. Please find more details
+					about it in the <a href="technical-support.html#dedicatedSupport">support
+						plans</a>.
 				</p>
-<p>Eg 1 :- </p>
-				<pre class="notranslate"><code>Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
-System.out.println(div.toHtmlString());
-</code></pre>
 
-<p>Eg 2 :- </p> 
 
-<pre class="notranslate"><code>Style style = new Style();
-CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
-style.addCssProperty(newCssProperty);
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+				Contact <a
+						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a> for more info.
 
-// cssProperty will be the same object newCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
-
-<p>Eg 3 :- </p> 
-<pre class="notranslate"><code>Style style = new Style();
-style.addCssProperty("new-property-name", "new-property-value");
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
-
-// cssProperty will be an instance of CustomCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
-
-<p>Or a separate class may be kept as below</p>
-<pre class="notranslate"><code>public class VibrateCssProperty extends CustomCssProperty {
-
-    public VibrateCssProperty(String cssValue) {
-        super("vibrate", cssValue);
-    }
-
-    // TODO add needful feature methods for this css property
-
-}
-</code></pre>
+				<br> <br> 
 
 				<p>
-					<a href="custom-server-methods.html">Next >></a>
+					Subscribe <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
+						youtube</a> for technical videos
 				</p>
 			</section>
 
@@ -103,8 +74,7 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
             .tar.gz file
           </a>
  -->
-
-				<p class="repo-owner">
+<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
@@ -166,6 +136,9 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 					<a href="wffweb-best-practices.html" >Best Practices</a>
 				</p>
 				<p class="repo-owner">
+					<a href="wffweb-current-features-and-future-plans.html" >Features and future plans</a>
+				</p>
+				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="http://www.webfirmframework.com">webfirmframework</a>.
 				</p>
@@ -199,9 +172,6 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 				</p>
                 <p>
 					<a href="technical-support.html" >Professional Support</a>
-				</p>
-				<p>
-					<a href="secured-by-wffweb.html" >Secured by wffweb</a>
 				</p>
 				<p>
 					<a href="wffweb-careers.html" >Careers</a>
