@@ -64,6 +64,7 @@ com.webfirmframework.wffweb.tag.html.programming
 com.webfirmframework.wffweb.tag.html.stylesandsemantics
 com.webfirmframework.wffweb.tag.html.tables
 com.webfirmframework.wffweb.tag.htmlwff
+com.webfirmframework.wffweb.tag.repository
 com.webfirmframework.wffweb.util
 com.webfirmframework.wffweb.util.data
 com.webfirmframework.wffweb.view
