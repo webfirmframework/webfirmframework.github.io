@@ -22,7 +22,7 @@
 			href="https://webfirmframework.github.io/developers-guide/wffweb-configurations.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/tags-and-attributes.html
 		</loc>
@@ -30,7 +30,7 @@
 			href="https://webfirmframework.github.io/developers-guide/tags-and-attributes.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/custom-tags.html
 		</loc>
@@ -38,7 +38,7 @@
 			href="https://webfirmframework.github.io/developers-guide/custom-tags.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/custom-attributes.html
 		</loc>
@@ -46,7 +46,7 @@
 			href="https://webfirmframework.github.io/developers-guide/custom-attributes.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/css-properties.html
 		</loc>
@@ -62,7 +62,7 @@
 			href="https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html
 		</loc>
@@ -70,7 +70,7 @@
 			href="https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/technical-support.html
 		</loc>
@@ -78,7 +78,7 @@
 			href="https://webfirmframework.github.io/developers-guide/technical-support.html"
 			hreflang="x-default" />
 	</url>
-	
+
 	<url>
 		<loc>https://webfirmframework.github.io/developers-guide/wffweb-demo-app.html
 		</loc>
@@ -155,6 +155,13 @@
 		</loc>
 		<xhtml:link rel="alternate"
 			href="https://webfirmframework.github.io/developers-guide/execute-browser-page-action.html"
+			hreflang="x-default" />
+	</url>
+	<url>
+		<loc>https://webfirmframework.github.io/developers-guide/tagrepository.html
+		</loc>
+		<xhtml:link rel="alternate"
+			href="https://webfirmframework.github.io/developers-guide/tagrepository.html"
 			hreflang="x-default" />
 	</url>
 
