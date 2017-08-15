@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xhtml="https://www.w3.org/1999/xhtml"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://webfirmframework.github.io/</loc>
+  <loc>https://webfirmframework.github.io/</loc>
   <xhtml:link rel="alternate" href="https://webfirmframework.github.io/"
 			hreflang="x-default" />
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
@@ -15,2995 +15,2995 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/get-started.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/get-started.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/faq.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/faq.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/index.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/index.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-released-versions.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-demo-app.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-demo-app.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/technical-support.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/technical-support.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffhub.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffhub.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-careers.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-careers.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-donors.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-donors.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-configurations.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-configurations.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/index.html</loc>
+  <loc>https://webfirmframework.github.io/index.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/tags-and-attributes.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/tags-and-attributes.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/event-attributes.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/event-attributes.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/mltp-design-pattern.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/mltp-design-pattern.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/custom-tags.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/custom-tags.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/custom-attributes.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/custom-attributes.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/css-properties.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/css-properties.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/custom-css-properties.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/custom-css-properties.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/custom-server-methods.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/custom-server-methods.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/execute-browser-page-action.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/execute-browser-page-action.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/tagrepository.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/tagrepository.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/multi-threading-in-wff-java-code.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/multi-threading-in-wff-java-code.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-best-practices.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-best-practices.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/wffweb-current-features-and-future-plans.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/wffweb-current-features-and-future-plans.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/developers-guide/secured-by-wffweb.html</loc>
+  <loc>https://webfirmframework.github.io/developers-guide/secured-by-wffweb.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/allclasses-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/allclasses-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-tree.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/overview-tree.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/deprecated-list.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/deprecated-list.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/index-files/index-1.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/index-files/index-1.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/help-doc.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/help-doc.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/index.html?overview-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/index.html?overview-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/allclasses-noframe.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/allclasses-noframe.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/informer/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/informer/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/io/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/io/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/js/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/js/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/security/object/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/security/object/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/js/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/js/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/settings/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/settings/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/streamer/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/streamer/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/clipboard/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/clipboard/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/drag/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/drag/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/form/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/form/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/frame/or/object/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/frame/or/object/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/keyboard/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/keyboard/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/media/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/media/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/misc/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/misc/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/mouse/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/mouse/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/print/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/print/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/touch/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/touch/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/transition/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/transition/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/core/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/core/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/links/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/links/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/lists/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/lists/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/programming/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/programming/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/repository/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/repository/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/data/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/data/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/package-summary.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/package-summary.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/informer/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/informer/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/io/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/io/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/js/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/js/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/security/object/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/security/object/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/js/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/js/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/settings/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/settings/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/streamer/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/streamer/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/clipboard/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/clipboard/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/drag/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/drag/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/form/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/form/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/frame/or/object/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/frame/or/object/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/keyboard/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/keyboard/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/media/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/media/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/misc/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/misc/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/mouse/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/mouse/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/print/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/print/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/touch/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/touch/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/transition/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/transition/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/core/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/core/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/links/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/links/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/lists/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/lists/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/programming/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/programming/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/repository/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/repository/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/data/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/data/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/package-frame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/package-frame.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/A.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/links/A.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Abbr.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Abbr.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AbbrAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AbbrAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AbstractAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AbstractAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/AbstractBean.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/AbstractBean.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/AbstractCssFileBlock.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/AbstractCssFileBlock.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/AbstractCssProperty.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/AbstractCssProperty.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/AbstractEventAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/AbstractEventAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtml.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtml.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtml.TagType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtml.TagType.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/AbstractHtml5SharedObject.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/model/AbstractHtml5SharedObject.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtmlRepository.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/AbstractHtmlRepository.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/AbstractHtmlView.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/AbstractHtmlView.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/AbstractJsObject.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/AbstractJsObject.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/AbstractTagBase.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/core/AbstractTagBase.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Accept.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Accept.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/AcceptCharset.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/AcceptCharset.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/AccessKey.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/AccessKey.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Action.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Action.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Address.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Address.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AddressAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AddressAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Align.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Align.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignContent.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignContent.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignItems.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignItems.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignSelf.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AlignSelf.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Alt.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Alt.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationDirection.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationDirection.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationEnd.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationEnd.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationFillMode.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationFillMode.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationIteration.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationIteration.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationIterationCount.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationIterationCount.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationPlayState.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/AnimationPlayState.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationStart.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/animation/AnimationStart.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/Area.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/Area.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AreaAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/AreaAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Article.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Article.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/ArticleAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/ArticleAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Aside.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Aside.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AsideAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AsideAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Async.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Async.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeAddListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeAddListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeAddListener.AddEvent.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeAddListener.AddEvent.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/AttributeAddListenerImpl.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/AttributeAddListenerImpl.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/AttributeNameConstants.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/AttributeNameConstants.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AttributeRegistry.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AttributeRegistry.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeRemoveListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeRemoveListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeRemoveListener.RemovedEvent.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/AttributeRemoveListener.RemovedEvent.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/AttributeRemoveListenerImpl.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/AttributeRemoveListenerImpl.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AttributeUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/core/AttributeUtil.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/AttributeValueChangeListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/AttributeValueChangeListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/AttributeValueChangeListener.Event.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/listener/AttributeValueChangeListener.Event.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/Audio.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/audiovideo/Audio.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AudioAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/AudioAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoComplete.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoComplete.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoFocus.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoFocus.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoPlay.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/AutoPlay.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/B.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/B.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackfaceVisibility.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackfaceVisibility.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundAttachment.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundAttachment.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundClip.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundClip.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundImage.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundImage.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundOrigin.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundOrigin.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundRepeat.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BackgroundRepeat.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundSize.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BackgroundSize.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/Base.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/Base.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BaseAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BaseAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/BaseFont.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/BaseFont.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BaseFontAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BaseFontAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/Bdi.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formatting/Bdi.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/BdiAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/BdiAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Bdo.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Bdo.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BdoAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BdoAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/Bean.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/data/Bean.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/Blank.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/Blank.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/BlockQuote.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/BlockQuote.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BlockQuoteAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BlockQuoteAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/BMType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/BMType.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/BMValueType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/wffbm/data/BMValueType.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Body.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Body.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BodyAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BodyAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BooleanAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BooleanAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Border.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Border.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Border.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Border.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottom.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottom.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderBottomWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderCollapse.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderCollapse.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderColorCssValues.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderColorCssValues.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageOutset.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageOutset.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageRepeat.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageRepeat.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageSlice.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageSlice.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageSource.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageSource.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BorderImageWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeft.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeft.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderLeftWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRight.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRight.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderRightWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderSpacing.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderSpacing.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTop.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTop.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderTopWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/BorderWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Bottom.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Bottom.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BoxSizing.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/BoxSizing.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Br.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Br.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BrAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/BrAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPage.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPage.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPage.On.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPage.On.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/BrowserPageAction.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/action/BrowserPageAction.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPageContext.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/server/page/BrowserPageContext.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Button.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Button.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ButtonAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ButtonAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/Canvas.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/Canvas.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/CanvasAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/CanvasAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/Caption.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/Caption.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CaptionAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CaptionAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CaptionSide.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CaptionSide.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CellPadding.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CellPadding.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CellSpacing.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CellSpacing.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Charset.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Charset.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CharsetUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CharsetUtil.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Checked.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Checked.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.ChildMovedEvent.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.ChildMovedEvent.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.Event.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagAppendListener.Event.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagRemoveListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagRemoveListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagRemoveListener.Event.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/ChildTagRemoveListener.Event.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Circle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Circle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/CircleAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/CircleAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Cite.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Cite.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CiteAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CiteAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/ClassAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/ClassAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Clear.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Clear.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/CloneUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/clone/CloneUtil.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Code.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Code.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CodeAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/CodeAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/CodeExecutor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/CodeExecutor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/Col.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/Col.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ColAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ColAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/ColGroup.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/tables/ColGroup.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ColGroupAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ColGroupAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Color.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Color.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/ColorAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/ColorAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Cols.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Cols.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/ColSpan.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/ColSpan.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnCount.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnCount.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnFill.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnFill.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnGap.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnGap.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRule.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRule.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleColor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleColor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnRuleWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Columns.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Columns.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnSpan.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnSpan.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnWidth.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/ColumnWidth.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/CommonConstants.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/core/constants/CommonConstants.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Content.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Content.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/ContentEditable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/ContentEditable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/ContextMenu.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/ContextMenu.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Controls.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Controls.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CoOrds.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/CoOrds.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssBlock.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssBlock.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssColorName.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssColorName.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssConstants.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssConstants.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/CssEnumUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/CssEnumUtil.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssFile.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssFile.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssFileBlock.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/CssFileBlock.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssLengthUnit.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssLengthUnit.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssLengthUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssLengthUtil.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssNameConstants.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssNameConstants.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/CssProperty.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/core/CssProperty.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssTimeUnit.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/CssTimeUnit.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssTimeUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssTimeUtil.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssValueUtil.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/util/CssValueUtil.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Cursor.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Cursor.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/CustomAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attributewff/CustomAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/CustomCssProperty.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/csswff/CustomCssProperty.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/CustomEventAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/CustomEventAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/CustomTag.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/htmlwff/CustomTag.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Data.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Data.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DataAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DataAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/DataAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/DataAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/DataList.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/formsandinputs/DataList.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DataListAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DataListAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/DataWffId.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/DataWffId.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/DateTime.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/DateTime.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dd.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dd.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DdAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DdAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Default.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Default.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Defer.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Defer.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Del.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Del.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DelAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DelAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Details.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Details.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DetailsAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DetailsAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Dfn.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Dfn.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DfnAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DfnAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Dialog.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Dialog.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DialogAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/DialogAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/Dir.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/Dir.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Direction.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Direction.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/DirName.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/DirName.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Disabled.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Disabled.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Display.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Display.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/Div.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/stylesandsemantics/Div.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DivAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DivAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dl.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dl.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DlAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DlAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DocAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DocAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/DocType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/DocType.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Download.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/Download.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Draggable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Draggable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Dropzone.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Dropzone.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dt.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/lists/Dt.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DtAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/DtAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Ellipse.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/Ellipse.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/EllipseAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/EllipseAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Em.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Em.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/EmAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/EmAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/Embed.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/programming/Embed.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/EmbedAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/EmbedAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/EmptyCells.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/EmptyCells.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/EncType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/EncType.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/EventAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/event/EventAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/ExcludeCssBlock.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/ExcludeCssBlock.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Face.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Face.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/FieldAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/FieldAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/FieldSet.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/FieldSet.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/FigCaption.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/FigCaption.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FigCaptionAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FigCaptionAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/Figure.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/images/Figure.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FigureAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FigureAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Flex.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Flex.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexBasis.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexBasis.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexDirection.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexDirection.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexGrow.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexGrow.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexShrink.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexShrink.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexWrap.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FlexWrap.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FloatCss.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FloatCss.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Font.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/Font.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontFamily.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontFamily.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontSize.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontSize.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FontSizeAdjust.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FontSizeAdjust.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FontStretch.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/FontStretch.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontStyle.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontStyle.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontVariant.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontVariant.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontWeight.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/FontWeight.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Footer.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Footer.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FooterAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/FooterAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/For.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/For.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/ForEach.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/interpreter/ForEach.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Form.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Form.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormAction.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormAction.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/FormAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/FormAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormAttribute.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormAttribute.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormEncType.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormEncType.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormMethod.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormMethod.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormNoValidate.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormNoValidate.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormTarget.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/FormTarget.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/GenericFontFamilyNameContants.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/GenericFontFamilyNameContants.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/GlobalAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/GlobalAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H1.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H1.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H1Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H1Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H2.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H2.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H2Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H2Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H3.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H3.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H3Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H3Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H4.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H4.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H4Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H4Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H5.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H5.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H5Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H5Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H6.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/H6.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H6Attributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/H6Attributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/HangingPunctuation.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/HangingPunctuation.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/Head.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/metainfo/Head.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HeadAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HeadAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Header.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/stylesandsemantics/Header.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/HeaderAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/HeaderAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Headers.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Headers.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Height.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Height.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HeightCss.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HeightCss.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/HGroup.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/HGroup.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/HGroupAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/identifier/HGroupAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Hidden.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/global/Hidden.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/High.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/html5/attribute/High.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Hr.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Hr.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HrAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HrAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Href.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/Href.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/HrefLang.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/HrefLang.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HslaCssValue.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HslaCssValue.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HslCssValue.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/HslCssValue.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Html.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/Html.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HtmlAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/HtmlAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/HtmlView.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/view/HtmlView.html</loc>
   <lastmod>2017-08-15T09:27:34+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/HttpEquiv.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/HttpEquiv.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/I.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/I.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/IAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/IAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Icon.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/css3/Icon.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/Id.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/attribute/global/Id.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/IFrame.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/frames/IFrame.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/IFrameAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/IFrameAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/Img.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/images/Img.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ImgAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/ImgAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/ImportCssFile.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/css/file/ImportCssFile.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InnerHtmlAddListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InnerHtmlAddListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InnerHtmlAddListener.Event.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InnerHtmlAddListener.Event.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Input.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formsandinputs/Input.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/InputAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/InputAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Ins.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/formatting/Ins.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/InsAttributable.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/identifier/InsAttributable.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InsertBeforeListener.html</loc>
+  <loc>https://webfirmframework.github.io/wffweb/wffweb-javadoc/com/webfirmframework/wffweb/tag/html/listener/InsertBeforeListener.html</loc>
   <lastmod>2017-08-15T09:27:33+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.51</priority>
