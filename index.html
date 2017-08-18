@@ -418,9 +418,8 @@ Hello World
 <script>
 
 var wffStorage = {};
-if (typeof(Storage) === "undefined") {
+if (typeof(Storage) !== "undefined") {
     wffStorage = localStorage;
-    console.log('wffStorage = localStorage');
 } else {
     wffStorage.jid = "";
     wffStorage.setItem = function(ky, val) {
