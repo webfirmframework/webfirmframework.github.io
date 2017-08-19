@@ -35,7 +35,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 	<header>
 		<div class="inner">
-			<h1>
 			<picture><source type="image/webp" srcset="../images/wff-logo-100px.webp"><img src="../images/wff-logo-100px.jpg" alt="WFF"></picture>
 			<h2>wffweb - Java framework to develop web applications</h2>
 			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
@@ -58,7 +57,7 @@
 				</p>
 				
 				<pre class="notranslate"><code>Div div = new Div(null);
-System.out.println(div.toHtmlString());</code></pre>
+System.out.println(div.toHtmlString(true));</code></pre>
 
 this code will print 
 
@@ -76,7 +75,7 @@ this code will print
 				<pre class="notranslate"><code>Div div = new Div(null) {{
     new Span(this);
 }};
-System.out.println(div.toHtmlString());</code></pre>
+System.out.println(div.toHtmlString(true));</code></pre>
                <p>prints</p>
                
                <pre class="notranslate"><code><xmp><div>
@@ -115,7 +114,7 @@ System.out.println(div.toHtmlString());</code></pre>
 
 				<h6>By passing as a constructor argument</h6>
 				<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
-System.out.println(div.toHtmlString());</code></pre>
+System.out.println(div.toHtmlString(true));</code></pre>
 
 				<p>prints</p>
 				<pre class="notranslate"><code><xmp><div style="color:green"></div></xmp></code></pre>

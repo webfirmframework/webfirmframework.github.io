@@ -36,7 +36,6 @@
 
 	<header>
 		<div class="inner">
-			<h1>
 			<picture><source type="image/webp" srcset="../images/wff-logo-100px.webp"><img src="../images/wff-logo-100px.jpg" alt="WFF"></picture>
 			<h2>wffweb - Java framework to develop web applications</h2>
 			<a href="https://github.com/webfirmframework/tomcat-8-wffweb-demo-apps" class="button"><small>View sample projects on</small> GitHub</a>
@@ -58,7 +57,7 @@
 				</p>
 <p>Eg 1 :- </p>
 				<pre class="notranslate"><code>Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
-System.out.println(div.toHtmlString());
+System.out.println(div.toHtmlString(true));
 </code></pre>
 
 <p>Eg 2 :- </p> 
@@ -67,7 +66,7 @@ System.out.println(div.toHtmlString());
 CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
 style.addCssProperty(newCssProperty);
 Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+System.out.println(div.toHtmlString(true));
 
 // cssProperty will be the same object newCssProperty
 CssProperty cssProperty = style.getCssProperty("new-property-name");
@@ -77,7 +76,7 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 <pre class="notranslate"><code>Style style = new Style();
 style.addCssProperty("new-property-name", "new-property-value");
 Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+System.out.println(div.toHtmlString(true));
 
 // cssProperty will be an instance of CustomCssProperty
 CssProperty cssProperty = style.getCssProperty("new-property-name");
