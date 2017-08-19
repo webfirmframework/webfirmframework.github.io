@@ -49,13 +49,13 @@
 						class="octicon octicon-link">wffweb best practices</span></a>
 				</h1>
 				
-				<h5>Build UI with minimal tags</h5>
+				<h2>Build UI with minimal tags</h2>
 				<p>When building heavy UI, it's important to follow this rule to
 					keep only necessary tags. It reduces the load of a browser, why
 					should the browser take care about unnecessary tags!!</p>
 				
 				
-				<h5>Use minimal tag manipulation methods</h5>
+				<h2>Use minimal tag manipulation methods</h2>
 				<p>If there are continuous invocation of tag manipulation methods then try to convert it to invoking minimal tag manipulation methods. Check out the below examples</p>
 				<p>Eg 1 :- </p>
 				<pre class="notranslate"><code>List<AbstractHtml> children = div1.getChildren();
@@ -83,7 +83,7 @@ div1.appendChild(div3);
 div1.addInnerHtmls(div2, div3);</code></pre>
 
 
-<h5>Use BrowserPage#holdPush &amp; BrowserPage#unholdPush wherever possible</h5>
+<h2>Use BrowserPage#holdPush &amp; BrowserPage#unholdPush wherever possible</h2>
 				<p>
 					Surround with
 					<code>BrowserPage#holdPush</code>
@@ -143,7 +143,7 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 					methods depends upon the requirements.
 				</p>
 
-				<h5>Do not return anonymous class</h5>
+				<h2>Do not return anonymous class</h2>
 				<p>When you want to reuse a set of tags, you have to keep a separate template class for it. Eg:-</p>
 
 				<p>First let us look at a bad practice :- </p>				
