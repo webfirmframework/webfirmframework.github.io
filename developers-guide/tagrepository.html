@@ -96,8 +96,22 @@ Collection<code><</code>AbstractHtml<code>></code> allTagsInTheBrowserPage = tag
 Collection<code><</code>AbstractAttribute<code>></code> allAttributesInTheBrowserPage = tagRepository.findAllAttributes();
 				</code></pre>
 				
-				<h5><code>TagRepository.exists</code></h5>
+				<h5><code>TagRepository.findOneTagAssignableToTag</code></h5>
+				<pre><code>TagRepository tagRepository = browserPage.getTagRepository();
+				
+//use it to find a particular type of tag, 
+//if there are many matchings a random one will be returned.
+//you can also find a custom tag (a new class which extends any tag)				
+Body body = tagRepository.findOneTagAssignableToTag(Body.class);</code></pre>
 
+				<h5><code>TagRepository.findTagsAssignableToTag</code></h5>
+				<pre><code>TagRepository tagRepository = browserPage.getTagRepository();
+//returns all matchings for the given tag class type.
+Collection&lt;Div&gt; divs = tagRepository.findTagsAssignableToTag(Div.class);</code></pre>
+				
+				
+				<h5><code>TagRepository.exists</code></h5>
+				<p>This is a fast and efficient way to find the existence of a tag or attribute in the UI.</p>
 				<pre><code>TagRepository tagRepository = browserPage.getTagRepository();
 //any tag instance to check its presence in the ui				
 AbstractHtml tagInTheUi;				
@@ -226,6 +240,14 @@ tagRepository.delete(tagInTheUi, "key1object");
 				</code></pre>
 				
 				
+				<h2>These are some additional methods</h2>
+				<h5><code>TagRepository.findTagsByTagName</code></h5>
+				<h5><code>TagRepository.findOneTagByTagName</code></h5>
+				<h5><code>TagRepository.findAttributesByTagName</code></h5>
+				<h5><code>TagRepository.executeJs</code></h5>
+				<p>Executes the given JavaScript in the client browser page.</p>
+				<h5><code>TagRepository.execute(BrowserPageAction)</code></h5>
+				<p>Performs some predefined JavaScript browser actions in the client browser page.</p>
 				<h2>Some examples of <i>static methods in TagRepository</i></h2>
 				<p>
 				It doesn't cover usages of all static methods.
