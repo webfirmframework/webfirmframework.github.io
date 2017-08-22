@@ -207,8 +207,7 @@ public static void main(String[] args) {
 
         Span span = new Span(details);
 
-        new NoTag(span, "Name : ");
-        new NoTag(span, fullName);
+        new NoTag(span, "Name : " + fullName);
 
         return details;
     }
