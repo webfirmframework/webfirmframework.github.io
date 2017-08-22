@@ -151,16 +151,11 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 
     public Div getUserDetailsDiv(final String fullName) {
 
-        Div details = new Div(null) {
-            {
-                new Span(this) {
-                    {
-                        new NoTag(this, "Name : ");
-                        new NoTag(this, fullName);
-                    }
-                };
-            }
-        };
+        Div details = new Div(null) {{
+            new Span(this) {{
+                new NoTag(this, "Name : " + fullName);
+            }};
+        }};
 
         return details;
     }
@@ -188,12 +183,9 @@ public static void main(String[] args) {
 
     private void develop(final String fullName) {
 
-        new Span(this) {
-            {
-                new NoTag(this, "Name : ");
-                new NoTag(this, fullName);
-            }
-        };
+        new Span(this) {{
+            new NoTag(this, "Name : " + fullName);
+        }};
 
     }
 
