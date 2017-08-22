@@ -57,7 +57,7 @@
 				</p>
 <p>Eg 1 :- </p>
 				<pre class="notranslate"><code>Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
-System.out.println(div.toHtmlString(true));
+System.out.println(div.toHtmlString());
 </code></pre>
 
 <p>Eg 2 :- </p> 
@@ -66,7 +66,7 @@ System.out.println(div.toHtmlString(true));
 CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
 style.addCssProperty(newCssProperty);
 Div div = new Div(null, style);
-System.out.println(div.toHtmlString(true));
+System.out.println(div.toHtmlString());
 
 // cssProperty will be the same object newCssProperty
 CssProperty cssProperty = style.getCssProperty("new-property-name");
@@ -76,7 +76,7 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 <pre class="notranslate"><code>Style style = new Style();
 style.addCssProperty("new-property-name", "new-property-value");
 Div div = new Div(null, style);
-System.out.println(div.toHtmlString(true));
+System.out.println(div.toHtmlString());
 
 // cssProperty will be an instance of CustomCssProperty
 CssProperty cssProperty = style.getCssProperty("new-property-name");

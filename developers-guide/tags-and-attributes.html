@@ -57,7 +57,7 @@
 				</p>
 				
 				<pre class="notranslate"><code>Div div = new Div(null);
-System.out.println(div.toHtmlString(true));</code></pre>
+System.out.println(div.toHtmlString());</code></pre>
 
 this code will print 
 
@@ -75,7 +75,7 @@ this code will print
 				<pre class="notranslate"><code>Div div = new Div(null) {{
     new Span(this);
 }};
-System.out.println(div.toHtmlString(true));</code></pre>
+System.out.println(div.toHtmlString());</code></pre>
                <p>prints</p>
                
                <pre class="notranslate"><code><xmp><div>
@@ -114,7 +114,7 @@ System.out.println(div.toHtmlString(true));</code></pre>
 
 				<h6>By passing as a constructor argument</h6>
 				<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
-System.out.println(div.toHtmlString(true));</code></pre>
+System.out.println(div.toHtmlString());</code></pre>
 
 				<p>prints</p>
 				<pre class="notranslate"><code><xmp><div style="color:green"></div></xmp></code></pre>
@@ -181,10 +181,6 @@ new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code
 					<code>removeChildren</code>
 					to remove multiple tags.
 				</p>
-
-				<h6>Be careful with the following methods until the announcement</h6>
-				<p>Avoid using <code>AbstractHtml#setChildren</code> and use <code>AbstractHtml#addInnerHtmls</code> instead of it.<br>
-				Always use <code>AbstractHtml#toHtmlString</code> by giving rebuild argument as <code>true</code>.</p>
 
 				<p>
 					<a href="event-attributes.html">Next >></a>
