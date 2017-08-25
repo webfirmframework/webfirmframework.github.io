@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>Secured by wffweb</title>
+<title>wffweb Tags Features | Methods of tags</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -44,23 +44,61 @@
 	<div id="content-wrapper">
 		<div class="inner clearfix">
 			<section id="main-content" >
-				<h2 id="secured-by-wffweb">
+				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Secured by wffweb</span></a>
-				</h2>
+						class="octicon octicon-link">Some special methods of Tags</span></a>
+				</h1>
 
 				<p>
-					If you are seeing a link <b><i>Secured by <a
-							href="#secured-by-wffweb">wffweb</a>
-					</i></b> in any app site it ensures that the end user UI and server
-					communication is highly secured by wffweb. Please find more details
-					about it in the <a href="technical-support.html#dedicatedSupport">support
-						plans</a>.
+					There some methods in tags which has some special purpose in the development.
 				</p>
+				<h2><code>toBigHtmlString &amp; toBigOutputStream</code></h2>
+				<p>
+					The
+					<code>toHtmlString</code>
+					and
+					<code>toBigHtmlString</code>
+					both can be used to return HTML string for the corresponding tag.
+					If the tag hierarchy is extremely complex (i.e. having around 10000
+					nested tags in it) then
+					<code>toBigHtmlString</code>
+					is the better choice because
+					<code>toHtmlString</code>
+					will consume memory while generating HTML and if there is no enough
+					memory available then it may throw an error.
+					<code>toHtmlString</code>
+					is faster than
+					<code>toBigHtmlString</code>
+					so it's always preferred for normal purpose. There could be some
+					cases where the tag hierarchy is used to generate very complex HTML
+					report, in such case
+					<code>toBigHtmlString</code>
+					is better.
+				</p>
+				<p>
+					<code>toBigOutputStream</code>
+					is for the same purpose the only difference is instead of returning
+					HTML string it writes HTML bytes directly to the given output
+					stream.
+				</p>
+				
+				<h2><code>setData(Object) &amp; getData()</code></h2>
+				<p>It's simply to set and get any object on the tag. It the set
+					object is saved in the tag itself.</p>
 
+				<p>
+				<h2><code>setSharedData(Object) &amp; getSharedData()</code></h2>
+				<p>It's simply to set and get any object common to the whole tag
+					hierarchy. The given object is saved in a private area of the root
+					tag of the whole hierarchy. Eg:-</p>
+				<script src="https://gist.github.com/webfirmframework/6608fa82ac1a8ebf1c81a336fc8dccba.js"></script>
+				<h2><code>getRootTag()</code></h2>
+				<p><code>getRootTag()</code> method of a tag returns the root tag (i.e. top level base tag) in the whole tag hierarchy. Eg:-</p>
+					<script src="https://gist.github.com/webfirmframework/3d758303988006aecbf3ce7e9eb89bb5.js"></script>
 
-				Contact <a
-						href="mailto:tech-support@webfirmframework.com">tech-support@webfirmframework.com</a> for more info.
+				<p>
+					<a href="event-attributes.html">Next >></a>
+				</p>
 
 				<br> <br> 
 
@@ -82,7 +120,8 @@
             .tar.gz file
           </a>
  -->
-<p class="repo-owner">
+
+			<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
@@ -149,6 +188,7 @@
 				<p class="repo-owner">
 					<a href="wffweb-best-practices.html" >Best Practices</a>
 				</p>
+				
 				<p class="repo-owner">
 					<a href="wffweb-current-features-and-future-plans.html" >Features and future plans</a>
 				</p>
@@ -190,6 +230,9 @@
 				</p>
 				<p>
 					<a href="https://webfirmframework.com/store/products" title="A place to download free/paid products, code templates or ready made projects" >Downloads</a>
+				</p>
+				<p>
+					<a href="secured-by-wffweb.html" >Secured by wffweb</a>
 				</p>
 				<p>
 					<a href="wffweb-careers.html" >Careers</a>
