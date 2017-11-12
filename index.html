@@ -296,7 +296,7 @@ function googleTranslateElementInit() {
 					be minimal in size and the framework to be improvable at any level.</p>
 
 				<h2>
-<a id="sample1--" class="anchor" href="#sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample code :-</h2>
+<a id="sample1--" class="anchor" href="#sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Sample code :-</h2>
 <p>Develop web application with Java code in the way you write HTML.</p>
 <pre><code class="notranslate">Html html = new Html(null) {{
 	new Head(this);
@@ -322,8 +322,8 @@ html.setPrependDocType(true);
 System.out.println(html.toHtmlString()); 
 </code></pre>
 
-<p>prints the following output</p>
 
+<p>prints the following output</p>
 <pre><code class="notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -334,6 +334,47 @@ Hello World
 &lt;/html&gt;
 </code></pre>
 
+<h2><a id="kotlin-sample1--" class="anchor" href="#kotlin-sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kotlin Sample code :-</h2>
+
+
+<pre><code class="notranslate">val html = object : Html(null) {
+    init {
+        Head(this)
+        object : Body(this) {
+            init {
+                NoTag(this, "Hello World")
+            }
+        }
+    }
+}
+
+// prepends the doc type <!DOCTYPE html>
+html.isPrependDocType = true
+println(html1.toHtmlString())
+</code></pre>
+
+alternatively
+
+<pre><code class="notranslate">val html = Html(null)
+Head(html)
+val body = Body(html)
+NoTag(body, "Hello World")
+
+// prepends the doc type <!DOCTYPE html>
+html.isPrependDocType = true
+println(html.toHtmlString())
+</code></pre>
+
+<p>prints the following output</p>
+<pre><code class="notranslate">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello World
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <h5>
 <a id="how-to-resolve-dependency-in-build-tools" class="anchor" href="#how-to-resolve-dependency-in-build-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to resolve dependency in different build tools</h5>
