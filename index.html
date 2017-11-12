@@ -342,9 +342,10 @@ Hello World
         Head(this)
         object : Body(this) {
             init {
-                NoTag(this, """Do you know
-                                   that writing multiple lines
-                                   in Kotin is very easy
+                NoTag(this, """
+                               Do you know
+                               that writing multiple lines
+                               in Kotin is very easy
                             """)
             }
         }
@@ -361,9 +362,10 @@ alternatively
 <pre><code class="notranslate">val html = Html(null)
 Head(html)
 val body = Body(html)
-NoTag(body, """Do you know
-                   that writing multiple lines
-                   in Kotin is very easy
+NoTag(body, """
+               Do you know
+               that writing multiple lines
+               in Kotin is very easy
             """)
 
 // prepends the doc type <!DOCTYPE html>
@@ -377,9 +379,9 @@ println(html.toHtmlString())
 &lt;head&gt;
 &lt;/head&gt;
 &lt;body&gt;
-Do you know
-    that writing multiple lines
-    in Kotin is very easy
+               Do you know
+               that writing multiple lines
+               in Kotin is very easy
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
