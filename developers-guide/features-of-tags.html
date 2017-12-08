@@ -96,6 +96,14 @@
 				<p><code>getRootTag()</code> method of a tag returns the root tag (i.e. top level base tag) in the whole tag hierarchy. Eg:-</p>
 					<script src="https://gist.github.com/webfirmframework/3d758303988006aecbf3ce7e9eb89bb5.js"></script>
 
+				<h2><code>resetHierarchy()</code></h2>
+				<p>If a tag is used under a <code>BrowserPage</code> instance and the same tag object needs to be used in another instance of <code>BrowserPage</code> then the tag must be removed from its parent and its <code>resetHierarchy</code> method must be called before using in another instance of <code>BrowserPage</code>
+					otherwise it will make an unusual behavour in the UI. To avoid compromising performance <code>resetHierarchy</code> doesn't handle it internally.
+					
+				</p>
+
+				<p>
+					
 				<p>
 					<a href="event-attributes.html">Next >></a>
 				</p>
