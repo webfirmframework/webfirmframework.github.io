@@ -18,7 +18,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>wffweb custom css properties | property</title>
+<title>wffweb Tag Attributes</title>
 <link rel="shortcut icon" href="../images/wffweb-logo.ico" type="image/x-icon">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -47,55 +47,88 @@
 			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Custom CSS property</span></a>
+						class="octicon octicon-link">Normal Tag Attribute</span></a>
 				</h1>
 
+				<h5>Normal tag attribute</h5>
+
 				<p>
-					<code>com.webfirmframework.wffweb.csswff.CustomCssProperty</code>
-					class may be used to create a custom css property. See the below
-					example.
+					Attributes which don't capture events are considered as normal tag attributes, 
+					eg:- <code>Name</code>, <code>Id</code>, <code>ClassAttribute</code>, <code>Value</code> etc...
 				</p>
-<p>Eg 1 :- </p>
-				<pre class="notranslate"><code>Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
-System.out.println(div.toHtmlString());
-</code></pre>
+				<p>All tag attributes will have some common methods like  
+				<code>setValue</code> and <code>getValue</code> or <code>getAttributeValue</code> depending on the context. Let's see some examples
+				</p>
 
-<p>Eg 2 :- </p> 
+<pre class="notranslate"><code>Input input = new Input(null);
+Value value = new Value("");
+input.addAttributes(value);
 
-<pre class="notranslate"><code>Style style = new Style();
-CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
-style.addCssProperty(newCssProperty);
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+//prints &lt;input value=""&gt;
+System.out.println(input.toHtmlString());
 
-// cssProperty will be the same object newCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
+value.setValue("webfirmframework");
 
-<p>Eg 3 :- </p> 
-<pre class="notranslate"><code>Style style = new Style();
-style.addCssProperty("new-property-name", "new-property-value");
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+//prints &lt;input value="webfirmframework"&gt;
+System.out.println(input.toHtmlString());
 
-// cssProperty will be an instance of CustomCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
+//prints webfirmframework
+System.out.println(value.getValue());
 
-<p>Or a separate class may be kept as below</p>
-<pre class="notranslate"><code>public class VibrateCssProperty extends CustomCssProperty {
+AbstractAttribute valueAttr = value;
 
-    public VibrateCssProperty(String cssValue) {
-        super("vibrate", cssValue);
-    }
+//prints webfirmframework
+System.out.println(valueAttr.getAttributeValue());
+				</code></pre>
 
-    // TODO add needful feature methods for this css property
+				<h5><code>setValue(boolean updateClient, String value)</code></h5>
+				<p>
+					Some attributes also contain
+					<code>setValue(boolean updateClient, String value)</code>
+					method (since <i>wffweb-2.1.15</i>) which excludes the value
+					syncing in client browser page and it's valid only if there is a
+					client browser page otherwise it works just like
+					<code>setValue</code>. Eg:- <code>Value#setValue(boolean updateClient, String value)</code>
+					<br> Use case:- Consider
+					<code>&lt;input type="text" value=""&gt;</code>
+					 tag in the browser page. The value of the value attribute in the browser page changes
+					whenever the user enters some value the text field. Sometimes we
+					may need to keep the same value state in the server side
+					<code>Value</code>
+					object by
+					<code>OnChange</code>
+					event attribute. In such cases if we are calling
+					<code>value.setValue(String value)</code>
+					method it will again synch the value to client browser page and
+					it's not required in this particular case so we can use
+					<code>value.setValue(boolean clientUpdate, String value)</code> method.
+					eg:-
+					<code>value.setValue(false, enteredValue)</code>.
+				    <br>
+				    <code>value.setValue(boolean clientUpdate, String value)</code> 
+				    may be useful to build stateful tags.<br>
+				    Eg:- 
+					<script src="https://gist.github.com/webfirmframework/e01427cc8acb8a2e48dee61f7d76d442.js"></script>
 
-}
-</code></pre>
+				</p>
+				<p>
+				<code>getAttributeValue</code>
+					is a common method in all attributes which returns the string
+					representation of the attribute value.
+					<br>
+					Based on the relevant context, the attribute will have needful feature methods in it.
+				</p>
 
 				<p>
-					<a href="custom-server-methods.html">Next >></a>
+					<a href="event-attributes.html">Next >></a>
+				</p>
+
+				<br> <br> 
+
+				<p>
+					Subscribe <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A">on
+						youtube</a> for technical videos
 				</p>
 			</section>
 
@@ -111,7 +144,7 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
           </a>
  -->
 
-				<p class="repo-owner">
+			<p class="repo-owner">
 					<a href="../index.html">Home</a>
 				</p>
 
@@ -182,6 +215,9 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 					<a href="wffweb-best-practices.html" >Best Practices</a>
 				</p>
 				<p class="repo-owner">
+					<a href="wffweb-current-features-and-future-plans.html" >Features and future plans</a>
+				</p>
+				<p class="repo-owner">
 					<a href="https://github.com/webfirmframework/wff">wffweb</a> is
 					maintained by <a href="https://webfirmframework.com">webfirmframework</a>.
 				</p>
@@ -233,12 +269,13 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 				<!-- 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>          
  -->
+ 
  				<p class="fb-share-button" data-href="https://webfirmframework.github.io" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwebfirmframework.github.io%2F&amp;src=sdkpreparse">Share</a></p>
 				<p>			
 				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
 				<script type="IN/Share" data-url="https://webfirmframework.github.io/" data-counter="right"></script>
 				</p>
-				<p><a href="https://twitter.com/wffweb" class="twitter-follow-button" data-show-count="false">Follow @wffweb</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+ 				<p><a href="https://twitter.com/wffweb" class="twitter-follow-button" data-show-count="false">Follow @wffweb</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 			</aside>
 		</div>
 	</div>
