@@ -337,19 +337,17 @@ Hello World
 <h2><a id="kotlin-sample1--" class="anchor" href="#kotlin-sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kotlin Sample code :-</h2>
 
 
-<pre><code class="notranslate">val html = object : Html(null) {
-    init {
-        Head(this)
-        object : Body(this) {
-            init {
-                NoTag(this, """
-                               Do you know
-                               that writing multiple lines
-                               in Kotin is very easy
-                            """)
-            }
-        }
-    }
+<pre><code class="notranslate">val html = Html(null).run {
+    Head(this)
+    Body(this).run {
+        NoTag(this, """
+                        Do you know
+                        that writing multiple lines
+                        in Kotin is very easy
+                        """)
+     }
+
+    this
 }
 
 // prepends the doc type <!DOCTYPE html>
