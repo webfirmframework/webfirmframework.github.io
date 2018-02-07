@@ -337,9 +337,9 @@ Hello World
 <h2><a id="kotlin-sample1--" class="anchor" href="#kotlin-sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kotlin Sample code :-</h2>
 
 
-<pre><code class="notranslate">val html = Html(null).run {
+<pre><code class="notranslate">val html = Html(null).apply {
     Head(this)
-    Body(this).run {
+    Body(this).apply {
         NoTag(this, """
                         Do you know
                         that writing multiple lines
@@ -347,7 +347,6 @@ Hello World
                         """)
      }
 
-    this
 }
 
 // prepends the doc type <!DOCTYPE html>
