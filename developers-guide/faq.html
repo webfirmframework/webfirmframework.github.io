@@ -85,7 +85,7 @@
 					anonymous class style coding in Java but sometimes it is referred
 					to as an anti-design pattern. It has an initial first time
 					performance impact if the tag hierarchy is heavy but it's only once
-					in the whole life time. And also this kind of development makes a
+					in the whole life time (As of <a target="_blank" href="https://docs.oracle.com/javase/10/vm/class-data-sharing.htm#JSJVM-GUID-2942983A-E83C-4DA3-A60C-60411D731D5A">Java 10</a>, it provides <a target="_blank" href="https://docs.oracle.com/javase/10/vm/class-data-sharing.htm#JSJVM-GUID-2942983A-E83C-4DA3-A60C-60411D731D5A">Application Class-Data Sharing</a> to avoid this load time). And also this kind of development makes a
 					method very lengthy unless it's properly managed/modularized. But
 					if you don't like anonymous class style coding you can follow
 					normal object creation coding style. It's always recommended to
@@ -103,7 +103,10 @@
 					target="_blank" >Kotlin wffweb sample project</a>.
 					
 				</p>
-
+				<p>
+				In <a target="_blank" href="https://docs.oracle.com/javase/10/vm/class-data-sharing.htm#JSJVM-GUID-2942983A-E83C-4DA3-A60C-60411D731D5A">Java 10</a>, it provides <a target="_blank" href="https://docs.oracle.com/javase/10/vm/class-data-sharing.htm#JSJVM-GUID-2942983A-E83C-4DA3-A60C-60411D731D5A">Application Class-Data Sharing</a> which can be used to avoid this initial class loading time.
+				</p>
+				
 				<h2>How wffweb is different from MVC framework?</h2>
 				<p>In an MVC framework, the application is categorized in to three, i.e. Model, View and Controller.
 				We have to write code for each part separately and need to connect each other. 
