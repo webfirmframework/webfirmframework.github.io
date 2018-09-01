@@ -46,9 +46,179 @@
 			<section id="main-content" >
 				<h1>
 					<a id="wffweb" class="anchor" href="#wffweb" aria-hidden="true"><span
-						class="octicon octicon-link">Some special methods of Tags</span></a>
+						class="octicon octicon-link">Methods of Tags</span></a>
 				</h1>
+				
+				<h2>
+					<a id="basic-features-of-tags" class="anchor" href="#basic-features-of-tags" aria-hidden="true"><span
+						class="octicon octicon-link">Basic methods of Tags</span></a>
+				</h2>
+				<p>These are some of the basic tag building methods but not limited to that.</p>
+				<h2>
+					<code>appendChild</code>
+				</h2>
+				<p>
+				<pre><code>Div div = new Div(null);        
+Span span = new Span(null);
 
+div.appendChild(span);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				<h2>
+					<code>appendChildren</code>
+				</h2>
+				<p>
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+H1 h1 = new H1(null);
+
+div.appendChildren(span, h1);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				
+				<h2>
+					<code>addInnerHtml</code>
+				</h2>
+				<p>
+				This method will remove all children and add the given tag as child.
+				<pre><code>Div div = new Div(null);         
+Span span = new Span(null);
+div.appendChild(span);
+
+div.addInnerHtml(new NoTag(null, "Some Text"));
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;Some Text&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				<h2>
+					<code>addInnerHtmls</code>
+				</h2>				
+				<p>
+				This method will remove all children and add the given tags as children.
+				<pre><code>Div div = new Div(null); 
+				       
+P p = new P(null);
+div.appendChild(p);
+
+H1 h1 = new H1(null);
+h1.addInnerHtml(new NoTag(null, "h1 heading"));
+
+H2 h2 = new H2(null);
+h2.addInnerHtml(new NoTag(null, "h2 subheading"));
+
+
+div.addInnerHtmls(h1, h2);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;h1&gt;h1 heading&lt;/h1&gt;&lt;h2&gt;h2 subheading&lt;/h2&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				
+				
+				<h2>
+					<code>removeChild</code>
+				</h2>				
+				<p>
+				This method will remove the given child from the tag.
+				<pre><code>Div div = new Div(null);
+P p = new P(null);
+div.appendChild(p);
+
+div.removeChild(p);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				
+				<h2>
+					<code>removeChildren</code>
+				</h2>				
+				<p>
+				This method will remove the given children from the tag.
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+div.removeChildren(Arrays.asList(p, span));
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;<br />
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				
+				
+				<h2>
+					<code>removeAllChildren</code>
+				</h2>				
+				<p>
+				This method will remove the all children from the tag.
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+div.removeAllChildren();
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;<br />
+System.out.println(htmlString);</code></pre>
+				</p>
+				
+				
+				<h2>
+					<code>getChildren</code>
+				</h2>				
+				<p>
+				This method will return all children from the tag.
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final List<AbstractHtml> children = div.getChildren();
+
+//true
+System.out.println(children.get(0).equals(span));
+//true
+System.out.println(children.get(1).equals(p));</code></pre>
+				</p>
+				
+				
+				
+				
+				
+				<h2>
+					<a id="special-features-of-tags" class="anchor" href="#wspecial-features-of-tags" aria-hidden="true"><span
+						class="octicon octicon-link">Some special methods of Tags</span></a>
+				</h2>
 				<p>
 					There some methods in tags which has some special purpose in the development.
 				</p>
