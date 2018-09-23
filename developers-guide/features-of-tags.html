@@ -213,6 +213,47 @@ System.out.println(children.get(1).equals(p));</code></pre>
 				
 				
 				
+				<h2>
+					<code>getFirstChild</code> since 3.0.1
+				</h2>				
+				<p>
+				This method will return the first child from its children.
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final AbstractHtml firstChild = div.getFirstChild();
+
+//true
+System.out.println(firstChild.equals(span));
+</code></pre></p>
+				
+				
+				
+				<h2>
+					<code>getChildAt</code> since 3.0.1
+				</h2>				
+				<p>
+				This method will return the child at the given index in its children. 
+				The below example will get the child at first index.
+				<pre><code>Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final AbstractHtml childAtIndexOne = div.getChildAt(1);
+
+//true
+System.out.println(childAtIndexOne.equals(p));
+</code></pre></p>
+				
+				
+				
 				
 				
 				<h2>
