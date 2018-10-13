@@ -61,14 +61,16 @@
 				<p>Since <i>wffweb-2.1.5</i>, it supports multi-threading. This will
 					help to asynchronously load ui for better user experience. A user
 					specific example is a large form containing many select fields
-					(drop down box of countries, vehicles, fruits etc..). In a sigle
+					(drop down box of countries, vehicles, fruits etc..). In a single
 					threaded model, the other parts of the form can not be generated
 					while the select box is being filled by elements. So if we are
 					using separate thread for generating select boxes then the user
 					will like the entire ui is quickly loaded and the select boxes are
 					being asynchronously filled with elements. This is a simple use
 					case, there are many use cases where you want to load the overall
-					ui first and after that asynchronously load different section of it.</p>
+					ui first and after that asynchronously load different section of it. 
+					There will be major multi-threading improvements done in <i>wffweb-3.0.1</i>, 
+					its early access will be available in <i>wffweb-3.0.1-SNAPSHOT</i> until the release of <i>wffweb-3.0.1</i>.</p>
 
 				<p>
 					<a href="wffweb-best-practices.html">Next >></a>
