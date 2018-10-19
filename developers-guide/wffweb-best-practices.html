@@ -140,7 +140,11 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 					<code>BrowserPage#holdPush</code>
 					and
 					<code>BrowserPage#unholdPush</code>
-					methods depends upon the requirements.
+					methods depends upon the requirements. 
+					There will be a major improvement for holdPush/unholdPush implementation in <i>wffweb-3.0.1</i> or later versions.
+					The improvement is with when <code>holdPush/unholdPush</code> method is called by multiple threads from the same <code>browserPage</code> instance, 
+					if the <code>holdPush</code> is called three times the <code>unholdPUsh</code> needs to be called three times to unhold the push
+					(in previous versions one unholdPush call will unhold the push). 
 				</p>
 
 				<h2>Do not return anonymous class</h2>
@@ -220,6 +224,20 @@ public static void main(String[] args) {
                 userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
 }
 </code></pre>
+
+
+				<h2>Use Executor Framework &amp; <i>wffweb-3.0.1</i> or later when using multiple threads</h2>
+				<p>
+				There are use cases where we need to load different parts of
+				<a href="multi-threading-in-wff-java-code.html" target="_blank">ui in an asynchronous manner</a>.
+				Java Executor Framework will be very useful to safely handle multiple threads for it. 
+				It's available as part of core java. 
+				<i>wffweb-3.0.1-SNAPSHOT</i> (check if <i>wffweb-3.0.1</i> is released) 
+				or later is recommended to use if ui portions are loaded in multiple threads. 
+				There will be a major change in thread safety improvements in <i>wffweb-3.0.1</i> 
+				and previous versions are not 100% thread safe. 
+			 
+				</p>
 
 				<h2>Use Kotlin to develop UI Templates</h2>
 				<p>
