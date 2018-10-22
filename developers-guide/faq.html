@@ -63,7 +63,9 @@
 				<p>No, it's purely built by Java.</p>
 				
 				<h2>Is wffweb thread-safe?</h2>
-				<p>Yes, it's almost thread safe but you have to handle thread safety while consuming this framework's classes.</p>
+				<p>Yes, it's almost thread safe but you have to handle thread safety while consuming this framework's classes. 
+				A lot of thread safety improvements will be done in <i>wffweb-3.0.1</i> or later. 
+				You can try early access with its snapshot version <i>wffweb-3.0.1-SNAPSHOT</i>.</p>
 				
 				<h2>Is it possible to use external js, css files along with wffweb?</h2>
 				<p>Yes, that's how an amazing ui can be built.</p>
@@ -150,7 +152,9 @@
 				<h2>What are the changes need to be done to migrate <i>wffweb-2.x.x</i> app to <i>wffweb-3.x.x</i>?</h2>
 				<p><i>wffweb-3.x.x</i> requires minimum of <i>Java 8</i>. 
 				Upgrade your project jdk/jre to Java 8 or later and recompile the project. 
-				No code changes are required in your project.
+				No code changes are required for <i>wffweb-3.0.0</i> but later version might need some minor code changes.
+				Eg: in wffweb-3.0.1 or later the <code>Style.getCssProperties</code> 
+				method returns an unmodifiable collection of <code>CssProperty</code>.
 				</p>
 				
 
