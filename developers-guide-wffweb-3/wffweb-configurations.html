@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Web Firm Framework">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide/get-started.html” />
+
+    <title>Developers Guide | WFF Configurations</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="../assets/css/blog.css" rel="stylesheet">
+    
+    <!-- google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+  <body>
+
+<!-- for facebook share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="https://webfirmframework.com/hub" target="_blank">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-success" href="/">Web Firm Framework</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 499.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+            <a title="Download latest released wffweb .jar file" class="btn btn-sm btn-outline-secondary" href="https://search.maven.org/remote_content?g=com.webfirmframework&amp;a=wffweb&amp;v=LATEST">Download .jar</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 text-muted" title="Home" href="#">Home</a>
+          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com">HTML5 to Java/Kotlin Tool</a>
+          <a class="p-2 text-muted" title="WFF Hub" href="#" target="_blank">Hub</a>
+          <a class="p-2 text-muted" title="Production Ready Projects" href="#" target="_blank">Production Ready Projects</a>          
+        </nav>
+      </div>
+
+		<div class="jumbotron p-3 p-md-5 rounded"
+			style="color: #147cb5; background: #75e8bf 0 0 repeat-x">
+			<div class="col-md-6 px-0">
+				<picture>
+				<source type="image/webp" srcset="../images/wff-logo-100px.webp">
+				<img src="../images/wff-logo-100px.jpg" alt="WFF"></picture>
+			</div>
+
+
+			<h1 class="display-4 font-italic"
+				title="wffweb - Java Developers Guide">wffweb - Java Developers
+				Guide</h1>
+			<p class="lead my-3">
+				<a href="mailto:tech-support@webfirmframework.com"
+					title="tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+				for support
+			</p>
+
+
+
+			<p class="lead mb-0">
+				<a href="#" class="text-white font-weight-bold">A Java framework
+					for Java experts to develop web applications...</a>
+			</p>
+		</div>
+
+		<div class="row mb-2">
+        <div class="col-md-6">
+        
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fWQvC9uV6Hg" frameborder="0" allowfullscreen></iframe>
+          <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Featured post</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#">Continue reading</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+          </div> -->
+        </div>
+        
+        
+        <div class="col-md-6">        
+         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">wffweb is the best one</strong>
+              <blockquote cite="https://webfirmframework.github.io/developers-guide/faq.html">
+              If you are developing single page application, highly secured ui (banking/financial products), mission critical ui development, business application, 
+				realtime application i.e. the applications which show realtime data in it, analytical applications etc..
+              </blockquote>
+              <p class="fb-share-button" data-href="https://webfirmframework.github.io" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwebfirmframework.github.io%2F&amp;src=sdkpreparse">Share</a></p>
+              <p>			
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+				<script type="IN/Share" data-url="https://webfirmframework.github.io/" data-counter="right"></script>
+			  </p>
+			  
+              
+              <!-- <h3 class="mb-0">
+                <a class="text-dark" href="#">wffweb for web app development</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
+              
+            </div>
+            <!-- <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+	      <div class="col-md-12">
+	      <!-- wffweb-github-io -->
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-6407927299164406" data-ad-slot="1020738577"
+						data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+	      </div>      
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            webfirmframework for Java Experts
+          </h3>
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">wffweb Configurations</h2>
+            <p class="blog-post-meta">for wffweb-3.0.1 or later</p>
+
+            
+			<p>
+				Unlike other java ee frameworks, wffweb doesn't have any direct dependency over java ee classes. And, websocket implementation is different in
+					different servers and i.e. not all servers follow <em>JSR 356</em> specification.
+                So, we have to configure wffweb if its server client communication feature needs to be used.
+                 
+			</p>
+			<hr>
+			<h2>Configuration steps</h2>
+			There are three main configurations.
+				<ul>
+					<li>Configure websocket,</li>
+					<li>set up a session listener and</li>
+					<li>set up a <code>BrowserPage</code>. Of course, once we have
+						configured <code>BrowserPage</code>, we have to expose it by any
+						servlet/rest.
+					</li>
+				</ul>
+				<h3>Configure websocket</h3>
+				
+				<p>There must be a websocket url set up with your server, that
+					websocket url should not be used by others. It should be dedicated
+					for wffweb. The websocket should support sending and receiving
+					binary data because wffweb and client communication is done via a
+					binary protocol called wff binary message. when the websocket
+					connection is opened, it must be informed to the wffweb as follows</p>
+					
+					<h4>On Open websocket connection event</h4>
+				
+				<h5>If the websocket supports partial message sending and maxBinaryMessageBufferSize is available or if the websocket conforms to <em>JSR 356</em> implementation then</h5>
+<pre><code class="notranslate">//webSocket session
+List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
+String wffInstanceId = wffInstanceIds.get(0);
+BrowserPage browserPage = BrowserPageContext.INSTANCE.webSocketOpened(wffInstanceId);
+
+final int maxBinaryMessageBufferSize = session
+                .getMaxBinaryMessageBufferSize();
+
+browserPage.addWebSocketPushListener(session.getId(), data -> {
+
+    ByteBufferUtil.sliceIfRequired(data, maxBinaryMessageBufferSize,
+            (part, last) -> {
+
+                try {
+                    session.getBasicRemote().sendBinary(part, last);
+                } catch (IOException e) {
+                    LOGGER.log(Level.SEVERE,
+                            "IOException while session.getBasicRemote().sendBinary(part, last)",
+                            e);
+                    try {
+                        session.close();
+                    } catch (IOException e1) {
+                        LOGGER.log(Level.SEVERE,
+                                "IOException while session.close()",
+                                e1);
+                    }
+                    throw new PushFailedException(e.getMessage(), e);
+                }
+
+                return !last;
+            });
+});
+</code></pre>
+				<h5>other than <em>JSR 356</em> websocket implementation</h5>
+				
+				
+				<pre><code class="notranslate">//webSocket session
+List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
+String wffInstanceId = wffInstanceIds.get(0);
+BrowserPage browserPage = BrowserPageContext.INSTANCE.webSocketOpened(wffInstanceId);
+
+//or unique id with String.valueOf(session.hashcode()) if session.getId() is not available
+browserPage.addWebSocketPushListener(session.getId(), new WebSocketPushListener() {
+
+            @Override
+            public void push(ByteBuffer data) {
+                try {
+                    session.getBasicRemote()
+                            .sendBinary(data);
+                } catch (Exception e) {
+                    throw new PushFailedException(e.getMessage(), e);
+                }
+            }
+        });
+</code></pre>
+				
+				
+	The above code setting a listener so that wffweb can push messages to the client browser page. 
+<br>
+<h4>When the websocket is closed i.e. on close event, it should be informed to wffweb as follows, </h4>
+
+<pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
+String wffInstanceId = wffInstanceIds.get(0);
+//session.getId() is the id given while adding websocket listener
+BrowserPageContext.INSTANCE.webSocketClosed(wffInstanceId, session.getId());
+</code></pre> 
+				
+				
+<h4>When the websocket receives a message i.e. on message event, it should be forwarded to wffweb as follows,</h4> 
+<pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
+String instanceId = wffInstanceIds.get(0);
+BrowserPage browserPage = BrowserPageContext.INSTANCE.getBrowserPage(instanceId);
+browserPage.webSocketMessaged(message);
+</code></pre> 
+
+Here, <code>wffInstanceId</code> is a unique id generated by <code>BrowserPage</code> instance, it can be taken by <code>browserPage.getInstanceId</code> method.
+Each instance of a <code>BrowserPage</code> will have its own unique <code>instanceId</code>				
+				
+				
+				<p>
+					If you want to keep the
+					<code>HttpSession</code>
+					active as long as the websocket connection is alive, you have to do
+					the following. In
+					<code>OnOpen</code>
+					, get the httpSession object and set
+					<code>httpSession.setMaxInactiveInterval(-1);</code>
+					and in
+					<code>OnClose</code>
+					reset the session time out as
+					<code>httpSession.setMaxInactiveInterval(60 * 30);</code>
+					(the same value which is given in web.xml). 
+					An http request to a dummy url may need to be made afterwards. 
+					So if the websocket doesn't make a connection again within the given time, the
+					httpSession will be timed out. This can also avoid keeping a heart
+					beat request to the server to keep the httpSession alive. This is
+					the solution for the issue explained in the <a
+						href="https://java.net/jira/browse/WEBSOCKET_SPEC-175"
+						target="_blank">description of this ticket</a>.
+				</p>				
+				
+
+				<p>
+					Refer from this <a target="_blank"
+						href="https://github.com/webfirmframework/minimal-production-ready-projects/blob/master/production-sample-with-bootstrap4-css-framework/src/main/java/com/wffwebdemo/minimalproductionsample/server/ws/WSServerForIndexPage.java#L104">fully
+						configured code from sample project</a>. Or checkout these <a
+						href="https://github.com/webfirmframework/minimal-production-ready-projects"
+						target="_blank">minimal production ready projects</a>. A sample project is also deployed at <a
+						href="https://webfirmframework.com/demo/" target="_blank">https://webfirmframework.com/demo</a>
+				</p>				
+
+
+				<p><a href="technical-support.html">Get technical assistance</a></p>
+				
+				
+				
+				<h3>Setting up session listener for wffweb</h3>
+<p>
+When the http session is closed, it must be informed to wffweb as follows.
+</p>
+<pre><code class="notranslate">@WebListener
+public class SessionListener implements HttpSessionListener {
+
+    @Override
+    public void sessionCreated(HttpSessionEvent sessionEvent) {
+        // NOP for wffweb
+    }
+
+    @Override
+    public void sessionDestroyed(HttpSessionEvent sessionEvent) {
+        BrowserPageContext.INSTANCE
+                .httpSessionClosed(sessionEvent.getSession().getId());
+    }
+
+}
+</code></pre>
+
+<h3><a id="browserPage" class="anchor" href="#browserPage"
+						aria-hidden="true">
+							Setting up <code>BrowserPage</code></a></h3>				
+				
+<p><code>BrowserPage</code> represents UI page (window) of a browser. In a single page application, there will be only one <code>BrowserPage</code>.</p>
+<pre><code>public class IndexPage extends BrowserPage {
+
+    @Override
+    public String webSocketUrl() {
+        //the websocket url you have configured for wffweb
+        return "ws://yourdomain.com/wffwebdemoproject/ws-for-index-page";
+    }
+
+    @Override
+    public AbstractHtml render() {
+
+        //keep this as a separate class so as to
+        //change its different portion
+        Html indexPageLayout = new Html(null) {{
+          new Head(this);
+          
+          new Body(this) {{
+           
+              new Div(this) {{
+                
+                  new H1(this) {{
+                      
+                    new NoTag(this, "こんにちは WFFWEB");  
+                    
+                  }};
+                  
+              }};
+              
+          }};
+          
+        }};
+
+        return indexPageLayout;
+    }
+
+}
+</code></pre>
+
+				<p>
+					Whatever changes made to
+					<code>indexPageLayout</code>
+					will automatically be reflected to the client browser. So, we can
+					keep it as a separate class for maintainability.
+				</p>
+				<p>
+					Once we have created a
+					<code>BrowserPage</code>
+					, we have to add it to
+					<code>BrowserPageContext</code>
+					.
+					<code>BrowserPageContext</code>
+					is the context which holds all
+					<code>BrowserPage</code>
+					instances. Adding a
+					<code>BrowserPage</code>
+					instance in to
+					<code>BrowserPageContext</code>
+					may be done inside a servlet because we need to create instance of
+					<code>BrowserPage</code>
+					only when there is a request from new session. i.e. we need to have
+					only one instance of the
+					<code>IndexPage</code>
+					per session. It may be added as follows
+				</p>
+				<pre><code>@WebServlet("/index")
+public class IndexPageServlet extends HttpServlet {
+    
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+
+        response.setContentType("text/html;charset=utf-8");
+
+        try (OutputStream os = response.getOutputStream();) {
+
+            HttpSession session = request.getSession();
+
+            String instanceId = (String) session
+                    .getAttribute("indexPageInstanceId");
+
+            BrowserPage browserPage = null;
+            if (instanceId != null) {
+
+                browserPage = BrowserPageContext.INSTANCE
+                        .getBrowserPage(instanceId);
+
+                // if the server is restarted browserPage could be null here,
+                // so you could save this instance to db after addBrowserPage
+                // method
+                // and retried from db using browserPage.getInstanceId()
+
+            }
+
+            if (browserPage == null) {
+                browserPage = new IndexPage();
+                BrowserPageContext.INSTANCE.addBrowserPage(session.getId(),
+                        browserPage);
+                session.setAttribute("indexPageInstanceId",
+                        browserPage.getInstanceId());
+            }
+
+            browserPage.toOutputStream(os, "UTF-8");
+        }
+
+    }
+
+}</code></pre>
+
+
+				<p>
+					<a
+						href="https://github.com/webfirmframework/minimal-production-ready-projects/archive/master.zip">Download
+						demo projects from here</a>
+				</p>
+
+
+
+			</div><!-- /.blog-post -->
+
+          
+
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="get-started.html">Prev</a>
+            <a class="btn btn-outline-primary" href="get-started.html">Next</a>
+          </nav>
+          
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="../developers-guide/get-started.html">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html">
+            <h4 class="font-italic text-danger">Notice</h4>
+            <p class="mb-0">Upgrade your project with 
+            <em class="text-info">wffweb-3.0.1</em> if it is released. It contains lot of major improvements for multi-threading environment.</p>
+            </blockquote>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Guide</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="get-started.html">Introduction</a></li>
+              <li><a href="wffweb-configurations.html">WFF Configurations</a></li>                                 
+            </ol>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Other</h4>
+            <ol class="list-unstyled">
+              <li><a href="../developers-guide/wffweb-released-versions.html">Released versions</a></li>
+            </ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>By <a href="https://webfirmframework.com">webfirmframework</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>
