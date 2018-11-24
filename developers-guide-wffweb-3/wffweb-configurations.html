@@ -469,13 +469,7 @@ public class IndexPageServlet extends HttpServlet {
 
           <div class="p-3">
             <h4 class="font-italic">Guide</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="get-started.html">Introduction</a></li>
-              <li><a href="wffweb-configurations.html">WFF Configurations</a></li>                                 
-              <li><a href="tags-and-attributes.html">Tags and Attributes</a></li>
-              <li><a href="tag-attributes.html">Non-event Attributes</a></li>
-              <li><a href="event-attributes.html">Event Attributes</a></li>                                 
-            </ol>
+            <ol id="devGuideLinks" class="list-unstyled mb-0"></ol>
           </div>
 
           <div class="p-3">
@@ -518,6 +512,19 @@ public class IndexPageServlet extends HttpServlet {
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
+			});
+			
+			$.getJSON("developers-guide-urls.json", function(data) {
+				var i;
+				for (i in data) {
+					var each = data[i]; 
+					var li = $('<li/>').appendTo('#devGuideLinks');
+					$('<a />')
+					.attr('href', each.uri)
+					.attr('title', each.title)
+					.text(each.name)					
+					.appendTo(li);
+				}
 			});
 		});
 	</script>
