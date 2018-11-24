@@ -202,10 +202,10 @@
 
         // jsObject is an implicit object
         // which is a conventional representation of bmObject
-        String postJsFunctionBody = "alert(jsObject.someKey);";
+        String jsPostFunctionBody = "alert(jsObject.someKey);";
 
         OnClick onClick = new OnClick(preJsFunctionBody, serverAsyncMethod,
-                jsFilterFunctionBody, postJsFunctionBody);
+                jsFilterFunctionBody, jsPostFunctionBody);
 
         Button button1 = new Button(this, onClick);
     }
@@ -222,12 +222,12 @@
 					,
 					<code>jsFilterFunctionBody</code>
 					and
-					<code>postJsFunctionBody</code>.
+					<code>jsPostFunctionBody</code>.
 					<code>preJsFunctionBody</code>
 					,
 					<code>jsFilterFunctionBody</code>
 					and
-					<code>postJsFunctionBody</code>
+					<code>jsPostFunctionBody</code>
 					can contain JavaScript function body without function declaration
 					and all these are executed at client side.
 				</p>
@@ -269,11 +269,11 @@
 				</p>
 
 				<p>
-					<code>postJsFunctionBody</code>
+					<code>jsPostFunctionBody</code>
 					is executed after
 					<code>asyncMethod</code>
 					is invoked. The role of
-					<code>postJsFunctionBody</code>
+					<code>jsPostFunctionBody</code>
 					is to receive data returned by
 					<code>asyncMethod</code>. In the sample code,
 					<code>asyncMethod</code>
@@ -283,7 +283,7 @@
 					available as an implicit object
 					<code>jsObject</code>
 					in the scope of
-					<code>postJsFunctionBody</code>.
+					<code>jsPostFunctionBody</code>.
 				</p>
 
 				
@@ -311,7 +311,7 @@
 					sample code
 				</p>
 				<pre class="notranslate"><code class="java">CustomEventAttribute customEventAttribute = new CustomEventAttribute("onclick"
-                , preJsFunctionBody, serverAsyncMethod, jsFilterFunctionBody, postJsFunctionBody);</code></pre>
+                , preJsFunctionBody, serverAsyncMethod, jsFilterFunctionBody, jsPostFunctionBody);</code></pre>
 				
 				
 				
