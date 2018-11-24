@@ -18,6 +18,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
   </head>
 
   <body>
@@ -162,7 +164,7 @@
 				<code>setValue</code> and <code>getValue</code> or <code>getAttributeValue</code> depending on the context. Let's see some examples
 				</p>
 
-<pre class="notranslate"><code>Input input = new Input(null);
+<pre class="notranslate"><code class="java">Input input = new Input(null);
 Value value = new Value("");
 input.addAttributes(value);
 
@@ -286,6 +288,7 @@ System.out.println(valueAttr.getAttributeValue());
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
@@ -295,6 +298,11 @@ System.out.println(valueAttr.getAttributeValue());
     </script>
 	<script type="text/javascript">
 		$(function() {
+			//for hightlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);

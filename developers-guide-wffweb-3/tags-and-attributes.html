@@ -18,6 +18,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
   </head>
 
   <body>
@@ -161,12 +163,12 @@
 					represent <em>div</em> tag in html, there is a <code>Div</code> class. See the below code 
 				</p>
 				
-				<pre class="notranslate"><code>Div div = new Div(null);
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
 System.out.println(div.toHtmlString());</code></pre>
 
 this code will print 
 
-<pre class="notranslate"><code><xmp><div></div></xmp></code></pre>
+<pre class="notranslate"><code class="html">&lt;div&gt;&lt;/div&gt;</code></pre>
 
 				<p>
 					The first argument in tag constructor (i.e.
@@ -177,15 +179,15 @@ this code will print
 					. A tag cannot have more than one direct parent tag. The preceding arguments in the constructor are attribute classes.
 					Let us check another example a <em>span</em> tag surrounded by <em>div</em> tag,
 				</p>
-				<pre class="notranslate"><code>Div div = new Div(null) {{
+				<pre class="notranslate"><code class="java">Div div = new Div(null) {{
     new Span(this);
 }};
 System.out.println(div.toHtmlString());</code></pre>
                <p>prints</p>
                
-               <pre class="notranslate"><code><xmp><div>
-    <span></span>
-</div></xmp></code></pre>
+               <pre class="notranslate"><code class="html">&lt;div&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
             <hr>
             
             <h3>Attribute</h3>
@@ -196,7 +198,7 @@ System.out.println(div.toHtmlString());</code></pre>
 					corresponding java class
 					<code>Style</code>. Check the below code to declare attribute.
 				</p>
-<pre class="notranslate"><code>Style style =  new Style("color:green");</code></pre>
+<pre class="notranslate"><code class="java">Style style =  new Style("color:green");</code></pre>
 
 				<p>
 					By behavior, attributes may be categorized into two, <em>tag
@@ -218,13 +220,13 @@ System.out.println(div.toHtmlString());</code></pre>
 					which it is added.
 				</p>
 			<h5>By passing as a constructor argument</h5>
-<pre class="notranslate"><code>Div div = new Div(null, new Style("color:green"));
+<pre class="notranslate"><code class="java">Div div = new Div(null, new Style("color:green"));
 System.out.println(div.toHtmlString());</code></pre>
 				<p>prints</p>
-				<pre class="notranslate"><code><xmp><div style="color:green"></div></xmp></code></pre>
+				<pre class="notranslate"><code class="html">&lt;div style=&quot;color:green&quot;&gt;&lt;/div&gt;</code></pre>
 				
             <h5>By addAttributes method</h5>
-				<pre class="notranslate"><code>Div div = new Div(null);
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
 				
 Style style =  new Style("color:green");
 Id id =  new Id("divId1");
@@ -233,7 +235,7 @@ div.addAttributes(style, id);</code></pre>
 				
 				<p>prints</p>
 				
-				<pre class="notranslate"><code><xmp><div id="divId1" style="color:green"></div></xmp></code></pre>
+				<pre class="notranslate"><code class="html">&lt;div id=&quot;divId1&quot; style=&quot;color:green&quot;&gt;&lt;/div&gt;</code></pre>
 				
 				<h4>Add or remove child tag in a tag</h4>
 				<p>Adding or removing child tags is similar to javascript
@@ -253,7 +255,7 @@ div.addAttributes(style, id);</code></pre>
 					will replace all existing child tags.
 					<code>insertBefore</code> can be used to insert a tag/tags before a tag, 
 					</p>
-					eg:- <pre class="notranslate"><code>Div parentDiv = new Div(null, new Id("parentDivId"));
+					eg:- <pre class="notranslate"><code class="java">Div parentDiv = new Div(null, new Id("parentDivId"));
 Div childDiv = new Div(parentDiv, new Id("child1"));
 
 childDiv.insertBefore(new Div(null, new Id("inserted1BeforeChild1")),
@@ -262,11 +264,11 @@ new Div(null, new Id("inserted2BeforeChild1")));</code></pre>
 see the printed output, <code>new Div(null, new Id("inserted1BeforeChild1")),
 new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code>childDiv</code>. 
 
-<pre class="notranslate"><code><xmp><div id="parentDivId">
-    <div id="inserted1BeforeChild1"></div>
-    <div id="inserted2BeforeChild1"></div>
-    <div id="child1"></div>
-</div></xmp></code></pre> 
+<pre class="notranslate"><code class="html">&lt;div id=&quot;parentDivId&quot;&gt;
+    &lt;div id=&quot;inserted1BeforeChild1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;inserted2BeforeChild1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;child1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre> 
 
 <p><code>childDiv</code> will be very useful when you want to insert rows in the middle of a table having thousands of rows.</p>
 				
@@ -343,6 +345,7 @@ new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
@@ -352,6 +355,11 @@ new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code
     </script>
 	<script type="text/javascript">
 		$(function() {
+			//for hightlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);

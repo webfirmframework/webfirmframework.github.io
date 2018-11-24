@@ -18,6 +18,10 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
+
   </head>
 
   <body>
@@ -162,7 +166,7 @@
 					containing four arguments which are used to handle events at client
 					side and server side. See the below code sample</p>
 
-				<pre class="notranslate"><code>public class SampleCode extends Body {
+				<pre class="notranslate"><code class="java">public class SampleCode extends Body {
     
     public SampleCode() {
         super(null);
@@ -306,7 +310,7 @@
 					can be used to create a custom event attribute. See the below
 					sample code
 				</p>
-				<pre class="notranslate"><code>CustomEventAttribute customEventAttribute = new CustomEventAttribute("onclick"
+				<pre class="notranslate"><code class="java">CustomEventAttribute customEventAttribute = new CustomEventAttribute("onclick"
                 , preJsFunctionBody, serverAsyncMethod, jsFilterFunctionBody, postJsFunctionBody);</code></pre>
 				
 				
@@ -368,6 +372,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
@@ -377,6 +382,12 @@
     </script>
 	<script type="text/javascript">
 		$(function() {
+			
+			//for hightlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+			
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
@@ -394,6 +405,9 @@
 				}
 			});
 		});
+	</script>
+	<script type="text/javascript">
+		
 	</script>
 </body>
 </html>

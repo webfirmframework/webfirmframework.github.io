@@ -18,6 +18,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
   </head>
 
   <body>
@@ -185,7 +187,7 @@
 					<h4>On Open websocket connection event</h4>
 				
 				<h5>If the websocket supports partial message sending and maxBinaryMessageBufferSize is available or if the websocket conforms to <em>JSR 356</em> implementation then</h5>
-<pre><code class="notranslate">//webSocket session
+<pre class="notranslate"><code class="java">//webSocket session
 List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
 String wffInstanceId = wffInstanceIds.get(0);
 BrowserPage browserPage = BrowserPageContext.INSTANCE.webSocketOpened(wffInstanceId);
@@ -221,7 +223,7 @@ browserPage.addWebSocketPushListener(session.getId(), data -> {
 				<h5>other than <em>JSR 356</em> websocket implementation</h5>
 				
 				
-				<pre><code class="notranslate">//webSocket session
+				<pre class="notranslate"><code class="java">//webSocket session
 List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
 String wffInstanceId = wffInstanceIds.get(0);
 BrowserPage browserPage = BrowserPageContext.INSTANCE.webSocketOpened(wffInstanceId);
@@ -246,7 +248,7 @@ browserPage.addWebSocketPushListener(session.getId(), new WebSocketPushListener(
 <br>
 <h4>When the websocket is closed i.e. on close event, it should be informed to wffweb as follows, </h4>
 
-<pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
+<pre class="notranslate"><code class="java">List<String> wffInstanceIds = session.getRequestParameterMap().get(BrowserPage.WFF_INSTANCE_ID);
 String wffInstanceId = wffInstanceIds.get(0);
 //session.getId() is the id given while adding websocket listener
 BrowserPageContext.INSTANCE.webSocketClosed(wffInstanceId, session.getId());
@@ -254,7 +256,7 @@ BrowserPageContext.INSTANCE.webSocketClosed(wffInstanceId, session.getId());
 				
 				
 <h4>When the websocket receives a message i.e. on message event, it should be forwarded to wffweb as follows,</h4> 
-<pre><code class="notranslate">List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
+<pre class="notranslate"><code class="java">List<String> wffInstanceIds = session.getRequestParameterMap().get("wffInstanceId");
 String instanceId = wffInstanceIds.get(0);
 BrowserPage browserPage = BrowserPageContext.INSTANCE.getBrowserPage(instanceId);
 browserPage.webSocketMessaged(message);
@@ -305,7 +307,7 @@ Each instance of a <code>BrowserPage</code> will have its own unique <code>insta
 <p>
 When the http session is closed, it must be informed to wffweb as follows.
 </p>
-<pre><code class="notranslate">@WebListener
+<pre class="notranslate"><code class="java">@WebListener
 public class SessionListener implements HttpSessionListener {
 
     @Override
@@ -327,7 +329,7 @@ public class SessionListener implements HttpSessionListener {
 							Setting up <code>BrowserPage</code></a></h3>				
 				
 <p><code>BrowserPage</code> represents UI page (window) of a browser. In a single page application, there will be only one <code>BrowserPage</code>.</p>
-<pre><code>public class IndexPage extends BrowserPage {
+<pre class="notranslate"><code class="java">public class IndexPage extends BrowserPage {
 
     @Override
     public String webSocketUrl() {
@@ -391,7 +393,7 @@ public class SessionListener implements HttpSessionListener {
 					<code>IndexPage</code>
 					per session. It may be added as follows
 				</p>
-				<pre><code>@WebServlet("/index")
+				<pre class="notranslate"><code class="java">@WebServlet("/index")
 public class IndexPageServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request,
@@ -500,6 +502,7 @@ public class IndexPageServlet extends HttpServlet {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
@@ -509,6 +512,11 @@ public class IndexPageServlet extends HttpServlet {
     </script>
     <script type="text/javascript">
 		$(function() {
+			//for hightlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
