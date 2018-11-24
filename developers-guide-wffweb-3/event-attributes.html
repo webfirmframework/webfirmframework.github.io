@@ -390,12 +390,13 @@
 			$.getJSON("developers-guide-urls.json", function(data) {
 				var each;
 				for (each in data) {
+					console.log(each);
 					var li = $('<li/>').appendTo('#devGuideLinks');
 
 					$('<a />')
-					.text(each.name)
 					.attr('href', each.uri)
 					.attr('title', each.title)
+					.text(each.name)					
 					.appendTo(li);
 				}
 			});
