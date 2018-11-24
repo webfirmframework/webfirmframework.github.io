@@ -227,9 +227,8 @@
         <aside class="col-md-4 blog-sidebar">
           <div class="p-3 mb-3 bg-light rounded">
             <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html">
-            <h4 class="font-italic text-danger" id="noticeTitle">Notice</h4>
-            <p id="noticeContent" class="mb-0">Upgrade your project with 
-            <em class="text-info">wffweb-3.0.1</em> if it is released. It contains lot of major improvements for multi-threading environment.</p>
+            <h4 class="font-italic text-danger" id="noticeTitle"></h4>
+            <p id="noticeContent" class="mb-0"></p>
             </blockquote>
           </div>
 
@@ -263,8 +262,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+		
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery-3.3.1.min.js"><\/script>')</script>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -281,6 +284,7 @@
 		
 		$(function() {
 			$.getJSON("notice.json", function(data) {
+				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
 		});
