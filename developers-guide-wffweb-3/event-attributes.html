@@ -388,8 +388,8 @@
 				$("#noticeContent").html(data.content);
 			});
 			$.getJSON("developers-guide-urls.json", function(data) {
-
-				for ( var each in data) {
+				var each;
+				for (each in data) {
 					var li = $('<li/>').appendTo('#devGuideLinks');
 
 					$('<a/>')
