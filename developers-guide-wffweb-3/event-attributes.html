@@ -195,7 +195,7 @@
             }
         };
 
-        String preJsFunctionBody = "/* event and source keywords are implicit objects here */ /*may be on some condition*/ return true;";
+        String jsPreFunctionBody = "/* event and source keywords are implicit objects here */ /*may be on some condition*/ return true;";
 
 	//source is equivalent to event.srcElement
         String jsFilterFunctionBody = "/* event and source keywords are implicit objects here */ var dataFromClient = {'clientKey' : 'clientValue', elementId : source.id, elementName : event.srcElement.name}; return dataFromClient;";
@@ -204,7 +204,7 @@
         // which is a conventional representation of bmObject
         String jsPostFunctionBody = "alert(jsObject.someKey);";
 
-        OnClick onClick = new OnClick(preJsFunctionBody, serverAsyncMethod,
+        OnClick onClick = new OnClick(jsPreFunctionBody, serverAsyncMethod,
                 jsFilterFunctionBody, jsPostFunctionBody);
 
         Button button1 = new Button(this, onClick);
@@ -216,14 +216,14 @@
 					In the above code,
 					<code>OnClick</code>
 					is an event attribute. There are four arguments for its constructor
-					<code>preJsFunctionBody</code>
+					<code>jsPreFunctionBody</code>
 					,
 					<code>serverAsyncMethod</code>
 					,
 					<code>jsFilterFunctionBody</code>
 					and
 					<code>jsPostFunctionBody</code>.
-					<code>preJsFunctionBody</code>
+					<code>jsPreFunctionBody</code>
 					,
 					<code>jsFilterFunctionBody</code>
 					and
@@ -232,7 +232,7 @@
 					and all these are executed at client side.
 				</p>
 				<p>
-					<code>preJsFunctionBody</code>
+					<code>jsPreFunctionBody</code>
 					should return boolean value. If it returns true then only
 					<code>serverAsyncMethod</code>
 					will be invoked. This will be useful when there is a validation
@@ -311,7 +311,7 @@
 					sample code
 				</p>
 				<pre class="notranslate"><code class="java">CustomEventAttribute customEventAttribute = new CustomEventAttribute("onclick"
-                , preJsFunctionBody, serverAsyncMethod, jsFilterFunctionBody, jsPostFunctionBody);</code></pre>
+                , jsPreFunctionBody, serverAsyncMethod, jsFilterFunctionBody, jsPostFunctionBody);</code></pre>
 				
 				
 				
