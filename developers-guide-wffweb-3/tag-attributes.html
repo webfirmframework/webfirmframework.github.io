@@ -55,10 +55,10 @@
 
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" title="Home" href="#">Home</a>
-          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com">HTML5 to Java/Kotlin Tool</a>
-          <a class="p-2 text-muted" title="WFF Hub" href="#" target="_blank">Hub</a>
-          <a class="p-2 text-muted" title="Production Ready Projects" href="#" target="_blank">Production Ready Projects</a>          
+          <a class="p-2 text-muted" title="Home" href="/">Home</a>
+          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com" target="_blank">HTML5 to Java/Kotlin Tool</a>
+          <a class="p-2 text-muted" title="WFF Hub" href="https://webfirmframework.com/hub" target="_blank">Hub</a>
+          <a class="p-2 text-muted" title="Production Ready Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Projects</a>          
         </nav>
       </div>
 
@@ -308,7 +308,7 @@ System.out.println(valueAttr.getAttributeValue());
 				$("#noticeContent").html(data.content);
 			});
 			
-			$.getJSON("developers-guide-urls.json", function(data) {
+			$.getJSON("developers-guide-uris.json", function(data) {
 				var i;
 				for (i in data) {
 					var each = data[i]; 
