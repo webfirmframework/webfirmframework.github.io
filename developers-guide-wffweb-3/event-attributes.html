@@ -346,9 +346,7 @@
 
           <div class="p-3">
             <h4 class="font-italic">Other</h4>
-            <ol class="list-unstyled">
-              <li><a href="../developers-guide/wffweb-released-versions.html">Released versions</a></li>
-            </ol>
+            <ol id="commonLinks" class="list-unstyled"></ol>
           </div>
         </aside><!-- /.blog-sidebar -->
 
@@ -397,6 +395,18 @@
 				for (i in data) {
 					var each = data[i]; 
 					var li = $('<li/>').appendTo('#devGuideLinks');
+					$('<a />')
+					.attr('href', each.uri)
+					.attr('title', each.title)
+					.text(each.name)					
+					.appendTo(li);
+				}
+			});
+			$.getJSON("common-uris.json", function(data) {
+				var i;
+				for (i in data) {
+					var each = data[i]; 
+					var li = $('<li/>').appendTo('#commonLinks');
 					$('<a />')
 					.attr('href', each.uri)
 					.attr('title', each.title)
