@@ -4,5 +4,6 @@
 {"uri":"tags-and-attributes.html","name":"Tags and Attributes","title":"Tags and Attributes"},
 {"uri":"tag-attributes.html","name":"Non-event Attributes","title":"Non-event Attributes"},
 {"uri":"event-attributes.html","name":"Event Attributes","title":"Event Attributes"},
-{"uri":"mltp-design-pattern.html","name":"MLTP Architecture","title":"MLTP Architecture"}
+{"uri":"mltp-design-pattern.html","name":"MLTP Architecture","title":"MLTP Architecture"},
+{"uri":"custom-tags.html","name":"Custom Tag","title":"Custom Tag"}
 ]

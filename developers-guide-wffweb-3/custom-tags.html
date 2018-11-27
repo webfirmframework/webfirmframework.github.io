@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>MLTP Architecture | Developers Guide</title>
+    <title>Custom Tags | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -93,7 +93,7 @@
 		<div class="row mb-2">
         <div class="col-md-6">
         
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1slPHG0_tOI?html5=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fWQvC9uV6Hg" frameborder="0" allowfullscreen></iframe>
           <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -156,225 +156,80 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">MLTP Architecture</h2>
+            <h2 class="blog-post-title">Custom Tags</h2>
             <p>
-					<em>MLTP</em> stands for <em>Model Logical-Template Push</em>. The
-					model (AKA domain object) gives the data required for
-					logical-template. Logical Template could be a reusable custom
-					template class containing wff java code which can generate a piece
-					of html for the UI. Push, which is done by the framework internally
-					itself when a template/layout is embedded by another template and
-					we don't have to take care about the push part.
+					<code>com.webfirmframework.wffweb.tag.htmlwff.CustomTag</code>
+					class can be used to create a new tag similar to the existing
+					tags like
+					<code>Div</code>
+					.
 				</p>
 				
-				<hr>
-            <h3>Logical-template</h3>
-            <p>Logical-template is a reusable template class which can
-					generate a specific portion of a ui with needful functionalities.
-					The below code shows a simple example for Logical-template. The
-					logical template may be provided model to show required data (it's
-					not included in the below code but you can simply modify). The mere
-					responsibility of a logical-template class is to generate a
-					specific portion for ui with functionalities</p>
+            <pre class="notranslate"><code class="java">public class NewTag extends CustomTag {
 
+    private static final long serialVersionUID = 1L;
 
-				<pre><code class="java">
-/**
- * this code is updated so it will be valid since wffweb-2.1.2 version
- */				
-public class ListUsersTempate extends Div implements ServerAsyncMethod {
+    public NewTag(AbstractHtml base, AbstractAttribute... attributes) {
+        super("newtag", TagType.OPENING_CLOSING, base, attributes);
+    }
 
-    private static final Logger LOGGER = Logger.getLogger(ListUsersTempate.class.getName());
-    
-    private TBody tBody;
-    
-    private Collection<AbstractHtml> previousRows;
-    
-    private int rowCount = 0;
-    
-    private Button nextRowsButton;
-    
-    private OnClick nextRowsButtonOnClick;
-    
-    private OnClick commonOnClick;
-    
-    private Button markGreenButton;
-    
-    private Button markVioletButton;
-    
-    private Button removeColoumnStyleButton;
-    
-    private Style countryColumnStyle;
-    
-    public ListUsersTempate() {
-    	super(null);
-    	countryColumnStyle = new Style("background:yellow");
-    	develop();
-    }
-    
-    private void develop() {
-    
-    	new StyleTag(this) {{
-    	    new NoTag(this, "table {\n    font-family: arial, sans-serif;");
-    	    new NoTag(this, "border-collapse: collapse;\n    width: 100%;");
-    	    new NoTag(this, "}\n\ntd, th {");
-    	    new NoTag(this, "border: 1px solid #dddddd;\n    text-align: left;");
-    	    new NoTag(this, "padding: 8px;\n}");
-    	    new NoTag(this, "tr:nth-child(even) {\n    background-color: #dddddd;");
-    	    new NoTag(this, "}");
-    	}};
-    
-    	new Table(this) {{
-    	    tBody = new TBody(this) {{
-    	        new Tr(this) {{
-    	            new Th(this) {{
-    	                new NoTag(this, "Company (会社)");
-    	            }};
-    	            new Th(this) {{
-    	                new NoTag(this, "Contact (接触)");
-    	            }};
-    	            new Th(this) {{
-    	            	new NoTag(this, "Country (国)");
-    	            }};
-    	        }};
-    	    }};
-    	}};
-    
-    	new Br(this);
-    	new Br(this);
-    
-    	nextRowsButtonOnClick = new OnClick(this);
-    	commonOnClick = new OnClick(this);
-    
-    	nextRowsButton = new Button(this, nextRowsButtonOnClick) {{
-    	    new B(this) {{
-    	        new NoTag(this, "Next");
-    	    }};
-    	}};
-    
-    	markGreenButton = new Button(this, commonOnClick) {{
-    	    new B(this) {{
-    	        new NoTag(this, "Mark column green");
-    	    }};
-    	}};
-    
-    	markVioletButton = new Button(this, commonOnClick) {{
-    	    new B(this) {{
-    	        new NoTag(this, "Mark column violet");
-    	    }};
-    	}};
-    
-    	removeColoumnStyleButton = new Button(this, commonOnClick) {{
-    	    new B(this) {{
-    	        new NoTag(this, "Remove style from column");
-    	    }};
-    	}};
-    
-    	// initially add rows
-    	addRows();
-    }
-    
-    private void addRows() {
-    
-    	Collection<AbstractHtml> rows = new LinkedList<AbstractHtml>();
-    
-    	for (int i = 0; i < 25; i++) {
-    
-    	    Tr tr = new Tr(null) {{
-    	        
-    	        rowCount++;
-                
-    	        new Td(this) {{
-    	            new NoTag(this, "Alfreds Futterkiste " + rowCount);
-    	        }};
-    	        new Td(this) {{
-    	            new NoTag(this, "Maria Anders " + rowCount);
-    	        }};
-    	        new Td(this, countryColumnStyle) {{
-    	            new NoTag(this, "Germany " + rowCount);
-    	        }};
-    	        
-    	    }};
-    
-    	    rows.add(tr);
-    	}
-    
-    	if (previousRows != null) {
-    	    tBody.removeChildren(previousRows);
-    	}
-    
-    	tBody.appendChildren(rows);
-    
-    	previousRows = rows;
-    
-    }
-    
+    // TODO your own feature methods
+
     @Override
-    public WffBMObject asyncMethod(WffBMObject dataFromClient, Event event) {
-    
-    	// if nextRowsButtonOnClick is equal to event.getSourceAttribute()
-    	// then nextRowsButton will be equal to event.getSourceTag()
-    	// because nextRowsButtonOnClick attribute is added only in
-    	// nextRowsButton
-    	// But, in the case of commonOnClick it's added in
-    	// three buttons so the sourceTag must also be checked.
-    
-    	if (nextRowsButtonOnClick.equals(event.getSourceAttribute())) {
-    
-    	    addRows();
-    
-    	} else if (commonOnClick.equals(event.getSourceAttribute()) 
-    		    && markGreenButton.equals(event.getSourceTag())) {
-    
-    	    LOGGER.info("Mark column green");
-    	    countryColumnStyle.addCssProperties("background:green");
-    
-    	} else if (commonOnClick.equals(event.getSourceAttribute()) 
-    		    && markVioletButton.equals(event.getSourceTag())) {
-    
-    	    LOGGER.info("Mark column violet");
-    	    countryColumnStyle.addCssProperties("background:violet");
-    
-    	} else if (commonOnClick.equals(event.getSourceAttribute())
-    		    && removeColoumnStyleButton.equals(event.getSourceTag())) {
-    
-    	    LOGGER.info("remove style");
-    	    AbstractHtml[] ownerTags = countryColumnStyle.getOwnerTags();
-            
-    	    for (AbstractHtml ownerTag : ownerTags) {
-    	        ownerTag.removeAttributes(countryColumnStyle.getAttributeName());
-    	    }
-    	}
-    
-    	return null;
+    public NewTag clone() throws CloneNotSupportedException {
+        return (NewTag) super.clone();
     }
 
-}
-</code></pre>
-<p>Later you can add this template class to any specific portion of ui, eg:</p>
+}</code></pre>
+
+
+
+<p><code>NewTag</code> may be used as a tag like <code>Div</code> tag. The below code shows custom tag without keeping a separate class</p>
+				<pre class="notranslate"><code class="java">CustomTag customTag = new CustomTag("newtag", null, new Id("ct1Id")) {
+    CustomTag customTag = new CustomTag("anothertag", this);
+};
+System.out.println(customTag.toHtmlString());</code></pre>
+
+this code will print 
+
+<pre class="notranslate"><code class="html">&lt;newtag id=&quot;ct1Id&quot;&gt;
+    &lt;anothertag&gt;&lt;/anothertag&gt;
+&lt;/newtag&gt;</code></pre>
+
+				<p>
+					The first argument in
+					<code>CustomTag</code>
+					constructor is tag name. There are three types of
+					<code>TagType</code>
+					,
+					<code>TagType.OPENING_CLOSING</code>
+					,
+					<code>TagType.SELF_CLOSING</code>
+					and
+					<code>TagType.NON_CLOSING</code>
+					. Example for
+					<code>TagType.OPENING_CLOSING</code>
+					is <em>&lt;div&gt;&lt;/div&gt;</em> which has opening and closing tag. Example for
+					<code>TagType.SELF_CLOSING</code>
+					is <em>&lt;input type=&quot;text&quot;/&gt;</em> which can be self closed and no need to have a
+					closing tag. Example for
+					<code>TagType.NON_CLOSING</code>
+					is <em>&lt;meta charset=&quot;UTF-8&quot;&gt;</em> which need neither be self closed nor be closed with
+					closing tag.
+				</p>
 				
-				<pre><code class="java">ListUsersTempate listUsers = new ListUsersTempate();
-
-//suppose you have a <em>div</em> in the ui to add, then
-
-div.appendChild(listUsers);
-</code></pre>
-
-
-
-
 
 				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="event-attributes.html">Prev</a>
+            <a class="btn btn-outline-primary" href="mltp-design-pattern.html">Prev</a>
             <a class="btn btn-outline-primary" href="custom-tags.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/mltp-design-pattern.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/custom-tags.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
