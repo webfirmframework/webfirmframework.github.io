@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Custom Tags | Developers Guide</title>
+    <title>Custom Attributes | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,80 +156,100 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Custom Tags</h2>
+            <h2 class="blog-post-title">Custom Attributes</h2>
             <p>
-					<code>com.webfirmframework.wffweb.tag.htmlwff.CustomTag</code>
-					class can be used to create a new tag similar to the existing
-					tags like
-					<code>Div</code>
-					.
+					As explained in <a href="tags-and-attributes.html">attributes
+						section</a>, custom attribute may also be considered as two,
+					<code>com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute</code>
+					class can be used to create a new attribute similar to the existing attribures
+					like
+					<code>Id</code>
+					and
+					<code>com.webfirmframework.wffweb.tag.html.attribute.event.CustomEventAttribute</code>
+					which can be used to create a new event attribute similar to existing event attributes like <i>OnClick</i>.
 				</p>
 				
-            <pre class="notranslate"><code class="java">public class NewTag extends CustomTag {
+				<h3>CustomAttribute</h3>
+				<h4>Custom attribute with value :</h4>
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new CustomAttribute("attribute-with", "value"));
+System.out.println(div);</code></pre>
+				
+				prints
+				
+				<pre class="notranslate"><code class="html">&lt;div attribute-with=&quot;value&quot;&gt;&lt;/div&gt;</code></pre>
+				
+				
+				<h4>Custom attribute without value :</h4>
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new CustomAttribute("attribute-without-value"));
+System.out.println(div);</code></pre>
+				prints
+				<pre class="notranslate"><code>&lt;div attribute-without-value&gt;&lt;/div&gt;</code></pre>
+				
+				
+				<p>You can also keep your own implementation class by extending
+					CustomAttribute class, see the below samples</p>
+					
+					<h4>To create custom attribute as a separate class</h4>
+					
+				<pre class="notranslate"><code class="java">import com.webfirmframework.wffweb.tag.html.attributewff.CustomAttribute;
+
+public class CommonDataAttribute extends CustomAttribute {
 
     private static final long serialVersionUID = 1L;
 
-    public NewTag(AbstractHtml base, AbstractAttribute... attributes) {
-        super("newtag", TagType.OPENING_CLOSING, base, attributes);
+    public CommonDataAttribute(String attributeValue) {
+        super("common-data", attributeValue);
     }
 
-    // TODO your own feature methods
-
-    @Override
-    public NewTag clone() throws CloneNotSupportedException {
-        return (NewTag) super.clone();
-    }
+    // TODO write the feature methods for this attribute
 
 }</code></pre>
 
+<pre class="notranslate"><code class="java">public static void main(String[] args) {
 
+    Div div = new Div(null, new CommonDataAttribute("data1")) {
+        Div div = new Div(this, new CommonDataAttribute("data2"));
+    };
 
-<p><code>NewTag</code> may be used as a tag like <code>Div</code> tag. The below code shows custom tag without keeping a separate class</p>
-				<pre class="notranslate"><code class="java">CustomTag customTag = new CustomTag("newtag", null, new Id("ct1Id")) {
-    CustomTag customTag = new CustomTag("anothertag", this);
-};
-System.out.println(customTag.toHtmlString());</code></pre>
+    System.out.println(div.toHtmlString());
+}</code></pre>
 
-this code will print 
+this will print
 
-<pre class="notranslate"><code class="html">&lt;newtag id=&quot;ct1Id&quot;&gt;
-    &lt;anothertag&gt;&lt;/anothertag&gt;
-&lt;/newtag&gt;</code></pre>
-
-				<p>
-					The first argument in
-					<code>CustomTag</code>
-					constructor is tag name. There are three types of
-					<code>TagType</code>
+<pre class="notranslate"><code class="html">&lt;div common-data=&quot;data1&quot;&gt;
+    &lt;div common-data=&quot;data2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+            <h3>CustomEventAttribute</h3>
+            <p>Let us create an <code class="notranslate">onclick</code> 
+            event attribute which will work similar to the existing <code class="notranslate">OnClick</code> attribute. 
+            It will also support all generic arguments (such as <code>jsPreFunctionBody</code>
 					,
-					<code>TagType.OPENING_CLOSING</code>
+					<code class="notranslate">serverAsyncMethod</code>
 					,
-					<code>TagType.SELF_CLOSING</code>
+					<code class="notranslate">jsFilterFunctionBody</code>
 					and
-					<code>TagType.NON_CLOSING</code>
-					. Example for
-					<code>TagType.OPENING_CLOSING</code>
-					is <em>&lt;div&gt;&lt;/div&gt;</em> which has opening and closing tag. Example for
-					<code>TagType.SELF_CLOSING</code>
-					is <em>&lt;input type=&quot;text&quot;/&gt;</em> which can be self closed and no need to have a
-					closing tag. Example for
-					<code>TagType.NON_CLOSING</code>
-					is <em>&lt;meta charset=&quot;UTF-8&quot;&gt;</em> which need neither be self closed nor be closed with
-					closing tag.
-				</p>
-				
-
-				
+					<code class="notranslate">jsPostFunctionBody</code>.
+					<code class="notranslate">jsPreFunctionBody</code>
+					,
+					<code class="notranslate">jsFilterFunctionBody</code>
+					and
+					<code class="notranslate">jsPostFunctionBody</code>) supported by an event attribute.</p>
+            
+            <pre class="notranslate"><code class="java">Button btn = new Button(null, new CustomEventAttribute("onclick", "alert('js alert');"));</code></pre>
+			<p>We can also keep it as a separate class by extending <code class="notranslate">CustomEventAttribute</code></p>
+            
+            
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="mltp-design-pattern.html">Prev</a>
+            <a class="btn btn-outline-primary" href="custom-tags.html">Prev</a>
             <a class="btn btn-outline-primary" href="custom-attributes.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/custom-tags.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/custom-attributes.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
