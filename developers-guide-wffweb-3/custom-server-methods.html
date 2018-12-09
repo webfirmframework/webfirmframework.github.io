@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Custom CSS Property | Developers Guide</title>
+    <title>Custom Server Methods | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,62 +156,143 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Custom CSS property</h2>
+            <h2 class="blog-post-title">Custom Server Method</h2>
  
- <p>
-					<code class="notranslate">com.webfirmframework.wffweb.csswff.CustomCssProperty</code>
-					class may be used to create a custom css property. See the below
-					example.
+ <p>The aim of custom server method is to declare a custom method
+					in the server which can be called from the client using JavaScript.</p>
+					
+					<hr>
+					
+ 			<h3><code class="notranslate">browserPage.addServerMethod(methodName, serverAsyncMethod);</code></h3>
+ 				<p>
+					<code class="notranslate">addServerMethod</code> of <code class="java">BrowserPage</code> can be used to register a custom server method. The custom server method can be called from JavaScript code. See the below sample
 				</p>
-<p>Eg 1 :- </p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
-System.out.println(div.toHtmlString());
-</code></pre>
+ 
+ <pre class="notranslate"><code class="java">ServerAsyncMethod serverAsyncMethod = new ServerAsyncMethod() {
 
-<p>Eg 2 :- </p> 
+            @Override
+            public WffBMObject asyncMethod(WffBMObject wffBMObject,
+                    Event event) {
+                //will print 'some value'
+                System.out.println(wffBMObject.get("somekeyFromClient").getValue());
+                //prints the type of value
+                System.out.println(wffBMObject.get("somekeyFromClient").getValueType());     
+                
+                String serverMethodName = event.getServerMethodName();
+                
+                //will print someUniqueMethodName
+                System.out.println(serverMethodName);
 
-<pre class="notranslate"><code class="java">Style style = new Style();
-CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
-style.addCssProperty(newCssProperty);
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+                // used to send data to the client
+                WffBMObject bmObject = new WffBMObject();
+                bmObject.put("someKey", BMValueType.STRING,
+                        "こんにちは Web Firm Framework");
 
-// cssProperty will be the same object newCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
+                return bmObject;
+            }
+        };
+        
+browserPage.addServerMethod("someUniqueMethodName", serverAsyncMethod);</code></pre>
 
-<p>Eg 3 :- </p> 
-<pre class="notranslate"><code class="java">Style style = new Style();
-style.addCssProperty("new-property-name", "new-property-value");
-Div div = new Div(null, style);
-System.out.println(div.toHtmlString());
+				<p>
+					Invoke the server method from JavaScript, see the code
+				</p>
+				
+			<pre class="notranslate"><code class="js">var arguments = {
+	'somekeyFromClient' : 'some value',
+	'numb' : 55555,
+	'bool' : true,
+	'anObj' : {
+		'key' : 'val'
+	},
+	'funcArray' : function() {console.log('m function');},
+	'numberArray' : [ 5, 55, 555, 55, 5555 ]
+};
 
-// cssProperty will be an instance of CustomCssProperty
-CssProperty cssProperty = style.getCssProperty("new-property-name");
-</code></pre>
+var callbackFunction = function(obj) {
 
-<p>Or a separate class may be kept as below</p>
-<pre class="notranslate"><code class="java">public class VibrateCssProperty extends CustomCssProperty {
+    console.log('callback obj ', obj);
 
-    public VibrateCssProperty(String cssValue) {
-        super("vibrate", cssValue);
+    for (key in obj) {
+	    console.log('key is ' + key, obj[key]);
     }
 
-    // TODO add needful feature methods for this css property
+    obj.testFun('check out browser console to see values received from server');
+};
 
-}
+wffAsync.serverMethod('someUniqueMethodName', arguments).invoke(callbackFunction);
+
 </code></pre>
-				
+				<p>
+					The first argument passed in
+					<code>wffAsync.serverMethod</code>
+					is the name of the method to be called.
+				</p>
+				<p>
+					The second argument 
+					<code>arguments</code>
+					passed in
+					<code>wffAsync.serverMethod</code>
+					will be received as a
+					<code>wffBMObject</code>
+					argument in
+					<code>asyncMethod</code>
+					method. The JavaScript object
+					<code>arguments</code>
+					can also contain
+					<code>Int8Array</code>
+					value type to pass binary data, which will be received in
+					<code>wffBMObject</code>
+					as a value type of
+					<code>BMValueType.BM_BYTE_ARRAY</code>
+					i.e. the value is a class type of
+					<code>WffBMByteArray</code>
+					which contains bytes.
+				</p>
+				<p>
+					The
+					<code>callbackFunction</code>
+					function will be called for the result of
+					<code>asyncMethod</code>
+					server method. The argument
+					<code>obj</code>
+					in
+					<code>callbackFunction</code>
+					is conventional JavaScript object of
+					<code>bmObject</code>
+					returned by
+					<code>asyncMethod</code>
+					in the server.
+				</p>
+
+				<p>
+					The server method can also send binary data using
+					<code>WffBMByteArray</code>
+					. Check out
+					<code>BMValueType</code>
+					enum to know the supported data types of value to send from server to client
+					and vice versa.
+				</p>
+				<p>
+					In the above JavaScript code,
+					<code>arguments</code>
+					,
+					<code>callbackFunction</code>
+					and
+					<code>obj</code>
+					are optional arguments.
+				</p>
+ 
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="css-properties.html">Prev</a>
+            <a class="btn btn-outline-primary" href="custom-css-properties.html">Prev</a>
             <a class="btn btn-outline-primary" href="custom-server-methods.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/custom-css-properties.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/custom-server-methods.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

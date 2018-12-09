@@ -8,5 +8,6 @@
 {"uri":"custom-tags.html","name":"Custom Tag","title":"Custom Tag"},
 {"uri":"custom-attributes.html","name":"Custom Attribute","title":"Custom Attribute"},
 {"uri":"css-properties.html","name":"CSS Property","title":"CSS Properties"},
-{"uri":"custom-css-properties.html","name":"Custom CSS Property","title":"Custom CSS Property"}
+{"uri":"custom-css-properties.html","name":"Custom CSS Property","title":"Custom CSS Property"},
+{"uri":"custom-server-methods.html","name":"Custom Server Method","title":"Custom Server Methods"}
 ]
