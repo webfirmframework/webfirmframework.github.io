@@ -156,45 +156,57 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">CSS properties</h2>
-            <p>
-					CSS properties are the properties of a style attribute. There are multiple ways to set css properties to a style object, see the below code.
+            <h2 class="blog-post-title">Custom CSS property</h2>
+ 
+ <p>
+					<code>com.webfirmframework.wffweb.csswff.CustomCssProperty</code>
+					class may be used to create a custom css property. See the below
+					example.
 				</p>
-				
-				
-				<pre class="notranslate"><code class="java">//if you initially want to have some css properties
-Style style = new Style("text-align:center;background-color:green");
-
-//another way of adding css property
-BackgroundColor backgroundColor = new BackgroundColor(CssColorName.BLUE);
-style.addCssProperties(backgroundColor);
-
-//again another way of adding css property
-style.addCssProperty("align-content", "center");
-
-//there some more methods to add/remove/modify properties
-//in a style class those you can find from style object.
-
-//to print the attribute name and value
-System.out.println(style.toHtmlString());
+<p>Eg 1 :- </p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
+System.out.println(div.toHtmlString());
 </code></pre>
 
-the final style object will have this outcome 
-<pre class="notranslate"><code class="java">style="text-align:center;background-color:blue;align-content:center"</code></pre>
+<p>Eg 2 :- </p> 
 
-<p>If a style object is added to multiple tags, then changing
-					the style object properties will apply to all tags to which it is
-					added.</p>
-<p>If a CSS property class does not exist we can create it with <code class="notranslate java">CustomCssProperty</code> class. Refer <a href="custom-css-properties.html">Custom CSS Property</a> doc for more info.</p>
+<pre class="notranslate"><code class="java">Style style = new Style();
+CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
+style.addCssProperty(newCssProperty);
+Div div = new Div(null, style);
+System.out.println(div.toHtmlString());
 
+// cssProperty will be the same object newCssProperty
+CssProperty cssProperty = style.getCssProperty("new-property-name");
+</code></pre>
 
+<p>Eg 3 :- </p> 
+<pre class="notranslate"><code class="java">Style style = new Style();
+style.addCssProperty("new-property-name", "new-property-value");
+Div div = new Div(null, style);
+System.out.println(div.toHtmlString());
 
+// cssProperty will be an instance of CustomCssProperty
+CssProperty cssProperty = style.getCssProperty("new-property-name");
+</code></pre>
+
+<p>Or a separate class may be kept as below</p>
+<pre class="notranslate"><code class="java">public class VibrateCssProperty extends CustomCssProperty {
+
+    public VibrateCssProperty(String cssValue) {
+        super("vibrate", cssValue);
+    }
+
+    // TODO add needful feature methods for this css property
+
+}
+</code></pre>
 				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-attributes.html">Prev</a>
+            <a class="btn btn-outline-primary" href="css-properties.html">Prev</a>
             <a class="btn btn-outline-primary" href="custom-css-properties.html">Next</a>
           </nav>
 
