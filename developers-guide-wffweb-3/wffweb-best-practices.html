@@ -166,7 +166,7 @@
 				<h3>Use minimal tag manipulation methods</h3>
 				<p>If there are continuous invocation of tag manipulation methods then try to convert it to invoking minimal tag manipulation methods. Check out the below examples</p>
 				<p>Eg 1 :- </p>
-				<pre class="notranslate"><code>List<AbstractHtml> children = div1.getChildren();
+				<pre class="notranslate"><code class="java">List&lt;AbstractHtml&gt; children = div1.getChildren();
         
 for (AbstractHtml child : children) {
     div1.removeChild(child);
@@ -176,14 +176,14 @@ for (AbstractHtml child : children) {
 div1.removeAllChildren();
 </code></pre>
                 <p>Eg 2 :- </p>
-				<pre class="notranslate"><code>div1.removeAllChildren();
+				<pre class="notranslate"><code class="java">div1.removeAllChildren();
 div1.appendChild(div2);
 
 //should be as follows instead of the above
 div1.addInnerHtml(div2);
 </code></pre>
                 <p>Eg 3 :- </p>
-				<pre class="notranslate"><code>div1.removeAllChildren();
+				<pre class="notranslate"><code class="java">div1.removeAllChildren();
 div1.appendChild(div2);
 div1.appendChild(div3);
         
@@ -214,7 +214,7 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 					is called inside finally block. See the sample code given below
 				</p>
 				<p>Eg :- </p>
-				<pre class="notranslate"><code>try {
+				<pre class="notranslate"><code class="java">try {
     browserPage.holdPush();
             
     div1.addAttributes(new Style("background:green"));
@@ -259,7 +259,7 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 				<p>When you want to reuse a set of tags, you have to keep a separate template class for it. Eg:-</p>
 
 				<p>First let us look at a bad practice :- </p>				
-				<pre class="notranslate"><code>public class UserDetails {
+				<pre class="notranslate"><code class="java">public class UserDetails {
 
     public Div getUserDetailsDiv(final String fullName) {
 
@@ -286,7 +286,7 @@ public static void main(String[] args) {
 					Use the below code instead which does the similar job
 				</p>
 
-				<pre class="notranslate"><code>public class UserDetailsTemplate extends Div {
+				<pre class="notranslate"><code class="java">public class UserDetailsTemplate extends Div {
 
     public UserDetailsTemplate(String fullName) {
         super(null);
@@ -311,7 +311,7 @@ public static void main(String[] args) {
 				
 			<p>But if you really want a method to return a div, then you have to change the coding style like this</p>
 
-<pre class="notranslate"><code>public class UserDetails {
+<pre class="notranslate"><code class="java">public class UserDetails {
 
     public Div getUserDetailsDiv(final String fullName) {
 
