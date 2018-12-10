@@ -10,5 +10,6 @@
 {"uri":"css-properties.html","name":"CSS Property","title":"CSS Properties"},
 {"uri":"custom-css-properties.html","name":"Custom CSS Property","title":"Custom CSS Property"},
 {"uri":"custom-server-methods.html","name":"Custom Server Method","title":"Custom Server Methods"},
-{"uri":"execute-javascript-from-server.html","name":"Execute JavaScript From Server","title":"Execute JavaScript From Server"}
+{"uri":"execute-javascript-from-server.html","name":"Execute JavaScript From Server","title":"Execute JavaScript From Server"},
+{"uri":"execute-browser-page-action.html","name":"Browser Page Action","title":"Browser Page Action"}
 ]

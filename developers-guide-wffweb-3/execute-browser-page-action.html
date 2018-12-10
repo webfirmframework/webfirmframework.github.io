@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
+    <title>Browser Page Action | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,26 +156,21 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
+            <h2 class="blog-post-title">Browser Page Action</h2>
  			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
+					You can perform specific browser page actions provided by <code>BrowserPageAction</code> enum.
+					
+					
 					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
+					Eg :- To refresh browser, call <code>BrowserPage#performBrowserPageAction</code> as follows
 					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
+					<pre class="notranslate"><code class="java">browserPage.performBrowserPageAction(BrowserPageAction.RELOAD.getActionByteBuffer());</code></pre>
+					<br><br>
+					It's also possible to execute custom JavaScript code by this method, eg:- 
+					
+					<pre class="notranslate"><code class="java">browserPage.performBrowserPageAction(BrowserPageAction.getActionByteBufferForExecuteJS("alert('executed script');"));</code></pre>
+				</p>
+ 			
  
  
  
@@ -183,12 +178,12 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
+            <a class="btn btn-outline-primary" href="execute-javascript-from-server.html">Prev</a>
             <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/execute-browser-page-action.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
