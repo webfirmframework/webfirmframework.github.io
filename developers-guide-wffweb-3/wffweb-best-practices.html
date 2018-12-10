@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Multi-threading for lazy loading tags/attributes of template | Developers Guide</title>
+    <title>best coding practices | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,34 +156,219 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Multi-threading for lazy
-							loading tags/attributes of template</h2>
- 			<h3>How to lazily load specific tags/attributes in the ui</h3>
- 			<p>Since <em>wffweb-2.1.5</em>, it supports multi-threading. This will
-					help to asynchronously load ui for better user experience. A user
-					specific example is a large form containing many select fields
-					(drop down box of countries, vehicles, fruits etc..). In a single
-					threaded model, the other parts of the form can not be generated
-					while the select box is being filled by elements. So if we are
-					using separate thread for generating select boxes then the user
-					will like the entire ui is quickly loaded and the select boxes are
-					being asynchronously filled with elements. This is a simple use
-					case, there are many use cases where you want to load the overall
-					ui first and after that asynchronously load different section of it. 
-					There will be major multi-threading improvements done in <em>wffweb-3.0.1</em>, 
-					its early access will be available in <em>wffweb-3.0.1-SNAPSHOT</em> until the release of <em>wffweb-3.0.1</em>.</p>
- 			
+            <h2 class="blog-post-title">wffweb best practices</h2>
+ 			<h3>Build UI with minimal tags</h3>
+				<p>When building heavy UI, it's important to follow this rule to
+					keep only necessary tags. It reduces the load of a browser, why
+					should the browser take care about unnecessary tags!!</p>
+				
+				
+				<h3>Use minimal tag manipulation methods</h3>
+				<p>If there are continuous invocation of tag manipulation methods then try to convert it to invoking minimal tag manipulation methods. Check out the below examples</p>
+				<p>Eg 1 :- </p>
+				<pre class="notranslate"><code>List<AbstractHtml> children = div1.getChildren();
+        
+for (AbstractHtml child : children) {
+    div1.removeChild(child);
+}
+
+//should be as follows instead of the above
+div1.removeAllChildren();
+</code></pre>
+                <p>Eg 2 :- </p>
+				<pre class="notranslate"><code>div1.removeAllChildren();
+div1.appendChild(div2);
+
+//should be as follows instead of the above
+div1.addInnerHtml(div2);
+</code></pre>
+                <p>Eg 3 :- </p>
+				<pre class="notranslate"><code>div1.removeAllChildren();
+div1.appendChild(div2);
+div1.appendChild(div3);
+        
+//should be as follows instead of the above
+div1.addInnerHtmls(div2, div3);</code></pre>
+
+
+<h3>Use BrowserPage#holdPush &amp; BrowserPage#unholdPush wherever possible</h3>
+				<p>
+					Surround with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods for multiple tag manipulation statements. When a tag
+					manipulation method (eg:
+					<code>div.removeAllChildren()</code>
+					) is executed the framework sends its UI update to the client as a
+					push so if there are multiple statements then there will be
+					multiple push. When all tag manipulation methods are surrounded
+					with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then all those UI updates will be sent in a single push so that the
+					end user will not see the UI changes are taking place one by one in
+					a slow network. Also ensure that the
+					<code>BrowserPage#unholdPush()</code>
+					is called inside finally block. See the sample code given below
+				</p>
+				<p>Eg :- </p>
+				<pre class="notranslate"><code>try {
+    browserPage.holdPush();
+            
+    div1.addAttributes(new Style("background:green"));
+    div2.addAttributes(new Id("div2Id"));
+    div3.addAttributes(new Name("div3"));
+    div1.addInnerHtmls(div2, div3);
+} finally {
+    //pushes UI updates for the above four methods in a single push
+    browserPage.unholdPush();
+}</code></pre>
+				<p>
+					But there are also cases where these methods are not suitable, for
+					example you are adding up to 1000 rows (or more than that) in a
+					table. In such case if you are writing that code between
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then the end user will have to wait a long time to see the result
+					because the framework sends all changes in a single push and the
+					browser displays it only after receiving all these UI updates.
+					Here, the end user is expecting a lazy loading. In such scenarios
+					it's better to avoid using these
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods.
+				</p>
+
+				<p>
+					The usage of
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods depends upon the requirements. 
+					There will be a major improvement for holdPush/unholdPush implementation in <i>wffweb-3.0.1</i> or later versions.
+					The improvement is with when <code>holdPush/unholdPush</code> method is called by multiple threads from the same <code>browserPage</code> instance, 
+					if the <code>holdPush</code> is called three times the <code>unholdPUsh</code> needs to be called three times to unhold the push
+					(in previous versions one unholdPush call will unhold the push). 
+				</p>
+
+				<h3>Do not return anonymous class</h3>
+				<p>When you want to reuse a set of tags, you have to keep a separate template class for it. Eg:-</p>
+
+				<p>First let us look at a bad practice :- </p>				
+				<pre class="notranslate"><code>public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null) {{
+            new Span(this) {{
+                new NoTag(this, "Name : " + fullName);
+            }};
+        }};
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+
+
+				<p>
+					Use the below code instead which does the similar job
+				</p>
+
+				<pre class="notranslate"><code>public class UserDetailsTemplate extends Div {
+
+    public UserDetailsTemplate(String fullName) {
+        super(null);
+        develop(fullName);
+    }
+
+    private void develop(final String fullName) {
+
+        new Span(this) {{
+            new NoTag(this, "Name : " + fullName);
+        }};
+
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetailsTemplate userDetails = new UserDetailsTemplate("Hitomi");
+    System.out.println(userDetails.toHtmlString());
+}
+</code></pre>
+				
+			<p>But if you really want a method to return a div, then you have to change the coding style like this</p>
+
+<pre class="notranslate"><code>public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null);
+
+        Span span = new Span(details);
+
+        new NoTag(span, "Name : " + fullName);
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+
+
+				<h3>Use Executor Framework &amp; <i>wffweb-3.0.1</i> or later when using multiple threads</h3>
+				<p>
+				There are use cases where we need to load different parts of
+				<a href="multi-threading-in-wff-java-code.html" target="_blank">ui in an asynchronous manner</a>.
+				Java Executor Framework will be very useful to safely handle multiple threads for it. 
+				It's available as part of core java. 
+				<i>wffweb-3.0.1-SNAPSHOT</i> (check if <i>wffweb-3.0.1</i> is released) 
+				or later is recommended to use if ui portions are loaded in multiple threads. 
+				There will be a major change in thread safety improvements in <i>wffweb-3.0.1</i> 
+				and previous versions are not 100% thread safe. 
+			 
+				</p>
+
+				<h3>Use Kotlin to develop UI Templates</h3>
+				<p>
+					Using Kotlin to develop UI templates will be better productive,
+					maintainable and readable. <a
+						href="https://kotlinlang.org/docs/reference/java-interop.html"
+						target="_blank">Kotlin is designed with Java Interoperability
+						in mind</a>, that is you can call/use Kotlin code in Java and vice
+					versa.
+				</p>
+
+
  
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="tagrepository.html">Prev</a>
             <a class="btn btn-outline-primary" href="wffweb-best-practices.html">Next</a>
+            <a class="btn btn-outline-primary" href="wffweb-best-practices.html">Prev</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/multi-threading-in-wff-java-code.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/wffweb-best-practices.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
