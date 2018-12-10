@@ -193,13 +193,13 @@
  			<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();</code></pre>
  			<h3><code>TagRepository.findAllTags</code></h3>
  			<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-Collection<AbstractHtml> allTagsInTheBrowserPage = tagRepository.findAllTags();
+Collection&lt;AbstractHtml&gt; allTagsInTheBrowserPage = tagRepository.findAllTags();
 				</code></pre>
 				
 				<h3><code>TagRepository.findAllAttributes</code></h3>
 
 				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-Collection<AbstractAttribute></code> allAttributesInTheBrowserPage = tagRepository.findAllAttributes();
+Collection&lt;AbstractAttribute&gt; allAttributesInTheBrowserPage = tagRepository.findAllAttributes();
 				</code></pre>
 				
 				<h3><code>TagRepository.findOneTagAssignableToTag</code></h3>
@@ -267,10 +267,10 @@ AbstractHtml tagByAttributeName = tagRepository.findOneTagByAttributeName("data-
 
 //any attribute instance in the ui to find all tags consumed by this attribute instance			
 AbstractAttribute attributeInTheUi;				
-Collection<code><</code>AbstractHtml<code>></code> tagsByAttributeInstance = tagRepository.findOneTagByAttribute(attributeInTheUi);
+Collection&lt;AbstractHtml&gt; tagsByAttributeInstance = tagRepository.findOneTagByAttribute(attributeInTheUi);
 
 //to find all tags consumed by attribute name and value 
-Collection<code><</code>AbstractHtml<code>></code> tagsByAttributeNameAndValue = tagRepository.findTagsByAttribute("data-shape", "rectangle");
+Collection&lt;AbstractHtml&gt; tagsByAttributeNameAndValue = tagRepository.findTagsByAttribute("data-shape", "rectangle");
 
 				</code></pre>
 
