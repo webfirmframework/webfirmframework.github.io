@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Normal Tag Attributes | Developers Guide</title>
+    <title>Tags and Attributes | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -154,94 +154,270 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Normal tag attribute</h2>
+            <h2 class="blog-post-title">Methods of Tags</h2>
             
-            <p>
-					Attributes which don't capture events are considered as normal tag attributes, 
-					eg:- <code>Name</code>, <code>Id</code>, <code>ClassAttribute</code>, <code>Value</code> etc...
+			<h3>
+					<a id="basic-features-of-tags" class="anchor" href="#basic-features-of-tags" aria-hidden="true"><span
+						class="octicon octicon-link">Basic methods of Tags</span></a>
+				</h3>
+				<p>These are some of the basic tag building methods but not limited to that.</p>
+				<h4>
+					<code>appendChild</code>
+				</h4>
+				
+				<pre class="notranslate"><code class="java">Div div = new Div(null);        
+Span span = new Span(null);
+
+div.appendChild(span);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>appendChildren</code>
+				</h4>
+				
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+H1 h1 = new H1(null);
+
+div.appendChildren(span, h1);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				
+				
+				<h4>
+					<code>addInnerHtml</code>
+				</h4>
+				<p>
+				This method will remove all children and add the given tag as child.</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);         
+Span span = new Span(null);
+div.appendChild(span);
+
+div.addInnerHtml(new NoTag(null, "Some Text"));
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;Some Text&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>addInnerHtmls</code>
+				</h4>				
+				<p>
+				This method will remove all children and add the given tags as children.
 				</p>
-				<p>All tag attributes will have some common methods like  
-				<code>setValue</code> and <code>getValue</code> or <code>getAttributeValue</code> depending on the context. Let's see some examples
+				<pre class="notranslate"><code class="java">Div div = new Div(null); 
+				       
+P p = new P(null);
+div.appendChild(p);
+
+H1 h1 = new H1(null);
+h1.addInnerHtml(new NoTag(null, "h1 heading"));
+
+H2 h2 = new H2(null);
+h2.addInnerHtml(new NoTag(null, "h2 subheading"));
+
+
+div.addInnerHtmls(h1, h2);
+
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;h1&gt;h1 heading&lt;/h1&gt;&lt;h2&gt;h2 subheading&lt;/h2&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>removeChild</code>
+				</h4>				
+				<p>
+				This method will remove the given child from the tag.
 				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+P p = new P(null);
+div.appendChild(p);
 
-<pre class="notranslate"><code class="java">Input input = new Input(null);
-Value value = new Value("");
-input.addAttributes(value);
+div.removeChild(p);
 
-//prints &lt;input value=""&gt;
-System.out.println(input.toHtmlString());
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>removeChildren</code>
+				</h4>				
+				<p>
+				This method will remove the given children from the tag.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
 
-value.setValue("webfirmframework");
+div.appendChild(span);
+div.appendChild(p);
 
-//prints &lt;input value="webfirmframework"&gt;
-System.out.println(input.toHtmlString());
+div.removeChildren(Arrays.asList(p, span));
 
-//prints webfirmframework
-System.out.println(value.getValue());
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;<br />
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>removeAllChildren</code>
+				</h4>				
+				<p>
+				This method will remove the all children from the tag.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
 
-AbstractAttribute valueAttr = value;
+div.appendChild(span);
+div.appendChild(p);
 
-//prints webfirmframework
-System.out.println(valueAttr.getAttributeValue());
-				</code></pre>
-            
-            <h3 id="updateClient"><code>setValue(boolean updateClient, String value)</code></h3>
-            <p>
-					Some attributes also contain
-					<code>setValue(boolean updateClient, String value)</code>
-					method (since <em>wffweb-2.1.15</em>) which excludes the value
-					syncing in client browser page and it's valid only if there is a
-					client browser page otherwise it works just like
-					<code>setValue</code>. Eg:- <code>Value#setValue(boolean updateClient, String value)</code>
-					<br> Use case:- Consider
-					<code>&lt;input type="text" value=""&gt;</code>
-					 tag in the browser page. The value of the value attribute in the browser page changes
-					whenever the user enters some value the text field. Sometimes we
-					may need to keep the same value state in the server side
-					<code>Value</code>
-					object by
-					<code>OnChange</code>
-					event attribute. In such cases if we are calling
-					<code>value.setValue(String value)</code>
-					method it will again synch the value to client browser page and
-					it's not required in this particular case so we can use
-					<code>value.setValue(boolean clientUpdate, String value)</code> method.
-					eg:-
-					<code>value.setValue(false, enteredValue)</code>.
-				    <br>
-				    <code>value.setValue(boolean clientUpdate, String value)</code> 
-				    may be useful to build stateful tags.<br>
-				    Eg:- 
-					<script src="https://gist.github.com/webfirmframework/e01427cc8acb8a2e48dee61f7d76d442.js"></script>
+div.removeAllChildren();
 
-					Its usage is similar to <code>Input</code> tag.
+String htmlString = div.toHtmlString();
+//prints 
+//&lt;div&gt;&lt;/div&gt;<br />
+System.out.println(htmlString);</code></pre>
+				
+				<h4>
+					<code>getChildren</code>
+				</h4>				
+				<p>
+				This method will return all children from the tag.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final List<AbstractHtml> children = div.getChildren();
+
+//true
+System.out.println(children.get(0).equals(span));
+//true
+System.out.println(children.get(1).equals(p));</code></pre>
+				
+				<h4>
+					<code>getFirstChild</code> since 3.0.1
+				</h4>				
+				<p>
+				This method will return the first child from its children.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final AbstractHtml firstChild = div.getFirstChild();
+
+//true
+System.out.println(firstChild.equals(span));
+</code></pre>
+				
+				<h4>
+					<code>getChildAt</code> since 3.0.1
+				</h4>				
+				<p>
+				This method will return the child at the given index in its children. 
+				The below example will get the child at first index.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+Span span = new Span(null);
+P p = new P(null);
+
+div.appendChild(span);
+div.appendChild(p);
+
+final AbstractHtml childAtIndexOne = div.getChildAt(1);
+
+//true
+System.out.println(childAtIndexOne.equals(p));
+</code></pre>
+				
+				
+				
+				
+				
+				<h3>
+					<a id="special-features-of-tags" class="anchor" href="#wspecial-features-of-tags" aria-hidden="true"><span
+						class="octicon octicon-link">Some special methods of Tags</span></a>
+				</h3>
+				<p>
+					There some methods in tags which have some special purpose in the development.
+				</p>
+				<h4><code>toBigHtmlString &amp; toBigOutputStream</code></h4>
+				<p>
+					The
+					<code>toHtmlString</code>
+					and
+					<code>toBigHtmlString</code>
+					both can be used to return HTML string for the corresponding tag.
+					If the tag hierarchy is extremely complex (i.e. having around 10000
+					nested tags in it) then
+					<code>toBigHtmlString</code>
+					is the better choice because
+					<code>toHtmlString</code>
+					will consume memory while generating HTML and if there is no enough
+					memory available then it may throw an error.
+					<code>toHtmlString</code>
+					is faster than
+					<code>toBigHtmlString</code>
+					so it's always preferred for normal purpose. There could be some
+					cases where the tag hierarchy is used to generate very complex HTML
+					report, in such case
+					<code>toBigHtmlString</code>
+					is better.
 				</p>
 				<p>
-				<code>getAttributeValue</code>
-					is a common method in all attributes which returns the string
-					representation of the attribute value.
-					<br>
-					Based on the relevant context, the attribute will have needful feature methods in it.
+					<code>toBigOutputStream</code>
+					is for the same purpose the only difference is instead of returning
+					HTML string it writes HTML bytes directly to the given output
+					stream.
 				</p>
-            
-            
-            
-            <hr>
-            
 				
-				
-				
+				<h4><code>setData(Object) &amp; getData()</code></h4>
+				<p>It's simply to set and get any object on the tag. It the set
+					object is saved in the tag itself.</p>
+
+				<h4><code>setSharedData(Object) &amp; getSharedData()</code></h4>
+				<p>It's simply to set and get any object common to the whole tag
+					hierarchy. The given object is saved in a private area of the root
+					tag of the whole hierarchy. Eg:-</p>
+				<script src="https://gist.github.com/webfirmframework/6608fa82ac1a8ebf1c81a336fc8dccba.js"></script>
+				<h4><code>getRootTag()</code></h4>
+				<p><code>getRootTag()</code> method of a tag returns the root tag (i.e. top level base tag) in the whole tag hierarchy. Eg:-</p>
+					<script src="https://gist.github.com/webfirmframework/3d758303988006aecbf3ce7e9eb89bb5.js"></script>
+
+				<h4><code>resetHierarchy()</code></h4>
+				<p>If a tag is used under a <code>BrowserPage</code> instance and the same tag object needs to be used in another instance of <code>BrowserPage</code> then the tag must be removed from its parent and its <code>resetHierarchy</code> method must be called before using in another instance of <code>BrowserPage</code>
+					otherwise it will make an unusual behavour in the UI. To avoid compromising performance <code>resetHierarchy</code> doesn't handle it internally.
+					
+				</p>	
 				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="features-of-tags.html">Prev</a>
-            <a class="btn btn-outline-primary" href="event-attributes.html">Next</a>
+            <a class="btn btn-outline-primary" href="tags-and-attributes.html">Prev</a>
+            <a class="btn btn-outline-primary" href="tag-attributes.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/tag-attributes.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/tags-and-attributes.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
