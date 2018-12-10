@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>TagRepository | Developers Guide</title>
+    <title>Multi-threading for lazy loading tags/attributes of template | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,221 +156,34 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">TagRepository for tag manipulations</h2>
- 			<p>
-					A tag repository is a high level repository for tags contained in
-					the
-					<code>browserPage</code>
-					instance for tags manipulations. The
-					<code>TagRepository</code>
-					may be used to find tags with different criteria. The
-					<code>TagRepository</code>
-					is available since <i>wffweb-2.1.8</i> just for an introduction but a bug free and 
-					performance improved version will be available since <i>wffweb-2.1.10</i>. The
-					<code>TagRepository</code>
-					instance may be got from the instance of
-					<code>BrowserPage</code>
-					using
-					<code>browserPage.getTagRepository()</code>
-					method. 					
-				</p>
-				<p>
-					There is an important feature in
-					<code>TagRepository</code>
-					class, i.e. to attach JavaScript objects to a tag's wffObjects
-					property from server. As we know the Java object for JavaScript
-					object is WffBMObject and Java array for JavaScript array is
-					WffBMArray, using
-					<code>TagRepository.upsert/delete</code>
-					methods we can set objects/arrays from server to a client html
-					tag/element so that we can use these values by client JavaScript
-					code. Find more details in its <a href="#tagrepository-upsert-delete">example</a>.
-				</p>
-				<hr>
-				<p>The following are some of the methods in
-					<code>TagRepository</code></p>
+            <h2 class="blog-post-title">Multi-threading for lazy
+							loading tags/attributes of template</h2>
+ 			<h3>How to lazily load specific tags/attributes in the ui</h3>
+ 			<p>Since <i>wffweb-2.1.5</i>, it supports multi-threading. This will
+					help to asynchronously load ui for better user experience. A user
+					specific example is a large form containing many select fields
+					(drop down box of countries, vehicles, fruits etc..). In a single
+					threaded model, the other parts of the form can not be generated
+					while the select box is being filled by elements. So if we are
+					using separate thread for generating select boxes then the user
+					will like the entire ui is quickly loaded and the select boxes are
+					being asynchronously filled with elements. This is a simple use
+					case, there are many use cases where you want to load the overall
+					ui first and after that asynchronously load different section of it. 
+					There will be major multi-threading improvements done in <i>wffweb-3.0.1</i>, 
+					its early access will be available in <i>wffweb-3.0.1-SNAPSHOT</i> until the release of <i>wffweb-3.0.1</i>.</p>
  			
- 			<h3>To get <code>TagRepository</code> instance</h3>
- 			<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();</code></pre>
- 			<h3><code>TagRepository.findAllTags</code></h3>
- 			<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-Collection&lt;AbstractHtml&gt; allTagsInTheBrowserPage = tagRepository.findAllTags();
-				</code></pre>
-				
-				<h3><code>TagRepository.findAllAttributes</code></h3>
-
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-Collection&lt;AbstractAttribute&gt; allAttributesInTheBrowserPage = tagRepository.findAllAttributes();
-				</code></pre>
-				
-				<h3><code>TagRepository.findOneTagAssignableToTag</code></h3>
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-				
-//use it to find a particular type of tag, 
-//if there are many matchings a random one will be returned.
-//you can also find a custom tag (a new class which extends any tag)				
-Body body = tagRepository.findOneTagAssignableToTag(Body.class);</code></pre>
-
-				<h3><code>TagRepository.findTagsAssignableToTag</code></h3>
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-//returns all matchings for the given tag class type.
-Collection&lt;Div&gt; divs = tagRepository.findTagsAssignableToTag(Div.class);</code></pre>
-				
-				
-				<h3><code>TagRepository.exists</code></h3>
-				<p>This is a fast and efficient way to find the existence of a tag or attribute in the UI.</p>
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-//any tag instance to check its presence in the ui				
-AbstractHtml tagInTheUi;				
-boolean tagExists = tagRepository.exists(tagInTheUi);
-
-//any attribute instance to check its presence in the ui				
-AbstractAttribute attributeInTheUi;				
-boolean attributeExists = tagRepository.exists(attributeInTheUi);
-				</code></pre>
-				
-				<h3><code>TagRepository.findTagById</code></h3>
-				
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-//to find one tag by id attribute
-AbstractHtml tagById = tagRepository.findTagById("alertDivId");
-
-				</code></pre>
-				
-				<h3><code>TagRepository.findOneTagByAttribute</code></h3>
-
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-
-//any attribute instance in the ui to find one tag consumed by this attribute			
-AbstractAttribute attributeInTheUi;				
-AbstractHtml tagByAttributeInstance = tagRepository.findOneTagByAttribute(attributeInTheUi);
-
-//to find one tag by attribute name and value 
-AbstractHtml tagByAttributeNameAndValue = tagRepository.findOneTagByAttribute("id", "alertDivId");
-
-				</code></pre>
-				
-				<h3><code>TagRepository.findOneTagByAttributeName</code></h3>
-				
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-//to find one tag by attribute name
-AbstractHtml tagByAttributeName = tagRepository.findOneTagByAttributeName("data-dialog");
-
-				</code></pre>
-				
-<h3><code>TagRepository.findTagsByAttribute</code></h3>
-
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-
-//any attribute instance in the ui to find all tags consumed by this attribute instance			
-AbstractAttribute attributeInTheUi;				
-Collection&lt;AbstractHtml&gt; tagsByAttributeInstance = tagRepository.findOneTagByAttribute(attributeInTheUi);
-
-//to find all tags consumed by attribute name and value 
-Collection&lt;AbstractHtml&gt; tagsByAttributeNameAndValue = tagRepository.findTagsByAttribute("data-shape", "rectangle");
-
-				</code></pre>
-
-
-
-				<h3><code>TagRepository.findTagsByAttributeName</code></h3>
-				
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-//to find all tags by attribute name
-AbstractHtml tagsByAttributeName = tagRepository.findTagsByAttributeName("data-shape");
-
-				</code></pre>
-				
-				<h4 id="tagrepository-upsert-delete">To upsert/delete wffObjects on tags</h4>
-				
-				<p>These methods are valid only if the applicable tag is available
-					in the ui so it's useful only for real time updates.</p>
-				<p>
-					The main advantage of using this feature is the JavaScript object
-					set on the tags will be in memory only in the life cycle of that
-					particular tag. So when the relevant tag is removed from the
-					browser page, the memory consumed by
-					<code>wffObjects</code>
-					property of the tag will also be released. Therefore, we don't have to
-					manually care about the memory of JavaScript objects in the browser.
-
-				</p>
-
-				<h3><code>TagRepository.upsert</code></h3>
-				<p>
-					This method inserts or updates (if not exists) the given
-					<code>WffBMObject</code>
-					or
-					<code>WffBMArray</code>
-					in the <code>wffObjects</code> property of a tag, eg:-
-				</p>
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-
-//any tag instance available in the ui
-//suppose it has id as middleDivId
-AbstractHtml tagInTheUi;
-
-WffBMObject bmObject = new WffBMObject();
-bmObject.put("bmkey1", BMValueType.STRING, "Success");
-tagRepository.upsert(tagInTheUi, "key1object", bmObject);
-
-WffBMArray bmArray = new WffBMArray(BMValueType.STRING);
-bmArray.add("first value");
-tagRepository.upsert(tagInTheUi, "key2array", bmArray);
-
-				</code></pre>
-				<p>To consume the JavaObjects/Arrays set from the server at client side. Suppose, The id of <code>tagInTheUi</code> in the UI is <code>middleDivId</code> then the following code may be used to get the values set from the server.</p>
-				<pre class="notranslate"><code class="js">
-var middleDiv = document.getElementById('middleDivId');
-var wffObjects = middleDiv.wffObjects;
-var obj1 = wffObjects.key1object;
-var ary2 = wffObjects.key2array;
-
-//prints <i>Success</i>
-console.log(obj1.bmkey1);
-
-//prints <i>first value</i>
-console.log(ary2[0]);
-
-</code></pre>
-				
-
-				<h3><code>TagRepository.delete</code></h3>
-				<p>To delete an entry from the <code>wffObjects</code> property of the tag</p>
-				<pre class="notranslate"><code class="java">TagRepository tagRepository = browserPage.getTagRepository();
-tagRepository.delete(tagInTheUi, "key1object");
-				</code></pre>
-				
-				
-				<h3>These are some additional methods</h3>
-				<h4><code>TagRepository.findTagsByTagName</code></h4>
-				<h4><code>TagRepository.findOneTagByTagName</code></h4>
-				<h4><code>TagRepository.findAttributesByTagName</code></h4>
-				<h4><code>TagRepository.executeJs</code></h4>
-				<p>Executes the given JavaScript in the client browser page.</p>
-				<h4><code>TagRepository.execute(BrowserPageAction)</code></h4>
-				<p>Performs some predefined JavaScript browser actions in the client browser page.</p>
-				<h3>Some examples of <i>static methods in TagRepository</i></h3>
-				<p>
-				It doesn't cover usages of all static methods.
-				<script src="https://gist.github.com/webfirmframework/e33d68868cbd43b9d9fd3542e6bde103.js"></script>
-				</p>
  
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Prev</a>
+            <a class="btn btn-outline-primary" href="tagrepository.html">Prev</a>
             <a class="btn btn-outline-primary" href="multi-threading-in-wff-java-code.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/tagrepository.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/multi-threading-in-wff-java-code.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

@@ -12,5 +12,6 @@
 {"uri":"custom-server-methods.html","name":"Custom Server Method","title":"Custom Server Methods"},
 {"uri":"execute-javascript-from-server.html","name":"Execute JavaScript From Server","title":"Execute JavaScript From Server"},
 {"uri":"execute-browser-page-action.html","name":"Browser Page Action","title":"Browser Page Action"},
-{"uri":"tagrepository.html","name":"Tag Repository","title":"TagRepository"}
+{"uri":"tagrepository.html","name":"Tag Repository","title":"TagRepository"},
+{"uri":"multi-threading-in-wff-java-code.html","name":"Lazy loading/Multi-threading","title":"Lazy loading / Multi-threading"}
 ]
