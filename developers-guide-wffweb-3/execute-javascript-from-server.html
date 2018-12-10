@@ -7,7 +7,7 @@
     <meta name="author" content="Web Firm Framework">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Custom Server Methods | Developers Guide</title>
+    <title>Execute JavaScript From Server | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -156,143 +156,39 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Custom Server Method</h2>
+            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
  
- <p>The aim of custom server method is to declare a custom method
-					in the server which can be called from the client using JavaScript.</p>
-					
-					<hr>
-					
- 			<h3><code class="notranslate">browserPage.addServerMethod(methodName, serverAsyncMethod);</code></h3>
- 				<p>
-					<code class="notranslate">addServerMethod</code> of <code class="java">BrowserPage</code> can be used to register a custom server method. The custom server method can be called from JavaScript code. See the below sample
-				</p>
- 
- <pre class="notranslate"><code class="java">ServerAsyncMethod serverAsyncMethod = new ServerAsyncMethod() {
-
-            @Override
-            public WffBMObject asyncMethod(WffBMObject wffBMObject,
-                    Event event) {
-                //will print 'some value'
-                System.out.println(wffBMObject.get("somekeyFromClient").getValue());
-                //prints the type of value
-                System.out.println(wffBMObject.get("somekeyFromClient").getValueType());     
-                
-                String serverMethodName = event.getServerMethodName();
-                
-                //will print someUniqueMethodName
-                System.out.println(serverMethodName);
-
-                // used to send data to the client
-                WffBMObject bmObject = new WffBMObject();
-                bmObject.put("someKey", BMValueType.STRING,
-                        "こんにちは Web Firm Framework");
-
-                return bmObject;
-            }
-        };
-        
-browserPage.addServerMethod("someUniqueMethodName", serverAsyncMethod);</code></pre>
-
-				<p>
-					Invoke the server method from JavaScript, see the code
-				</p>
-				
-			<pre class="notranslate"><code class="js">var arguments = {
-	'somekeyFromClient' : 'some value',
-	'numb' : 55555,
-	'bool' : true,
-	'anObj' : {
-		'key' : 'val'
-	},
-	'funcArray' : function() {console.log('m function');},
-	'numberArray' : [ 5, 55, 555, 55, 5555 ]
-};
-
-var callbackFunction = function(obj) {
-
-    console.log('callback obj ', obj);
-
-    for (key in obj) {
-	    console.log('key is ' + key, obj[key]);
-    }
-
-    obj.testFun('check out browser console to see values received from server');
-};
-
-wffAsync.serverMethod('someUniqueMethodName', arguments).invoke(callbackFunction);
-
-</code></pre>
-				<p>
-					The first argument passed in
-					<code>wffAsync.serverMethod</code>
-					is the name of the method to be called.
-				</p>
-				<p>
-					The second argument 
-					<code>arguments</code>
-					passed in
-					<code>wffAsync.serverMethod</code>
-					will be received as a
-					<code>wffBMObject</code>
-					argument in
-					<code>asyncMethod</code>
-					method. The JavaScript object
-					<code>arguments</code>
-					can also contain
-					<code>Int8Array</code>
-					value type to pass binary data, which will be received in
-					<code>wffBMObject</code>
-					as a value type of
-					<code>BMValueType.BM_BYTE_ARRAY</code>
-					i.e. the value is a class type of
-					<code>WffBMByteArray</code>
-					which contains bytes.
-				</p>
-				<p>
-					The
-					<code>callbackFunction</code>
-					function will be called for the result of
-					<code>asyncMethod</code>
-					server method. The argument
-					<code>obj</code>
-					in
-					<code>callbackFunction</code>
-					is conventional JavaScript object of
-					<code>bmObject</code>
+ 			<p>
+					The normal way to execute a JavaScript code is to insert a
+					<code>Script</code> tag
+					class containing JavaScript code in the UI. But, in some special cases like
+					server restart, there won't be a
+					<code>BrowserPage</code>
+					object so in such cases it's possible to push
+					<code>ByteBuffer</code>
 					returned by
-					<code>asyncMethod</code>
-					in the server.
+					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
+					<br><br>
+					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client using <code>browserPage.performBrowserPageAction</code> method or we can also directly use the websocket of the corresponding <code>browserPage</code>.
+					<br><br>
+					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
+					"alert('executed script');");
+browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
 				</p>
-
-				<p>
-					The server method can also send binary data using
-					<code>WffBMByteArray</code>
-					. Check out
-					<code>BMValueType</code>
-					enum to know the supported data types of value to send from server to client
-					and vice versa.
-				</p>
-				<p>
-					In the above JavaScript code,
-					<code>arguments</code>
-					,
-					<code>callbackFunction</code>
-					and
-					<code>obj</code>
-					are optional arguments.
-				</p>
+ 
+ 
+ 
  
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-css-properties.html">Prev</a>
+            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
             <a class="btn btn-outline-primary" href="execute-javascript-from-server.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/custom-server-methods.html">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
