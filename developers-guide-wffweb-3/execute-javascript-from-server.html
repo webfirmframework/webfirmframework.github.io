@@ -169,11 +169,12 @@
 					returned by
 					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
 					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client using <code>browserPage.performBrowserPageAction</code> method or we can also directly use the websocket of the corresponding <code>browserPage</code>.
+					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
 					<br><br>
 					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
 					"alert('executed script');");
-browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
+websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
+//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
 				</p>
  
  
