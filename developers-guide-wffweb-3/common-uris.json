@@ -2,8 +2,8 @@
 {"uri":"faq.html","name":"FAQs","title":"Frequently Asked Questions"},
 {"uri":"wffweb-current-features-and-future-plans.html","name":"Features and future plans","title":"Current features and future plans"},
 {"uri":"wffweb-released-versions.html","name":"Released versions","title":"Released versions"},
+{"uri":"how-to-resolve-dependency-in-build-tools.html","name":"Resolve dependency in build tools","title":"Resolve dependency in build tools"},
 {"uri":"../wffweb/wffweb-javadoc/index.html","name":"wffweb javadoc","title":"Java Documentation for wffweb"},
-{"uri":"../developers-guide/wffweb-demo-app.html","name":"Resolve dependency in build tools","title":"Resolve dependency in build tools"},
 {"uri":"https://webfirmframework.com/donate","name":"Donate to author","title":"Donate to the creator of this framework"}
 
 ]
