@@ -430,6 +430,7 @@ public class IndexPageServlet extends HttpServlet {
             }
 
             browserPage.toOutputStream(os, "UTF-8");
+            os.flush();
         }
 
     }
