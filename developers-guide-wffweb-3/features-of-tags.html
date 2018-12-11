@@ -348,7 +348,31 @@ final AbstractHtml childAtIndexOne = div.getChildAt(1);
 System.out.println(childAtIndexOne.equals(p));
 </code></pre>
 				
-				
+			<h4>
+					<code>prependChildren</code> since 3.0.1
+				</h4>				
+				<p>
+				This method will return the child at the given index in its children. 
+				The below example will get the child at first index.
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new Id("one")) {{                                   
+              new Div(this, new Id("child1"));
+          }};                                      
+                                        
+Span span = new Span(null);             
+P p = new P(null);                      
+Br br = new Br(null);                   
+div.prependChildren(span, p, br);       
+                                        
+System.out.println(div.toHtmlString()); 
+</code></pre>	
+This will print:
+<pre class="notranslate"><code class="java">&lt;div id=&quot;one&quot;&gt;                   
+    &lt;span&gt;&lt;/span&gt;                    
+    &lt;p&gt;&lt;/p&gt;                          
+    &lt;br/&gt;                                  
+    &lt;div id=&quot;child1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;                                     </code></pre>
 				
 				
 				
