@@ -17,20 +17,20 @@
 </url>
 
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/get-started.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/how-to-resolve-dependency-in-build-tools.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/how-to-resolve-dependency-in-build-tools.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/faq.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/faq.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
@@ -41,8 +41,8 @@
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/wffweb-released-versions.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/wffweb-released-versions.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
@@ -77,98 +77,98 @@
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/wffweb-configurations.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/wffweb-configurations.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/tags-and-attributes.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/tags-and-attributes.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/features-of-tags.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/features-of-tags.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/event-attributes.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/event-attributes.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/mltp-design-pattern.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/mltp-design-pattern.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/custom-tags.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/custom-tags.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/custom-attributes.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/custom-attributes.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/css-properties.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/css-properties.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/custom-css-properties.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/custom-css-properties.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/custom-server-methods.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/custom-server-methods.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/execute-javascript-from-server.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/execute-javascript-from-server.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/execute-browser-page-action.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/execute-browser-page-action.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/tagrepository.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/tagrepository.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/multi-threading-in-wff-java-code.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/multi-threading-in-wff-java-code.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/wffweb-best-practices.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/wffweb-best-practices.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://webfirmframework.github.io/developers-guide/wffweb-current-features-and-future-plans.html</loc>
-   <lastmod>2017-09-24T16:53:46+00:00</lastmod>
+   <loc>https://webfirmframework.github.io/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html</loc>
+   <lastmod>2018-12-10T16:53:46+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
