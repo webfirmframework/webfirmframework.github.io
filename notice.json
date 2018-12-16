@@ -1,0 +1,2 @@
+{"title":"Notice",
+"content":"Upgrade your project with <em class=\"text-info\">wffweb-3.0.1</em> if it is released. It contains lot of major improvements for multi-threading environment. <br><br> We are verifying the stability of <em>wffweb-3.0.1-SNAPSHOT</em> in our production projects, we will release its production version <em>wffweb-3.0.1</em> once the verification is success. It may take several days to weeks for this process to finish."}
