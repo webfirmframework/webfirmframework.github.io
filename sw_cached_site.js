@@ -4,7 +4,7 @@ var cacheName = 'wffweb-cache-v5';
 
 self.addEventListener('install', e => {
   // Perform install steps
-  console.log(sw_cached_site install'');
+  console.log('sw_cached_site install');
 });
 
 

@@ -4,7 +4,7 @@ var cacheName = 'wffweb-guide-guide-cache-v1';
 
 self.addEventListener('install', e => {
   // Perform install steps
-  console.log(sw_cached_site install'');
+  console.log('dev/sw_cached_site install');
 });
 
 
