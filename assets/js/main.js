@@ -1,6 +1,6 @@
 console.log('main.js invoked');
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register('/sw_cached_site.js')
   .then(function(registration) {
     console.log('Registration successful, scope is:', registration.scope);
   })
