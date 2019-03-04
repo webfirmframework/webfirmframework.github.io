@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Frequently asked questions about webfirmframework wffweb. How to create data visualization UI. Single page application support. When to use wffweb for UI development. Platform dependency, thread-safety, stable final version, impossible features and known demerits of the framework. Difference from other frameworks like MVC based or Java SWING. Using third party or custom js, css along with it. Recommended application server. Generating extremely large HTML. Generating formatted HTML. Ready-made widgets or web components. Migration of wffweb. Minimal technical knowledge to create wffweb apps.">
+    <meta name="author" content="Web Firm Framework">
+    <meta name="theme-color" content="#147cb5"/>
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Data Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="../assets/css/blog.css" rel="stylesheet">
+    
+    <!-- google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
+
+  </head>
+
+  <body>
+
+<!-- for facebook share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="container">
+      <header class="blog-header py-3">
+      	<div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo text-success" href="/">Web Firm Framework</a>
+          </div>
+        </div>
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-6 pt-1">
+            <a class="text-muted" href="get-started.html" title="Getting Started">Get Started</a>
+          </div>
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 499.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+            <a title="Download latest released wffweb .jar file" class="btn btn-sm btn-outline-secondary" href="https://search.maven.org/remote_content?g=com.webfirmframework&amp;a=wffweb&amp;v=LATEST">Download .jar</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 text-muted" title="Home" href="/">Home</a>
+          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com" target="_blank">HTML5 to Java/Kotlin Tool</a>
+          <a class="p-2 text-muted" title="WFF Hub" href="https://webfirmframework.com/hub" target="_blank">Sign in Hub</a>
+          <a class="p-2 text-muted" title="Production Ready Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Projects</a>          
+        </nav>
+      </div>
+
+		<div class="jumbotron p-3 p-md-5 rounded"
+			style="color: #147cb5; background: #75e8bf 0 0 repeat-x">
+			<div class="col-md-6 px-0">
+				<a href="/" title="Web Firm Framework"><picture>
+				<source type="image/webp" srcset="../images/wff-logo-100px.webp">
+				<img src="../images/wff-logo-100px.jpg" alt="WFF"></picture></a>
+			</div>
+
+
+			<h1 class="display-4 font-italic"
+				title="wffweb - Java Developers Guide">wffweb - Java Developers
+				Guide</h1>
+			<p class="lead my-3">
+				<a href="mailto:tech-support@webfirmframework.com"
+					title="tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+				for support
+			</p>
+
+
+
+			<p class="lead mb-0">
+				<a href="#" class="text-white font-weight-bold">A Java framework
+					for Java experts to develop web applications...</a>
+			</p>
+		</div>
+
+		<div class="row mb-2">
+        <div class="col-md-6">
+        
+        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" data="https://www.youtube.com/embed/fWQvC9uV6Hg" alt="Demo app creation youtube video"></object>
+          <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Featured post</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#">Continue reading</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+          </div> -->
+        </div>
+        
+        
+        <div class="col-md-6">        
+         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">wffweb is the best one</strong>
+              <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/faq.html">
+              If you are developing single page application, highly secured ui (banking/financial products), mission critical ui development, business application, 
+				realtime application i.e. the applications which show realtime data in it, analytical applications etc..
+              </blockquote>
+              <p class="fb-share-button" data-href="https://webfirmframework.github.io" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwebfirmframework.github.io%2F&amp;src=sdkpreparse">Share</a></p>
+              <p>			
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+				<script type="IN/Share" data-url="https://webfirmframework.github.io/" data-counter="right"></script>
+			  </p>
+			  
+              
+              <!-- <h3 class="mb-0">
+                <a class="text-dark" href="#">wffweb for web app development</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
+              
+            </div>
+            <!-- <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+	      <div class="col-md-12">
+	      <!-- wffweb-github-io -->
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-6407927299164406" data-ad-slot="1020738577"
+						data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+	      </div>      
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            webfirmframework for Java Experts
+          </h3>
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">How to do data visualization in HTML5?</h2>
+
+				<p>
+				Even if there are many third party ready-made libraries available for data visualization 
+				it will be better to develop one with our own logic. 
+				 The reason is in almost all cases we have to represent data in some different way which the libraries cannot do.
+				 However, if any library can satisfy your exact requirement it is good to go with it.
+					 
+				</p>
+				<p>
+				There are two ways to create data visualization in browser. One is with client side library and another is with HTML5 SVG tag. 
+				Google charts js library is an example for client side js library for data visualization.
+				In the modern era, developing with HTML5 SVG tag is the better way. In fact, google charts is internally using HTML5 SVG features.
+				
+				</p>
+				<p>
+				There are two types of data we want to visualize, one is static data and another is real-time data. 
+				Visualizing real-time data is challenging compared to static data.				
+				</p>
+				<h6>static data visualization</h6>
+				<p>It is not difficult to visualize static data. The data can be bought from the server in JSON format and with some javascript and HTML5 SVG tag we can do the reset.</p>
+				<h6>real-time data visualization</h6>
+				<p>To do real-time data visualization we need continues transfer of data from server side to client side in the JSON format. To make it more real-time we have to choose websocket for data transfer.</p>
+				<h6>Do Any frameworks help from scratch development of real-time data visualization with HTML5 SVG tag?</h6>
+				<p>Yes, <a href="/" >Web Firm Framework</a> will make it more easy because it is a server side framework. 
+				It uses websocket for data transfer and we don't have to handle it explicitly. Just keep coding just like a client side program, the framework will handle the rest.</p>
+				
+				
+				<hr>
+
+				
+			</div><!-- /.blog-post -->
+
+		  <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="../developers-guide/faq.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
+          
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html">
+            <h4 class="font-italic text-danger" id="noticeTitle"></h4>
+            <p id="noticeContent" class="mb-0"></p>
+            </blockquote>
+          </div>         
+
+          <div class="p-3">
+            <h4 class="font-italic">Other</h4>
+            <ol id="commonLinks" class="list-unstyled"></ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>By <a href="https://webfirmframework.com">webfirmframework</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer><script defer src="/assets/js/developers-guide-wffweb-3_main.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery-3.3.1.min.js"><\/script>')</script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+	<script type="text/javascript">
+		$(function() {
+			
+			//for highlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+			
+			$.getJSON("notice.json", function(data) {
+				$("#noticeTitle").html(data.title);
+				$("#noticeContent").html(data.content);
+			});
+			
+			$.getJSON("common-uris.json", function(data) {
+				var i;
+				for (i in data) {
+					var each = data[i]; 
+					var li = $('<li/>').appendTo('#commonLinks');
+					$('<a />')
+					.attr('href', each.uri)
+					.attr('title', each.title)
+					.text(each.name)					
+					.appendTo(li);
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
