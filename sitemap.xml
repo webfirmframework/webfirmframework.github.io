@@ -11,6 +11,17 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://webfirmframework.github.io/blog/what-is-data-visualization.html</loc>
+  <lastmod>2019-03-03T06:58:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://webfirmframework.github.io/blog/how-to-do-data-visualization-in-html.html</loc>
+  <lastmod>2019-03-03T06:58:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+
+<url>
   <loc>https://webfirmframework.github.io/developers-guide/get-started.html</loc>
   <lastmod>2018-12-16T06:58:19+00:00</lastmod>
   <priority>0.80</priority>
