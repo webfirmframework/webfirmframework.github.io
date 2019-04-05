@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Data Visualization</title>
+    <title>Sending large content through WebSocket</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -114,34 +114,35 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">How to do data visualization in HTML5?</h2>
+            <h2 class="blog-post-title">WebSocket connection is getting closed while sending large data from HTML5 WebSocket client to server.</h2>
 
 				<p>
-				Even if there are many third party ready-made libraries available for data visualization 
-				it will be better to develop one with our own logic. 
-				 The reason is in almost all cases we have to represent data in some different way which the libraries cannot do.
-				 However, if any library can satisfy your exact requirement it is good to go with it.
-					 
+					A WebSocket server may have data size limit for sending and
+					receiving data it doesn't matter whether it is text or binary. For
+					instance, tomcat (which follows <em>JSR 356</em>) has limitation
+					for sending &amp; receiving data, <em>binaryBufferSize</em> and
+					<em>textBufferSize</em> represent it. The default limit is 8192
+					bytes.
+
 				</p>
+				<p>If we are sending data above its limit from any websocket
+					client (eg: HTML5 websocket client) and the server is unable to
+					deliver it the server may close the websocket connection. 
+					If you are receiving data in the server as a single chuck, the server will be unable to deliver it. </p>
 				<p>
-				There are two ways to create data visualization in browser. One is with client side library and another is with HTML5 SVG tag. 
-				Google charts js library is an example for client side js library for data visualization.
-				In the modern era, developing with HTML5 SVG tag is the better way. In fact, google charts is internally using HTML5 SVG features.
-				
+				The solution to avoid this issue is to receive data as partial in <em>OnMessage</em>,  
+				<a href="https://github.com/webfirmframework/minimal-production-ready-projects/blob/master/production-sample-with-petal-css-framework/src/main/java/com/wffwebdemo/minimalproductionsample/server/ws/WSServerForIndexPage.java#L205" target="_blank">This example shows how to receive data in partial</a>. 
 				</p>
+
 				<p>
-				There are two types of data we want to visualize, one is static data and another is real-time data. 
-				Visualizing real-time data is challenging compared to static data.				
+					The same case is applicable for sending data from websocket server
+					to client. If the size of data is above its allowed limit (8192
+					bytes) we have to send it as partial.
+					<code class="java">sendBinary(part, last);</code>
+					takes partial bytes and also checks whether it is the last part. Checkout <a href="https://github.com/webfirmframework/minimal-production-ready-projects/blob/master/production-sample-with-petal-css-framework/src/main/java/com/wffwebdemo/minimalproductionsample/server/ws/WSServerForIndexPage.java#L178" target="_blank">this code</a> to get a clear idea about sending partial bytes.
 				</p>
-				<h6>static data visualization</h6>
-				<p>It is not difficult to visualize static data. The data can be bought from the server in JSON format and with some javascript and HTML5 SVG tag we can do the rest.</p>
-				<h6>real-time data visualization</h6>
-				<p>To do real-time data visualization we need continues transfer of data from server side to client side in the JSON format. To make it more real-time we have to choose websocket for data transfer.</p>
-				<h6>Do Any frameworks help from scratch development of real-time data visualization with HTML5 SVG tag?</h6>
-				<p>Yes, <a href="/" >Web Firm Framework</a> will make it more easy because it is a server side framework. 
-				It uses websocket for data transfer and we don't have to handle it explicitly. Just keep coding just like a client side program, the framework will handle the rest.</p>
-				
-				
+
+
 				<hr>
 
 				
@@ -149,7 +150,7 @@
 
 		  <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="what-is-data-visualization.html" rel="nofollow">Prev</a>
-            <a class="btn btn-outline-primary" href="unable-to-send-large-data-through-websocket.html" rel="nofollow">Next</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Next</a>
           </nav>
           
         </div><!-- /.blog-main -->

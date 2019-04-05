@@ -7,6 +7,7 @@
 {"uri":"https://webfirmframework.com/donate","name":"Donate to author","title":"Donate to the creator of this framework"},
 {"uri":"https://stackoverflow.com/questions/tagged/wffweb","name":"Stackoverflow","title":"Ask questions in Stackoverflow"},
 {"uri":"https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A/","name":"Technical Videos","title":"Technical Videos"},
-{"uri":"../offices.html","name":"Offices","title":"Office Address"}
+{"uri":"../offices.html","name":"Offices","title":"Office Address"},
+{"uri":"blog/what-is-data-visualization.html","name":"Blog","title":"Technical Blog"}
 
 ]
