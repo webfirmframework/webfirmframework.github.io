@@ -169,20 +169,30 @@
 					threaded model, the other parts of the form can not be generated
 					while the select box is being filled by elements. So if we are
 					using separate thread for generating select boxes then the user
-					will like the entire ui is quickly loaded and the select boxes are
+					will feel like the entire UI is quickly loaded and the select boxes are
 					being asynchronously filled with elements. This is a simple use
 					case, there are many use cases where you want to load the overall
-					ui first and after that asynchronously load different section of it. 
+					UI first and after that asynchronously load different section of it. 
 					There are some major multi-threading improvements done in <em>wffweb-3.0.1</em>, 
 					use <em>wffweb-3.0.1</em> or later.</p>
 			<p>
 			You can find sample code for muti-threaded UI <a href="https://github.com/webfirmframework/minimal-production-ready-projects/blob/6934833231fa77627b8fbae51d905fc27c1d05f3/production-sample-with-foundation-css-framework/src/main/java/com/wffwebdemo/minimalproductionsample/page/template/ResponsiveTable.java#L72" target="_blank">in this project</a>.
-			</p>					
-					
- 			
- 
-            
-          </div><!-- /.blog-post -->
+			</p>
+
+				<p>
+					Creating lot of threads may not be a good approach as it may
+					consume more memory and CPU so we are handling it with thread pool. But a good news is that we can forget about this problem after the arrival of <em>Java Fibers</em>.
+					We can develop more user experienced UI with <em>Java Fibers</em> proposed
+					in <a
+						href="http://cr.openjdk.java.net/~rpressler/loom/Loom-Proposal.html"
+						rel="nofollow"> Java Loom project</a>. We will be able to create
+					millions of Fibers without the overhead of thread.
+				</p>
+
+
+
+
+			</div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="tagrepository.html">Prev</a>
