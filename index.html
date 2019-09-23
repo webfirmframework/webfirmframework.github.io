@@ -289,11 +289,26 @@
 				<h3>
 <a id="sample1--" class="anchor" href="#sample1--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Sample code :-</h3>
 <p>Develop web application with Java code in the way you write HTML.</p>
+
+Since 3.0.7 you can write in functional style coding. Eg:
+<pre class="notranslate"><code class="java">Html html = new Html(null).give(rootTag -> {
+    new Head(rootTag);
+    new Body(rootTag).give(body -> {
+        new NoTag(body, "Hello World");
+    });
+});
+
+// prepends the doc type &lt;!DOCTYPE html&gt;
+html.setPrependDocType(true);
+System.out.println(html.toHtmlString()); 
+</code></pre>
+
+Eg for anonymous class style coding: 
 <pre class="notranslate"><code class="java">Html html = new Html(null) {{
-	new Head(this);
-	new Body(this) {{
-		new NoTag(this, "Hello World");
-	}};
+    new Head(this);
+    new Body(this) {{
+        new NoTag(this, "Hello World");
+    }};
 }};
 
 // prepends the doc type &lt;!DOCTYPE html&gt;
