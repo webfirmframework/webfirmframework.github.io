@@ -204,7 +204,7 @@
 					However, file upload and file download options should be handled in some other way (other framework/servlet) because currently it doesn't support multiplexing.</p>
 				
 				<h3>Is there any known demerits with this framework?</h3>
-				<p>To gain more readability and maintenance flexibility we use
+				<p><del>To gain more readability and maintenance flexibility we use
 					anonymous class style coding in Java but sometimes it is referred
 					to as an anti-design pattern. It has an initial first time
 					performance impact if the tag hierarchy is heavy but it's only once
@@ -214,16 +214,25 @@
 					normal object creation coding style. It's always recommended to
 					develop reusable components which will increase the productivity
 					&amp; maintenance comfortability. You can also maintain separate
-					package (.jar) for the custom components (.class files).</p>
+					package (.jar) for the custom components (.class files).</del></p>
 				<p>
-					Kotlin solves the issue of Java anonymous class, using <a
+					With latest version we can use functional style coding using
+					<code class="java">AbstractHtml.give</code>
+					method instead of anonymous style coding. So now there is no more
+					issue of anonymous class loading. Say good bye to anonymous class
+					style coding. We can use <a href="https://webfirmframework.com" 
+					target="_blank" >this tool to convert HTML to Java functional style code</a>.
+				</p>
+				<p>
+					Kotlin also solves the issue of Java anonymous class, using <a
 						href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/apply.html"
 						target="_blank">apply function block</a> we can get the same readability as
 					Java anonymous class style coding without generating anonymous class.
 					Checkout <a href="https://github.com/webfirmframework/kotlin-wffweb-demo-apps/blob/master/kotlinminimalproductionsample/src/main/java/com/wffwebdemo/minimalproductionsample/page/layout/IndexPageLayout.kt"
 					target="_blank">this code</a> from 
 					<a href="https://github.com/webfirmframework/kotlin-wffweb-demo-apps" 
-					target="_blank" >Kotlin wffweb sample project</a>.
+					target="_blank" >Kotlin wffweb sample project</a>. Try <a href="https://webfirmframework.com" 
+					target="_blank" >this tool to convert HTML to Kotlin code</a>.
 					
 				</p>
 				<p>
