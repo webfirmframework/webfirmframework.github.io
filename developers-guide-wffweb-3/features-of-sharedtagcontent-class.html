@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Basic feature methods of tags and special methods of tag in wffweb. Data and shared data method of tag. Generating tag hierarchy as a string from java object. Sample code to understand usage.">
+    <meta name="description" content="Features of SharedTagContent class">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Features of Tag | Developers Guide</title>
+    <title>Features of SharedTagContent class</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,8 +19,10 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
+
   </head>
 
   <body>
@@ -94,7 +96,7 @@
 		<div class="row mb-2">
         <div class="col-md-6">
         
-        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" data="https://www.youtube.com/embed/fWQvC9uV6Hg" alt="Demo app creation youtube video"></object>
+        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" data="https://www.youtube.com/embed/7h1iKVViKE0" alt="Demo app creation youtube video"></object>
           <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -157,336 +159,154 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Methods of Tags</h2>
+            <h2 class="blog-post-title">What is <code class="java">SharedTagContent</code> class</h2>
+            <p>It is a class which can be used to change inner content of one or more tags (even from multiple BrowserPage instances) from a single point. </p>
             
-			<h3>
-					<a id="basic-features-of-tags" class="anchor" href="#basic-features-of-tags" aria-hidden="true"><span
-						class="octicon octicon-link">Basic methods of Tags</span></a>
-				</h3>
-				<p>These are some of the basic tag building methods but not limited to that.</p>
-				<h4>
-					<code>appendChild</code>
-				</h4>
-				
-				<pre class="notranslate"><code class="java">Div div = new Div(null);        
-Span span = new Span(null);
+            <h3>Features of <code class="java">SharedTagContent</code></h3>
+            
+            <ol>
+            <li>Update content of multiple tags</li>
+            <li>Shared behavior can be turn off/on</li>
+            <li>Formatter can be set to show content in different format in different consumer tags</li>
+            <li>Can be detached from all of its consumer tags with a single method</li>
+            <li>Listeners can be added for content change &amp; detach event</li>
+            <li>Thread-safe &amp; auto dereferencing</li>
+            <li>Allows parallel push only when appropriate</li>
+            </ol>
 
-div.appendChild(span);
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>appendChildren</code>
-				</h4>
-				
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-H1 h1 = new H1(null);
-
-div.appendChildren(span, h1);
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;
-System.out.println(htmlString);</code></pre>
-				
-				
-				<h4>
-					<code>addInnerHtml</code>
-				</h4>
+			<h5>Update content of multiple tags</h5>
 				<p>
-				This method will remove all children and add the given tag as child.</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);         
-Span span = new Span(null);
-div.appendChild(span);
-
-div.addInnerHtml(new NoTag(null, "Some Text"));
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;Some Text&lt;/div&gt;
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>addInnerHtmls</code>
-				</h4>				
-				<p>
-				This method will remove all children and add the given tags as children.
+					<code class="java">SharedTagContent</code>
+					object can be added in tags using
+					<code class="java">addInnerHtml</code>
+					or
+					<code class="java">subscribeTo</code>
+					method. Eg:
 				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null); 
-				       
-P p = new P(null);
-div.appendChild(p);
 
-H1 h1 = new H1(null);
-h1.addInnerHtml(new NoTag(null, "h1 heading"));
-
-H2 h2 = new H2(null);
-h2.addInnerHtml(new NoTag(null, "h2 subheading"));
-
-
-div.addInnerHtmls(h1, h2);
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;h1&gt;h1 heading&lt;/h1&gt;&lt;h2&gt;h2 subheading&lt;/h2&gt;&lt;/div&gt;
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>removeChild</code>
-				</h4>				
-				<p>
-				This method will remove the given child from the tag.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-P p = new P(null);
-div.appendChild(p);
-
-div.removeChild(p);
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;/div&gt;
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>removeChildren</code>
-				</h4>				
-				<p>
-				This method will remove the given children from the tag.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-P p = new P(null);
-
-div.appendChild(span);
-div.appendChild(p);
-
-div.removeChildren(Arrays.asList(p, span));
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;/div&gt;<br />
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>removeAllChildren</code>
-				</h4>				
-				<p>
-				This method will remove the all children from the tag.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-P p = new P(null);
-
-div.appendChild(span);
-div.appendChild(p);
-
-div.removeAllChildren();
-
-String htmlString = div.toHtmlString();
-//prints 
-//&lt;div&gt;&lt;/div&gt;<br />
-System.out.println(htmlString);</code></pre>
-				
-				<h4>
-					<code>getChildren</code>
-				</h4>				
-				<p>
-				This method will return all children from the tag.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-P p = new P(null);
-
-div.appendChild(span);
-div.appendChild(p);
-
-final List<AbstractHtml> children = div.getChildren();
-
-//true
-System.out.println(children.get(0).equals(span));
-//true
-System.out.println(children.get(1).equals(p));</code></pre>
-				
-				<h4>
-					<code>getFirstChild</code> since 3.0.1
-				</h4>				
-				<p>
-				This method will return the first child from its children.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-P p = new P(null);
-
-div.appendChild(span);
-div.appendChild(p);
-
-final AbstractHtml firstChild = div.getFirstChild();
-
-//true
-System.out.println(firstChild.equals(span));
-</code></pre>
-				
-				<h4>
-					<code>getChildAt</code> since 3.0.1
-				</h4>				
-				<p>
-				This method will return the child at the given index in its children. 
-				The below example will get the child at first index.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null);
-Span span = new Span(null);
-P p = new P(null);
-
-div.appendChild(span);
-div.appendChild(p);
-
-final AbstractHtml childAtIndexOne = div.getChildAt(1);
-
-//true
-System.out.println(childAtIndexOne.equals(p));
-</code></pre>
-				
-			<h4>
-					<code>prependChildren</code> since 3.0.1
-				</h4>				
-				<p>
-				This method will return the child at the given index in its children. 
-				The below example will get the child at first index.
-				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null, new Id("one")) {{                                   
-              new Div(this, new Id("child1"));
-          }};                                      
-                                        
-Span span = new Span(null);             
-P p = new P(null);                      
-Br br = new Br(null);                   
-div.prependChildren(span, p, br);       
-                                        
-System.out.println(div.toHtmlString()); 
-</code></pre>	
-This will print:
-<pre class="notranslate"><code class="html">&lt;div id=&quot;one&quot;&gt;                   
-    &lt;span&gt;&lt;/span&gt;                    
-    &lt;p&gt;&lt;/p&gt;                          
-    &lt;br/&gt;                                  
-    &lt;div id=&quot;child1&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-				
-				
-				<h4>
-					<code>addInnerHtml​(SharedTagContent&lt;T&gt;)</code> &amp; <code>subscribeTo​​(SharedTagContent&lt;T&gt;)</code>  since 3.0.6
-				</h4>				
-				<p>
-				Same <code class="java">SharedTagContent</code> object may be passed to multiple tags to change content from a single point. Read more about its usage from its javadoc.
-				</p>
-				
-				<h4>
-					<code>replaceWith</code> since 3.0.7
-				</h4>				
-				<p>
-				This method will replace the current tag with the given tags. Obviously, the current tag must have a parent.
-				</p>
-				
-				<h4>
-					<code>give</code> since 3.0.7
-				</h4>				
-				<p>
-				This method may be used to write functional style coding instead of anonymous style coding.
-				</p> Eg:-
 				<pre class="notranslate"><code class="java">
-Html rootTag = new Html(null).give(html -> {
-    new Head(html);
-    new Body(html).give(body -> {           	 
-        new NoTag(body, "Hello World");           	 
+SharedTagContent&lt;String&gt; stc = new SharedTagContent&lt;&gt;("Initial Content can also be empty");
+
+Div div = new Div(null);
+
+Span span1 = new Span(div);
+span1.subscribeTo(stc);
+
+Span span2 = new Span(div);
+span2.addInnerHtml(stc);
+
+System.out.println(div.toHtmlString());
+stc.setContent("Content Changed");
+System.out.println(div.toHtmlString());
+				</code></pre>
+				<p>In the first <code class="java">System.out.println(div.toHtmlString());</code> it will print as follows</p>
+				
+				<pre class="notranslate"><code class="html">&lt;div&gt;&lt;span&gt;Initial Content can also be empty&lt;/span&gt;&lt;span&gt;Initial Content can also be empty&lt;/span&gt;&lt;/div&gt;</code></pre>
+				
+				<p>In the second <code class="java">System.out.println(div.toHtmlString());</code> it will print as follows</p>
+				
+				<pre class="notranslate"><code class="html">&lt;div&gt;&lt;span&gt;Content Changed&lt;/span&gt;&lt;span&gt;Content Changed&lt;/span&gt;&lt;/div&gt;</code></pre>
+				
+				
+				
+				<h5>Turning on/off shared behavior</h5>
+				<p>
+					By default the shared behavior property is set as true unless it is
+					specified as a constructor argument. It can be changed using
+					<code class="java">setShared(boolean)</code>
+					. It is useful in wffweb app. It if turned off then content changed
+					by
+					<code class="java">setContent</code>
+					method will not be reflected in all of its consumer tags
+					dynamically but internal content of
+					<code class="">SharedTagContent</code>
+					object will be changed so that when it is added to a new tag the
+					updated content will be applied.
+				</p>
+				<pre class="notranslate"><code class="java">
+SharedTagContent&lt;String&gt; stc = new SharedTagContent&lt;&gt;("Initial Content can also be empty");
+stc.setShared(false);</code></pre>
+
+				
+				<h5>Setting <code class="java">ContentFormatter</code></h5>
+				<p>
+					In the following code, the second argument in
+					<code class="java">new Span(usdDv).addInnerHtml</code>
+					is an object of
+					<code class="java">ContentFormatter</code>
+					which is passed as a lambda function. The method of
+					<code class="java">ContentFormatter</code>
+					should always return string type of content
+					<code class="java">SharedTagContent.Content&lt;String&gt;</code>
+					. The first constructor argument in
+					<code class="java">SharedTagContent.Content&lt;String&gt;</code>
+					specifies the string to be embedded in the consumer tag and the
+					second argument specifies whether the content is an HTML, i.e. true
+					for HTML and false for text.
+				</p>
+
+
+
+				<pre class="notranslate"><code class="java">SharedTagContent<BigDecimal> stcAmountInUsd = new SharedTagContent<>(null);
+                
+new Div(null).give(dv -> {
+    new Div(dv).give(usdDv -> {
+        new NoTag(usdDv, "Amount in GBP: ");
+        new Span(usdDv).addInnerHtml(stcAmountInUsd, content -> {
+            
+            BigDecimal amountInUsd = content.getContent();
+            if (amountInUsd != null) {
+              //1 USD to 0.78 GBP
+                BigDecimal exchangeRate = new BigDecimal("0.78").setScale(10);  
+                BigDecimal amountInGbp = amountInUsd.multiply(exchangeRate);
+                String amountInGbpString = amountInGbp.stripTrailingZeros().toPlainString();                                
+                return new SharedTagContent.Content&lt;String&gt;(amountInGbpString, false);
+            }
+            
+            return new SharedTagContent.Content&lt;String&gt;("--", false);
+        });
+    });
+    
+    new Div(dv).give(usdDv -> {
+        new NoTag(usdDv, "Amount in Yen: ");
+        new Span(usdDv).addInnerHtml(stcAmountInUsd, content -> {
+            
+            BigDecimal amountInUsd = content.getContent();
+            if (amountInUsd != null) {
+              //1 USD to 108.80 Japanese Yen
+                BigDecimal exchangeRate = new BigDecimal("108.80").setScale(10);  
+                BigDecimal amountInYen = amountInUsd.multiply(exchangeRate);
+                String amountInYenString = amountInYen.stripTrailingZeros().toPlainString();                                
+                return new SharedTagContent.Content&lt;String&gt;(amountInYenString, false);
+            }
+            
+            return new SharedTagContent.Content&lt;String&gt;("--", false);
+        });
     });
 });
-// prepends the doc type <!DOCTYPE html>
-rootTag.setPrependDocType(true);
-System.out.println(rootTag.toHtmlString(true));
-				</code></pre>
-				
-				
-				<h4>
-					<code>getIndexByChild</code> since 3.0.7
-				</h4>
-				<p> To find the index of given tag if it is a child tag of this tag.
-				</p>
-				
-				
-				<h3>
-					<a id="special-features-of-tags" class="anchor" href="#wspecial-features-of-tags" aria-hidden="true"><span
-						class="octicon octicon-link">Some special methods of Tags</span></a>
-				</h3>
-				<p>
-					There some methods in tags which have some special purpose in the development.
-				</p>
-				<h4><code>toBigHtmlString &amp; toBigOutputStream</code></h4>
-				<p>
-					The
-					<code>toHtmlString</code>
-					and
-					<code>toBigHtmlString</code>
-					both can be used to return HTML string for the corresponding tag.
-					If the tag hierarchy is extremely complex (i.e. having around 10000
-					nested tags in it) then
-					<code>toBigHtmlString</code>
-					is the better choice because
-					<code>toHtmlString</code>
-					will consume memory while generating HTML and if there is no enough
-					memory available then it may throw an error.
-					<code>toHtmlString</code>
-					is faster than
-					<code>toBigHtmlString</code>
-					so it's always preferred for normal purpose. There could be some
-					cases where the tag hierarchy is used to generate very complex HTML
-					report, in such case
-					<code>toBigHtmlString</code>
-					is better.
-				</p>
-				<p>
-					<code>toBigOutputStream</code>
-					is for the same purpose the only difference is instead of returning
-					HTML string it writes HTML bytes directly to the given output
-					stream.
-				</p>
-				
-				<h4><code>setData(Object) &amp; getData()</code></h4>
-				<p>It's simply to set and get any object on the tag. It the set
-					object is saved in the tag itself.</p>
 
-				<h4><code>setSharedData(Object) &amp; getSharedData()</code></h4>
-				<p>It's simply to set and get any object common to the whole tag
-					hierarchy. The given object is saved in a private area of the root
-					tag of the whole hierarchy. Eg:-</p>
-				<script src="https://gist.github.com/webfirmframework/6608fa82ac1a8ebf1c81a336fc8dccba.js"></script>
-				<h4><code>getRootTag()</code></h4>
-				<p><code>getRootTag()</code> method of a tag returns the root tag (i.e. top level base tag) in the whole tag hierarchy. Eg:-</p>
-					<script src="https://gist.github.com/webfirmframework/3d758303988006aecbf3ce7e9eb89bb5.js"></script>
+stcAmountInUsd.setContent(new BigDecimal("1000"));</code></pre>
 
-				<h4><code>resetHierarchy()</code></h4>
-				<p>If a tag is used under a <code>BrowserPage</code> instance and the same tag object needs to be used in another instance of <code>BrowserPage</code> then the tag must be removed from its parent and its <code>resetHierarchy</code> method must be called before using in another instance of <code>BrowserPage</code>
-					otherwise it will make an unusual behavour in the UI. To avoid compromising performance <code>resetHierarchy</code> doesn't handle it internally.
-					
-				</p>	
-				
-            
-          </div><!-- /.blog-post -->
+				<h6>
+					Subscribe to <a
+						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A/"
+						target="_blank">this youtube channel</a> to get demonstration
+					video about all of its features. Minimum 100 subscribers required
+					to publish video.
+				</h6>
 
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="tags-and-attributes.html">Prev</a>
-            <a class="btn btn-outline-primary" href="features-of-sharedtagcontent-class.html">Next</a>
+
+
+
+
+
+			</div><!-- /.blog-post -->
+
+		  <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="features-of-tags.html">Prev</a>
+            <a class="btn btn-outline-primary" href="tag-attributes.html">Next</a>
           </nav>
-
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/tags-and-attributes.html" rel="nofollow">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav>
-
+          
         </div><!-- /.blog-main -->
 
         <aside class="col-md-4 blog-sidebar">
@@ -538,16 +358,16 @@ System.out.println(rootTag.toHtmlString(true));
     </script>
 	<script type="text/javascript">
 		$(function() {
+			
 			//for highlightjs
 			$('pre code').each(function(i, block) {
 				  hljs.highlightBlock(block);
 			});
-
+			
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
-			
 			$.getJSON("developers-guide-uris.json", function(data) {
 				var i;
 				for (i in data) {
@@ -573,6 +393,9 @@ System.out.println(rootTag.toHtmlString(true));
 				}
 			});
 		});
+	</script>
+	<script type="text/javascript">
+		
 	</script>
 </body>
 </html>

@@ -93,6 +93,12 @@
    <priority>0.6400</priority>
 </url>
 <url>
+   <loc>https://webfirmframework.github.io/developers-guide/features-of-sharedtagcontent-class.html</loc>
+   <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
    <loc>https://webfirmframework.github.io/developers-guide/event-attributes.html</loc>
    <lastmod>2019-10-04T00:00:00+00:00</lastmod>
    <changefreq>monthly</changefreq>
