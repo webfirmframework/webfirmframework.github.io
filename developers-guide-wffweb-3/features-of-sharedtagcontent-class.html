@@ -287,6 +287,28 @@ new Div(null).give(dv -> {
 
 stcAmountInUsd.setContent(new BigDecimal("1000"));</code></pre>
 
+				<h5>
+					<code class="java">detach</code>
+					method in
+					<code class="java">SharedTagContent</code>
+				</h5>
+				<p>
+					<code class="java">sharedTagContent.detach</code>
+					will remove this object from all of its consumer tags. The argument
+					<code class="java">true</code>
+					in
+					<code class="java">sharedTagContent.detach(true)</code>
+					method call means that the embedded content should also be removed
+					from the consumer tags and
+					<code class="java">false</code>
+					means not to remove the embedded content but remove the
+					<code class="java">SharedTagContent</code>
+					object from its consumer tags. There are some other overloaded
+					methods available for various operations. Refer its javadoc for details.
+				</p>
+
+
+
 				<h6>
 					Subscribe to <a
 						href="https://www.youtube.com/channel/UCQsPONDM3hfyas896Qyu74A/"
