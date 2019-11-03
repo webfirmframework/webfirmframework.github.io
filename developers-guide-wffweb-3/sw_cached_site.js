@@ -1,5 +1,5 @@
 console.log('sw.js invoked');
-var cacheName = 'wffweb-guide-guide-cache-v8';
+var cacheName = 'wffweb-guide-guide-cache-v9';
 
 
 self.addEventListener('install', e => {
