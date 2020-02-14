@@ -1,33 +1,37 @@
 console.log('sw_cached_site.js invoked');
 var cacheName = 'wffweb-cache-v50';
 
+
 var urlsToCache = [
-	"/developers-guide-wffweb-3/css-properties.html",  
-	  "/developers-guide-wffweb-3/get-started.html",
-	  "/developers-guide-wffweb-3/custom-attributes.html",
-	  "/developers-guide-wffweb-3/custom-css-properties.html",
-	  "/developers-guide-wffweb-3/custom-server-methods.html",
-	  "/developers-guide-wffweb-3/custom-tags.html",
-	  "/developers-guide-wffweb-3/event-attributes.html",
-	  "/developers-guide-wffweb-3/execute-browser-page-action.html",
-	  "/developers-guide-wffweb-3/execute-javascript-from-server.html",
-	  "/developers-guide-wffweb-3/faq.html",
-	  "/developers-guide-wffweb-3/features-of-sharedtagcontent-class.html",
-	  "/developers-guide-wffweb-3/features-of-tags.html",
-	  "/developers-guide-wffweb-3/get-started.html",
-	  "/developers-guide-wffweb-3/how-to-resolve-dependency-in-build-tools.html",
-	  "/developers-guide-wffweb-3/mltp-design-pattern.html",
-	  "/developers-guide-wffweb-3/multi-threading-in-wff-java-code.html",
-	  "/developers-guide-wffweb-3/tag-attributes.html",
-	  "/developers-guide-wffweb-3/tagrepository.html",
-	  "/developers-guide-wffweb-3/tags-and-attributes.html",
-	  "/developers-guide-wffweb-3/wffweb-best-practices.html",
-	  "/developers-guide-wffweb-3/wffweb-configurations.html",
-	  "/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html",
-	  "/developers-guide-wffweb-3/wffweb-released-versions.html",
-	  "/index.html",
-	  "/favicon.ico"
-	];
+"/developers-guide-wffweb-3/css-properties.html",  
+  "/developers-guide-wffweb-3/get-started.html",
+  "/developers-guide-wffweb-3/custom-attributes.html",
+  "/developers-guide-wffweb-3/custom-css-properties.html",
+  "/developers-guide-wffweb-3/custom-server-methods.html",
+  "/developers-guide-wffweb-3/custom-tags.html",
+  "/developers-guide-wffweb-3/event-attributes.html",
+  "/developers-guide-wffweb-3/execute-browser-page-action.html",
+  "/developers-guide-wffweb-3/execute-javascript-from-server.html",
+  "/developers-guide-wffweb-3/faq.html",
+  "/developers-guide-wffweb-3/features-of-sharedtagcontent-class.html",
+  "/developers-guide-wffweb-3/features-of-tags.html",
+  "/developers-guide-wffweb-3/get-started.html",
+  "/developers-guide-wffweb-3/how-to-resolve-dependency-in-build-tools.html",
+  "/developers-guide-wffweb-3/mltp-design-pattern.html",
+  "/developers-guide-wffweb-3/multi-threading-in-wff-java-code.html",
+  "/developers-guide-wffweb-3/tag-attributes.html",
+  "/developers-guide-wffweb-3/tagrepository.html",
+  "/developers-guide-wffweb-3/tags-and-attributes.html",
+  "/developers-guide-wffweb-3/wffweb-best-practices.html",
+  "/developers-guide-wffweb-3/wffweb-configurations.html",
+  "/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html",
+  "/developers-guide-wffweb-3/wffweb-released-versions.html",
+  "/developers-guide-wffweb-3/developers-guide-uris.json",
+  "/developers-guide-wffweb-3/common-uris.json",
+  "/index.html",
+  "/favicon.ico",
+  "/common-uris.json"
+];
 
 self.addEventListener('install', e => {
   // Perform install steps
