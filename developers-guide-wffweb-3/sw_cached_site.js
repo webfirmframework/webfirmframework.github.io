@@ -23,7 +23,7 @@ self.addEventListener('install', e => {
 			.then(cache => {
 				console.log('put response in cache');
 				// add response to cache
-				cache.put(e.request, resClone);
+				cache.put(uri, resClone);
 			});
 			return res;
 		}).catch(err => caches.match(e.request).then(res => res));
