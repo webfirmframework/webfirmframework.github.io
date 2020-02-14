@@ -1,48 +1,11 @@
 console.log('sw_cached_site.js invoked');
 var cacheName = 'wffweb-cache-v-1';
 
-var urlsToCache = [
-	"/developers-guide-wffweb-3/css-properties.html",  
-	  "/developers-guide-wffweb-3/get-started.html",
-	  "/developers-guide-wffweb-3/faq.html"
-	];
 
 self.addEventListener('install', e => {
   // Perform install steps
   console.log('sw_cached_site.js install');
   
-//  var uris = [
-//	"/developers-guide-wffweb-3/css-properties.html",  
-//	  "/developers-guide-wffweb-3/get-started.html",
-//	  "/developers-guide-wffweb-3/faq.html"
-//  ];
-//  
-//
-//  for (var i = 0; i < uris.length; i++) {
-//	  const uri = uris[i];
-//	  fetch(uri).then(res => {
-//			// make copy/clone of response
-//			const resClone = res.clone();
-//			caches
-//			.open(cacheName)
-//			.then(cache => {
-//				console.log('put response in cache', uri);
-//				// add response to cache
-//				cache.put(uri, resClone);
-//			});
-//			return res;
-//		}).catch(err => caches.match(e.request).then(res => res));
-//		
-//  }
-  
-  e.waitUntil(
-		    caches.open(cacheName)
-		      .then(cache => {
-		        console.log('sw caching files');
-		        cache.addAll(urlsToCache);
-		      })
-		      .then(() => self.skipWaiting())
-		  );
 	
 });
 
@@ -56,7 +19,7 @@ self.addEventListener('activate', e => {
 			caches.keys().then(cacheNames => {
 				return Promise.all(
 						cacheNames.map(cache => {
-							if(cache !== cacheName) {
+							if(cache !== cacheName && cache !== 'wffweb-cache-dev-guide-v-1') {
 								console.log('Service worker: clearing old cache');
 								return caches.delete(cache);
 							}

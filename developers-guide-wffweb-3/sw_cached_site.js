@@ -72,7 +72,7 @@ self.addEventListener('activate', e => {
 			caches.keys().then(cacheNames => {
 				return Promise.all(
 						cacheNames.map(cache => {
-							if(cache !== cacheName) {
+							if(cache !== cacheName && cache !== 'wffweb-cache-v-1') {
 								console.log('Service worker: clearing old cache');
 								return caches.delete(cache);
 							}
