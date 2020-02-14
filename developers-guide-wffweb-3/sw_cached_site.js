@@ -24,7 +24,9 @@ var urlsToCache = [
   "/developers-guide-wffweb-3/wffweb-best-practices.html",
   "/developers-guide-wffweb-3/wffweb-configurations.html",
   "/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html",
-  "/developers-guide-wffweb-3/wffweb-released-versions.html"
+  "/developers-guide-wffweb-3/wffweb-released-versions.html",
+  "/index.html",
+  "/favicon.ico"
 ];
 
 self.addEventListener('install', e => {
