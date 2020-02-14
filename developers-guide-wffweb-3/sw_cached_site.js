@@ -1,10 +1,21 @@
-console.log('sw.js invoked');
-var cacheName = 'wffweb-guide-guide-cache-v9';
+console.log('sw_cached_site.js invoked');
+var cacheName = 'wffweb-guide-guide-cache-v10';
 
 
-self.addEventListener('install', e => {
+self.addEventListener('install', event => {
   // Perform install steps
-  console.log('dev/sw_cached_site install');
+  console.log('sw_cached_site install');
+  
+  event.waitUntil(
+		    caches.open(cacheName).then(function(cache) {
+		      return cache.addAll(
+		        [
+		          '/developers-guide-wffweb-3/get-started.html',
+		          '/developers-guide-wffweb-3/css-properties.html'
+		        ]
+		      );
+		    })
+		  );
 });
 
 
