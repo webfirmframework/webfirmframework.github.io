@@ -7,15 +7,4 @@ if ('serviceWorker' in navigator) {
   .catch(function(error) {
     console.log('Service worker registration failed, error:', error);
   });
-  
-  
-  navigator.serviceWorker.register('/developers-guide-wffweb-3/sw_cached_site_all_uris.js')
-  .then(function(registration) {
-	  console.log('Registration successful, scope is:', registration.scope);
-  })
-  .catch(function(error) {
-	  console.log('Service worker registration failed, error:', error);
-  });
-  
-  
 }
