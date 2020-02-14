@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v-1';
+var cacheName = 'wffweb-cache-v50';
 
 
 var urlsToCache = [
@@ -60,7 +60,7 @@ self.addEventListener('activate', e => {
 			caches.keys().then(cacheNames => {
 				return Promise.all(
 						cacheNames.map(cache => {
-							if(cache !== cacheName && cache !== 'wffweb-cache-dev-guide-v-1') {
+							if(cache !== cacheName) {
 								console.log('Service worker: clearing old cache');
 								return caches.delete(cache);
 							}
