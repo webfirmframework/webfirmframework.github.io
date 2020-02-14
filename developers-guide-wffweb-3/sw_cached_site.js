@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v-1';
+var cacheName = 'wffweb-cache-dev-guide-v-1';
 
 var urlsToCache = [
 "/developers-guide-wffweb-3/css-properties.html",  
@@ -24,8 +24,7 @@ var urlsToCache = [
   "/developers-guide-wffweb-3/wffweb-best-practices.html",
   "/developers-guide-wffweb-3/wffweb-configurations.html",
   "/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html",
-  "/developers-guide-wffweb-3/wffweb-released-versions.html",
-  "/index.html"
+  "/developers-guide-wffweb-3/wffweb-released-versions.html"
 ];
 
 self.addEventListener('install', e => {
