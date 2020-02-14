@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-dev-guide-cache-v9';
+var cacheName = 'wffweb-dev-guide-cache-v10';
 
 
 self.addEventListener('install', e => {
@@ -21,6 +21,7 @@ self.addEventListener('install', e => {
 			caches
 			.open(cacheName)
 			.then(cache => {
+				console.log('put response in cache');
 				// add response to cache
 				cache.put(e.request, resClone);
 			});
