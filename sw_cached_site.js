@@ -1,10 +1,37 @@
-console.log('sw.js invoked');
-var cacheName = 'wffweb-cache-v15';
+console.log('sw_cached_site.js invoked');
+var cacheName = 'wffweb-cache-v-1';
 
 
 self.addEventListener('install', e => {
   // Perform install steps
-  console.log('sw_cached_site install');
+  console.log('sw_cached_site.js install');
+  
+//  var uris = [
+//	"/developers-guide-wffweb-3/css-properties.html",  
+//	  "/developers-guide-wffweb-3/get-started.html",
+//	  "/developers-guide-wffweb-3/faq.html"
+//  ];
+//  
+//
+//  for (var i = 0; i < uris.length; i++) {
+//	  const uri = uris[i];
+//	  fetch(uri).then(res => {
+//			// make copy/clone of response
+//			const resClone = res.clone();
+//			caches
+//			.open(cacheName)
+//			.then(cache => {
+//				console.log('put response in cache', uri);
+//				// add response to cache
+//				cache.put(uri, resClone);
+//			});
+//			return res;
+//		}).catch(err => caches.match(e.request).then(res => res));
+//		
+//  }
+  
+	
+	
 });
 
 
