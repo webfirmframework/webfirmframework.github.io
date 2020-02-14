@@ -5,6 +5,32 @@ var cacheName = 'wffweb-dev-guide-cache-v9';
 self.addEventListener('install', e => {
   // Perform install steps
   console.log('sw_cached_site.js install');
+  
+  var uris = [
+	"/developers-guide-wffweb-3/css-properties.html",  
+	  "/developers-guide-wffweb-3/get-started.html",
+	  "/developers-guide-wffweb-3/faq.html"
+  ];
+  
+
+  for(i in uris) {
+	  var uri = uris[i];
+	  fetch(uri).then(res => {
+			// make copy/clone of response
+			const resClone = res.clone();
+			caches
+			.open(cacheName)
+			.then(cache => {
+				// add response to cache
+				cache.put(e.request, resClone);
+			});
+			return res;
+		}).catch(err => caches.match(e.request).then(res => res));
+		
+  }
+  
+	
+	
 });
 
 
