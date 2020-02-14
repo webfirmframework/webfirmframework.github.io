@@ -1,10 +1,10 @@
-console.log('sw_cached_site.js invoked');
+console.log('sw_cached_site_all_uris.js invoked');
 var cacheName = 'wffweb-all-uris-cache-v1';
 
 
 self.addEventListener('install', event => {
   // Perform install steps
-  console.log('sw_cached_site install');
+  console.log('sw_cached_site_all_uris.js install');
   
   event.waitUntil(
 		    caches.open(cacheName).then(function(cache) {
