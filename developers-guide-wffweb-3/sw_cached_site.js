@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v-1';
+var cacheName = 'wffweb-cache-dev-guide-v-1';
 
 
 self.addEventListener('install', e => {
