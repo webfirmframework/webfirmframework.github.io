@@ -83,20 +83,16 @@ self.addEventListener('activate', e => {
 			);
 });
 
-// fetch cached files
-self.addEventListener('fetch', e => {
-	console.log('sw fetch');
-	e.respondWith(
-	fetch(e.request).then(res => {
-		// make copy/clone of response
-		const resClone = res.clone();
-		caches
-		.open(cacheName)
-		.then(cache => {
-			// add response to cache
-			cache.put(e.request, resClone);
-		});
-		return res;
-	}).catch(err => caches.match(e.request).then(res => res))		
-	)
-});
+//fetch cached files
+self.addEventListener('fetch', function(event) {
+	  event.respondWith(
+	    caches.open(cacheName).then(function(cache) {
+	      return cache.match(event.request).then(function (response) {
+	        return response || fetch(event.request).then(function(response) {
+	          cache.put(event.request, response.clone());
+	          return response;
+	        });
+	      });
+	    })
+	  );
+	});
