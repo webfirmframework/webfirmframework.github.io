@@ -1,10 +1,10 @@
-console.log('sw.js invoked');
-var cacheName = 'wffweb-guide-guide-cache-v9';
+console.log('sw_cached_site.js invoked');
+var cacheName = 'wffweb-dev-guide-cache-v9';
 
 
 self.addEventListener('install', e => {
   // Perform install steps
-  console.log('dev/sw_cached_site install');
+  console.log('sw_cached_site.js install');
 });
 
 
