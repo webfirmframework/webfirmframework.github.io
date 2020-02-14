@@ -1,16 +1,17 @@
 console.log('sw_cached_site.js invoked');
 var cacheName = 'wffweb-cache-dev-guide-v-1';
 
+var urlsToCache = [
+"/developers-guide-wffweb-3/css-properties.html",  
+  "/developers-guide-wffweb-3/get-started.html",
+  "/developers-guide-wffweb-3/faq.html"
+];
 
 self.addEventListener('install', e => {
   // Perform install steps
   console.log('sw_cached_site.js install');
   
-//  var uris = [
-//	"/developers-guide-wffweb-3/css-properties.html",  
-//	  "/developers-guide-wffweb-3/get-started.html",
-//	  "/developers-guide-wffweb-3/faq.html"
-//  ];
+
 //  
 //
 //  for (var i = 0; i < uris.length; i++) {
@@ -30,7 +31,14 @@ self.addEventListener('install', e => {
 //		
 //  }
   
-	
+  e.waitUntil(
+		    caches.open(cacheName)
+		      .then(cache => {
+		        console.log('sw caching files');
+		        cache.addAll(urlsToCache);
+		      })
+		      .then(() => self.skipWaiting())
+		  );
 	
 });
 
