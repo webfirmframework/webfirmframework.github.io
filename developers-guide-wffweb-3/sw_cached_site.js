@@ -13,8 +13,8 @@ self.addEventListener('install', e => {
   ];
   
 
-  for(i in uris) {
-	  var uri = uris[i];
+  for (var i = 0; i < uris.length; i++) {
+	  const uri = uris[i];
 	  fetch(uri).then(res => {
 			// make copy/clone of response
 			const resClone = res.clone();
