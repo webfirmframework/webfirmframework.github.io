@@ -41,8 +41,7 @@ self.addEventListener('install', e => {
 			const resClone = res.clone();
 			caches
 			.open(cacheName)
-			.then(cache => {
-				console.log('put response in cache', uri);
+			.then(cache => {				
 				// add response to cache
 				cache.put(uri, resClone);
 			});
