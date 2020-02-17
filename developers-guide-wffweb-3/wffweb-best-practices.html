@@ -259,9 +259,9 @@ div1.addInnerHtmls(div2, div3);</code></pre>
 				</p>
 
 				<h3>Do not return anonymous class</h3>
-				<p>When you want to reuse a set of tags, you have to keep a separate template class for it. Eg:-</p>
+				<p>When you want to reuse a set of tags, you have to keep a separate template class for it.</p>
 
-				<p>First let us look at a bad practice :- </p>				
+				<p>First let us look at a bad practice:- </p>				
 				<pre class="notranslate"><code class="java">public class UserDetails {
 
     public Div getUserDetailsDiv(final String fullName) {
@@ -298,9 +298,15 @@ public static void main(String[] args) {
 
     private void develop(final String fullName) {
 
-        new Span(this) {{
-            new NoTag(this, "Name : " + fullName);
-        }};
+//before 3.x.x
+//        new Span(this) {{
+//            new NoTag(this, "Name : " + fullName);
+//        }};
+        
+//      as of 3.x.x 
+        new Span(this).give(span -> {
+            new NoTag(span, "Name : " + fullName);
+        });
 
     }
 
@@ -314,6 +320,29 @@ public static void main(String[] args) {
 				
 			<p>But if you really want a method to return a div, then you have to change the coding style like this</p>
 
+with the latest version of <em>3.x.x</em>: 
+<pre class="notranslate"><code class="java">public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null).give(div -> {
+            new Span(div).give(span -> {
+                new NoTag(span, "Name : " + fullName);
+            });
+        });    
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+OR 
 <pre class="notranslate"><code class="java">public class UserDetails {
 
     public Div getUserDetailsDiv(final String fullName) {
@@ -345,12 +374,12 @@ public static void main(String[] args) {
 				It's available as part of core java. 
 				<em>wffweb-3.0.1</em> 
 				or later is recommended to use if ui portions are loaded in multiple threads. 
-				There some major thread safety improvements done in <em>wffweb-3.0.1</em> 
+				There some major thread safety improvements done in <em>wffweb-3.0.1 &amp; later</em>
 				and previous versions are not 100% thread safe. 
 			 
 				</p>
 
-				<h3>Use Kotlin to develop UI Templates</h3>
+				<h3>You may use Kotlin to develop UI Templates to reduce coding effort</h3>
 				<p>
 					Using Kotlin to develop UI templates will be better productive,
 					maintainable and readable. <a
