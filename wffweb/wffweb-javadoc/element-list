@@ -1,5 +1,6 @@
 com.webfirmframework.wffweb
 com.webfirmframework.wffweb.clone
+com.webfirmframework.wffweb.concurrent
 com.webfirmframework.wffweb.core.constants
 com.webfirmframework.wffweb.css
 com.webfirmframework.wffweb.css.core
@@ -11,6 +12,7 @@ com.webfirmframework.wffweb.informer
 com.webfirmframework.wffweb.interpreter
 com.webfirmframework.wffweb.io
 com.webfirmframework.wffweb.js
+com.webfirmframework.wffweb.lang
 com.webfirmframework.wffweb.security.object
 com.webfirmframework.wffweb.server.page
 com.webfirmframework.wffweb.server.page.action
