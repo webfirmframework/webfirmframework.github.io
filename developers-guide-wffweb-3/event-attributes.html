@@ -288,6 +288,38 @@
 					in the scope of
 					<code>jsPostFunctionBody</code>.
 				</p>
+				
+				<h4 id="action"><code class="java">action</code> object since <em>3.0.15</em></h4>
+				
+				
+				<p>Since <em>wffweb-3.0.15</em>, there is one more object available in the scope of 
+				<code class="java">jsPreFunctionBody</code> called <code class="java">action</code>. 
+				This <code class="java">action</code> object has a function called <code class="java">perform()</code>, 
+				it can do the same action which happens when 
+				<code class="java">jsPreFunctionBody</code> returns <code class="java">true</code>. 
+				Doing <code class="java">return true</code> in <code class="java">jsPreFunctionBody</code>  
+				or calling its <code class="java">action.perform()</code> does the same job. 
+				The advantage of <code class="java">action.perform()</code> is the <code class="java">action</code> 
+				object can be passed to any other <em>JavaScript</em> code and invoke <code class="java">perform()</code> functionn later to do the same job.
+				<br>
+				You can call <code class="java">action.perform()</code> multiple times to do the same action multiple times.
+				However, if you are calling <code class="java">action.perform()</code> inside <code class="java">jsPreFunctionBody</code> 
+				the <code class="java">return true</code> has no effect on it because both do the same job. 
+				This is to prevent double form submission.
+				<br><br>
+				Eg:- Suppose there is a button, let's say <code class="java">btn1</code> it has an <code class="java">OnClick</code> event attribute.
+				This event attribute has <code class="java">ServerAsyncMethod</code>. When we click the button
+				it has to pop up some modal having some buttons. When we click the button on the modal it should invoke 
+				the <code class="java">ServerAsyncMethod</code> of button <code class="java">btn1</code>. 
+				How to achieve this? 
+				In this case, the <code class="java">action</code> object 
+				(from <code class="java">jsPreFunctionBody</code> of <code class="java">OnClick</code> of <code class="java">btn1</code>) 
+				can be passed to the event attribute of button on the modal and 
+				it can call <code class="java">perform()</code> function on that. 
+				You should have some basic <em>JavaScript</em> knowledge to achieve this.
+				
+				
+				</p>
 
 				
 				<h3 id="wffBMObject">WffBMObject</h3>
