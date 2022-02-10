@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="URL rewriting in wffweb. URL routing in wffweb. URI rewriting in wffweb. URI routing in wffweb. URL rewriting or routing in wffweb-12">
+    <meta name="author" content="Web Firm Framework">
+    <meta name="theme-color" content="#147cb5"/>
+    <link rel="icon" href="/favicon.ico">
+
+    <title>URL Rewriting | Routing | wffweb-12</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="../assets/css/blog.css" rel="stylesheet">
+    
+    <!-- google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
+
+  </head>
+
+  <body>
+
+<!-- for facebook share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="container">
+      <header class="blog-header py-3">
+      	<div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo text-success" href="/">Web Firm Framework</a>
+          </div>
+        </div>
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-6 pt-1">
+            <a class="text-muted" href="get-started.html" title="Getting Started">Get Started</a>
+          </div>
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 499.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+            <a title="Download latest released wffweb .jar file" class="btn btn-sm btn-outline-secondary" href="https://search.maven.org/remote_content?g=com.webfirmframework&amp;a=wffweb&amp;v=LATEST">Download .jar</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 text-muted" title="Home" href="/">Home</a>
+          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com" target="_blank">HTML5 to Java/Kotlin Tool</a>
+          <a class="p-2 text-muted" title="WFF Hub" href="https://webfirmframework.com/hub" target="_blank">Sign in Hub</a>
+          <a class="p-2 text-muted" title="Production Ready Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Projects</a>          
+        </nav>
+      </div>
+
+		<div class="jumbotron p-3 p-md-5 rounded"
+			style="color: #147cb5; background: #75e8bf 0 0 repeat-x">
+			<div class="col-md-6 px-0">
+				<a href="/" title="Web Firm Framework"><picture>
+				<source type="image/webp" srcset="../images/wff-logo-100px.webp">
+				<img src="../images/wff-logo-100px.jpg" alt="WFF"></picture></a>
+			</div>
+
+
+			<h1 class="display-4 font-italic"
+				title="wffweb - Java Developers Guide">wffweb - Java Developers
+				Guide</h1>
+			<p class="lead my-3">
+				<a href="mailto:tech-support@webfirmframework.com"
+					title="tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+				for support
+			</p>
+
+
+
+			<p class="lead mb-0">
+				<a href="#" class="text-white font-weight-bold">A Java framework
+					for Java experts to develop web applications...</a>
+			</p>
+		</div>
+
+		<div class="row mb-2">
+        <div class="col-md-6">
+        
+        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" data="https://www.youtube.com/embed/SBTKZh5LN_E" alt="Demo app creation youtube video"></object>
+          <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Featured post</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#">Continue reading</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+          </div> -->
+        </div>
+        
+        
+        <div class="col-md-6">        
+         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">wffweb is the best one</strong>
+              <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/faq.html">
+              If you are developing single page application, highly secured ui (banking/financial products), mission critical ui development, business application, 
+				realtime application i.e. the applications which show realtime data in it, analytical applications, trading applications etc..
+              </blockquote>
+              <p class="fb-share-button" data-href="https://webfirmframework.github.io" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwebfirmframework.github.io%2F&amp;src=sdkpreparse">Share</a></p>
+              <p>			
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+				<script type="IN/Share" data-url="https://webfirmframework.github.io/" data-counter="right"></script>
+			  </p>
+			  
+              
+              <!-- <h3 class="mb-0">
+                <a class="text-dark" href="#">wffweb for web app development</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
+              
+            </div>
+            <!-- <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+	      <div class="col-md-12">
+	      <!-- wffweb-github-io -->
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-6407927299164406" data-ad-slot="1020738577"
+						data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+	      </div>      
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            webfirmframework for Java Experts
+          </h3>
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">URL rewriting/routing in <em>wffweb-12</em></h2>
+					<p>The advantage of URL rewriting/routing in this framework is
+						that it changes only the needful part of the UI (so the server
+						sends only the data required for that portion), it will not
+						download/reload the entire page. We can get the same performance
+						advantage of a single page application with url rewriting/routing
+						feature.</p>
+					<hr>
+
+					<h3>
+						<code>URIStateSwitch.whenURI</code>
+						or
+						<code>AbstractHtml.whenURI</code>
+					</h3>
+					<p>
+						<code>AbstractHtml</code>
+						is the implementation class of
+						<code>URIStateSwitch</code>
+						interface so
+						<code>whenURI</code>
+						methods can be called on any tag (but on
+						<code>NoTag</code>
+						only consumer based overloading methods are allowed.).
+					</p>
+
+					<p>
+						<code>whenURI</code>
+						method mainly has four arguments. They are,
+						<code>whenURI(predicate, successSupplier/successConsumer,
+							failSupplier/failConsumer, index)</code>
+						. The argument of
+						<code>predicate.test</code>
+						is the changed URI. The argument of consumer is an
+						<code>TagEvent</code>
+						object which contains info like the changed URI and the sourceTag.
+						There are many overloading methods available
+						with different combinations of these arguments for ease of use.
+					</p>
+					<p>
+						The
+						<code>whenURI</code>
+						method can be called multiple times on a tag, the
+						failSupplier/failConsumer is valid only on the last
+						<code>whenURI</code>
+						call.
+					</p>
+					<p>
+						Now, let's talk about how it works. There are client side and
+						server side methods to change URI of the app, at server side
+						<code>browserPage.setURI</code>
+						can be called and at client side
+						<code>wffAsync.setURI</code>
+						can be called, their various usage is explained in the upcoming
+						section. <br>
+					</p>
+					<p>
+						The main logic is when there is a URI change the predicate will be
+						invoked and if the
+						<code>predicate.test</code>
+						method returns
+						<code>true</code>
+						, the successSupplier/successConsumer will be invoked otherwise
+						the failSupplier/failConsumer will be invoked unless there is
+						further predicates to test, i.e. we can call
+						<code>whenURI</code>
+						method to add multiple actions. Here, the role of the supplier is
+						to provide innerHtml/child tags for the corresponding tag that
+						means the existing children of the tag will be replaced with the
+						provided tags (returned by the supplier). The role of consumer is
+						to do any operation at the time of URI change and the current
+						children of the tag will not be altered unlike supplier. 
+						
+						Checkout <a
+							href="https://github.com/webfirmframework/wffweb-demo-deployment"
+							target="_blank">this sample code here</a> which is deployed at <a
+							href="https://wffweb.herokuapp.com" target="_blank">wffweb.herokuapp.com</a>.
+
+					</p>
+
+					Let's see an example with only successSupplier
+					<pre class="notranslate">
+						<code class="java">AbstractHtml div = new Div(null);
+
+div.whenURI(uri -> uri.startsWith("/ui/user"),
+() -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};});
+</code>
+					</pre>
+
+					When
+					<code>setURI</code>
+					method is called either from server side or client side, the
+					predicate will invoke and if the predicate test returns true then
+					existing children of
+					<code>div</code>
+					will be replaced with
+					<code>H1</code>
+					otherwise existing children will be removed as there is no
+					failConsumer/failSupplier passed.
+
+<br><br>
+
+Let's see an example with both successSupplier and failSupplier
+					<pre class="notranslate">
+						<code class="java">AbstractHtml div = new Div(null);
+
+div.whenURI(uri -> uri.startsWith("/ui/user"),
+() -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};},
+() -> {return new AbstractHtml[]{ new H2(null).give(TagContent::text, "h2")};});
+</code>
+					</pre>
+
+					When
+					<code>setURI</code>
+					method is called either from server side or client side, the
+					predicate will invoke and if the predicate test returns true then
+					existing children of
+					<code>div</code>
+					will be replaced with
+					<code>H1</code>
+					otherwise with
+					<code>H2</code>
+					.
+					
+<br><br>
+
+Let's see an example with multiple <code>whenURI</code> methods
+					<pre class="notranslate">
+						<code class="java">AbstractHtml div = new Div(null);
+ 
+div.whenURI(uri -> uri.startsWith("/ui/user"),
+() -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};});
+ 
+div.whenURI(uri -> uri.startsWith("/ui/admin"),
+() -> {return new AbstractHtml[]{ new H2(null).give(TagContent::text, "h2")};},
+() -> {return new AbstractHtml[]{ new H3(null).give(TagContent::text, "h3")};});
+</code>
+					</pre>
+
+					When
+					<code>setURI</code>
+					method is called either from server side or client side, the
+					predicate of the first
+					<code>whenURI</code>
+					action will invoke and if the predicate test returns true then the
+					existing children of
+					<code>div</code>
+					will be replaced with
+					<code>H1</code>
+					if that predicate test returns false it will invoke the predicate of the second
+					<code>whenURI</code>
+					action if the test returns true then existing children of
+					<code>div</code>
+					will be replaced with
+					<code>H2</code>
+					if test returns false 
+					then existing children of
+					<code>div</code>
+					will be replaced with
+					<code>H3</code>
+					.
+					<br>
+					In short:
+<br>
+If <code class="java">browserPage.setURI("/ui/user")</code> is called the <code class="java">div</code> will contain <code>h1</code> tag.
+<br>
+If <code class="java">browserPage.setURI("/ui/admin")</code> is called the <code class="java">div</code> will contain <code>h2</code> tag.
+<br>
+If <code class="java">browserPage.setURI("/ui/other")</code> is called the <code class="java">div</code> will contain <code>h3</code> tag.
+<br> In the above example there is no failSupplier in the first
+					<code>whenURI</code>
+					method because the failSupplier/failConsumer is valid only on the
+					last
+					<code>whenURI</code>
+					call.
+					
+					<br><br>
+
+
+					<h3>
+						<code>removeURIChangeActions()</code>
+					</h3>
+					<p>
+						This method can be called on a tag to remove all
+						<code>whenURI</code>
+						actions.
+					</p>
+
+					<h3>
+						<code>removeURIChangeAction(int index)</code>
+					</h3>
+					<p>
+						When the
+						<code>whenURI</code>
+						is called multiple times those actions will be indexed in the tag.
+						This method can be called on a tag to remove
+						<code>whenURI</code>
+						action at a particular index.
+					</p>
+					
+					<h3>
+						<code class="java">browserPage.setURI(String)</code>
+					</h3>
+					<p>
+						This method can be called at server side to change the URI of the app.
+					</p>
+					
+					<h3>
+						<code class="java">browserPage.getURI()</code>
+					</h3>
+					<p>
+						This method can be called at server side to get the current URI of the app.
+					</p>
+					<hr>
+					
+					<h2>Client side features</h2>
+
+					<h3>
+						<code>wffAsync.setURI</code>
+					</h3>
+					<p>This function can be called at client side to change the URI
+						of the app. There are three arguments for this function. The first
+						argument is the uri to change, the second and third arguments are
+						functions which will be invoked on uri change and after uri change
+						respectively. The second and third arguments are optional.</p>
+						
+						Checkout the following example 
+<pre class="notranslate">
+<code class="JavaScript">
+var uri = '/ui/user/items/view';
+
+// the event object contains uriBefore and uriAfter properties
+var preFunction = function(event) {
+    console.log('preFunction');
+};
+
+// the event object contains uriBefore, uriAfter and origin properties
+var postFunction = function(event) {
+    console.log('postFunction');
+};
+
+// preFunction and postFunction arguments are optional
+wffAsync.setURI(uri, preFunction, postFunction);
+</code>
+</pre>
+					<p>
+					<code>preFunction</code>
+					will be invoked if there is a uri change, i.e. at time of calling
+					if the current uri is same as the uri value passed in
+					<code>wffAsync.setURI</code>
+					function then this function will not invoke. This will be useful to
+					show a progress icon only if there is a change in the URI.
+					<code>postFunction</code>
+					will be invoked only after the UI changes applied by the server,
+					this function may be used to stop the progress icon. If you want to
+					handle progress icon globally, you can use
+					<code>wffGlobalListeners</code>
+					.
+					</p>
+
+					<h2><code>wffGlobalListeners</code> </h2>
+					<p>
+						<code>wffGlobalListeners</code>, <code>onSetURI</code> and <code>afterSetURI</code> are
+						legal names used by the framework. It is not mandatory to have
+						<code>wffGlobalListeners</code>
+						in your js file. You can add the following code in the js file to
+						listen to URI change events.
+					</p>
+
+					<pre class="notranslate">
+<code class="JavaScript">
+const wffGlobalListeners = new function() {
+
+// the event object contains uriBefore and uriAfter properties
+    this.onSetURI = function(event) {
+        console.log('wffGlobalListeners > onSetURI', event);
+        loadingIcon.hidden = false;
+    };
+
+// the event object contains uriBefore, uriAfter and origin properties
+    this.afterSetURI = function(event) {
+        console.log('wffGlobalListeners > afterSetURI', event);
+        loadingIcon.hidden = true;
+    };
+
+};
+</code>
+</pre>
+					<p>
+						<code>wffGlobalListeners</code>
+						,
+						<code>onSetURI</code>
+						and
+						<code>afterSetURI</code>
+						are optional.
+						<code>event.uriBefore</code>
+						is the uri before the uri change,
+						<code>event.uriAfter</code>
+						is the uri after uri change and
+						<code>event.origin</code>
+						will contain either
+						<code>client</code>
+						or
+						<code>server</code>
+						. If the
+						<code>setURI</code>
+						is called by client side JavaScript code (like
+						<code>wffAsync.setURI</code>
+						) then the
+						<code>event.origin</code>
+						will contain value as
+						<code>client</code>
+						and if the
+						<code>setURI</code>
+						is called by server side code (like
+						<code>browserPage.setURI</code>
+						) then the
+						<code>event.origin</code>
+						will contain value as
+						<code>server</code>
+						. <br>
+						<code>onSetURI</code>
+						will be invoked only when there is a URI change at the time of
+						calling
+						<code>wffAsync.setURI</code>
+						function, obviously
+						<code>browserPage.setURI</code>
+						has no effect on this method. Its role is similar to
+						<code>preFunction</code>
+						in
+						<code>wffAsync.setURI</code>
+						function. <br>
+						<code>afterSetURI</code>
+						is invoked only after URI set and the UI changes applied by the
+						server. Its role is similar to
+						<code>postFunction</code>
+						in
+						<code>wffAsync.setURI</code>
+						function but in addition to that if
+						<code>browserPage.setURI</code>
+						is called at server side this function will get invoked.
+
+					</p>
+
+
+					<hr>
+
+			</div><!-- /.blog-post -->
+
+		  <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-3/wffweb-best-practices.html">Previous</a>            
+          </nav>
+          
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html">
+            <h4 class="font-italic text-danger" id="noticeTitle"></h4>
+            <p id="noticeContent" class="mb-0"></p>
+            </blockquote>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Dev Guide</h4>
+            <ol id="devGuideLinks" class="list-unstyled mb-0"></ol>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Other</h4>
+            <ol id="commonLinks" class="list-unstyled"></ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>By <a href="https://webfirmframework.com">webfirmframework</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer><script defer src="/assets/js/developers-guide-wffweb-3_main.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery-3.3.1.min.js"><\/script>')</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+	<script type="text/javascript">
+		$(function() {
+			
+			//for highlightjs
+			$('pre code').each(function(i, block) {
+				  hljs.highlightBlock(block);
+			});
+			
+			$.getJSON("/notice.json", function(data) {
+				$("#noticeTitle").html(data.title);
+				$("#noticeContent").html(data.content);
+			});
+			$.getJSON("developers-guide-uris.json", function(data) {
+				var i;
+				for (i in data) {
+					var each = data[i]; 
+					var li = $('<li/>').appendTo('#devGuideLinks');
+					$('<a />')
+					.attr('href', each.uri)
+					.attr('title', each.title)
+					.text(each.name)					
+					.appendTo(li);
+				}
+			});
+			$.getJSON("common-uris.json", function(data) {
+				var i;
+				for (i in data) {
+					var each = data[i]; 
+					var li = $('<li/>').appendTo('#commonLinks');
+					$('<a />')
+					.attr('href', each.uri)
+					.attr('title', each.title)
+					.text(each.name)					
+					.appendTo(li);
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
