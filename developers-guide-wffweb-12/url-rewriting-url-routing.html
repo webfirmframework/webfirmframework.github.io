@@ -431,13 +431,13 @@ wffAsync.setURI(uri, preFunction, postFunction);
 <code class="JavaScript">
 const wffGlobalListeners = new function() {
 
-// the event object contains uriBefore and uriAfter properties
+// the event object contains uriBefore, uriAfter, origin and initiator properties
     this.onSetURI = function(event) {
         console.log('wffGlobalListeners > onSetURI', event);
         loadingIcon.hidden = false;
     };
 
-// the event object contains uriBefore, uriAfter and origin properties
+// the event object contains uriBefore, uriAfter, origin and initiator properties
     this.afterSetURI = function(event) {
         console.log('wffGlobalListeners > afterSetURI', event);
         loadingIcon.hidden = true;
@@ -483,10 +483,9 @@ const wffGlobalListeners = new function() {
 						will be invoked only when there is a URI change at the time of
 						calling
 						<code>wffAsync.setURI</code>
-						function, for now in this beta version
+						function or
 						<code>browserPage.setURI</code>
-						has no effect on this method (but will be changed in the next
-						beta version). Its role is similar to
+						method. Its role is similar to
 						<code>preFunction</code>
 						in
 						<code>wffAsync.setURI</code>
@@ -502,6 +501,35 @@ const wffGlobalListeners = new function() {
 						is called at server side this function will get invoked.
 
 					</p>
+					<p>
+						The
+						<code>initiator</code>
+						can have value as
+						<code>serverCode</code>
+						,
+						<code>clientCode</code>
+						or
+						<code>browser</code>
+						. If the value is
+						<code>serverCode</code>
+						it means that the URI change is initiated by server side Java
+						code. If the value is
+						<code>clientCode</code>
+						it means that the URI change is initiated by client side
+						JavaScript code. If the value is
+						<code>browser</code>
+						it means that the URI change is initiated by some browser actions
+						such as browser's back/forward button (history buttons) click. <br>Note:
+						If the value of
+						<code>initiator</code>
+						is
+						<code>browser</code>
+						then the
+						<code>uriBefore</code>
+						property will not available.
+					</p>
+					
+
 
 
 					<hr>
