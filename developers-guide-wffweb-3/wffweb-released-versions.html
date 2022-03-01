@@ -161,6 +161,27 @@
 				<div class="blog-post">
 					<h2 class="blog-post-title">wffweb released versions</h2>
 					
+					<h3>wffweb-12.0.0-beta.4</h3>
+
+					<p>
+					New Features
+					<ul>
+						<li>Support for BrowserPageSession, now no need to depend on Java server's HttpSession for session tracking.</li>
+						<li>Support for LocalStorage to set/remove tokens/items. Now, the authentication/authorization can be handled using token instead of cookie.</li>
+						<li>Inbuilt multi node support. Now, the wffweb app can be scaled by deploying into multiple nodes.</li>
+						<li>Implemented beforeURIChange and afterURIChange in BrowserPage.</li>
+						<li>Implemented executeJsInOtherPages method in TagRepository.</li>
+					</ul>
+					Improvements
+					<ul>
+					<li>Minor optimization related to whenURI feature - the server-client payload size reduced.</li>
+					</ul>
+
+					<a
+						href="https://github.com/webfirmframework/wff/releases/tag/released-version-12.0.0-beta.4_on_UTC_01-03-2022"
+						target="_blank">Read more in detail</a>
+					</p>
+
 					<h3>wffweb-12.0.0-beta.3</h3>
 					<p>
 						Internal implementation improvements to
