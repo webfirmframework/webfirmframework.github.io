@@ -180,11 +180,11 @@
 						instead of cookie.
 					</h6>
 					<h6>Inbuilt multi node support. Now, the wffweb app can be
-						scaled without any additional effort. </h6>
+						scaled without any additional effort. No need to configure sticky sessions to the load balancer.</h6>
 						<p>
 						For that, the Java server's
 						session should be disabled for wffweb <code>BrowserPage</code> &amp; use a custom
-						<code>httpSessionId</code> to use the <code>BrowserPageContext</code> and handle the authentication/authorization using token instead of cookie.
+						<code>httpSessionId</code> when adding <code>BrowserPage</code> to the <code>BrowserPageContext</code> and handle the authentication/authorization using token instead of cookie.
 						</p>
 					<p>
 						<b>Deployment Architecture Eg</b>: deploy wffweb app in multiple domain nodes like <em>node1.webfirmframework.com</em>,
