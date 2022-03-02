@@ -180,7 +180,7 @@
 						instead of cookie.
 					</h6>
 					<h6>Inbuilt multi node support. Now, the wffweb app can be
-						scaled without any additional effort. No need to configure sticky sessions to the load balancer.</h6>
+						scaled without any additional effort. </h6>
 						<p>
 						For that, the Java server's
 						session should be disabled for wffweb <code>BrowserPage</code> &amp; use a custom
@@ -190,7 +190,7 @@
 						<b>Deployment Architecture Eg</b>: deploy wffweb app in multiple domain nodes like <em>node1.webfirmframework.com</em>,
 						<em>node2.webfirmframework.com</em>, <em>node2.webfirmframework.com</em>
 						etc... Now create a load balancer in the main domain <em>webfirmframework.com</em>
-						and point it to those subdomain nodes. That's all!
+						and point it to those subdomain nodes. That's all! No need to configure sticky sessions to the load balancer.
 					</p>
 					<p>
 						<b>NB</b>: The websocket connection should be publicly accessible
@@ -198,6 +198,25 @@
 						subdomain nodes may be limited to the load balancer, to do that,
 						the load balancer should route request to the nodes along with an
 						app key, this app key may be checked in the wffweb app.
+					</p>
+					<p>
+					    Now, you may have this question, we usually save some user data in <code>HttpSession</code> object, 
+					    if we have disabled Java server's <code>HttpSession</code>	where can we store such data?
+					    <br>					    				
+						There is a <code>BrowserPageSession.userProperties()</code> which returns a map, you can store in it but it is not shared across multiple nodes. 
+						If you want to share data (that we usually save in <code>HttpSession</code> object)
+						across multiple nodes you can use
+						<code>LocalStorage</code>
+						at server side. The
+						<code>LocalStorage</code>
+						object can be obtained from
+						<code>BrowserPageSession</code>
+						object, eg:
+						<code>LocalStorage localStorage =
+							browserPageSession.localStorage()</code>
+						.
+					</p>
+					<p> The purpose of <code>BrowserPageSession.userProperties()</code> map is to store some temporary data in the same node.
 					</p>
 
 					Checkout <a
