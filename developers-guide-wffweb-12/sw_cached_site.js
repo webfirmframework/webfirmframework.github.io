@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v71';
+var cacheName = 'wffweb-cache-v73';
 
 
 var urlsToCache = [
@@ -27,6 +27,7 @@ var urlsToCache = [
   "/developers-guide-wffweb-3/wffweb-current-features-and-future-plans.html",
   "/developers-guide-wffweb-3/wffweb-released-versions.html",
   "/developers-guide-wffweb-12/url-rewriting-url-routing.html",
+  "/developers-guide-wffweb-12/new-features-in-wffweb-12.html",
   "/developers-guide-wffweb-3/developers-guide-uris.json",
   "/developers-guide-wffweb-3/common-uris.json",
   "/developers-guide-wffweb-12/developers-guide-uris.json",
