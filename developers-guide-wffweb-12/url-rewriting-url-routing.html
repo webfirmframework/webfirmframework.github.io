@@ -399,8 +399,11 @@ var postFunction = function(event) {
     console.log('postFunction');
 };
 
-// preFunction and postFunction arguments are optional
-wffAsync.setURI(uri, preFunction, postFunction);
+// true to replace existing uri in the history with the given uri passed
+var replace = false;
+
+// preFunction, postFunction and replace arguments are optional
+wffAsync.setURI(uri, preFunction, postFunction, replace);
 </code>
 </pre>
 					<p>
