@@ -166,18 +166,7 @@
 						download/reload the entire page. We can get the same performance
 						advantage of a single page application with url rewriting/routing
 						feature.</p>
-					<hr>
-					<h4 class="alert alert-warning">
-						The following code is based on the <em>wffweb-12.0.0-beta.4</em>.
-						The whenURI feature will be enhanced in <em>wffweb-12.0.0-beta.5</em>
-						so the whenURI predicate will have
-						<code>URIEvent</code>
-						object as the param instead of uri string, this
-						<code>URIEvent</code>
-						object will contain needful details such as the current uri, old
-						uri etc... However, the concept remains the same. This doc will be
-						updated after its release.
-					</h4>
+					<hr>					
 
 					<h3>
 						<code>URIStateSwitch.whenURI</code>
@@ -204,7 +193,7 @@
 						<code>predicate.test</code>
 						is the changed URI. The argument of consumer is an
 						<code>TagEvent</code>
-						object which contains info like the changed URI and the sourceTag.
+						object which contains info like the changed URI, the sourceTag etc...
 						There are many overloading methods available
 						with different combinations of these arguments for ease of use.
 					</p>
@@ -253,7 +242,7 @@
 					<pre class="notranslate">
 						<code class="java">AbstractHtml div = new Div(null);
 
-div.whenURI(uri -> uri.startsWith("/ui/user"),
+div.whenURI(uriEvent -> uriEvent.uriAfter().startsWith("/ui/user"),
 () -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};});
 </code>
 					</pre>
@@ -275,7 +264,7 @@ Let's see an example with both successSupplier and failSupplier
 					<pre class="notranslate">
 						<code class="java">AbstractHtml div = new Div(null);
 
-div.whenURI(uri -> uri.startsWith("/ui/user"),
+div.whenURI(uriEvent -> uriEvent.uriAfter().startsWith("/ui/user"),
 () -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};},
 () -> {return new AbstractHtml[]{ new H2(null).give(TagContent::text, "h2")};});
 </code>
@@ -299,10 +288,10 @@ Let's see an example with multiple <code>whenURI</code> methods
 					<pre class="notranslate">
 						<code class="java">AbstractHtml div = new Div(null);
  
-div.whenURI(uri -> uri.startsWith("/ui/user"),
+div.whenURI(uriEvent -> uriEvent.uriAfter().startsWith("/ui/user"),
 () -> {return new AbstractHtml[]{ new H1(null).give(TagContent::text, "h1")};});
  
-div.whenURI(uri -> uri.startsWith("/ui/admin"),
+div.whenURI(uriEvent -> uriEvent.uriAfter().startsWith("/ui/admin"),
 () -> {return new AbstractHtml[]{ new H2(null).give(TagContent::text, "h2")};},
 () -> {return new AbstractHtml[]{ new H3(null).give(TagContent::text, "h3")};});
 </code>

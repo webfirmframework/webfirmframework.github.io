@@ -222,8 +222,16 @@ this will print
 <pre class="notranslate"><code class="html">&lt;div common-data=&quot;data1&quot;&gt;
     &lt;div common-data=&quot;data2&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            
-            <h3>CustomEventAttribute</h3>
+
+					<h3>ImmutableCustomAttribute since <em>wffweb-12.0.0-beta.5</em></h3>
+					<p>
+						It is similar to
+						<code class="java">CustomAttribute</code>
+						but it doesn't contain any method to modify its value. It accepts
+						value value through the constructor argument.
+					</p>
+
+					<h3>CustomEventAttribute</h3>
             <p>Let us create an <code class="notranslate">onclick</code> 
             event attribute which will work similar to the existing <code class="notranslate">OnClick</code> attribute. 
             It will also support all generic arguments (such as <code>jsPreFunctionBody</code>
