@@ -364,12 +364,48 @@ If <code class="java">browserPage.setURI("/ui/other")</code> is called the <code
 					<p>
 						This method can be called at server side to change the URI of the app.
 					</p>
-					
+					<h3>
+						<code class="java">browserPage.setURI(String, boolean)</code>
+					</h3>
+					<p>
+						This method can be called at server side to replace the current
+						URI with the given one in the browser page history only if
+						<code class="java">true</code>
+						is passed as the second argument. If
+						<code class="java">false</code>
+						is passed as second argument then it changes the current uri with
+						the given one and adds to the browser history, i.e. browser page
+						navigates to the given uri, it is similar to calling
+						<code class="java">browserPage.setURI("/ui/user/items")</code>
+						.
+					</p>
+
 					<h3>
 						<code class="java">browserPage.getURI()</code>
 					</h3>
 					<p>
 						This method can be called at server side to get the current URI of the app.
+					</p>
+					<h3>
+						<code class="java"> browserPage.beforeURIChange(URIEvent
+							uriEvent)</code>
+					</h3>
+					<p>
+						This method can be overridden in the extended class of
+						<code class="java">BrowserPage</code>
+						to mask the
+						<code class="java">uriBefore</code>
+						value in the
+						<code class="java">URIEvent</code>
+						object. Use case: This will be useful to improve security if third
+						party components are used in the application. If the uriBefore
+						contains some sensitive path param values and we don't want to let
+						any third party components to read such details then override this
+						method and return an
+						<code class="java">URIEventMask</code>
+						with new
+						<code class="java">uriBefore</code>
+						value.
 					</p>
 					<hr>
 					
