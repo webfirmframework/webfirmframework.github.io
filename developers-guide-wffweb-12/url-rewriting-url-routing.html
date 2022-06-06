@@ -415,12 +415,15 @@ If <code class="java">browserPage.setURI("/ui/other")</code> is called the <code
 						<code>wffAsync.setURI</code>
 					</h3>
 					<p>This function can be called at client side to change the URI
-						of the app. There are three arguments for this function. The first
+						of the app. There are four arguments for this function. The first
 						argument is the uri to change, the second and third arguments are
 						functions which will be invoked on uri change and after uri change
-						respectively. The second and third arguments are optional.</p>
-						
-						Checkout the following example 
+						respectively. The fourth argument is a boolean argument, if true
+						is passed then the current uri in the browser page history will be
+						replaced with the given uri (i.e. first argument). The second,
+						third and fourth arguments are optional.</p>
+
+					Checkout the following example 
 <pre class="notranslate">
 <code class="JavaScript">
 var uri = '/ui/user/items/view';
@@ -443,18 +446,21 @@ wffAsync.setURI(uri, preFunction, postFunction, replace);
 </code>
 </pre>
 					<p>
-					<code>preFunction</code>
-					will be invoked if there is a uri change, i.e. at time of calling
-					if the current uri is same as the uri value passed in
-					<code>wffAsync.setURI</code>
-					function then this function will not invoke. This will be useful to
-					show a progress icon only if there is a change in the URI.
-					<code>postFunction</code>
-					will be invoked only after the UI changes applied by the server,
-					this function may be used to stop the progress icon. If you want to
-					handle progress icon globally, you can use
-					<code>wffGlobalListeners</code>
-					.
+						<code>preFunction</code>
+						will be invoked if there is a uri change, i.e. at time of calling
+						if the current uri is same as the uri value passed in
+						<code>wffAsync.setURI</code>
+						function then this function will not invoke. This will be useful
+						to show a progress icon only if there is a change in the URI.
+						<code>postFunction</code>
+						will be invoked only after the UI changes applied by the server,
+						this function may be used to stop the progress icon. If you want
+						to handle progress icon globally, you can use
+						<code>wffGlobalListeners</code>
+						. The fourth argument is
+						<code class="java">false</code>
+						here i.e. not to replace the current uri in the browser history
+						instead navigate the page to the given uri.
 					</p>
 
 					<h2><code>wffGlobalListeners</code> </h2>
