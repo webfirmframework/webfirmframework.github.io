@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v78';
+var cacheName = 'wffweb-cache-v79';
 
 
 var urlsToCache = [
