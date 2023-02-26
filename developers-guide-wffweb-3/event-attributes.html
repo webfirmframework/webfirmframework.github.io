@@ -316,7 +316,6 @@
 						
 <pre><code class="java">new Button(mainDiv,
         new OnClick("""
-                source.notifPerm = Notification.permission;
                 Notification.requestPermission().then((perm) => {
                 source.notifPerm = perm;
                 action.perform();
