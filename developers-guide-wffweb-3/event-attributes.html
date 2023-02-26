@@ -319,9 +319,9 @@ new Button(mainDiv,
                 source.notifPerm = perm;
                 action.perform();
                 });
-                return false;""", event -> {
+                return false;""", (data, event) -> {
 
-            String notifPerm = (String) event.data().getValue("notifPerm");
+            String notifPerm = (String) data.getValue("notifPerm");
             System.out.println("notifPerm = " + notifPerm);
 
             WffBMObject result = new WffBMObject();
