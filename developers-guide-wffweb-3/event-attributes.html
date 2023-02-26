@@ -307,12 +307,14 @@
 				the <code class="java">return true</code> has no effect on it because both do the same job. 
 				This is to prevent double form submission.
 				
-				<br><br> Eg 1: Suppose there is a button on the UI, when we click on
-						the button it should request JavaScript notification permission and send the
-						value to the server. In this case, the permission value is got asynchronously so have to use  <code class="java">action.perform();</code> as follows.
-<pre><code class="java">
-new Button(mainDiv,
-        Bootstrap5CssClass.BTN_PRIMARY.getAttribute(),
+				<br><br>Eg 1: Suppose there is a button on the UI, when we click on
+						the button it should request JavaScript notification permission
+						from user and send the value to the server. In this case, the
+						permission value is got asynchronously so have to use
+						<code class="java">action.perform();</code>
+						as follows.
+						
+<pre><code class="java">new Button(mainDiv,
         new OnClick("""
                 source.notifPerm = Notification.permission;
                 Notification.requestPermission().then((perm) => {
@@ -333,11 +335,12 @@ new Button(mainDiv,
                 "if (jsObject.perm === 'granted') {new Notification(jsObject.msg);} else {alert(jsObject.msg);}"))
         .give(TagContent::text, "Request notification permission");
 </code></pre>			
-<br>
-
-In this code, <code class="java">source.notifPerm</code> is assigned with permission value. When <code class="java">action.perform();</code> is called the JavaScript in jsFilterFunctionBody is invoked to send the value to the server.
-				
-				<br><br>
+<br> In this code,
+					<code class="java">source.notifPerm</code>
+					is assigned with permission value. When
+					<code class="java">action.perform();</code>
+					is called the JavaScript in jsFilterFunctionBody is invoked to send
+					the value to the server. <br><br>
 				
 				Eg 2: Suppose there is a button, let's say <code class="java">btn1</code> it has an <code class="java">OnClick</code> event attribute.
 				This event attribute has <code class="java">ServerAsyncMethod</code>. When we click the button
