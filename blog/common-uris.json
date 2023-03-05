@@ -3,5 +3,5 @@
 {"uri":"/blog/how-to-do-data-visualization-in-html.html","name":"Data Visualization with HTML5","title":"How to do data visualization with HTML5"},
 {"uri":"/blog/unable-to-send-large-data-through-websocket.html","name":"Sending Large Data through WebSocket","title":"Sending Large Data through WebSocket"},
 {"uri":"/blog/programming-myths/always-use-long-type-for-id.html","name":"Logic behind using long for id in entity class","title":"Is it a best practice to always use long type for database table id columns in Java entity class?"},
-{"uri":"/blog/database-design-myths/always-unsigned-int-or-bigint-type-for-table-id.html","name":"Data type for id column in database table","title":"Is it a best practice to always use unsigned int or bigint for <em>id</em> column in database table?"}
+{"uri":"/blog/database-design-myths/always-unsigned-int-or-bigint-type-for-table-id.html","name":"Data type for id column in database table","title":"Is it a best practice to always use unsigned int or bigint for id column in database table?"}
 ]
