@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>New Features in wffweb 12 | wffweb-12</title>
+    <title>URL Rewriting | Routing | wffweb-12</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -47,7 +47,7 @@
         </div>
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-6 pt-1">
-            <a class="text-muted" href="/developers-guide-wffweb-3/get-started.html" title="Getting Started">Get Started</a>
+            <a class="text-muted" href="get-started.html" title="Getting Started">Get Started</a>
           </div>
           <div class="col-6 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
@@ -159,109 +159,115 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">New features in <em>wffweb 12</em></h2>
-					<p>
-						<em>wffweb 12</em> includes all features of <em>wffweb 3</em> plus
-						the features below. Please know that Java 17 or later is required
-						to run <em>wffweb 12</em> and <em>wffweb 12</em> is in beta.
-					</p>
-					<hr>
-
-					<h6>
-						<a href="url-rewriting-url-routing.html">URL rewriting/routing</a>
-					</h6>
-					<h6>
-						Support for <em>BrowserPageSession</em>, now no need to depend on
-						Java server's <em>HttpSession</em> for session tracking.
-					</h6>
-					<h6>
-						Support for <em>LocalStorage</em> to set/remove tokens/items. Now,
-						the authentication/authorization can be handled using token
-						instead of cookie.
-					</h6>
-					<h6>Inbuilt multi node support. Now, the wffweb app can be
-						scaled without any additional effort. </h6>
-						<p>
-						For that, the Java server's
-						session should be disabled for wffweb <code>BrowserPage</code> &amp; use a custom
-						<code>httpSessionId</code> when adding <code>BrowserPage</code> to the <code>BrowserPageContext</code> and handle the authentication/authorization using token instead of cookie.
-						</p>
-					<p>
-						<b>Deployment Architecture Eg</b>: deploy wffweb app in multiple domain nodes like <em>node1.webfirmframework.com</em>,
-						<em>node2.webfirmframework.com</em>, <em>node2.webfirmframework.com</em>
-						etc... Now create a load balancer in the main domain <em>webfirmframework.com</em>
-						and point it to those subdomain nodes. That's all! No need to configure sticky sessions to the load balancer.
-					</p>
-					<p>
-						<b>NB</b>: The websocket connection should be publicly accessible
-						in the subdomain nodes. The access to http connection in the
-						subdomain nodes may be limited to the load balancer, to do that,
-						the load balancer should route request to the nodes along with an
-						app key, this app key may be checked in the wffweb app.
-					</p>
-					<p>
-					    Now, you may have this question, we usually save some user data in <code>HttpSession</code> object, 
-					    if we have disabled Java server's <code>HttpSession</code>	where can we store such data?
-					    <br>					    				
-						There is a <code>BrowserPageSession.userProperties()</code> which returns a map, you can store in it but it is not shared across multiple nodes. 
-						If you want to share data (that we usually save in <code>HttpSession</code> object)
-						across multiple nodes you can use
-						<code>LocalStorage</code>
-						at server side. The
-						<code>LocalStorage</code>
-						object can be obtained from
-						<code>BrowserPageSession</code>
-						object, eg:
-						<code>LocalStorage localStorage =
-							browserPageSession.localStorage()</code>
-						.
-					</p>
-					<p> The purpose of <code>BrowserPageSession.userProperties()</code> map is to store some temporary data in the same node.
-					</p>
+            <h2 class="blog-post-title">Lossless browser page communication in <em>wffweb-12</em></h2>
 					
-					<h6>Support for Virtual Thread
-					</h6>
 					<p>
-						It fully supports Java Virtual Thread, it doesn't use
-						<code class="java">synchronized</code>
-						keyword anywhere in the code. We know that Virtual Thread is a
-						preview feature (at least till Java 20) so we have to explicitly
-						enable it by JVM argument
-						<code>--enable-preview</code>
-						. If Virtual Thread is enabled the framework will use Virtual
-						Thread to do their internal operations where appropriate. When Virtual Thread
-						becomes part of production feature of Java,
-						<code>--enable-virtual-thread</code>
-						JVM argument can be passed to enable it for the
-						framework. If you are using <em>GraalVM</em> native image to run
-						your application you have to set system property
-						<code>virtualThread.enable</code>
-						with
-						<code>true</code>
-						, i.e.
-						<code>-DvirtualThread.enable="true"</code>
-						from command line or
-						<code class="java">System.setProperty("virtualThread.enable",
-							"true");</code>
-						by Java code.
+					 It will be available since <em>wffweb-12.0.0-beta.8</em>. It is enabled by default. If it is enabled this is what happens, let's understand it by an example:
 					</p>
+					<pre><code class="java">
+//some existing div in the UI
+Div mainDiv = new Div(null);
 
-					<h6>
-						<a href="lossless-browser-page-communication.html">Lossless browser page communication since <em>wffweb-12.0.0-beta.8</em></a>
-					</h6>
-					<h6>
-						<a href="browser-page-buffer-limit.html">Buffer limit configurations for BrowserPage since <em>wffweb-12.0.0-beta.8</em></a>
-					</h6>
+Div div1 = new Div(null);			
+// step 1
+mainDiv.appendChild(div1);        
+
+
+Div div2 = new Div(null);			
+// step 2
+mainDiv.appendChild(div2);
+
+
+Div div3 = new Div(null);
+// step 3
+div1.replaceWith(div3);					
+</code></pre>
+
 					
 					
+					<p>
+						Suppose, the client received UI changes for the step 1 and
+						suddenly the network lost, the changes for step 2 was already sent
+						from the server but could not be delivered to the client. The
+						network reconnected and the client received changes for step 3.
+						The changes for step 3 and subsequent changes will be ignored
+						because the changes for step 3 is not valid as the changes for
+						step 2 is not applied on the UI, precisely
+						<code class="java">div2</code>
+						is not available on the UI so it cannot be replaced with
+						<code class="java">div3</code>
+						. After step 1, the client will execute the
+						<code class="java">JavaScript</code>
+						code set in
+						<code class="java">BrowserPage.Settings.onPayloadLoss.javaScript</code>
+						. The default value for the
+						<code class="java">JavaScript</code>
+						is for reloading the browser page so the browser page will reload
+						just after executing step 1. This is what happens when client
+						loses a payload sent from the server.
+					</p>
 
-					<hr>
-					
-					Checkout <a
-						href="https://github.com/webfirmframework/wffweb-demo-deployment"
-						target="_blank">this sample code here</a> which is deployed at
-					<a href="https://wffweb.herokuapp.com" target="_blank">wffweb.herokuapp.com</a>.
 
+					<p>
+						The same scenario is applicable at server side. Suppose, there are
+						three buttons on the UI, button1 button2 and button3. Each button
+						has an
+						<code class="java">OnClick</code>
+						event attribute java code. The user clicked on button1 and
+						button2, the
+						<code class="java">OnClick</code>
+						event attribute of button1 is executed at server side but the
+						event changes for button2 could not be delivered to the server due
+						to network failure. The network reconnected, the user clicks on
+						button3 and the onclick event changes are delivered to the server
+						but the
+						<code class="java">OnClick</code>
+						event of button3 will not be executed as the previous payload was
+						not delivered to server, i.e. the payload of button3 event and
+						subsequent events will not be processed instead it will execute
+						the action set in
+						<code class="java">BrowserPage.Settings.onPayloadLoss.serverSideAction</code>
+						(just after executing
+						<code class="java">OnClick</code>
+						of button1). The default
+						<code class="java">BrowserPage.Settings.onPayloadLoss.serverSideAction</code>
+						is for reloading the browser page.
+					</p>
+					<p>
+						The
+						<code class="java">browserPage.defaultSettings()</code>
+						can be used to get the default setting of the
+						<code class="java">BrowserPage</code>
+						instance. To change the current
+						<code class="java">Settings</code>
+						override
+						<code class="java">useSettings</code>
+						method in the subclass of
+						<code class="java">BrowserPage</code>. <code class="java">getSettings</code>
+						may be used to get the current settings (i.e. the applied settings by <code class="java">useSettings</code> method).
+					</p>
+
+Eg:-
+<pre><code class="java">@Override
+protected Settings useSettings() {
+    final OnPayloadLoss onPayloadLoss = new OnPayloadLoss(
+            "console.log('reloading page');location.reload();",
+            defaultSettings().onPayloadLoss().serverSideAction());
+    
+    final Settings newSettings =  new Settings(
+            defaultSettings().inputBufferLimit(), defaultSettings().inputBufferTimeout(),
+            defaultSettings().outputBufferLimit(), defaultSettings().outputBufferTimeout(),
+            onPayloadLoss);
+    return newSettings;
+}
+</code></pre>
+
+					<p>
+						To disable this lossless browser page communication, pass
+						<code class="java">null</code>
+						for
+						<code class="java">BrowserPage.Settings.onPayloadLoss</code>
+					</p>
 
 
 
@@ -270,8 +276,7 @@
 			</div><!-- /.blog-post -->
 
 		  <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-3/wffweb-best-practices.html">Previous</a>
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/url-rewriting-url-routing.html">Next</a>            
+            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/new-features-in-wffweb-12.html">Previous</a>            
           </nav>
           
         </div><!-- /.blog-main -->

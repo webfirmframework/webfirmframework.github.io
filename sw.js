@@ -1,5 +1,5 @@
 console.log('sw.js invoked');
-var cacheName = 'wffweb-cache-v37';
+var cacheName = 'wffweb-cache-v38';
 var urlsToCache = [
   '/',
   '/assets/js/main.js',

@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>New Features in wffweb 12 | wffweb-12</title>
+    <title>URL Rewriting | Routing | wffweb-12</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -47,7 +47,7 @@
         </div>
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-6 pt-1">
-            <a class="text-muted" href="/developers-guide-wffweb-3/get-started.html" title="Getting Started">Get Started</a>
+            <a class="text-muted" href="get-started.html" title="Getting Started">Get Started</a>
           </div>
           <div class="col-6 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
@@ -159,108 +159,50 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">New features in <em>wffweb 12</em></h2>
+            <h2 class="blog-post-title">BrowserPage buffer limit in <em>wffweb-12</em></h2>
+					
 					<p>
-						<em>wffweb 12</em> includes all features of <em>wffweb 3</em> plus
-						the features below. Please know that Java 17 or later is required
-						to run <em>wffweb 12</em> and <em>wffweb 12</em> is in beta.
+					 It will be available since <em>wffweb-12.0.0-beta.8</em>. It is enabled by default.  
 					</p>
-					<hr>
 
-					<h6>
-						<a href="url-rewriting-url-routing.html">URL rewriting/routing</a>
-					</h6>
-					<h6>
-						Support for <em>BrowserPageSession</em>, now no need to depend on
-						Java server's <em>HttpSession</em> for session tracking.
-					</h6>
-					<h6>
-						Support for <em>LocalStorage</em> to set/remove tokens/items. Now,
-						the authentication/authorization can be handled using token
-						instead of cookie.
-					</h6>
-					<h6>Inbuilt multi node support. Now, the wffweb app can be
-						scaled without any additional effort. </h6>
-						<p>
-						For that, the Java server's
-						session should be disabled for wffweb <code>BrowserPage</code> &amp; use a custom
-						<code>httpSessionId</code> when adding <code>BrowserPage</code> to the <code>BrowserPageContext</code> and handle the authentication/authorization using token instead of cookie.
-						</p>
 					<p>
-						<b>Deployment Architecture Eg</b>: deploy wffweb app in multiple domain nodes like <em>node1.webfirmframework.com</em>,
-						<em>node2.webfirmframework.com</em>, <em>node2.webfirmframework.com</em>
-						etc... Now create a load balancer in the main domain <em>webfirmframework.com</em>
-						and point it to those subdomain nodes. That's all! No need to configure sticky sessions to the load balancer.
+						The
+						<code class="java">BrowserPage</code>
+						uses a buffer to store data for its incoming and outgoing
+						payloads. Now we can limit it with
+						<code class="java">BrowserPage.Settings.inputBufferLimit</code>
+						and
+						<code class="java">BrowserPage.Settings.outputBufferLimit</code>
+						for its incoming and outgoing buffer resp. Lossless communication
+						should be enabled to fully enable this feature. Limiting the
+						buffer will prevent using unlimited memory for server and client
+						payloads.
+
+
 					</p>
 					<p>
-						<b>NB</b>: The websocket connection should be publicly accessible
-						in the subdomain nodes. The access to http connection in the
-						subdomain nodes may be limited to the load balancer, to do that,
-						the load balancer should route request to the nodes along with an
-						app key, this app key may be checked in the wffweb app.
-					</p>
-					<p>
-					    Now, you may have this question, we usually save some user data in <code>HttpSession</code> object, 
-					    if we have disabled Java server's <code>HttpSession</code>	where can we store such data?
-					    <br>					    				
-						There is a <code>BrowserPageSession.userProperties()</code> which returns a map, you can store in it but it is not shared across multiple nodes. 
-						If you want to share data (that we usually save in <code>HttpSession</code> object)
-						across multiple nodes you can use
-						<code>LocalStorage</code>
-						at server side. The
-						<code>LocalStorage</code>
-						object can be obtained from
-						<code>BrowserPageSession</code>
-						object, eg:
-						<code>LocalStorage localStorage =
-							browserPageSession.localStorage()</code>
+						<code class="java">browserPage.defaultSettings()</code>
+						can be used to get a default value. To change its settings
+						override
+						<code class="java">useSettings</code>
+						method in the subclass of
+						<code class="java">BrowserPage</code>
 						.
+						<code class="java">getSettings</code>
+						may be used to get the current settings (i.e. the applied settings by <code class="java">useSettings</code> method).
 					</p>
-					<p> The purpose of <code>BrowserPageSession.userProperties()</code> map is to store some temporary data in the same node.
-					</p>
 					
-					<h6>Support for Virtual Thread
-					</h6>
-					<p>
-						It fully supports Java Virtual Thread, it doesn't use
-						<code class="java">synchronized</code>
-						keyword anywhere in the code. We know that Virtual Thread is a
-						preview feature (at least till Java 20) so we have to explicitly
-						enable it by JVM argument
-						<code>--enable-preview</code>
-						. If Virtual Thread is enabled the framework will use Virtual
-						Thread to do their internal operations where appropriate. When Virtual Thread
-						becomes part of production feature of Java,
-						<code>--enable-virtual-thread</code>
-						JVM argument can be passed to enable it for the
-						framework. If you are using <em>GraalVM</em> native image to run
-						your application you have to set system property
-						<code>virtualThread.enable</code>
-						with
-						<code>true</code>
-						, i.e.
-						<code>-DvirtualThread.enable="true"</code>
-						from command line or
-						<code class="java">System.setProperty("virtualThread.enable",
-							"true");</code>
-						by Java code.
-					</p>
-
-					<h6>
-						<a href="lossless-browser-page-communication.html">Lossless browser page communication since <em>wffweb-12.0.0-beta.8</em></a>
-					</h6>
-					<h6>
-						<a href="browser-page-buffer-limit.html">Buffer limit configurations for BrowserPage since <em>wffweb-12.0.0-beta.8</em></a>
-					</h6>
-					
-					
-
-					<hr>
-					
-					Checkout <a
-						href="https://github.com/webfirmframework/wffweb-demo-deployment"
-						target="_blank">this sample code here</a> which is deployed at
-					<a href="https://wffweb.herokuapp.com" target="_blank">wffweb.herokuapp.com</a>.
+<pre><code class="java">@Override
+protected Settings useSettings() {
+    final int limit1MB = 1024 * 1024 * 1024;
+    final long timeout1Second = TimeUnit.SECONDS.toNanos(1);
+    final Settings newSettings =  new Settings(
+            limit1MB, timeout1Second,
+            limit1MB, timeout1Second,
+            defaultSettings().onPayloadLoss());
+    return newSettings;
+}
+</code></pre>
 
 
 
@@ -270,8 +212,7 @@
 			</div><!-- /.blog-post -->
 
 		  <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-3/wffweb-best-practices.html">Previous</a>
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/url-rewriting-url-routing.html">Next</a>            
+            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/new-features-in-wffweb-12.html">Previous</a>            
           </nav>
           
         </div><!-- /.blog-main -->
