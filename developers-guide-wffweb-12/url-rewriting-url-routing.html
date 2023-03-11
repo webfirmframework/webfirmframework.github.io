@@ -455,7 +455,7 @@ if (uri !== window.location.pathname && uri !== window.location.href) {
 }
 
 // you can also keep a global function in your custom js file for this like this
-const setURI = function(uri, preFunction, postFunction, replace) {
+window.setURI = function(uri, preFunction, postFunction, replace) {
     if (uri !== window.location.pathname && uri !== window.location.href) {
         wffAsync.setURI(uri, preFunction, postFunction, replace);
     }
