@@ -161,10 +161,19 @@
           <div class="blog-post">
             <h2 class="blog-post-title"><em>wffweb-3</em> to <em>wffweb-12</em> migration changes</h2>
             <hr>
-            
 
-                    <p>Avoid using deprecated methods in <em>wffweb-3</em>.</p>
-                    <hr>
+
+					<p>
+						Avoid using deprecated methods and use its replacement methods.
+						Many data classes are converted to record classes so its method
+						names are also changed, i.e. the getter methods do not start with
+						<code class="java">get</code>
+						prefix. For instance, instead of using
+						<code class="java">SharedTagContent.Content.getContent()</code>
+						use
+						<code class="java">SharedTagContent.Content.content()</code>.
+					</p>
+					<hr>
 					<p>
 						Replace <code class="java">com.webfirmframework.wffweb.tag.html.attribute.event.ServerAsyncMethod</code>
 						with
@@ -175,8 +184,9 @@
 						
 					</p>
 					<hr>
-					<p>Update configuration changes (optional) from the sample project.</p>
-					
+					<p>Update your project for configuration changes (optional but
+						recommended) from the sample project.</p>
+
 					Checkout <a
 							href="https://github.com/webfirmframework/wffweb-demo-deployment"
 							target="_blank">this sample code</a>.
