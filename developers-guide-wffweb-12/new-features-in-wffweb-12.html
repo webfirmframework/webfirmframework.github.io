@@ -232,13 +232,15 @@
 						preview feature (at least till Java 20) so we have to explicitly
 						enable it by JVM argument
 						<code>--enable-preview</code>
-						. If Virtual Thread is enabled the framework will use Virtual
-						Thread to do their internal operations where appropriate. When Virtual Thread
-						becomes part of production feature of Java,
+						or
 						<code>--enable-virtual-thread</code>
-						JVM argument can be passed to enable it for the
-						framework. If you are using <em>GraalVM</em> native image to run
-						your application you have to set system property
+						if it is a preview feature. If Virtual Thread is enabled the framework will use Virtual
+						Thread to do their internal operations where appropriate. If you
+						are using using <em>Java 21</em> or later then no need to
+						explicitly enable it by this VM argument, it will automatically
+						use Virtual Thread for its internal operations. If you are using <em>GraalVM</em>
+						native image to run your application you have to set system
+						property
 						<code>virtualThread.enable</code>
 						with
 						<code>true</code>
@@ -247,7 +249,7 @@
 						from command line or
 						<code class="java">System.setProperty("virtualThread.enable",
 							"true");</code>
-						by Java code.
+						by Java code if GraalVM Java version is less than 21 otherwise nothing to do.
 					</p>
 					<hr>
 					<h6>
