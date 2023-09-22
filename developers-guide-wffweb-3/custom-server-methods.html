@@ -190,6 +190,7 @@
                 WffBMObject bmObject = new WffBMObject();
                 bmObject.put("someKey", BMValueType.STRING,
                         "こんにちは Web Firm Framework");
+                bmObject.put("testFun", BMValueType.FUNCTION, "function(arg) {alert(arg);}");        
 
                 return bmObject;
             }
