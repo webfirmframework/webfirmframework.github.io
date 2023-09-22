@@ -444,21 +444,6 @@ var replace = false;
 // preFunction, postFunction and replace arguments are optional
 wffAsync.setURI(uri, preFunction, postFunction, replace);
 
-
-// browser doesn't keep history if navigated to the same url via href
-// till wffweb-12.0.0-beta.8 we have to explicitly check 
-// if the current uri is not same as the given uri
-// to get the same experience of default behavior of browser.
-if (uri !== window.location.pathname && uri !== window.location.href) {
-    wffAsync.setURI(uri, preFunction, postFunction, replace);
-}
-
-// you can also keep a global function in your custom js file for this like this
-window.setURI = function(uri, preFunction, postFunction, replace) {
-    if (uri !== window.location.pathname && uri !== window.location.href) {
-        wffAsync.setURI(uri, preFunction, postFunction, replace);
-    }
-};
 </code>
 </pre>
 					<p>
@@ -587,7 +572,7 @@ const wffGlobalListeners = new function() {
 						<code>browser</code>
 						then the
 						<code>uriBefore</code>
-						property will not available.
+						property may not available.
 					</p>
 					
 
