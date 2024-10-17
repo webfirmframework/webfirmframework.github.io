@@ -19,5 +19,6 @@
 {"uri":"../developers-guide-wffweb-3/wffweb-best-practices.html","name":"Best Practices","title":"Best Practices"},
 {"uri":"../developers-guide-wffweb-12/new-features-in-wffweb-12.html","name":"New Features in wffweb 12","title":"New Features in wffweb 12"},
 {"uri":"../developers-guide-wffweb-12/url-rewriting-url-routing.html","name":"URL Rewriting / Routing","title":"URL Rewriting / Routing"},
+{"uri":"../developers-guide-wffweb-12/parent-gained-and-lost-listeners.html","name":"ParentGainedListener & ParentLostListener","title":"ParentGainedListener & ParentLostListener"},
 {"uri":"../developers-guide-wffweb-12/wffweb-3-to-wffweb-12-migration-changes.html","name":"wffweb-3 to wffweb-12 migration changes","title":"wffweb-3 to wffweb-12 migration changes"}
 ]
