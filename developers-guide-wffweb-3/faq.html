@@ -252,7 +252,7 @@
 				Any changes in the server side is updated with the browser by the framework, the developer doesn't have to write any webservice, server calls etc.. 
 				he can write coding just like a client side application, eg:- swing application.</p>
 				
-				<h3>How wffweb is different from a swing application?</h3>
+				<h3>How wffweb is different from a Java swing desktop application?</h3>
 				<p>In a swing application, we use ready made components/listeners like
 					<code>Button</code>, <code>TextField</code>, <code>ActionListener</code> etc.. But wffweb is a web framework so we build html
 					tags and attributes which can make a ui, for eg:- to show a text field we use <code>new Input(null, new Type(Type.TEXT))</code>. 
@@ -284,12 +284,17 @@
 				<p>No, it doesn't provide any ready made widgets/web components because style &amp; element structure of widgets/web components will depend on a css file. It is independent of any CSS & JavaScript frameworks. That is the major advantage of webfirmframework, we can use any CSS/JavaScript frameworks along with this framework. 
 				You have to build your own widgets/web components with your preferred CSS framework. You can refer <a href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">these sample projects with different css frameworks</a>. </p>
 				
-				<h3>What are the changes need to be done to migrate <i>wffweb-2.x.x</i> app to <i>wffweb-3.x.x</i>?</h3>
+				<h3>What are the changes need to be done to migrate <i>wffweb-2.x.x</i> web app to <i>wffweb-3.x.x</i>?</h3>
 				<p><i>wffweb-3.x.x</i> requires minimum of <i>Java 8</i>. 
 				Upgrade your project jdk/jre to Java 8 or later and recompile the project. 
 				No code changes are required for <i>wffweb-3.0.0</i> but later version might need some minor code changes.
 				Eg: in wffweb-3.0.1 or later the <code>Style.getCssProperties</code> 
 				method returns an unmodifiable collection of <code>CssProperty</code>.
+				</p>
+				
+				<h3>What are the changes need to be done to migrate <i>wffweb-3.x.x</i> web app to <i>wffweb-12.x.x</i>?</h3>
+				<p>
+				Read <a href="/developers-guide-wffweb-12/wffweb-3-to-wffweb-12-migration-changes.html">this doc</a> for more details.
 				</p>
 				
 				<h3>What technical knowledge should I have to get started with this framework?</h3>
@@ -323,7 +328,7 @@
 				<p>Please contact tech support.</p>
 				
 				<h3>Can we use embed tomcat to run wffweb app?</h3>
-				<p>Yes</p>
+				<p>Yes, checkout <a title="Production Ready wffweb Java embed tomcat Project" href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">Production Ready Java embed tomcat Project</a>.</p>
 				
 				<h3>Can we run wffweb app in docker container?</h3>
 				<p>Yes</p>
