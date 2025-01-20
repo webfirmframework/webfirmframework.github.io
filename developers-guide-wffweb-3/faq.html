@@ -187,7 +187,7 @@
 				<h3>Is wffweb thread-safe?</h3>
 				<p>
 					Yes, <em>wffweb-3.0.x</em> is mainly released for thread-safety, reliability, security and
-					stability improvements. So use the latest version to get better thread-safety.
+					stability improvements. So use the latest version (<em>wffweb-12.x.x</em>) to get better thread-safety.
 				</p>
 
                 <h3>Can we integrate third party APIs with wffweb app?</h3>
@@ -206,7 +206,9 @@
 					version is safe to use.</p>
 				<h3>Is there any web ui feature that will be impossible to do with this framework?</h3>
 				<p>There is nothing impossible with this framework. 
-					However, file upload and file download options should be handled in some other way (other framework/servlet) because currently it doesn't support multiplexing.</p>
+					However, file upload and file download options should be handled in some other way (other framework/servlet) because currently it doesn't support multiplexing.
+					<a href="https://github.com/webfirmframework/wffweb-demo-deployment/blob/master/src/main/java/com/webfirmframework/ui/page/component/SampleFilesUploadComponent.java" target="_blank">Checkout this project it contains sample code for file upload feature. </a>
+				</p>
 				
 				<h3>Is there any known demerits with this framework?</h3>
 				<p><del>To gain more readability and maintenance flexibility we use
@@ -329,6 +331,9 @@
 				
 				<h3>Can we use embed tomcat to run wffweb app?</h3>
 				<p>Yes, checkout <a title="Production Ready wffweb Java embed tomcat Project" href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">Production Ready Java embed tomcat Project</a>.</p>
+				
+				<h3>Can we build native image from wffweb app with GraalVM?</h3>
+				<p>Yes, checkout <a title="Production Ready wffweb GraalVM Java Projects" href="https://github.com/webfirmframework/wffweb-graalvm-production-ready-sample-projects" target="_blank">Production Ready GraalVM Projects</a>.</p>
 				
 				<h3>Can we run wffweb app in docker container?</h3>
 				<p>Yes</p>
