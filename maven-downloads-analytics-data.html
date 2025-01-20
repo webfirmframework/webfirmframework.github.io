@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Web Firm Framework is a server controlled web UI framework. Java or Kotlin can be used to build UI with this framework.">
+    <meta name="author" content="Web Firm Framework">
+    <meta name="theme-color" content="#147cb5"/>
+    <link rel="icon" href="/favicon.ico">
+    <link data-wff-id="S8" rel="manifest" href="/wam/manifest.json">
+
+    <title>Server Controlled web UI Framework | Web Firm Framework | wffweb</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="assets/css/blog.css" rel="stylesheet">
+    
+    <!-- google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
+    
+  </head>
+
+  <body>
+
+<!-- for facebook share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="container">
+      <header class="blog-header py-3">
+      	<div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo text-success" href="/">Web Firm Framework</a>
+          </div>
+        </div>
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-6 pt-1">
+            <a class="text-muted" href="developers-guide-wffweb-3/get-started.html" title="Getting Started">Get Started</a>
+          </div>
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 499.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3" focusable="false"><title>Sample Projects in GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+            <a title="Download latest released wffweb .jar file" class="btn btn-sm btn-outline-secondary" href="https://search.maven.org/remote_content?g=com.webfirmframework&amp;a=wffweb&amp;v=LATEST">Download .jar</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 text-muted" title="Home" href="/">Home</a>
+          <a class="p-2 text-muted" title="HTML5 to Java/Kotlin Tool" href="https://webfirmframework.com" target="_blank">HTML5 to Java/Kotlin Tool</a>
+          <a class="p-2 text-muted" title="WFF Hub" href="https://webfirmframework.com/hub" target="_blank">Sign in Hub</a>
+          <a class="p-2 text-muted" title="Production Ready Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Projects</a>          
+        </nav>
+      </div>
+
+		<div class="jumbotron p-3 p-md-5 rounded"
+			style="color: #147cb5; background: #75e8bf 0 0 repeat-x">
+			<div class="col-md-6 px-0">
+				<a href="/" title="Web Firm Framework"><picture>
+				<source type="image/webp" srcset="images/wff-logo-100px.webp">
+				<img src="images/wff-logo-100px.jpg" alt="WFF"></picture></a>
+			</div>
+
+
+			<h1 class="display-4 font-italic"
+				title="wffweb - Java Developers Guide">Web Firm Framework</h1>
+			<p class="lead my-3">
+				<a href="mailto:tech-support@webfirmframework.com"
+					title="tech-support@webfirmframework.com">tech-support@webfirmframework.com</a>
+				for support
+			</p>
+
+
+
+			<p class="lead mb-0">
+				<a href="#" class="text-white font-weight-bold">A Java framework
+					for Java experts to develop web applications...</a>
+			</p>
+		</div>
+
+		<!-- row mb-2 removed -->
+		
+      <div class="row mb-2">
+	      <div class="col-md-12">
+	      <!-- wffweb-github-io -->
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-6407927299164406" data-ad-slot="1020738577"
+						data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+	      </div>      
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            webfirmframework for Java Experts
+          </h3>
+
+          <div class="blog-post">            
+            <h2>As per Maven repository analytics data</h2>
+            <h3>Downloads of wffweb from unique IPs</h3>
+            <div class="col-md-6 px-0">
+				<picture>
+				<source type="image/webp" srcset="images/maven_wffweb_downloads_from_unique_ips.webp">
+				<img src="images/maven_wffweb_downloads_from_unique_ips.png" alt="WFF"></picture>
+			</div>
+			
+			<br>
+			
+			<h3>Total downloads of wffweb from any IP</h3>
+            <div class="col-md-6 px-0">
+				<picture>
+				<source type="image/webp" srcset="images/maven_wffweb_downloads.webp">
+				<img src="images/maven_wffweb_downloads.png" alt="WFF"></picture>
+			</div>
+			
+			<br>
+
+			<p>Base on this data, it can be concluded that 4000+ new <em>wffweb</em> projects are created every month.
+			
+			checkout and try <a title="Production Ready wffweb Java Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Java Projects</a>,
+			
+			<a title="Production Ready wffweb Java embed tomcat Project" href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">Production Ready Java embed tomcat Project</a> and
+			
+			<a title="Production Ready wffweb GraalVM Java Projects" href="https://github.com/webfirmframework/wffweb-graalvm-production-ready-sample-projects" target="_blank">Production Ready GraalVM Projects</a>.
+			
+			
+			</p>
+
+
+          </div><!-- /.blog-post -->
+
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="developers-guide-wffweb-3/get-started.html">Developers Guide</a>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <blockquote cite="https://webfirmframework.github.io/developers-guide-wffweb-3/get-started.html">
+            <h4 class="font-italic text-danger" id="noticeTitle"></h4>
+            <p id="noticeContent" class="mb-0"></p>
+            </blockquote>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Refer</h4>
+            <ol id="commonLinks" class="list-unstyled"></ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+        <div class="row mb-2">
+	      <div class="col-md-12">
+	      <!-- wffweb-github-io -->
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-6407927299164406" data-ad-slot="1020738577"
+						data-ad-format="auto"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+	      </div>      
+        </div>
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>By <a href="https://webfirmframework.com">webfirmframework</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+	<script defer src="assets/js/main.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-3.3.1.min.js"><\/script>')</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+	<script type="text/javascript">
+		//for highlightjs
+		$('pre code').each(function(i, block) {
+			  hljs.highlightBlock(block);
+		});
+
+		$(function() {
+			$.getJSON("notice.json", function(data) {
+				$("#noticeTitle").html(data.title);
+				$("#noticeContent").html(data.content);
+			});
+		});
+		
+		$.getJSON("common-uris.json", function(data) {
+			var i;
+			for (i in data) {
+				var each = data[i]; 
+				var li = $('<li/>').appendTo('#commonLinks');
+				$('<a />')
+				.attr('href', each.uri)
+				.attr('title', each.title)
+				.text(each.name)					
+				.appendTo(li);
+			}
+		});
+	</script>
+	
+</body>
+</html>
