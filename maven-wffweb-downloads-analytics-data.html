@@ -136,15 +136,63 @@
 			<br>
 
 			<p>Based on this data, it can be concluded that 4000+ new <em>wffweb</em> projects are created every month.
-			
 			checkout and try <a title="Production Ready wffweb Java Projects" href="https://github.com/webfirmframework/minimal-production-ready-projects" target="_blank">Production Ready Java Projects</a>,
-			
 			<a title="Production Ready wffweb Java embed tomcat Project" href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">Production Ready Java embed tomcat Project</a> and
-			
 			<a title="Production Ready wffweb GraalVM Java Projects" href="https://github.com/webfirmframework/wffweb-graalvm-production-ready-sample-projects" target="_blank">Production Ready GraalVM Projects</a>.
-			
-			
 			</p>
+			
+			<h3>Download history since 2024</h3>
+			<div>
+			
+			  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			  <div id="maven_downloads_chart_div"></div>
+			  
+<script type="text/javascript">
+
+
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'X');
+      data.addColumn('number', 'From unique IPs');
+      data.addColumn('number', 'From all IPs');
+
+      data.addRows([
+        ['Jan2024', 1524, 8880],
+        ['Feb2024', 1771, 4457],
+        ['Mar2024', 3005, 5284],
+        ['Apr2024', 3001, 5261],
+        ['May2024', 3656, 6020],
+        ['Jun2024', 4603, 7088],
+        ['Jul2024', 5433, 9987],
+        ['Aug2024', 4386, 8012],
+        ['Sep2024', 3930, 7524],
+        ['Oct2024', 4354, 6447],
+        ['Nov2024', 4279, 6408],
+        ['Dec2024', 4038, 5971]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Months'
+        },
+        vAxis: {
+          title: 'Downloads'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('maven_downloads_chart_div'));
+
+      chart.draw(data, options);
+    }
+
+</script>
+      
+			
+			</div>
 
 
           </div><!-- /.blog-post -->
