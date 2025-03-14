@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>URL Rewriting | Routing | wffweb-12</title>
+    <title>JSON Parser | wffweb-12</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -159,79 +159,17 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">ParentGainedListener &amp; ParentLostListener since <em>wffweb-12.0.1</em></h2>
-					<p><code>ParentGainedListener</code> &amp; <code>ParentLostListener</code> can be added on any tag. 
-					If a tag gains a parent or loses its parent by the framework (eg: <code>whenURI</code> event) then also the listeners will get invoked.</p>
-					<hr>					
-
-					<h3>
-						<code>ParentGainedListener</code>						
-					</h3>
-					<p>
-						<code>ParentGainedListener</code>
-						can be used to get an event when a tag gains a parent. When a
-						<code>ParentGainedListener</code>
-						is added using
-						<code>addParentGainedListener</code>
-						it will return an id of its internal slot, this id can be used to
-						remove that listener from the tag using
-						<code>removeParentGainedListener</code>
-						method, see the following example.
-					</p>
-					<pre class="notranslate">
-						<code class="java">Div div1 = new Div(null);
-Div div2 = new Div(null);
-
-long listenerSlotId = div1.addParentGainedListener(event -> {
-    System.out.println("addParentGainedListener invoked");
-});
-
-//this line will invoke addParentGainedListener
-div2.appendChild(div1);
-
-//this will remove the listener added to the tag
-div1.removeParentGainedListener(listenerSlotId);
-</code></pre>
+            <h2 class="blog-post-title">JSON parser since <em>wffweb-12.0.4</em></h2>
+            
+            <script src="https://gist.github.com/webfirmframework/824d3408c4beb4845cd32f5b43ff5eee.js"></script>
 					
-
-					<h3>
-						<code>ParentLostListener</code>						
-					</h3>
-					<p>
-						<code>ParentLostListener</code>
-						can be used to get an event when a tag loses its parent. When a
-						<code>ParentLostListener</code>
-						is added using
-						<code>addParentLostListener</code>
-						it will return an id of its internal slot, this id can be used to
-						remove that listener from the tag using
-						<code>removeParentLostListener</code>
-						method, see the following example.
-					</p>
-					<pre class="notranslate">
-						<code class="java">Div div1 = new Div(null);
-Div div2 = new Div(null);
-div2.appendChild(div1);
-
-long listenerSlotId = div1.addParentLostListener(event -> {
-    System.out.println("addParentLostListener invoked");
-});
-
-//this line will invoke addParentLostListener
-div2.removeChild(div1); // or div2.removeAllChildren();
-
-//this will remove the listener added to the tag
-div1.removeParentLostListener(listenerSlotId);
-</code></pre>
-
-<em class="text-danger">Note: The listener slot id is NOT globally unique, it is unique only for the corresponding tag.</em>
 					<hr>
 
 			</div><!-- /.blog-post -->
 
 		  <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/url-rewriting-url-routing.html">Previous</a>
-            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/json-parser.html">Next</a>
+            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/parent-gained-and-lost-listeners.html">Previous</a>
+            <a class="btn btn-outline-primary" href="../developers-guide-wffweb-12/wffweb-3-to-wffweb-12-migration-changes.html">Next</a>
           </nav>
           
         </div><!-- /.blog-main -->
