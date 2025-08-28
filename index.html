@@ -304,19 +304,6 @@ html.setPrependDocType(true);
 System.out.println(html.toHtmlString()); 
 </code></pre>
 
-Eg for anonymous class style coding: 
-<pre class="notranslate"><code class="java">Html html = new Html(null) {{
-    new Head(this);
-    new Body(this) {{
-        new NoTag(this, "Hello World");
-    }};
-}};
-
-// prepends the doc type &lt;!DOCTYPE html&gt;
-html.setPrependDocType(true);
-System.out.println(html.toHtmlString()); 
-</code></pre>
-
 alternatively
 
 <pre class="notranslate"><code class="java">Html html = new Html(null);
