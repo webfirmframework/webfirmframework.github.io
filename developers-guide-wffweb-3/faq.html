@@ -274,12 +274,18 @@
 				Any changes in the server side is updated with the browser by the framework, the developer doesn't have to write any webservice, server calls etc.. 
 				he can write coding just like a client side application, eg:- swing application.</p>
 				
-				<h3>How wffweb is different from a Java swing desktop application?</h3>
+				<h3>How wffweb is different from a Java Swing/AWT desktop application?</h3>
 				<p>In a swing application, we use ready made components/listeners like
 					<code>Button</code>, <code>TextField</code>, <code>ActionListener</code> etc.. But wffweb is a web framework so we build html
 					tags and attributes which can make a ui, for eg:- to show a text field we use <code>new Input(null, new Type(Type.TEXT))</code>. 
 					You can build your own components to reuse it. The events in wffweb is handled by event attributes like <code>OnClick</code>, <code>OnChange</code> etc..
 					 which can be used to handle event either at server side, client side or both sides.</p>
+					 
+				<h3>Can we port an existing Java Swing/AWT desktop application to wffweb web app?</h3>
+				<p>
+				Yes. You can reuse the existing code (other than Swing, AWT or desktop dependent GUI code) in the <em>wffweb</em> web app. 
+				The web UI needs to be built from scratch using <em>wffweb</em>. Your only effort will be replace the desktop dependent GUI code to <em>wffweb</em> Java code.  
+				</p>
 					 
 				<h3>Is it possible to generate an extremely large &amp; complicated HTML (used for reporting purpose) with <code>toHtmlString</code>/<code>toOutputStream</code> methods?</h3>
 				<p>
