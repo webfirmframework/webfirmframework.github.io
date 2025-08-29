@@ -169,7 +169,9 @@
 				<hr>
 
 				<h3>Is it possible to create single page application with wffweb?</h3>
-				<p>Yes, it's mainly intended for single page application development.</p>				
+				<p>Yes, <em>wffweb-2.x.x</em> and <em>wffweb-3.x.x</em> are mainly intended for single page application development.
+				<em>wffweb-12.x.x</em> or later supports url routing/rewriting (optional feature) which is useful to get the same performance of single page application with url navigation.				
+				</p>
 				
 				<h3>When should I choose wffweb for ui development?</h3>
 				<p>If you are developing single page application, highly secured ui (banking/financial products), mission critical ui development, business application, 
@@ -188,6 +190,14 @@
 				<p>
 					Yes, <em>wffweb-3.0.x</em> is mainly released for thread-safety, reliability, security and
 					stability improvements. So use the latest version (<em>wffweb-12.x.x</em>) to get better thread-safety.
+				</p>
+				<h3>My browser page UI is rich with lot of tags and attributes so a lot of tag &amp; attribute Java objects will be created in the server memory/JVM.
+				Is this normal? Is there any way to reduce the memory consumption?
+				</h3>
+				<p>
+				It's completely normal. When a UI object (tag, attribute etc..) is no longer in use, it will be garbage collected and so its memory will be released.
+				Java 25 comes up with <em>Compact Object Headers (JEP 519)</em> feature which reduces the memory footprint of Java objects. 
+				Use Java 25 when it is release, you can see a significant difference in memory consumption.
 				</p>
 
                 <h3>Can we integrate third party APIs with wffweb app?</h3>
