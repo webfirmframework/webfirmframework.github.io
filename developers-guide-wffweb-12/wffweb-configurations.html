@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="Steps to configure wffweb project. It includes the configuration of websocket, servlet, browser page for the web firm framework. This configuration is mainly for wffweb-3.0.1 or later versions.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
-
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    
+    <title>WFF Configurations | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,10 +19,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
-
   </head>
 
   <body>
@@ -160,39 +157,65 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">wffweb Configurations</h2>
+            <p class="blog-post-meta">for wffweb-12.x.x or later</p>
+
             
-          </div><!-- /.blog-post -->
+			<p>
+				Unlike other java ee frameworks, wffweb doesn't have any direct dependency over java ee classes. And, websocket implementation is different in
+					different servers and i.e. not all servers follow <em>JSR 356</em> specification.
+                So, we have to configure wffweb if its server client communication feature needs to be used.
+                 
+			</p>
+			<hr>
+			<h2>Configuration steps</h2>
+			There are three main configurations.
+				<ul>
+					<li>Configure websocket,</li>
+					<li>set up a session listener and</li>
+					<li>set up a <code>BrowserPage</code>. Of course, once we have
+						configured <code>BrowserPage</code>, we have to expose it by any
+						servlet/rest.
+					</li>
+				</ul>
+				<h3>Configure websocket</h3>
+				
+				<p>There must be a websocket url set up with your server, that
+					websocket url should not be used by others. It should be dedicated
+					for wffweb. The websocket should support sending and receiving
+					binary data because the server client communication is done via a
+					binary protocol called WFF Binary Message. Checkout the configuration from 
+					<a href="https://github.com/webfirmframework/wffweb-demo-deployment/blob/master/src/main/java/com/webfirmframework/wffwebconfig/server/ws/WSServerForIndexPage.java" target="_blank">this sample project</a>.</p>
+					
+					
+
+				<p>
+					Checkout these <a
+						href="https://github.com/webfirmframework/minimal-production-ready-projects"
+						target="_blank">minimal production ready projects</a>,
+						<a
+						href="https://github.com/webfirmframework/wffweb-demo-deployment"
+						target="_blank">embed tomcat production ready projects</a>
+						and <a
+						href="https://github.com/webfirmframework/wffweb-graalvm-production-ready-sample-projects"
+						target="_blank">GraalVM production ready projects</a>.
+				</p>
+				
+				
+
+
+
+			</div><!-- /.blog-post -->
+
+          
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="get-started.html">Prev</a>
+            <a class="btn btn-outline-primary" href="tags-and-attributes.html">Next</a>
           </nav>
-
+          
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/wffweb-configurations.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
@@ -245,18 +268,18 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
         text: 'Thumbnail'
       });
     </script>
-	<script type="text/javascript">
+    <script type="text/javascript">
 		$(function() {
-			
 			//for highlightjs
 			$('pre code').each(function(i, block) {
 				  hljs.highlightBlock(block);
 			});
-			
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
+			
 			$.getJSON("developers-guide-uris.json", function(data) {
 				var i;
 				for (i in data) {
@@ -283,8 +306,5 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
 			});
 		});
 	</script>
-	<script type="text/javascript">
-		
-	</script>
-</body>
+  </body>
 </html>

@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="What is a multi-threaded UI in wffweb and how to create it. The concept of lazy loading of tags and attributes. Which is the best wffweb version to use multi-threaded UI. Where to find sample code for multi-threaded UI in wffweb.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Multi-threading for lazy loading of tags/attributes of template | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -160,39 +159,47 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
-            
-          </div><!-- /.blog-post -->
+            <h2 class="blog-post-title">Multi-threading for lazy
+							loading of tags/attributes of template</h2>
+ 			<h3>How to lazily load specific tags/attributes in the ui</h3>
+ 			<p>Since <em>wffweb-2.1.5</em>, it supports multi-threading. This will
+					help to asynchronously load ui for better user experience. A user
+					specific example is a large form containing many select fields
+					(drop down box of countries, vehicles, fruits etc..). In a single
+					threaded model, the other parts of the form can not be generated
+					while the select box is being filled by elements. So if we are
+					using separate thread for generating select boxes then the user
+					will feel like the entire UI is quickly loaded and the select boxes are
+					being asynchronously filled with elements. This is a simple use
+					case, there are many use cases where you want to load the overall
+					UI first and after that asynchronously load different section of it. 
+					There are many major multi-threading improvements done till <em>wffweb-12.0.6</em>, 
+					use <em>wffweb-12.0.7</em> or later to get best thread-safety.</p>
+			<p>
+			You can find sample code for muti-threaded UI <a href="https://github.com/webfirmframework/minimal-production-ready-projects/blob/6934833231fa77627b8fbae51d905fc27c1d05f3/production-sample-with-foundation-css-framework/src/main/java/com/wffwebdemo/minimalproductionsample/page/template/ResponsiveTable.java#L72" target="_blank">in this project</a>.
+			(Use Virtual Thread if you are using Java 21 or later.)
+			</p>
+
+				<p>
+					Creating lot of threads may not be a good approach as it may
+					consume more memory and CPU so we are handling it with thread pool. 
+					<a rel="nofollow" href="https://openjdk.java.net/projects/loom/" ><em>Java Virtual Threads</em></a> is available since Java 21.
+					We can develop more user experienced UI with <a rel="nofollow" href="https://wiki.openjdk.java.net/display/loom/Main"><em>Java Virtual Threads</em></a> proposed. We will be able to create
+					millions of Virtual Threads without the overhead of traditional thread.
+				</p>
+
+
+
+
+			</div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="tagrepository.html">Prev</a>
+            <a class="btn btn-outline-primary" href="wffweb-best-practices.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/multi-threading-in-wff-java-code.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

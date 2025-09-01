@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="Basic introduction of tags and attributes in wffweb. Usage of tags and attributes and basic tag manipulation methods. This will give an idea about how to create a tag or attribute, how to change tag hierarchy in wffweb.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Tags and Attributes | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,10 +19,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
-
   </head>
 
   <body>
@@ -160,39 +157,152 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">Tags and Attributes</h2>
+            <p class="blog-post-meta">for wffweb-1.x.x / wffweb-2.x.x / wffweb-3.x.x / wffweb-12.x.x</p>
+            
+
+			<h3>Tag</h3>
+<p>
+					For every html tag, there is a corresponding java class, eg:- To
+					represent <em>div</em> tag in html, there is a <code>Div</code> class. See the below code 
+				</p>
+				
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+System.out.println(div.toHtmlString());</code></pre>
+
+this code will print 
+
+<pre class="notranslate"><code class="html">&lt;div&gt;&lt;/div&gt;</code></pre>
+
+				<p>
+					The first argument in tag constructor (i.e.
+					<code>Div</code>
+					here) is its parent/outer tag. In the above example, there is no
+					parent tag so passed as
+					<code>null</code>
+					. A tag cannot have more than one direct parent tag. The preceding arguments in the constructor are attribute classes.
+					Let us check another example a <em>span</em> tag surrounded by <em>div</em> tag,
+				</p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null) {{
+    new Span(this);
+}};
+System.out.println(div.toHtmlString());</code></pre>
+               <p>prints</p>
+               
+               <pre class="notranslate"><code class="html">&lt;div&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            <hr>
+            
+            <h3>Attribute</h3>
+            
+            <p>
+					Just like tag, every html attribute has corresponding
+					attribute java class, eg:- To represent <em>style</em> attribute, the
+					corresponding java class
+					<code>Style</code>. Check the below code to declare attribute.
+				</p>
+<pre class="notranslate"><code class="java">Style style =  new Style("color:green");</code></pre>
+
+				<p>
+					By behavior, attributes may be categorized into two, <em>tag
+						attributes</em> and <em>event attributes</em>.Tag attributes are normal
+					attributes like <em>id, name, style</em> etc... Event attributes are
+					those attributes which handle events in a tag, eg <em>onclick,
+						onchange etc..</em>.
+				</p>
+            
+            
+            <h4>Giving attribute to tag</h4>
+			<p>
+					An attribute can be given to tag either by passing as a constructor
+					argument or using
+					<code>addAttributes</code>
+					method of that tag. Of course, an attribute can be added to
+					multiple tags. If an attribute object is added to multiple tags,
+					then changing the attribute object properties will apply to all tags to
+					which it is added.
+				</p>
+			<h5>By passing as a constructor argument</h5>
+<pre class="notranslate"><code class="java">Div div = new Div(null, new Style("color:green"));
+System.out.println(div.toHtmlString());</code></pre>
+				<p>prints</p>
+				<pre class="notranslate"><code class="html">&lt;div style=&quot;color:green&quot;&gt;&lt;/div&gt;</code></pre>
+				
+            <h5>By addAttributes method</h5>
+				<pre class="notranslate"><code class="java">Div div = new Div(null);
+				
+Style style =  new Style("color:green");
+Id id =  new Id("divId1");
+
+div.addAttributes(style, id);</code></pre>
+				
+				<p>prints</p>
+				
+				<pre class="notranslate"><code class="html">&lt;div id=&quot;divId1&quot; style=&quot;color:green&quot;&gt;&lt;/div&gt;</code></pre>
+				
+				<h4>Add or remove child tag in a tag</h4>
+				<p>Adding or removing child tags is similar to javascript
+					functional concept of a node. There are also few additional
+					methods.</p>
+				<p>
+					There are few methods in the tag class to add child tags, they are
+					<code>appendChild</code>
+					,
+					<code>appendChildren</code>
+					,
+					<code>addInnerHtml</code>, <code>addInnerHtmls</code>
+					and
+					<code>insertBefore</code>. 
+					<code>appendChild</code> is used to append a child in its current children. The method
+					<code>addInnerHtml</code>
+					will replace all existing child tags.
+					<code>insertBefore</code> can be used to insert a tag/tags before a tag, 
+					</p>
+					eg:- <pre class="notranslate"><code class="java">Div parentDiv = new Div(null, new Id("parentDivId"));
+Div childDiv = new Div(parentDiv, new Id("child1"));
+
+childDiv.insertBefore(new Div(null, new Id("inserted1BeforeChild1")),
+new Div(null, new Id("inserted2BeforeChild1")));</code></pre>
+
+see the printed output, <code>new Div(null, new Id("inserted1BeforeChild1")),
+new Div(null, new Id("inserted2BeforeChild1"))</code>tags are added before <code>childDiv</code>. 
+
+<pre class="notranslate"><code class="html">&lt;div id=&quot;parentDivId&quot;&gt;
+    &lt;div id=&quot;inserted1BeforeChild1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;inserted2BeforeChild1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;child1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre> 
+
+<p><code>childDiv</code> will be very useful when you want to insert rows in the middle of a table having thousands of rows.</p>
+				
+				<p>If a tag is added a child tag
+					which is already a child tag of another tag class then the child
+					will be removed from its previous parent tag because a tag cannot have
+					more than one direct parent tag.</p>
+				<p>
+					The methods for removing tags are
+					<code>removeAllChildren</code>
+					to remove all children,
+					<code>removeChild</code>
+					to remove specific tag and
+					<code>removeChildren</code>
+					to remove multiple tags.
+				</p>
+				
+				
+				<p>Refer <a target="_blank" href="https://javadoc.io/doc/com.webfirmframework/wffweb">javadoc</a> for all available methods.</p>
+				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="wffweb-configurations.html">Prev</a>
+            <a class="btn btn-outline-primary" href="features-of-tags.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/tags-and-attributes.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
@@ -247,16 +357,16 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
     </script>
 	<script type="text/javascript">
 		$(function() {
-			
 			//for highlightjs
 			$('pre code').each(function(i, block) {
 				  hljs.highlightBlock(block);
 			});
-			
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
+			
 			$.getJSON("developers-guide-uris.json", function(data) {
 				var i;
 				for (i in data) {
@@ -282,9 +392,6 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
 				}
 			});
 		});
-	</script>
-	<script type="text/javascript">
-		
 	</script>
 </body>
 </html>

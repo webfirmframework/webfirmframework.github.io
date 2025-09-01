@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="Introduction of wffweb-1.x.x, wffweb-2.x.x and wffweb-3.x.x. The supported languages for wffweb. Minimal java version for different version of wffweb. Browser compatibility. Server compatibility. wffweb upgrade recommendation in the project.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Developers Guide | Getting Started</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -23,7 +22,7 @@
     
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
-
+    
   </head>
 
   <body>
@@ -97,7 +96,8 @@
 		<div class="row mb-2">
         <div class="col-md-6">
         
-        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" data="https://www.youtube.com/embed/SBTKZh5LN_E" alt="Demo app creation youtube video"></object>
+        <object style="width:100%;height:100%;float:none;clear:both;margin:2px auto;" 
+				data="https://www.youtube.com/embed/7h1iKVViKE0" alt="Demo app creation youtube video"></object>
           <!-- <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -160,39 +160,68 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">Introduction</h2>
+            <p class="blog-post-meta">to wffweb-12.x.x or later</p>
+
+            
+			<p>
+				This developer guide is based on latest version of <em>wffweb</em> 
+				because <em>wffweb-1.x.x</em> provides just to generate html/css but
+				<em>wffweb-2.x.x</em> and later comes with server-client bi-directional full-duplex
+				communication, event handling, writing server side/client side code
+				etc... Before getting started with code watch <a target="_blank"
+					href="https://youtu.be/VyfhiRjvF_c?feature=shared">this video</a>
+				to understand the main features of <em>wffweb</em>. The
+				wffweb-2.x.x or later is decoupled with <em>Java EE</em> modules so you have to
+				configure your project before use. The configurations may be
+				different on different servers you are using. <a
+					href="https://github.com/webfirmframework/minimal-production-ready-projects/archive/master.zip"
+					download>Sample projects configured for servers like tomcat 9 can be
+					downloaded from here.</a>
+
+
+			</p>
+            <hr>
+            
+			<p>
+				<b>Note :-</b> Unless you set these configurations, wffweb is a
+				simple html/css generator framework and no other unwanted classes
+				like classes for client-server communication etc.. will be loaded
+				into memory. For this advantage, it's decoupled with Java EE
+				modules.
+			</p>
+
+            <blockquote cite="">
+            <p><strong>Always use the latest version of wffweb to enjoy more features and improvements.</strong></p>
+            </blockquote>
+            
+            
+            <h2>Supported programming languages</h2>
+            <p>Java and Kotlin</p>				
+			<h3>Java version</h3>
+			
+			<ul>
+			  <li>wffweb-12.x.x requires Java 17 or later (Java 24 or later is recommended).</li>
+			  <li>wffweb-3.x.x requires Java 1.8 or later. <i>wffweb-3.0.20</i> is the last version (EOL).</li>
+              <li>wffweb-2.x.x requires Java 1.7 or later. <i>wffweb-2.1.15</i> is the last version (EOL).</li>
+            </ul>
+            
+			<h2>Browser compatibility</h2>
+            <p>Currently, wffweb applications are compatible with only HTML5
+					supported browsers because it uses HTML5 websocket at client side.</p>
+					
+			<h2>Server compatibility</h2>       		
+            <p>Server should support websocket.</p>
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Prev</a>
+            <a class="btn btn-outline-primary" href="wffweb-configurations.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/get-started.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
@@ -246,45 +275,42 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
       });
     </script>
 	<script type="text/javascript">
+		//for highlightjs
+		$('pre code').each(function(i, block) {
+			  hljs.highlightBlock(block);
+		});
+
 		$(function() {
-			
-			//for highlightjs
-			$('pre code').each(function(i, block) {
-				  hljs.highlightBlock(block);
-			});
-			
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
-			$.getJSON("developers-guide-uris.json", function(data) {
-				var i;
-				for (i in data) {
-					var each = data[i]; 
-					var li = $('<li/>').appendTo('#devGuideLinks');
-					$('<a />')
-					.attr('href', each.uri)
-					.attr('title', each.title)
-					.text(each.name)					
-					.appendTo(li);
-				}
-			});
-			$.getJSON("common-uris.json", function(data) {
-				var i;
-				for (i in data) {
-					var each = data[i]; 
-					var li = $('<li/>').appendTo('#commonLinks');
-					$('<a />')
-					.attr('href', each.uri)
-					.attr('title', each.title)
-					.text(each.name)					
-					.appendTo(li);
-				}
-			});
+		});
+		$.getJSON("developers-guide-uris.json", function(data) {
+			var i;
+			for (i in data) {
+				var each = data[i]; 
+				var li = $('<li/>').appendTo('#devGuideLinks');
+				$('<a />')
+				.attr('href', each.uri)
+				.attr('title', each.title)
+				.text(each.name)					
+				.appendTo(li);
+			}
+		});
+		$.getJSON("common-uris.json", function(data) {
+			var i;
+			for (i in data) {
+				var each = data[i]; 
+				var li = $('<li/>').appendTo('#commonLinks');
+				$('<a />')
+				.attr('href', each.uri)
+				.attr('title', each.title)
+				.text(each.name)					
+				.appendTo(li);
+			}
 		});
 	</script>
-	<script type="text/javascript">
-		
-	</script>
+	
 </body>
 </html>

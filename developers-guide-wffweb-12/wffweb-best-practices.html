@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="What are the best practices to follow while developing applications using wffweb. What is the concept of holdPush and unholdPush methods in wffweb and when to use it. Major changes done for holdPush and unholdPush methods and since which version of wffweb it is applicable.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>best coding practices | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -160,39 +159,236 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">wffweb best practices</h2>
+ 			<h3>Build UI with minimal tags</h3>
+				<p>When building heavy UI, it's important to follow this rule to
+					keep only necessary tags. It reduces the load of a browser, why
+					should the browser take care about unnecessary tags!!</p>
+				
+				
+				<h3>Use minimal tag manipulation methods</h3>
+				<p>If there are continuous invocation of tag manipulation methods then try to convert it to invoking minimal tag manipulation methods. Check out the below examples</p>
+				<p>Eg 1 :- </p>
+				<pre class="notranslate"><code class="java">List&lt;AbstractHtml&gt; children = div1.getChildren();
+        
+for (AbstractHtml child : children) {
+    div1.removeChild(child);
+}
+
+//should be as follows instead of the above
+div1.removeAllChildren();
+</code></pre>
+                <p>Eg 2 :- </p>
+				<pre class="notranslate"><code class="java">div1.removeAllChildren();
+div1.appendChild(div2);
+
+//should be as follows instead of the above
+div1.addInnerHtml(div2);
+</code></pre>
+                <p>Eg 3 :- </p>
+				<pre class="notranslate"><code class="java">div1.removeAllChildren();
+div1.appendChild(div2);
+div1.appendChild(div3);
+        
+//should be as follows instead of the above
+div1.addInnerHtmls(div2, div3);</code></pre>
+
+
+<h3>Use BrowserPage#holdPush &amp; BrowserPage#unholdPush wherever possible</h3>
+				<p>
+					Surround with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods for multiple tag manipulation statements. When a tag
+					manipulation method (eg:
+					<code>div.removeAllChildren()</code>
+					) is executed the framework sends its UI update to the client as a
+					push so if there are multiple statements then there will be
+					multiple push. When all tag manipulation methods are surrounded
+					with
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then all those UI updates will be sent in a single push so that the
+					end user will not see the UI changes are taking place one by one in
+					a slow network. Also ensure that the
+					<code>BrowserPage#unholdPush()</code>
+					is called inside finally block. See the sample code given below
+				</p>
+				<p>Eg :- </p>
+				<pre class="notranslate"><code class="java">try {
+    browserPage.holdPush();
+            
+    div1.addAttributes(new Style("background:green"));
+    div2.addAttributes(new Id("div2Id"));
+    div3.addAttributes(new Name("div3"));
+    div1.addInnerHtmls(div2, div3);
+} finally {
+    //pushes UI updates for the above four methods in a single push
+    browserPage.unholdPush();
+}</code></pre>
+				<p>
+					But there are also cases where these methods are not suitable, for
+					example you are adding up to 1000 rows (or more than that) in a
+					table. In such case if you are writing that code between
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					then the end user will have to wait a long time to see the result
+					because the framework sends all changes in a single push and the
+					browser displays it only after receiving all these UI updates.
+					Here, the end user is expecting a lazy loading. In such scenarios
+					it's better to avoid using these
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods.
+				</p>
+
+				<p>
+					The usage of
+					<code>BrowserPage#holdPush</code>
+					and
+					<code>BrowserPage#unholdPush</code>
+					methods depends upon the requirements. 
+					There will be a major improvement for holdPush/unholdPush implementation in <em>wffweb-3.0.1</em> or later versions.
+					The improvement is with when <code>holdPush/unholdPush</code> method is called by multiple threads from the same <code>browserPage</code> instance, 
+					if the <code>holdPush</code> is called three times the <code>unholdPUsh</code> needs to be called three times to unhold the push
+					(in previous versions one unholdPush call will unhold the push). 
+				</p>
+
+				<h3>Do not return anonymous class</h3>
+				<p>When you want to reuse a set of tags, you have to keep a separate template class for it.</p>
+
+				<p>First let us look at a bad practice:- </p>				
+				<pre class="notranslate"><code class="java">public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null) {{
+            new Span(this) {{
+                new NoTag(this, "Name : " + fullName);
+            }};
+        }};
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+
+
+				<p>
+					Use the below code instead which does the similar job
+				</p>
+
+				<pre class="notranslate"><code class="java">public class UserDetailsTemplate extends Div {
+
+    public UserDetailsTemplate(String fullName) {
+        super(null);
+        develop(fullName);
+    }
+
+    private void develop(final String fullName) {
+
+//before 3.x.x
+//        new Span(this) {{
+//            new NoTag(this, "Name : " + fullName);
+//        }};
+        
+//      as of 3.x.x 
+        new Span(this).give(span -> {
+            new NoTag(span, "Name : " + fullName);
+        });
+
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetailsTemplate userDetails = new UserDetailsTemplate("Hitomi");
+    System.out.println(userDetails.toHtmlString());
+}
+</code></pre>
+				
+			<p>But if you really want a method to return a div, then you have to change the coding style like this</p>
+
+with the latest version of <em>3.x.x</em>: 
+<pre class="notranslate"><code class="java">public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null).give(div -> {
+            new Span(div).give(span -> {
+                new NoTag(span, "Name : " + fullName);
+            });
+        });    
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+OR 
+<pre class="notranslate"><code class="java">public class UserDetails {
+
+    public Div getUserDetailsDiv(final String fullName) {
+
+        Div details = new Div(null);
+
+        Span span = new Span(details);
+
+        new NoTag(span, "Name : " + fullName);
+
+        return details;
+    }
+
+}
+
+public static void main(String[] args) {
+    UserDetails userDetails = new UserDetails();
+    System.out.println(
+                userDetails.getUserDetailsDiv("Hitomi").toHtmlString());
+}
+</code></pre>
+
+
+				<h3>Use Executor Framework &amp; <em>wffweb-3.0.1</em> or later when using multiple threads</h3>
+				<p>
+				There are use cases where we need to load different parts of
+				<a href="multi-threading-in-wff-java-code.html" target="_blank">ui in an asynchronous manner</a>.
+				Java Executor Framework will be very useful to safely handle multiple threads for it. 
+				It's available as part of core java. 
+				<em>wffweb-3.0.1</em> 
+				or later is recommended to use if ui portions are loaded in multiple threads. 
+				There some major thread safety improvements done in <em>wffweb-3.0.1 &amp; later</em>
+				and previous versions are not 100% thread safe. 
+			 
+				</p>
+
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="multi-threading-in-wff-java-code.html">Prev</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/wffweb-best-practices.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

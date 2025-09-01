@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="Attribute other than event attribute. Some important methods of attribute to get and set its value. Basic usage of existing attributes with sample code.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Normal Tag Attributes | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -20,10 +19,8 @@
     
     <!-- google ads -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/default.min.css">
-
   </head>
 
   <body>
@@ -160,39 +157,94 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">Normal tag attribute</h2>
+            
+            <p>
+					Attributes which don't capture events are considered as normal tag attributes, 
+					eg:- <code>Name</code>, <code>Id</code>, <code>ClassAttribute</code>, <code>Value</code> etc...
+				</p>
+				<p>All tag attributes will have some common methods like  
+				<code>setValue</code> and <code>getValue</code> or <code>getAttributeValue</code> depending on the context. Let's see some examples
+				</p>
+
+<pre class="notranslate"><code class="java">Input input = new Input(null);
+Value value = new Value("");
+input.addAttributes(value);
+
+//prints &lt;input value=""&gt;
+System.out.println(input.toHtmlString());
+
+value.setValue("webfirmframework");
+
+//prints &lt;input value="webfirmframework"&gt;
+System.out.println(input.toHtmlString());
+
+//prints webfirmframework
+System.out.println(value.getValue());
+
+AbstractAttribute valueAttr = value;
+
+//prints webfirmframework
+System.out.println(valueAttr.getAttributeValue());
+				</code></pre>
+            
+            <h3 id="updateClient"><code>setValue(boolean updateClient, String value)</code></h3>
+            <p>
+					Some attributes also contain
+					<code>setValue(boolean updateClient, String value)</code>
+					method (since <em>wffweb-2.1.15</em>) which excludes the value
+					syncing in client browser page and it's valid only if there is a
+					client browser page otherwise it works just like
+					<code>setValue</code>. Eg:- <code>Value#setValue(boolean updateClient, String value)</code>
+					<br> Use case:- Consider
+					<code>&lt;input type="text" value=""&gt;</code>
+					 tag in the browser page. The value of the value attribute in the browser page changes
+					whenever the user enters some value the text field. Sometimes we
+					may need to keep the same value state in the server side
+					<code>Value</code>
+					object by
+					<code>OnChange</code>
+					event attribute. In such cases if we are calling
+					<code>value.setValue(String value)</code>
+					method it will again synch the value to client browser page and
+					it's not required in this particular case so we can use
+					<code>value.setValue(boolean clientUpdate, String value)</code> method.
+					eg:-
+					<code>value.setValue(false, enteredValue)</code>.
+				    <br>
+				    <code>value.setValue(boolean clientUpdate, String value)</code> 
+				    may be useful to build stateful tags.<br>
+				    Eg:- 
+					<script src="https://gist.github.com/webfirmframework/37a7cb17dc735e936bccf04596d5fa1b.js"></script>
+
+					Its usage is similar to <code>Input</code> tag.
+				</p>
+				<p>
+				<code>getAttributeValue</code>
+					is a common method in all attributes which returns the string
+					representation of the attribute value.
+					<br>
+					Based on the relevant context, the attribute will have needful feature methods in it.
+				</p>
+            
+            
+            
+            <hr>
+            
+				
+				
+				
+				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="features-of-sharedtagcontent-class.html">Prev</a>
+            <a class="btn btn-outline-primary" href="event-attributes.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/tag-attributes.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
@@ -247,16 +299,16 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
     </script>
 	<script type="text/javascript">
 		$(function() {
-			
 			//for highlightjs
 			$('pre code').each(function(i, block) {
 				  hljs.highlightBlock(block);
 			});
-			
+
 			$.getJSON("notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
+			
 			$.getJSON("developers-guide-uris.json", function(data) {
 				var i;
 				for (i in data) {
@@ -282,9 +334,6 @@ websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
 				}
 			});
 		});
-	</script>
-	<script type="text/javascript">
-		
 	</script>
 </body>
 </html>

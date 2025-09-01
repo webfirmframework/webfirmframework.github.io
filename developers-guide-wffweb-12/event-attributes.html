@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="What is an event attribute and how to use it. The main properties of an event attribute in wffweb. Some of the existing event attribute classes in wffweb. How to execute code in client side and server side. How to send value from client side to server side and vice versa using event attribute. What are the implicit objects in event attributes. What is WffBMObject.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Event Attributes | Custom Event Attribute | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -160,39 +159,251 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">EventAttribute</h2>
+            
+            <p>
+					Attributes which can execute JavaScript on some event are considered as event
+					attributes. Eg :- <em>onclick</em>, <em>onchange</em> etc...
+				</p>
+				<p>All event attributes in wffweb contain a common constructor
+					containing four arguments which are used to handle events at client
+					side and server side. See the below code sample</p>
+
+				<pre class="notranslate"><code class="java">public class SampleCode extends Body {
+    
+    public SampleCode() {
+        super(null);
+
+        develop();
+    }
+
+    private void develop() {
+        ServerMethod serverMethod = event -> {
+            WffBMObject wffBMObject = event.data();
+
+            // the sourceTag from which the event generated
+            // in this sample sourceTag instance will be button1 instance
+            AbstractHtml sourceTag = event.sourceTag();
+
+            // used to send data to the client
+            WffBMObject bmObject = new WffBMObject();
+            bmObject.put("someKey", BMValueType.STRING,
+                    "こんにちは WebFirmFramework");
+
+            return bmObject;
+        };
+
+        String jsPreFunctionBody = """
+                // event and source keywords are implicit objects here
+                //may be on some condition return true to invoke ServerMethod method.
+                return true;""";
+
+        //source is equivalent to event.srcElement
+        String jsFilterFunctionBody = """
+                //event and source keywords are implicit objects here
+                var dataFromClient = {'clientKey' : 'clientValue', elementId : source.id, elementName : event.srcElement.name};
+                return dataFromClient;
+                """;
+
+        // jsObject is an implicit object
+        // which is a conventional representation of bmObject returned by ServerMethod.
+        String jsPostFunctionBody = "alert(jsObject.someKey);";
+
+        OnClick onClick = new OnClick(jsPreFunctionBody, serverMethod,
+                jsFilterFunctionBody, jsPostFunctionBody);
+
+        Button button1 = new Button(this, onClick);
+    }
+    
+}
+				</code></pre>
+
+				<p>
+					In the above code,
+					<code>OnClick</code>
+					is an event attribute. There are four arguments for its constructor
+					<code>jsPreFunctionBody</code>
+					,
+					<code>serverMethod</code>
+					,
+					<code>jsFilterFunctionBody</code>
+					and
+					<code>jsPostFunctionBody</code>.
+					<code>jsPreFunctionBody</code>
+					,
+					<code>jsFilterFunctionBody</code>
+					and
+					<code>jsPostFunctionBody</code>
+					can contain JavaScript function body without function declaration
+					and all these are executed at client side.
+				</p>
+				<p>
+					The <code>jsPreFunctionBody</code>
+					should return boolean value. If it returns true then only
+					<code>serverMethod</code>
+					will be invoked. This will be useful when there is a validation
+					needs to be done at client side before invoking <code>serverMethod</code>. The
+					<code>event</code> and <code>source</code> are implicit objects in its scope.
+					The <code>source</code> is equivalent to <code>event.srcElement</code>.
+				</p>
+				<p>
+					The <code>serverMethod</code>
+					should be an instance of
+					<code>serverMethod</code>. The <code>serverMethod#invoke</code> invokes at server side.
+					The <code>invoke</code> method
+					contains single argument 
+					<code>event</code>.  The returned JavaScript object by
+					<code>jsFilterFunctionBody</code>
+					will be received as a
+					<code>WffBMObject</code> in <code>event.data()</code> property.
+				</p>
+				<p>
+					The role of
+					<code>jsFilterFunctionBody</code>
+					is to provide data to
+					<code>invoke</code>. The
+					<code>jsFilterFunctionBody</code>
+					should return either a JavaScript object or null. This JavaScript
+					object will be converted to a
+					<code>WffBMObject</code>
+					which will be received as <code>data</code> property in
+					<code>event</code> object.
+					The <code>event</code> and <code>source</code> are implicit objects in its scope.
+					The <code>source</code> is equivalent to <code>event.srcElement</code>.
+				</p>
+
+				<p>
+					The <code>jsPostFunctionBody</code>
+					is executed after
+					<code>invoke</code>
+					is invoked. The role of
+					<code>jsPostFunctionBody</code>
+					is to receive data returned by
+					<code>invoke</code>. In the sample code,
+					<code>invoke</code>
+					returns an object
+					<code>bmObject</code>
+					which will be converted to a JavaScript object, this JavaScript object be
+					available as an implicit object
+					<code>jsObject</code>
+					in the scope of
+					<code>jsPostFunctionBody</code> at client side.
+				</p>
+				
+				<h4 id="action"><code class="java">action</code> object since <em>3.0.15</em></h4>
+				
+				
+				<p>Since <em>wffweb-3.0.15</em>, there is one more object available in the scope of 
+				<code class="java">jsPreFunctionBody</code> called <code class="java">action</code>. 
+				This <code class="java">action</code> object has a function called <code class="java">perform()</code>, 
+				it can do the same action which happens when 
+				<code class="java">jsPreFunctionBody</code> returns <code class="java">true</code>. 
+				Doing <code class="java">return true</code> in <code class="java">jsPreFunctionBody</code>  
+				or calling its <code class="java">action.perform()</code> does the same job. 
+				The advantage of <code class="java">action.perform()</code> is the <code class="java">action</code> 
+				object can be passed to any other <em>JavaScript</em> code and invoke <code class="java">perform()</code> functionn later to do the same job.
+				<br>
+				You can call <code class="java">action.perform()</code> multiple times to do the same action multiple times.
+				However, if you are calling <code class="java">action.perform()</code> inside <code class="java">jsPreFunctionBody</code> 
+				the <code class="java">return true</code> has no effect on it because both do the same job. 
+				This is to prevent double form submission.
+				
+				<br><br>Eg 1: Suppose there is a button on the UI, when we click on
+						the button it should request JavaScript notification permission
+						from user and send the value to the server. In this case, the
+						permission value is got asynchronously so have to use
+						<code class="java">action.perform();</code>
+						as follows.
+						
+<pre><code class="java">new Button(mainDiv,
+        new OnClick("""
+        Notification.requestPermission().then((perm) => {
+        source.notifPerm = perm;
+        action.perform();
+        });
+        return false;""", event -> {
+            WffBMObject data = event.data();
+
+            String notifPerm = (String) data.getValue("notifPerm");
+            System.out.println("notifPerm = " + notifPerm);
+
+            WffBMObject result = new WffBMObject();
+            result.put("perm", BMValueType.STRING, notifPerm);
+            result.put("msg", BMValueType.STRING, "Notification " + notifPerm + "!");
+
+            return result;
+        }, "return {notifPerm: source.notifPerm};",
+                """
+                        if (jsObject.perm === 'granted') {
+                            new Notification(jsObject.msg);
+                        } else {
+                            alert(jsObject.msg);
+                        }
+                        """))
+        .give(TagContent::text, "Request notification permission");
+</code></pre>			
+<br> In this code,
+					<code class="java">source.notifPerm</code>
+					is assigned with permission value. When
+					<code class="java">action.perform();</code>
+					is called the JavaScript in <code>jsFilterFunctionBody</code> is invoked to send
+					the value to the server. <br><br>
+				
+				Eg 2: Suppose there is a button, let's say <code class="java">btn1</code> it has an <code class="java">OnClick</code> event attribute.
+				This event attribute has <code class="java">serverMethod</code>. When we click the button
+				it has to pop up some modal having some buttons. When we click the button on the modal it should invoke 
+				the <code class="java">serverMethod</code> of button <code class="java">btn1</code>. 
+				How to achieve this? 
+				In this case, the <code class="java">action</code> object 
+				(from <code class="java">jsPreFunctionBody</code> of <code class="java">OnClick</code> of <code class="java">btn1</code>) 
+				can be passed to the event attribute of button on the modal and 
+				it can call <code class="java">perform()</code> function on that. 
+				You should have some basic <em>JavaScript</em> knowledge to achieve this.
+				
+				
+				</p>
+				 
+
+				
+				<h3 id="wffBMObject">WffBMObject</h3>
+				<p>
+					<code>WffBMObject</code>
+					stores data as key value pairs. Unlike JSON, it can also contain
+					binary data (<code>WffBMByteArray</code>) in its value. The data types supported by
+					<code>WffBMObject</code>
+					can be found in
+					<code>BMValueType</code>
+					enum.
+					<code>WffBMObject</code>
+					can also be used to send and receive binary data from server to
+					client and vice versa.
+				</p>
+				<p>Check out this <a href="https://github.com/webfirmframework/wffweb-demo-deployment" target="_blank">sample project</a> for code reference.</p>
+            <hr>
+            
+				<h2>CustomEventAttribute</h2>
+
+				<p>
+					<code>com.webfirmframework.wffweb.tag.html.attribute.event.CustomEventAttribute</code>
+					can be used to create a custom event attribute. See the below
+					sample code
+				</p>
+				<pre class="notranslate"><code class="java">CustomEventAttribute customEventAttribute = new CustomEventAttribute("onclick"
+                , jsPreFunctionBody, serverMethod, jsFilterFunctionBody, jsPostFunctionBody);</code></pre>
+				
+				
+				
+				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="tag-attributes.html">Prev</a>
+            <a class="btn btn-outline-primary" href="mltp-design-pattern.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/event-attributes.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

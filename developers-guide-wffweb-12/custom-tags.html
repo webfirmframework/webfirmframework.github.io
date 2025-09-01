@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="How to create a custom tag in wffweb. Examples for custom tags in wffweb. When a custom tag is required to use in wffweb project. What are the different types of tags in wffweb. Sample code for custom tag. Different ways to create custom tags.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Custom Tags | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -160,39 +159,80 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
- 
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+            <h2 class="blog-post-title">Custom Tags</h2>
+            <p>
+					<code>com.webfirmframework.wffweb.tag.htmlwff.CustomTag</code>
+					class can be used to create a new tag similar to the existing
+					tags like
+					<code>Div</code>
+					.
+				</p>
+				
+            <pre class="notranslate"><code class="java">public class NewTag extends CustomTag {
+
+    private static final long serialVersionUID = 1L;
+
+    public NewTag(AbstractHtml base, AbstractAttribute... attributes) {
+        super("newtag", TagType.OPENING_CLOSING, base, attributes);
+    }
+
+    // TODO your own feature methods
+
+    @Override
+    public NewTag clone() throws CloneNotSupportedException {
+        return (NewTag) super.clone();
+    }
+
+}</code></pre>
+
+
+
+<p><code>NewTag</code> may be used as a tag like <code>Div</code> tag. The below code shows custom tag without keeping a separate class</p>
+				<pre class="notranslate"><code class="java">CustomTag customTag = new CustomTag("newtag", null, new Id("ct1Id")).give(customTag1 -> {
+    CustomTag customTag2 = new CustomTag("anothertag", customTag1);
+});
+System.out.println(customTag.toHtmlString());</code></pre>
+
+this code will print 
+
+<pre class="notranslate"><code class="html">&lt;newtag id=&quot;ct1Id&quot;&gt;
+    &lt;anothertag&gt;&lt;/anothertag&gt;
+&lt;/newtag&gt;</code></pre>
+
+				<p>
+					The first argument in
+					<code>CustomTag</code>
+					constructor is tag name. There are three types of
+					<code>TagType</code>
+					,
+					<code>TagType.OPENING_CLOSING</code>
+					,
+					<code>TagType.SELF_CLOSING</code>
+					and
+					<code>TagType.NON_CLOSING</code>
+					. Example for
+					<code>TagType.OPENING_CLOSING</code>
+					is <em>&lt;div&gt;&lt;/div&gt;</em> which has opening and closing tag. Example for
+					<code>TagType.SELF_CLOSING</code>
+					is <em>&lt;input type=&quot;text&quot;/&gt;</em> which can be self closed and no need to have a
+					closing tag. Example for
+					<code>TagType.NON_CLOSING</code>
+					is <em>&lt;meta charset=&quot;UTF-8&quot;&gt;</em> which need neither be self closed nor be closed with
+					closing tag.
+				</p>
+				
+
+				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="mltp-design-pattern.html">Prev</a>
+            <a class="btn btn-outline-primary" href="custom-attributes.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/custom-tags.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 

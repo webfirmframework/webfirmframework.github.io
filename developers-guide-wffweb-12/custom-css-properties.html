@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="How to execute JavaScript code from server in wffweb. What is BrowserPageAction in wffweb. Sample code to execute JavaScript code from server in wffweb with and without the object of BrowserPage.">
+    <meta name="description" content="How to create custom css property in wffweb and how to use it. When to create a custom css property in wffweb. What are the feature methods of custom css property in wffweb.">
     <meta name="author" content="Web Firm Framework">
     <meta name="theme-color" content="#147cb5"/>
     <link rel="icon" href="/favicon.ico">
 
-    <title>Execute JavaScript From Server | Developers Guide</title>
-    <link rel=”canonical” href=”https://webfirmframework.github.io/developers-guide-wffweb-12/execute-javascript-from-server.html” />
+    <title>Custom CSS Property | Developers Guide</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -160,39 +159,62 @@
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Execute JavaScript From Server</h2>
+            <h2 class="blog-post-title">Custom CSS property</h2>
  
- 			<p>
-					The normal way to execute a JavaScript code is to insert a
-					<code>Script</code> tag
-					class containing JavaScript code in the UI. But, in some special cases like
-					server restart, there won't be a
-					<code>BrowserPage</code>
-					object so in such cases it's possible to push
-					<code>ByteBuffer</code>
-					returned by
-					<code>BrowserPageAction.getActionByteBufferForExecuteJS</code> method which can execute the given JavaScript code in the browser.
-					<br><br>
-					Eg :- To execute an alert in the browser push the <code>actionByteBuffer</code> to the client directly using the websocket of the corresponding <code>browserPage</code> or using <code>browserPage.performBrowserPageAction</code> method.
-					<br><br>
-					<pre class="notranslate"><code class="java">ByteBuffer actionByteBuffer = BrowserPageAction.getActionByteBufferForExecuteJS(
-					"alert('executed script');");
-websocket.session.getBasicRemote().sendBinary(actionByteBuffer);
-//alternatively browserPage.performBrowserPageAction(actionByteBuffer);</code></pre>
- 
- 
- 
- 
+ <p>
+					<code class="notranslate">com.webfirmframework.wffweb.csswff.CustomCssProperty</code>
+					class may be used to create a custom css property. See the below
+					example.
+				</p>
+<p>Eg 1 :- </p>
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new Style(new CustomCssProperty("new-property-name", "new-property-value")));
+System.out.println(div.toHtmlString());
+</code></pre>
+
+<p>Eg 2 :- </p> 
+
+<pre class="notranslate"><code class="java">Style style = new Style();
+CustomCssProperty newCssProperty = new CustomCssProperty("new-property-name", "new-property-value");
+style.addCssProperty(newCssProperty);
+Div div = new Div(null, style);
+System.out.println(div.toHtmlString());
+
+// cssProperty will be the same object newCssProperty
+CssProperty cssProperty = style.getCssProperty("new-property-name");
+</code></pre>
+
+<p>Eg 3 :- </p> 
+<pre class="notranslate"><code class="java">Style style = new Style();
+style.addCssProperty("new-property-name", "new-property-value");
+Div div = new Div(null, style);
+System.out.println(div.toHtmlString());
+
+// cssProperty will be an instance of CustomCssProperty
+CssProperty cssProperty = style.getCssProperty("new-property-name");
+</code></pre>
+
+<p>Or a separate class may be kept as below</p>
+<pre class="notranslate"><code class="java">public class VibrateCssProperty extends CustomCssProperty {
+
+    public VibrateCssProperty(String cssValue) {
+        super("vibrate", cssValue);
+    }
+
+    // TODO add needful feature methods for this css property
+
+}
+</code></pre>
+				
             
           </div><!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="custom-server-methods.html">Prev</a>
-            <a class="btn btn-outline-primary" href="execute-browser-page-action.html">Next</a>
+            <a class="btn btn-outline-primary" href="css-properties.html">Prev</a>
+            <a class="btn btn-outline-primary" href="custom-server-methods.html">Next</a>
           </nav>
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="../developers-guide/execute-javascript-from-server.html" rel="nofollow">Older</a>
+            <a class="btn btn-outline-primary" href="../developers-guide/custom-css-properties.html" rel="nofollow">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
