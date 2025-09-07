@@ -1,7 +1,6 @@
 console.log('sw_cached_site.js invoked');
 var cacheName = 'wffweb-cache-v115';
 
-
 var urlsToCache = [
 "/developers-guide-wffweb-12/css-properties.html",  
   "/developers-guide-wffweb-12/get-started.html",
@@ -34,6 +33,14 @@ var urlsToCache = [
   "/favicon.ico",
   "/common-uris.json"
 ];
+
+caches.keys().then(function(names) {
+	for (let name of names) {
+		if (name !== cacheName) {
+			caches.delete(name);	
+		}
+	}
+});
 
 self.addEventListener('install', e => {
   // Perform install steps
