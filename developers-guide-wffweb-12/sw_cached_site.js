@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-var cacheName = 'wffweb-cache-v116';
+var cacheName = 'wffweb-cache-v117';
 
 var urlsToCache = [
 "/developers-guide-wffweb-12/css-properties.html",  
@@ -33,14 +33,6 @@ var urlsToCache = [
   "/favicon.ico",
   "/common-uris.json"
 ];
-
-caches.keys().then(function(names) {
-	for (let name of names) {
-		if (name !== cacheName) {
-			caches.delete(name);	
-		}
-	}
-});
 
 self.addEventListener('install', e => {
   // Perform install steps
@@ -105,3 +97,13 @@ self.addEventListener('fetch', function(event) {
 	    })
 	  );
 	});
+
+
+caches.keys().then(function(names) {
+	for (let name of names) {
+		if (name !== cacheName) {
+			caches.delete(name);	
+		}
+	}
+});
+	
