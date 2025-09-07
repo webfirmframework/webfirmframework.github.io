@@ -388,7 +388,7 @@ stcAmountInUsd.setContent(new BigDecimal("1000"));</code></pre>
 				  hljs.highlightBlock(block);
 			});
 			
-			$.getJSON("notice.json", function(data) {
+			$.getJSON("../notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});

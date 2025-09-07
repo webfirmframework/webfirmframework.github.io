@@ -276,7 +276,7 @@ CssProperty cssProperty = style.getCssProperty("new-property-name");
 				  hljs.highlightBlock(block);
 			});
 			
-			$.getJSON("notice.json", function(data) {
+			$.getJSON("../notice.json", function(data) {
 				$("#noticeTitle").html(data.title);
 				$("#noticeContent").html(data.content);
 			});
