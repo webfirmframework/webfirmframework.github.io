@@ -248,40 +248,40 @@ stc.setShared(false);</code></pre>
 
 
 
-				<pre class="notranslate"><code class="java">SharedTagContent<BigDecimal> stcAmountInUsd = new SharedTagContent<>(null);
-                
+				<pre class="notranslate"><code class="java">SharedTagContent&lt;BigDecimal&gt; stcAmountInUsd = new SharedTagContent&lt;&gt;(null);
+
 new Div(null).give(dv -> {
     new Div(dv).give(usdDv -> {
         new NoTag(usdDv, "Amount in GBP: ");
         new Span(usdDv).addInnerHtml(stcAmountInUsd, content -> {
-            
-            BigDecimal amountInUsd = content.getContent();
+
+            BigDecimal amountInUsd = content.content();
             if (amountInUsd != null) {
-              //1 USD to 0.78 GBP
-                BigDecimal exchangeRate = new BigDecimal("0.78").setScale(10);  
+                //1 USD to 0.78 GBP
+                BigDecimal exchangeRate = new BigDecimal("0.78").setScale(10, RoundingMode.HALF_UP);
                 BigDecimal amountInGbp = amountInUsd.multiply(exchangeRate);
-                String amountInGbpString = amountInGbp.stripTrailingZeros().toPlainString();                                
-                return new SharedTagContent.Content&lt;String&gt;(amountInGbpString, false);
+                String amountInGbpString = amountInGbp.stripTrailingZeros().toPlainString();
+                return new SharedTagContent.Content<>(amountInGbpString, false);
             }
-            
-            return new SharedTagContent.Content&lt;String&gt;("--", false);
+
+            return new SharedTagContent.Content<>("--", false);
         });
     });
-    
+
     new Div(dv).give(usdDv -> {
         new NoTag(usdDv, "Amount in Yen: ");
         new Span(usdDv).addInnerHtml(stcAmountInUsd, content -> {
-            
-            BigDecimal amountInUsd = content.getContent();
+
+            BigDecimal amountInUsd = content.content();
             if (amountInUsd != null) {
-              //1 USD to 108.80 Japanese Yen
-                BigDecimal exchangeRate = new BigDecimal("108.80").setScale(10);  
+                //1 USD to 108.80 Japanese Yen
+                BigDecimal exchangeRate = new BigDecimal("108.80").setScale(10, RoundingMode.HALF_UP);
                 BigDecimal amountInYen = amountInUsd.multiply(exchangeRate);
-                String amountInYenString = amountInYen.stripTrailingZeros().toPlainString();                                
-                return new SharedTagContent.Content&lt;String&gt;(amountInYenString, false);
+                String amountInYenString = amountInYen.stripTrailingZeros().toPlainString();
+                return new SharedTagContent.Content<>(amountInYenString, false);
             }
-            
-            return new SharedTagContent.Content&lt;String&gt;("--", false);
+
+            return new SharedTagContent.Content<>("--", false);
         });
     });
 });

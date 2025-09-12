@@ -249,7 +249,7 @@ stc.setShared(false);</code></pre>
 
 
 
-				<pre class="notranslate"><code class="java">SharedTagContent<BigDecimal> stcAmountInUsd = new SharedTagContent<>(null);
+				<pre class="notranslate"><code class="java">SharedTagContent&lt;BigDecimal&gt; stcAmountInUsd = new SharedTagContent&lt;&gt;(null);
                 
 new Div(null).give(dv -> {
     new Div(dv).give(usdDv -> {
@@ -259,7 +259,7 @@ new Div(null).give(dv -> {
             BigDecimal amountInUsd = content.getContent();
             if (amountInUsd != null) {
               //1 USD to 0.78 GBP
-                BigDecimal exchangeRate = new BigDecimal("0.78").setScale(10);  
+                BigDecimal exchangeRate = new BigDecimal("0.78").setScale(10, RoundingMode.HALF_UP);  
                 BigDecimal amountInGbp = amountInUsd.multiply(exchangeRate);
                 String amountInGbpString = amountInGbp.stripTrailingZeros().toPlainString();                                
                 return new SharedTagContent.Content&lt;String&gt;(amountInGbpString, false);
@@ -276,7 +276,7 @@ new Div(null).give(dv -> {
             BigDecimal amountInUsd = content.getContent();
             if (amountInUsd != null) {
               //1 USD to 108.80 Japanese Yen
-                BigDecimal exchangeRate = new BigDecimal("108.80").setScale(10);  
+                BigDecimal exchangeRate = new BigDecimal("108.80").setScale(10, RoundingMode.HALF_UP);  
                 BigDecimal amountInYen = amountInUsd.multiply(exchangeRate);
                 String amountInYenString = amountInYen.stripTrailingZeros().toPlainString();                                
                 return new SharedTagContent.Content&lt;String&gt;(amountInYenString, false);

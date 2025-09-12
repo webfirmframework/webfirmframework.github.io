@@ -359,9 +359,9 @@ System.out.println(childAtIndexOne.equals(p));
 				This method will return the child at the given index in its children. 
 				The below example will get the child at first index.
 				</p>
-				<pre class="notranslate"><code class="java">Div div = new Div(null, new Id("one")) {{                                   
-              new Div(this, new Id("child1"));
-          }};                                      
+				<pre class="notranslate"><code class="java">Div div = new Div(null, new Id("one")).give(dv -> {
+    new Div(dv, new Id("child1"));
+});
                                         
 Span span = new Span(null);             
 P p = new P(null);                      
