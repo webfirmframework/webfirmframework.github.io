@@ -14,7 +14,6 @@ var urlsToCache = [
   "/developers-guide-wffweb-3/faq.html",
   "/developers-guide-wffweb-3/features-of-sharedtagcontent-class.html",
   "/developers-guide-wffweb-3/features-of-tags.html",
-  "/developers-guide-wffweb-3/get-started.html",
   "/developers-guide-wffweb-3/how-to-resolve-dependency-in-build-tools.html",
   "/developers-guide-wffweb-3/mltp-design-pattern.html",
   "/developers-guide-wffweb-3/multi-threading-in-wff-java-code.html",
