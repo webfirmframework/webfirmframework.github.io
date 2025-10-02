@@ -161,12 +161,12 @@
 
           <div class="blog-post">
             <h2 class="blog-post-title">What is <code class="java">SharedTagContent</code> class</h2>
-            <p>It is a class which can be used to change inner content of one or more tags (even from multiple BrowserPage instances) from a single point. </p>
+            <p>It is a class which can be used to change inner content of one or more tags (even if the tags are used under multiple <code class="Java">BrowserPage</code> instances) from a single point. </p>
             
             <h3>Features of <code class="java">SharedTagContent</code></h3>
             
             <ol>
-            <li>Update content of multiple tags</li>
+            <li>Update content of multiple tags which are used under multiple <code class="Java">BrowserPage</code> instances.</li>
             <li>Shared behavior can be turn off/on</li>
             <li>Formatter can be set to show content in different format in different consumer tags</li>
             <li>Can be detached from all of its consumer tags with a single method</li>
@@ -244,6 +244,7 @@ stc.setShared(false);</code></pre>
 					specifies the string to be embedded in the consumer tag and the
 					second argument specifies whether the content is an HTML, i.e. true
 					for HTML and false for text.
+					You can declare <code class="java">SharedTagContent</code> as a static field if the subscribed tags are from multiple <code class="java">BrowserPage</code> instances.
 				</p>
 
 
