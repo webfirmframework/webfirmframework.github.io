@@ -1,5 +1,5 @@
 console.log('sw_cached_site.js invoked');
-const cacheName = 'wffweb-cache-v126';
+const cacheName = 'wffweb-cache-v127';
 
 var urlsToCache = [
 "/developers-guide-wffweb-12/css-properties.html",  
